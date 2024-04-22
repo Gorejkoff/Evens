@@ -31,7 +31,10 @@
 
    &__body {
       max-width: 542px;
-      width: 100vw;
+
+      @media (min-width:768px) {
+         width: 100vw;
+      }
    }
 
    &__title {

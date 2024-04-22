@@ -1128,7 +1128,11 @@ body {
 }
 .modal__body {
   max-width: 542px;
-  width: 100vw;
+}
+@media (min-width: 768px) {
+  .modal__body {
+    width: 100vw;
+  }
 }
 .modal__title {
   margin-bottom: 20px;

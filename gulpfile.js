@@ -24,7 +24,6 @@ import { images } from "./gulp/tasks/images.js";
 import { otfToTtf, ttfToWoff, fontsfiles } from "./gulp/tasks/fonts.js";
 import { svgSprive } from "./gulp/tasks/svgSprive.js";
 import { zip } from "./gulp/tasks/zip.js";
-import { github } from "./gulp/tasks/github.js";
 //import { ftp } from "./gulp/tasks/ftp.js";
 
 // запуск в консоли (npm run svgSprive)
@@ -52,14 +51,12 @@ const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images,
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
 const deployZIP = gulp.series(reset, mainTasks, zip);
-const github = gulp.series(github);
 //const deployFTP = gulp.series(reset, mainTasks, ftp);
 
 // экспорт сценариев, что бы была возможначть пользоваться вне файла
 export { dev } // режим разработчика
 export { build } // режим production (производство), конечный результат
 export { deployZIP } // архивация проекта 
-export { github } // запись на github
 //export { deployFTP } // загрузка на ftp сервер
 
 // выполненте сценария по умолчанию
