@@ -1,0 +1,47 @@
+<div class="main-screen margin-section">
+   <div class="main-screen__container">
+      <div class="main-screen__body">
+         <div class="main-screen__nav">
+
+         </div>
+
+         <div class="main-screen__content">
+            <div class="swiper swiper-main">
+               <div class="swiper-wrapper">
+                  <div class="main-screen__card swiper-slide">
+                     <div class="main-screen__title">Готовые компьютеры</div>
+                     <div class="main-screen__text">Компьютеры нашей сборки. Качественные комплектующие проверенные временем</div>
+                     <button class="main-screen__button button-green" type="button">Добавить в корзину</button>
+                     <img src="@img/webp/main-screen-1.webp" alt="системный блок с подсветкой">
+                  </div>
+                  <div class="main-screen__card swiper-slide">
+                     <div class="main-screen__title">Готовые компьютеры</div>
+                     <div class="main-screen__text">Компьютеры нашей сборки. Качественные комплектующие проверенные временем</div>
+                     <button class="main-screen__button button-green" type="button">Добавить в корзину</button>
+                     <img src="@img/webp/main-screen-1.webp" alt="системный блок с подсветкой">
+                  </div>
+                  <div class="main-screen__card swiper-slide">
+                     <div class="main-screen__title">Готовые компьютеры</div>
+                     <div class="main-screen__text">Компьютеры нашей сборки. Качественные комплектующие проверенные временем</div>
+                     <button class="main-screen__button button-green" type="button">Добавить в корзину</button>
+                     <img src="@img/webp/main-screen-1.webp" alt="системный блок с подсветкой">
+                  </div>
+               </div>
+               <div class="swiper-main-pagination swiper-pagination"></div>
+            </div>
+            <div class="swiper swiper-brand-main">
+               <div class="swiper-wrapper">
+                  @@loop('../html/brand/brand_card.html', [
+                  { "name": "Intel LGA 1700", "image": "brand-4.png", "link": "#0" },
+                  { "name": "AMD AM9", "image": "brand-5.png", "link": "#0" },
+                  { "name": "Intel LGA 1200", "image": "brand-6.png", "link": "#0" }
+                  ])
+               </div>
+            </div>
+         </div>
+      </div>
+
+      @@include('../html/catalog_nav/catalog_nav.html',{})
+
+   </div>
+</div>

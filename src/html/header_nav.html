@@ -1,0 +1,47 @@
+<header id="header_nav" class="header-nav">
+   <div class="header-nav__container">
+      <nav class="header-nav__body js-header-nav-da">
+         <button id="burger" class="header-nav__burger" type="button">
+            <img src="@img/svg/menu-2.svg" alt="кнопка открыть меню">
+         </button>
+
+         <form class="header-nav__search" action="search" method="post" name="search" id="search">
+            <input type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
+            <button class="header-nav__search-submit" type="button">
+               <img src="@img/svg/search.svg" alt="поиск">
+            </button>
+            <button class="header-nav__search-back" type="button">
+               <img src="@img/svg/arrow-nav-left.svg" alt="кнопка назад">
+            </button>
+         </form>
+         <ol class="header-nav__office">
+            <li>
+               <button class="header-nav__button-search" data-message="Поиск" type="button">
+                  <img src="@img/svg/search-2.svg" alt="поиск">
+               </button>
+            </li>
+            <li>
+               <a href="#0" data-message="У вас пока нет товаров для сравнения">
+                  <img src="@img/svg/compare.svg" alt="сравнение">
+               </a>
+            </li>
+            <li>
+               <a href="#0" data-quantity="4" data-message="У вас пока нет избранных товаров">
+                  <img src="@img/svg/favourites.svg" alt="избранное">
+               </a>
+            </li>
+            <li>
+               <a href="basket.html" data-quantity="20">
+                  <img src="@img/svg/shop.svg" alt="корзина">
+               </a>
+            </li>
+            <li>
+               <a href="#0">
+                  <img src="@img/svg/user.svg" alt="кабинет">
+               </a>
+            </li>
+         </ol>
+      </nav>
+      @@include('../html/catalog_nav/catalog_nav.html',{})
+   </div>
+</header>

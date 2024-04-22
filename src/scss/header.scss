@@ -1,0 +1,114 @@
+.header {
+   background: url('../img/svg/header-background.svg');
+
+   &__container {}
+
+   &__body {
+      padding-top: 8px;
+      padding-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 49px;
+
+
+      @media (max-width:1343.98px) and (min-width:768px) {
+         @include sizeMaxMinTablet (min-height, 80, 52);
+      }
+
+      @media (min-width:1344px) {
+         min-height: 80px;
+      }
+   }
+
+   &__logo {
+      img {
+         width: 120px;
+
+
+
+         @media (max-width:1343.98px) and (min-width:768px) {
+            @include sizeMaxMinTablet (width, 180, 100);
+         }
+
+         @media (min-width:1344px) {
+            width: 180px;
+         }
+
+      }
+   }
+
+   &__build {
+      @media (min-width:768px) {
+         flex: 0 1 214px;
+      }
+
+      @media (max-width:1343.98px) and (min-width:768px) {
+         @include sizeMaxMinTabletFlex (0, 0, 214, 162);
+      }
+
+      button {
+         padding: 5px 15px;
+         width: 100%;
+         min-height: 32px;
+         border-radius: 4px;
+         background-color: var(--color-violet);
+         font-weight: 600;
+         font-size: 16px;
+         color: var(--color-white);
+
+         @media (max-width:1343.98px) and (min-width:768px) {
+            @include sizeMaxMinTablet (font-size, 16, 14);
+         }
+      }
+   }
+
+   &__social {
+      display: flex;
+      gap: 10px;
+
+      img {
+         width: 30px;
+      }
+   }
+
+   &__contacts {
+      display: flex;
+      gap: 20px;
+   }
+
+   &__contacts-block {}
+
+   &__contacts-number {
+      font-weight: 700;
+      white-space: nowrap;
+   }
+
+   &__contacts-text {
+      font-size: 14px;
+      color: var(--color-violet);
+   }
+
+   &__address {
+      @media (min-width:768px) and (max-width: 1023.98px) {
+         display: none;
+      }
+   }
+
+   &__address-item {
+      white-space: nowrap;
+      color: var(--color-violet);
+   }
+
+   &__address-correction {
+      white-space: nowrap;
+      font-size: 12px;
+   }
+
+   &__phone {
+      @media (min-width:768px) {
+         display: none;
+      }
+   }
+}

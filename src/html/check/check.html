@@ -1,0 +1,8 @@
+<label class="check @@if(context.buttonName){@@buttonName}" @@if(context.buttonNumber){data-button="@@buttonNumber" }>
+   <input type="@@type" name="@@name" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">@@text
+      @@if(context.linkText){ <a class="hover-underline" href="@@link"><span>@@linkText</span></a> }
+      @@if(context.text2){ @@text2 }
+   </span>
+</label>

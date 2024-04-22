@@ -1,0 +1,2073 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <title>"Evens"</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width" initial-scale=1.0>
+
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Medium.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-SemiBold.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Bold.woff2" crossorigin>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+   <div class="wrapper index">
+
+      <header id="header" class="header">
+   <div class="header__container">
+      <div class="header__body js-header-da">
+         <a class="header__logo" href="index.html">
+            <img src="./img/svg/logo.svg" alt="логотип Evens">
+         </a>
+
+
+         <button class="header__phone" type="button">
+            <img src="./img/svg/fone.svg" alt="иконка телефона">
+         </button>
+      </div>
+   </div>
+</header>
+      <header id="header_nav" class="header-nav">
+   <div class="header-nav__container">
+      <nav class="header-nav__body js-header-nav-da">
+         <button id="burger" class="header-nav__burger" type="button">
+            <img src="./img/svg/menu-2.svg" alt="кнопка открыть меню">
+         </button>
+
+         <form class="header-nav__search" action="search" method="post" name="search" id="search">
+            <input type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
+            <button class="header-nav__search-submit" type="button">
+               <img src="./img/svg/search.svg" alt="поиск">
+            </button>
+            <button class="header-nav__search-back" type="button">
+               <img src="./img/svg/arrow-nav-left.svg" alt="кнопка назад">
+            </button>
+         </form>
+         <ol class="header-nav__office">
+            <li>
+               <button class="header-nav__button-search" data-message="Поиск" type="button">
+                  <img src="./img/svg/search-2.svg" alt="поиск">
+               </button>
+            </li>
+            <li>
+               <a href="#0" data-message="У вас пока нет товаров для сравнения">
+                  <img src="./img/svg/compare.svg" alt="сравнение">
+               </a>
+            </li>
+            <li>
+               <a href="#0" data-quantity="4" data-message="У вас пока нет избранных товаров">
+                  <img src="./img/svg/favourites.svg" alt="избранное">
+               </a>
+            </li>
+            <li>
+               <a href="basket.html" data-quantity="20">
+                  <img src="./img/svg/shop.svg" alt="корзина">
+               </a>
+            </li>
+            <li>
+               <a href="#0">
+                  <img src="./img/svg/user.svg" alt="кабинет">
+               </a>
+            </li>
+         </ol>
+      </nav>
+      <div id="catalog_nav_wrapper" class="catalog-nav-wrapper">
+   <div class="catalog-nav-wrapper__container">
+      <div class="catalog-nav-wrapper__body js-catalog-nav-body">
+         <div class="catalog-nav">
+            <div class="catalog-nav__body">
+               <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+               <button class="catalog-nav__button-other" type="button">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M5 12H19M12 5V19" stroke="#9604CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Собрать компьютер
+               </button>
+               <ol>
+                  <li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="1">
+      <span>Комплектующие</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="2">
+      <span>Готовые компьютеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="3">
+      <span>Компоненты СВО</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="4">
+      <span>Сетевое оборудование</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="5">
+      <span>Мониторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="6">
+      <span>ИБП, Стабилизаторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="7">
+      <span>Принтеры, сканеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="8">
+      <span>Манипуляторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="9">
+      <span>Мультимедиа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="10">
+      <span>Программное обеспечение</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="11">
+      <span>Аксессуары</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="12">
+      <span>Кабельная продукция</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="13">
+      <span>Товары для майнинга</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="14">
+      <span>Устройства видеозахвата</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="15">
+      <span>Распродажа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li>
+               </ol>
+            </div>
+         </div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="1">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         
+<div class="catalog-nav__list-title">Комплектующие</div>
+
+         <ol>
+            
+   
+
+<li>
+   <a href="#0">Беспроводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Коммутаторы</a>
+   
+   <ol>  <li><a href=index.htm> Коммутаторы сетевые</a>
+</li> <li><a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li><a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Точки доступа</a>
+   
+</li>
+<li>
+   <a href="#0">Мобильный интернет</a>
+   
+   <ol>  <li><a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li><a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li><a href=undefined> Модемы</a>
+</li> <li><a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Wi-Fi адаптеры</a>
+   
+   <ol>  <li><a href=index.htm> PCI-E адаптеры</a>
+</li> <li><a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Усилители сигнала Wi-Fi</a>
+   
+   <ol>  <li><a href=index.htm> MESH системы</a>
+</li> <li><a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Bluetooth адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Проводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Powerline адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Кабели патч-корды, коннекторы</a>
+   
+   <ol>  <li><a href=index.htm> Витая пара</a>
+</li> <li><a href=index.htm> Патч-корды</a>
+</li> <li><a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Антенны</a>
+   
+   <ol>  <li><a href=index.htm> LTE антенны</a>
+</li> <li><a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Кабельные сборки, пигтейлы, переходники</a>
+   
+</li>
+<li>
+   <a href="#0">LAN аксессуары</a>
+   
+</li>
+<li>
+   <a href="#0">Кронштейны, крепежи, гермобоксы</a>
+   
+</li>
+<li>
+   <a href="#0">Инструменты сетевого оборудования</a>
+   
+</li>
+<li>
+   <a href="#0">Телекомму&shy;никационные шкафы и аксессуары</a>
+   
+   <ol>  <li><a href=index.htm> Сетевые шкафы</a>
+</li> <li><a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">PoE инжекторы</a>
+   
+</li>
+<li>
+   <a href="#0">Медиаконвертеры</a>
+   
+</li>
+<li>
+   <a href="#0">ADSL маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые камеры</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые хранилища (NAS)</a>
+   
+</li>
+<li>
+   <a href="#0">Умный дом</a>
+   
+</li>
+<li>
+   <a href="#0">IP-телефония</a>
+   
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="2">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         
+<div class="catalog-nav__list-title">Готовые компьютеры</div>
+
+         <ol>
+            
+   
+
+<li>
+   <a href="#0">Готовые компьютеры</a>
+   
+</li>
+<li>
+   <a href="#0">Коммутаторы</a>
+   
+   <ol>  <li><a href=index.htm> Коммутаторы сетевые</a>
+</li> <li><a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li><a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Точки доступа</a>
+   
+</li>
+<li>
+   <a href="#0">Мобильный интернет</a>
+   
+   <ol>  <li><a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li><a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li><a href=undefined> Модемы</a>
+</li> <li><a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Wi-Fi адаптеры</a>
+   
+   <ol>  <li><a href=index.htm> PCI-E адаптеры</a>
+</li> <li><a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Усилители сигнала Wi-Fi</a>
+   
+   <ol>  <li><a href=index.htm> MESH системы</a>
+</li> <li><a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Bluetooth адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Проводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Powerline адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Кабели патч-корды, коннекторы</a>
+   
+   <ol>  <li><a href=index.htm> Витая пара</a>
+</li> <li><a href=index.htm> Патч-корды</a>
+</li> <li><a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Антенны</a>
+   
+   <ol>  <li><a href=index.htm> LTE антенны</a>
+</li> <li><a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Кабельные сборки, пигтейлы, переходники</a>
+   
+</li>
+<li>
+   <a href="#0">LAN аксессуары</a>
+   
+</li>
+<li>
+   <a href="#0">Кронштейны, крепежи, гермобоксы</a>
+   
+</li>
+<li>
+   <a href="#0">Инструменты сетевого оборудования</a>
+   
+</li>
+<li>
+   <a href="#0">Телекомму&shy;никационные шкафы и аксессуары</a>
+   
+   <ol>  <li><a href=index.htm> Сетевые шкафы</a>
+</li> <li><a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">PoE инжекторы</a>
+   
+</li>
+<li>
+   <a href="#0">Медиаконвертеры</a>
+   
+</li>
+<li>
+   <a href="#0">ADSL маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые камеры</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые хранилища (NAS)</a>
+   
+</li>
+<li>
+   <a href="#0">Умный дом</a>
+   
+</li>
+<li>
+   <a href="#0">IP-телефония</a>
+   
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+      </div>
+   </div>
+</div>
+   </div>
+</header>
+
+      <main class="main">
+
+         <div class="main-screen margin-section">
+   <div class="main-screen__container">
+      <div class="main-screen__body">
+         <div class="main-screen__nav">
+
+         </div>
+
+         <div class="main-screen__content">
+            <div class="swiper swiper-main">
+               <div class="swiper-wrapper">
+                  <div class="main-screen__card swiper-slide">
+                     <div class="main-screen__title">Готовые компьютеры</div>
+                     <div class="main-screen__text">Компьютеры нашей сборки. Качественные комплектующие проверенные временем</div>
+                     <button class="main-screen__button button-green" type="button">Добавить в корзину</button>
+                     <img src="./img/webp/main-screen-1.webp" alt="системный блок с подсветкой">
+                  </div>
+                  <div class="main-screen__card swiper-slide">
+                     <div class="main-screen__title">Готовые компьютеры</div>
+                     <div class="main-screen__text">Компьютеры нашей сборки. Качественные комплектующие проверенные временем</div>
+                     <button class="main-screen__button button-green" type="button">Добавить в корзину</button>
+                     <img src="./img/webp/main-screen-1.webp" alt="системный блок с подсветкой">
+                  </div>
+                  <div class="main-screen__card swiper-slide">
+                     <div class="main-screen__title">Готовые компьютеры</div>
+                     <div class="main-screen__text">Компьютеры нашей сборки. Качественные комплектующие проверенные временем</div>
+                     <button class="main-screen__button button-green" type="button">Добавить в корзину</button>
+                     <img src="./img/webp/main-screen-1.webp" alt="системный блок с подсветкой">
+                  </div>
+               </div>
+               <div class="swiper-main-pagination swiper-pagination"></div>
+            </div>
+            <div class="swiper swiper-brand-main">
+               <div class="swiper-wrapper">
+                  <a href="#0" class="brand__card swiper-slide">
+   <div class="brand__name">Intel LGA 1700</div>
+   <div class="brand__image">
+      <div class="brand__image-body">
+         <img src="./img/png/brand-4.png" alt="изображение бренда">
+      </div>
+   </div>
+</a><a href="#0" class="brand__card swiper-slide">
+   <div class="brand__name">AMD AM9</div>
+   <div class="brand__image">
+      <div class="brand__image-body">
+         <img src="./img/png/brand-5.png" alt="изображение бренда">
+      </div>
+   </div>
+</a><a href="#0" class="brand__card swiper-slide">
+   <div class="brand__name">Intel LGA 1200</div>
+   <div class="brand__image">
+      <div class="brand__image-body">
+         <img src="./img/png/brand-6.png" alt="изображение бренда">
+      </div>
+   </div>
+</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div id="catalog_nav_wrapper" class="catalog-nav-wrapper">
+   <div class="catalog-nav-wrapper__container">
+      <div class="catalog-nav-wrapper__body js-catalog-nav-body">
+         <div class="catalog-nav">
+            <div class="catalog-nav__body">
+               <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+               <button class="catalog-nav__button-other" type="button">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M5 12H19M12 5V19" stroke="#9604CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Собрать компьютер
+               </button>
+               <ol>
+                  <li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="1">
+      <span>Комплектующие</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="2">
+      <span>Готовые компьютеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="3">
+      <span>Компоненты СВО</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="4">
+      <span>Сетевое оборудование</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="5">
+      <span>Мониторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="6">
+      <span>ИБП, Стабилизаторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="7">
+      <span>Принтеры, сканеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="8">
+      <span>Манипуляторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="9">
+      <span>Мультимедиа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="10">
+      <span>Программное обеспечение</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="11">
+      <span>Аксессуары</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="12">
+      <span>Кабельная продукция</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="13">
+      <span>Товары для майнинга</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="14">
+      <span>Устройства видеозахвата</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="15">
+      <span>Распродажа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li>
+               </ol>
+            </div>
+         </div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="1">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         
+<div class="catalog-nav__list-title">Комплектующие</div>
+
+         <ol>
+            
+   
+
+<li>
+   <a href="#0">Беспроводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Коммутаторы</a>
+   
+   <ol>  <li><a href=index.htm> Коммутаторы сетевые</a>
+</li> <li><a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li><a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Точки доступа</a>
+   
+</li>
+<li>
+   <a href="#0">Мобильный интернет</a>
+   
+   <ol>  <li><a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li><a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li><a href=undefined> Модемы</a>
+</li> <li><a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Wi-Fi адаптеры</a>
+   
+   <ol>  <li><a href=index.htm> PCI-E адаптеры</a>
+</li> <li><a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Усилители сигнала Wi-Fi</a>
+   
+   <ol>  <li><a href=index.htm> MESH системы</a>
+</li> <li><a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Bluetooth адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Проводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Powerline адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Кабели патч-корды, коннекторы</a>
+   
+   <ol>  <li><a href=index.htm> Витая пара</a>
+</li> <li><a href=index.htm> Патч-корды</a>
+</li> <li><a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Антенны</a>
+   
+   <ol>  <li><a href=index.htm> LTE антенны</a>
+</li> <li><a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Кабельные сборки, пигтейлы, переходники</a>
+   
+</li>
+<li>
+   <a href="#0">LAN аксессуары</a>
+   
+</li>
+<li>
+   <a href="#0">Кронштейны, крепежи, гермобоксы</a>
+   
+</li>
+<li>
+   <a href="#0">Инструменты сетевого оборудования</a>
+   
+</li>
+<li>
+   <a href="#0">Телекомму&shy;никационные шкафы и аксессуары</a>
+   
+   <ol>  <li><a href=index.htm> Сетевые шкафы</a>
+</li> <li><a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">PoE инжекторы</a>
+   
+</li>
+<li>
+   <a href="#0">Медиаконвертеры</a>
+   
+</li>
+<li>
+   <a href="#0">ADSL маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые камеры</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые хранилища (NAS)</a>
+   
+</li>
+<li>
+   <a href="#0">Умный дом</a>
+   
+</li>
+<li>
+   <a href="#0">IP-телефония</a>
+   
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="2">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         
+<div class="catalog-nav__list-title">Готовые компьютеры</div>
+
+         <ol>
+            
+   
+
+<li>
+   <a href="#0">Готовые компьютеры</a>
+   
+</li>
+<li>
+   <a href="#0">Коммутаторы</a>
+   
+   <ol>  <li><a href=index.htm> Коммутаторы сетевые</a>
+</li> <li><a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li><a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Точки доступа</a>
+   
+</li>
+<li>
+   <a href="#0">Мобильный интернет</a>
+   
+   <ol>  <li><a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li><a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li><a href=undefined> Модемы</a>
+</li> <li><a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Wi-Fi адаптеры</a>
+   
+   <ol>  <li><a href=index.htm> PCI-E адаптеры</a>
+</li> <li><a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Усилители сигнала Wi-Fi</a>
+   
+   <ol>  <li><a href=index.htm> MESH системы</a>
+</li> <li><a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Bluetooth адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Проводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Powerline адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Кабели патч-корды, коннекторы</a>
+   
+   <ol>  <li><a href=index.htm> Витая пара</a>
+</li> <li><a href=index.htm> Патч-корды</a>
+</li> <li><a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Антенны</a>
+   
+   <ol>  <li><a href=index.htm> LTE антенны</a>
+</li> <li><a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Кабельные сборки, пигтейлы, переходники</a>
+   
+</li>
+<li>
+   <a href="#0">LAN аксессуары</a>
+   
+</li>
+<li>
+   <a href="#0">Кронштейны, крепежи, гермобоксы</a>
+   
+</li>
+<li>
+   <a href="#0">Инструменты сетевого оборудования</a>
+   
+</li>
+<li>
+   <a href="#0">Телекомму&shy;никационные шкафы и аксессуары</a>
+   
+   <ol>  <li><a href=index.htm> Сетевые шкафы</a>
+</li> <li><a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">PoE инжекторы</a>
+   
+</li>
+<li>
+   <a href="#0">Медиаконвертеры</a>
+   
+</li>
+<li>
+   <a href="#0">ADSL маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые камеры</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые хранилища (NAS)</a>
+   
+</li>
+<li>
+   <a href="#0">Умный дом</a>
+   
+</li>
+<li>
+   <a href="#0">IP-телефония</a>
+   
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+      </div>
+   </div>
+</div>
+
+   </div>
+</div>
+
+         <section class="card-block margin-section">
+   <div class="card-block__container">
+      <div class="card-block__title">
+         <h2 class="title">Готовые компьютеры</h2>
+      </div>
+       <p class="card-block__text">Компьютеры нашей сборки. Качественные комплектующие проверенные временем</p> 
+      <div class="swiper swiper-card">
+         <div class="swiper-wrapper">
+             <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-1.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC Snow man</h3>
+      <div class="card__price">120 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status orange">Хит</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-2.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC Snow</h3>
+      <div class="card__price">100 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" disabled>Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status "></div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-3.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC man</h3>
+      <div class="card__price">90 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status green">Скидка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-4.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC</h3>
+      <div class="card__price">130 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status violet">Новинка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-1.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC Snow man</h3>
+      <div class="card__price">120 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status orange">Хит</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-2.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC Snow</h3>
+      <div class="card__price">100 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" disabled>Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status "></div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-3.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC man</h3>
+      <div class="card__price">90 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status green">Скидка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-4.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Игровой компьютер EvensPC</h3>
+      <div class="card__price">130 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status violet">Новинка</div>
+   </a>
+</article>  </div>
+               <div class="card-block-pagination swiper-pagination"></div>
+               <div class="button-transition">
+                  <a class="link-transition hover-underline" href="catalog.html" data-da=".card-block__title,last,1024" >
+   <span>Смотреть всё</span>
+   <img src="./img/svg/arrow-nav-right.svg" alt="стрелка вправо">
+</a>
+               </div>
+         </div>
+      </div>
+</section>
+
+         <div class="info margin-section">
+   <div class="info__container">
+      <div class="info__body">
+         <div class="info__block">
+            <div class="info__image">
+               <img src="./img/svg/protection.svg" alt="img">
+            </div>
+            <div class="info__content">
+               <div class="info__title">3 года гарантии</div>
+               <div class="info__text">Компьютеры EvensPC имеют гарантию на комплектующие и сервисное обслуживание</div>
+            </div>
+         </div>
+         <div class="info__block">
+            <div class="info__image">
+               <img src="./img/svg/efficiency.svg" alt="img">
+            </div>
+            <div class="info__content">
+               <div class="info__title">Оперативная сборка ПК</div>
+               <div class="info__text">Мы качественно соберем системный блок за 1 - 2 дня с нужными Вам конфигурациями</div>
+            </div>
+         </div>
+         <div class="info__block">
+            <div class="info__image">
+               <img src="./img/svg/suport.svg" alt="img">
+            </div>
+            <div class="info__content">
+               <div class="info__title">Консультация и поддержка</div>
+               <div class="info__text">Наши специалисты готовы предоставить профессиональную консультацию на любой вопрос</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+         <section class="card-block margin-section">
+   <div class="card-block__container">
+      <div class="card-block__title">
+         <h2 class="title">Мониторы</h2>
+      </div>
+      
+      <div class="swiper swiper-card">
+         <div class="swiper-wrapper">
+             <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-5.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">27&quot; Монитор Xiaomi RMMNT27NF Black 75Hz 1920x1080 IPS</h3>
+      <div class="card__price">122 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status orange">Хит</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-6.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">34&quot; Монитор Huawei MateView GT ZQE-CBA Black 165Hz 3440x1440 VA</h3>
+      <div class="card__price">135 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status violet">Новинка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-7.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Monitor ЖК-монитор с док-станцией USB-C 279C9/01 | Philips</h3>
+      <div class="card__price">95 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status green">Скидка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-8.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">23.8&quot; Монитор MSI Modern MD241PW белый</h3>
+      <div class="card__price">80 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" disabled>Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status "></div>
+   </a>
+</article>  </div>
+               <div class="card-block-pagination swiper-pagination"></div>
+               <div class="button-transition">
+                  <a class="link-transition hover-underline" href="#0" data-da=".card-block__title,last,1024" >
+   <span>Смотреть всё</span>
+   <img src="./img/svg/arrow-nav-right.svg" alt="стрелка вправо">
+</a>
+               </div>
+         </div>
+      </div>
+</section>
+
+         <section class="card-block margin-section">
+   <div class="card-block__container">
+      <div class="card-block__title">
+         <h2 class="title">Акустика</h2>
+      </div>
+      
+      <div class="swiper swiper-card">
+         <div class="swiper-wrapper">
+             <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-9.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Penaudio Karelia - напольная акустика</h3>
+      <div class="card__price">192 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" disabled>Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status "></div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-10.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Radiotehnika Alfa 1.02 - напольная акустика</h3>
+      <div class="card__price">135 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status violet">Новинка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-11.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Полочная акустика Klipsch R-40M Black</h3>
+      <div class="card__price">55 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status green">Скидка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-12.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Колонки компьютерные Sven 320</h3>
+      <div class="card__price">40 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" disabled>Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status orange">Хит</div>
+   </a>
+</article>  </div>
+               <div class="card-block-pagination swiper-pagination"></div>
+               <div class="button-transition">
+                  <a class="link-transition hover-underline" href="#0" data-da=".card-block__title,last,1024" >
+   <span>Смотреть всё</span>
+   <img src="./img/svg/arrow-nav-right.svg" alt="стрелка вправо">
+</a>
+               </div>
+         </div>
+      </div>
+</section>
+
+         <section class="card-block margin-section">
+   <div class="card-block__container">
+      <div class="card-block__title">
+         <h2 class="title">Скоростные накопители</h2>
+      </div>
+      
+      <div class="swiper swiper-card">
+         <div class="swiper-wrapper">
+             <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-13.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Внешний SSD диск 2TB SAMSUNG T7 TOUCH (MU-PC2T0K/WW) BLACK</h3>
+      <div class="card__price">22 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" disabled>Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status "></div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-14.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Внешний SSD диск 2Tb SanDisk Extreme Pro Portable (SDSSDE61-2T00-G25)</h3>
+      <div class="card__price">35 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status violet">Новинка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-15.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Внешний SSD диск Samsung 1.8&quot; T7 500 Gb USB 3.2 Type-C Titanium MU-PC500T/WW</h3>
+      <div class="card__price">37 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status green">Скидка</div>
+   </a>
+</article>  <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <img src="./img/png/img-16.png" alt="образец товара">
+      </div>
+      <h3 class="card__description">Внешний диск SSD SanDisk Portable 2TB (SDSSDE30-2T00-G25)</h3>
+      <div class="card__price">40 000 ₽</div>
+      <div class="card__button">
+         <button class="button-transparent" type="button" >Добавить в корзину</button>
+      </div>
+      <div class="card__top-buttons">
+         <button class="card__compare" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+            </svg>
+         </button>
+         <button class="card__favourites" type="button">
+            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+            </svg>
+         </button>
+      </div>
+      <div class="card__status orange">Хит</div>
+   </a>
+</article>  </div>
+               <div class="card-block-pagination swiper-pagination"></div>
+               <div class="button-transition">
+                  <a class="link-transition hover-underline" href="#0" data-da=".card-block__title,last,1024" >
+   <span>Смотреть всё</span>
+   <img src="./img/svg/arrow-nav-right.svg" alt="стрелка вправо">
+</a>
+               </div>
+         </div>
+      </div>
+</section>
+
+         <div class="brands margin-section">
+   <div class="brands__container">
+      <div class="brands__swiper swiper">
+         <div class="swiper-wrapper">
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_asus.svg" alt="логотип asus">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_msi.svg" alt="логотип msi">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_gigabyte.svg" alt="логотип gigabyte">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_asus.svg" alt="логотип asus">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_msi.svg" alt="логотип msi">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_gigabyte.svg" alt="логотип gigabyte">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_asus.svg" alt="логотип asus">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_msi.svg" alt="логотип msi">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_gigabyte.svg" alt="логотип gigabyte">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_asus.svg" alt="логотип asus">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_msi.svg" alt="логотип msi">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_gigabyte.svg" alt="логотип gigabyte">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_asus.svg" alt="логотип asus">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_msi.svg" alt="логотип msi">
+            </a>
+            <a href="#0" class="brands__item swiper-slide">
+               <img src="./img/svg/brand_gigabyte.svg" alt="логотип gigabyte">
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+
+         <section class="poster margin-section">
+   <div class="poster__container">
+      <div class="poster__body">
+         <div class="poster__image">
+            <div class="poster__image-body">
+               <img src="./img/webp/poster.webp" alt="изображение компьютера">
+            </div>
+         </div>
+         <div class="poster__content">
+            <h2 class="poster__title">Нужен компьютер?</h2>
+            <div>
+               <p class="poster__text">Компьютерный магазин «EvensPC» уже на протяжение 15 лет дарит своим покупателям компьютеры по низким ценам, комплектующие для системного блока известных брендов дёшево, сетевое оборудование для дома и дача, а так же периферийное оборудование от поставщика, где цена будет низкой по Москве.</p>
+               <p class="poster__text">Одним из приоритетных направлений нашего интернет — магазина «EvensPC» является сетевое оборудование. Роутер, точка доступа, Wi-Fi-усилитель, коммутатор, PoE адаптер — это и многое другое от мировых лидеров рынка, таких как ASUS, TP-Link, Ubiquiti, Zyxel, Mikrotik, Huawei. Всегда в наличии сетевые решения для дома, коттеджа и офиса.</p>
+            </div>
+            <a class="link-transition hover-underline" href="#0" >
+   <span>Собрать компьютер</span>
+   <img src="./img/svg/arrow-nav-right.svg" alt="стрелка вправо">
+</a>
+         </div>
+      </div>
+   </div>
+</section>
+
+         <section class="news margin-section">
+   <div class="news__container">
+      <div class="news__title">
+         <h2 class="title">Новости</h2>
+      </div>
+      <div class="swiper naws__swiper">
+         <div class="news__body swiper-wrapper">
+            <article class="news__card swiper-slide">
+               <a class="news__card-image" href="#0">
+                  <span class="news__card-image-shell">
+                     <img src="./img/png/news-1.png" alt="иллюстрация к новостям">
+                  </span>
+               </a>
+               <h3 class="news__card-title"><a href="#0">Бета-версия 1 GeForce NOW Cloud Gaming PC начинается</a></h3>
+               <p>1 играйте на максимальных настройках, со скоростью до 120 кадров в секунду, на ПК с недостаточной мощностью</p>
+               <a class="news__card-link hover-underline" href="#0"><span>Подробнее</span></a>
+               </article><article class="news__card swiper-slide">
+               <a class="news__card-image" href="#0">
+                  <span class="news__card-image-shell">
+                     <img src="./img/png/news-2.png" alt="иллюстрация к новостям">
+                  </span>
+               </a>
+               <h3 class="news__card-title"><a href="#0">Бета-версия 2 GeForce NOW Cloud Gaming PC начинается</a></h3>
+               <p>2 играйте на максимальных настройках, со скоростью до 120 кадров в секунду, на ПК с недостаточной мощностью</p>
+               <a class="news__card-link hover-underline" href="#0"><span>Подробнее</span></a>
+               </article><article class="news__card swiper-slide">
+               <a class="news__card-image" href="#0">
+                  <span class="news__card-image-shell">
+                     <img src="./img/png/news-3.png" alt="иллюстрация к новостям">
+                  </span>
+               </a>
+               <h3 class="news__card-title"><a href="#0">Бета-версия 3 GeForce NOW Cloud Gaming PC начинается</a></h3>
+               <p>3 играйте на максимальных настройках, со скоростью до 120 кадров в секунду, на ПК с недостаточной мощностью</p>
+               <a class="news__card-link hover-underline" href="#0"><span>Подробнее</span></a>
+               </article><article class="news__card swiper-slide">
+               <a class="news__card-image" href="#0">
+                  <span class="news__card-image-shell">
+                     <img src="./img/png/news-4.png" alt="иллюстрация к новостям">
+                  </span>
+               </a>
+               <h3 class="news__card-title"><a href="#0">Бета-версия 4 GeForce NOW Cloud Gaming PC начинается</a></h3>
+               <p>4 играйте на максимальных настройках, со скоростью до 120 кадров в секунду, на ПК с недостаточной мощностью</p>
+               <a class="news__card-link hover-underline" href="#0"><span>Подробнее</span></a>
+               </article>
+         </div>
+      </div>
+      <div class="swiper-news-pagination swiper-pagination"></div>
+      <div class="button-transition">
+         <a class="link-transition hover-underline" href="#0" data-da=".news__title,last,1024" >
+   <span>Смотреть все </span>
+   <img src="./img/svg/arrow-nav-right.svg" alt="стрелка вправо">
+</a>
+      </div>
+   </div>
+</section>
+
+         <div class="seo margin-section">
+   <div class="seo__container">
+      <ol class="seo__body">
+         <li>Kомпьютеры и комплектующие по доступным ценам</li>
+         <li>Ищете надёжный компьютер или комплектующие для апгрейда? В нашем интернет-магазине вы найдёте всё необходимое для создания мощной системы или обновления существующего устройства.</li>
+         <li>Широкий ассортимент</li>
+         <li>
+            Мы предлагаем широкий выбор компьютеров и комплектующих от ведущих производителей. У нас вы найдёте:
+            <ol>
+               <li>Компьютеры: от бюджетных моделей для повседневных задач до мощных игровых систем.</li>
+               <li>Мониторы: от классических до современных моделей с высоким разрешением и частотой обновления.</li>
+               <li>Комплектующие: процессоры, видеокарты, материнские платы, жёсткие диски, SSD, оперативная память и многое другое.</li>
+            </ol>
+         </li>
+      </ol>
+   </div>
+</div>
+
+      </main>
+
+      <footer class="footer">
+   <div class="footer__container">
+      <div class="footer__body">
+         <section class="footer__info">
+            <a href="index.html" class="footer__logo">
+               <img src="./img/svg/logo.svg" alt="логотип Evens">
+            </a>
+            <h2 class="footer__text">Интернет — магазин компьютерной техники и электроники!</h2>
+            <address>
+               <p class="footer__text">г. Москва, Пятницкое шоссе, д. 18, <span class="footer__p-smaller">ТК «Митинский Радиорынок», 2 этаж, пав. 379</span></p>
+               <a class="footer__text-link" href="#0">Показать на карте</a>
+            </address>
+            <div class="footer__fone">
+               <button class="footer__block js-modal-open" type="button" data-modal_open="modal-call">
+                  <div class="footer__number">+7 965 130 55 70</div>
+                  <div class="footer__text-link">Заказать звонок</div>
+               </button>
+               <button class="footer__block js-modal-open" type="button" data-modal_open="modal_write">
+                  <div class="footer__number">+7 909 670 05 09</div>
+                  <div class="footer__text-link">Напишите нам</div>
+               </button>
+            </div>
+            <div class="footer__social">
+               <a href="#0">
+                  <img src="./img/svg/whats_app.svg" alt="иконка социальной сети whats app">
+               </a>
+               <a href="#0">
+                  <img src="./img/svg/vk.svg" alt="иконка социальной сети в контакте">
+               </a>
+            </div>
+         </section>
+         <nav class="footer__nav">
+            <h2 class="footer__nav-title">Информация</h2>
+            <ol class="footer__nav-links">
+               <li>
+                  <a href="#0">Вакансии</a>
+               </li>
+               <li>
+                  <a href="#0">Возврат и обмен</a>
+               </li>
+               <li>
+                  <a href="#0">Доставка по Москве</a>
+               </li>
+               <li>
+                  <a href="#0">Контакты</a>
+               </li>
+               <li>
+                  <a href="#0">Акции</a>
+               </li>
+               <li>
+                  <a href="#0">Гарантийное обслуживание</a>
+               </li>
+               <li>
+                  <a href="#0">Гарантия на системные блоки</a>
+               </li>
+               <li>
+                  <a href="#0">Розничная покупка</a>
+               </li>
+               <li>
+                  <a href="#0">Покупка на организацию</a>
+               </li>
+            </ol>
+         </nav>
+         <nav class="footer__nav">
+            <h2 class="footer__nav-title">Дополнительно</h2>
+            <ol class="footer__nav-links">
+               <li>
+                  <a href="#0">Оптовым клиентам</a>
+               </li>
+               <li>
+                  <a href="#0">Реквизиты</a>
+               </li>
+               <li>
+                  <a href="#0">Законы о ЗПП</a>
+               </li>
+               <li>
+                  <a href="#0">Соглашение</a>
+               </li>
+               <li>
+                  <a href="#0">Пользовательское соглашение</a>
+               </li>
+               <li>
+                  <a href="#0">О компании</a>
+               </li>
+            </ol>
+         </nav>
+      </div>
+
+      <div class="footer__bottom">
+         <span>© 2023 EvensPC</span>
+         <a href="#0">Пользовательское соглашение</a>
+         <a href="#0">Политика конфиденциальности</a>
+      </div>
+   </div>
+</footer>
+
+      <div class="menu-mobile">
+   <div class="menu-mobile__container">
+      <div class="menu-mobile__body">
+
+         <div class="header-nav__catalog" data-da=".js-header-nav-da,1,768">
+            <button class="header-nav__catalog-button js-open-catalog-nav" type="button">
+               <img src="./img/svg/menu.svg" alt="кнопка открыть меню">
+               Каталог товаров
+            </button>
+
+            <button id="closeMenu" class="menu-mobile__close" type="button">
+               <img src="./img/svg/close.svg" alt="закрыть">
+            </button>
+
+
+         </div>
+         <ol class="header-nav__links js-header-links" data-da=".js-header-nav-da,2,768">
+            <li>
+               <a href="#0">Контакты</a>
+            </li>
+            <li>
+               <a href="#0">Новости</a>
+            </li>
+            <li class="header-nav__menu-tab js-menu-tab">
+               <button class="js-menu-tab-button" type="button">
+                  Информация
+                  <img src="./img/svg/arrow-nav-bottom.svg" alt="стрелка указывает вниз">
+               </button>
+               <div class="header-nav__info js-menu-tab-body">
+                  <ol class=" js-menu-tab-content">
+                     <li><a href="#0">Оплата</a></li>
+                     <li><a href="#0">Доставка</a></li>
+                     <li><a href="#0">Самовывоз</a></li>
+                     <li><a href="#0">Гарантия</a></li>
+                  </ol>
+               </div>
+            </li>
+         </ol>
+
+         <div class="header__build js-modal-open" data-da=".js-header-da,1,768" data-modal_open="modal-build-pc">
+            <button type="button">Собрать ПК</button>
+         </div>
+         <div class="header__social" data-da=".js-header-da,2,768">
+            <a href="#0">
+               <img src="./img/svg/vk.svg" alt="иконка социальной сети в контакте">
+            </a>
+            <a href="#0">
+               <img src="./img/svg/whats_app.svg" alt="иконка социальной сети whats app">
+            </a>
+         </div>
+         <div class="header__contacts" data-da=".js-header-da,3,768">
+            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal-call">
+               <p class="header__contacts-number">+7 965 130 55 70</p>
+               <p class="header__contacts-text">Заказать звонок</p>
+            </button>
+            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal_write">
+               <p class="header__contacts-number">+7 909 670 05 09</p>
+               <p class="header__contacts-text">Напишите нам</p>
+            </button>
+         </div>
+         <div class="header__address" data-da=".js-header-da,4,768">
+            <p class="header__address-item">г. Москва, Пятницкое шоссе, <wbr/>д. 18</p>
+            <p class="header__address-correction">ТК «Митинский Радиорынок», <wbr/>2 этаж, пав. 379</p>
+         </div>
+
+
+
+      </div>
+   </div>
+</div>
+
+      <section id="modal-build-pc" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Собрать ПК</h2>
+            <p class="modal__text">Пожалуйста, оставьте заявку и наши специалистыпомогут Вами подобрать комплектующие и рассчитать стоимость.</p>
+            <p class="modal__text">Или позвоните нам: <span class="modal__phone">+7 909 670 05 09</span></p>
+            <form action="#0" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <textarea class="modal__textarea" name="" id="" placeholder="Ваше сообщение"></textarea>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="#0"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <div class="modal__image">
+            <img src="./img/webp/pc.webp" alt="системный блок">
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+      <section id="modal-call" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Заказать звонок</h2>
+            <p class="modal__text">Оставьте заявку и мы перезвоним Вам в самое ближайшее время!</p>
+            <form action="#0" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="#0"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+      <section id="modal_write" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Напишите нам</h2>
+            <p class="modal__text">У Вас есть вопрос или пожелание? Пожалуйста, напишите нам!</p>
+            <p class="modal__text">Или позвоните нам: <span class="modal__phone">+7 909 670 05 09</span></p>
+            <form action="#0" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <textarea class="modal__textarea" name="" id="" placeholder="Ваше сообщение"></textarea>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="#0"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+   </div>
+
+
+   <script defer src='./js/app.js'></script>
+<script defer src='./js/swiper.js'></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+<div class="order-registration">
+   <div class="order-registration__title">Оформление заказа</div>
+   <div class="order-registration__input-block">
+      @@include('../registration/input.html',{"required": true, "marker": true, "name": "surname", "title" : "Фамилия", "placeholder": "Ваша фамилия", "type": "text"})
+      @@include('../registration/input.html',{"required": true, "marker": true, "name": "name", "title" : "Имя", "placeholder": "Ваше имя", "type": "text"})
+      @@include('../registration/input.html',{"required": true, "marker": true, "name": "email", "title" : "E-mail", "placeholder": "Ваш e-mail", "type": "text"})
+      @@include('../registration/input.html',{"required": true, "marker": true, "name": "phone", "title" : "Телефон", "placeholder": "Ваш номер телефона", "type": "number"})
+   </div>
+   <div class="order-registration__rule">Поля отмеченные *, обязательны для заполнения</div>
+</div>

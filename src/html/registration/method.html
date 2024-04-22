@@ -1,0 +1,48 @@
+<div class="order-registration js-method">
+   <div class="order-registration__method">
+      <div class="order-registration__method-block">
+         <div class="order-registration__title">Способ получения</div>
+         <div class="order-registration__radio-block">
+            @@loop("../check/check.html", "json/method_list_1.json")
+         </div>
+      </div>
+      <div class="order-registration__method-block">
+         <div class="order-registration__title">Способ оплаты</div>
+         <div class="order-registration__radio-block">
+            @@loop("../check/check.html", "json/method_list_2.json")
+         </div>
+      </div>
+   </div>
+   <div class="js-method-tab" data-tab="2">
+      <div class="order-registration__addres">
+         @@include('../registration/input.html',{"required": true, "name": "street", "title" : "Адрес доставки", "placeholder": "Улица", "type": "text"})
+         @@include('../registration/input.html',{"required": true, "name": "home", "placeholder": "Дом", "type": "text"})
+         @@include('../registration/input.html',{"required": true, "name": "flat", "placeholder": "Квартира/офис", "type": "text"})
+      </div>
+   </div>
+   <div class="js-method-tab" data-tab="3">
+      <div class="order-registration__addres">
+         @@include('../registration/input.html',{"required": true, "name": "index", "title" : "Адрес доставки", "placeholder": "Индекс", "type": "text"})
+         @@include('../registration/input.html',{"required": true, "name": "city", "placeholder": "Город", "type": "text"})
+         @@include('../registration/input.html',{"required": true, "name": "street", "placeholder": "Улица", "type": "text"})
+         @@include('../registration/input.html',{"required": true, "name": "home", "placeholder": "Дом", "type": "text"})
+         @@include('../registration/input.html',{"required": true, "name": "flat", "placeholder": "Квартира/офис", "type": "text"})
+      </div>
+   </div>
+   <div class="js-method-tab" data-tab="4">
+      <div class="order-registration__map-search">
+         @@include('../registration/input.html',{"required": true, "name": "index", "title" : "Адрес доставки", "placeholder": "Искать на карте", "type": "text"})
+      </div>
+      <div class="order-registration__map">
+         <script type=" text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad48beccebc6b130d597f1bb4fe0c2bc67101a22ac6f9502c756f7db0b377dba3&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+   </div>
+   <div class="js-method-tab" data-tab="5">
+      <div class="order-registration__map-search">
+         @@include('../registration/input.html',{"required": true, "name": "index", "title" : "Адрес доставки", "placeholder": "Искать на карте", "type": "text"})
+      </div>
+      <div class="order-registration__map">
+         <script type=" text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad48beccebc6b130d597f1bb4fe0c2bc67101a22ac6f9502c756f7db0b377dba3&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+   </div>
+</div>

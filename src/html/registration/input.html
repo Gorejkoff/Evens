@@ -1,0 +1,6 @@
+<label class="order-registration__input">
+   @@if(context.title){<span class="order-registration__input-title">@@title
+      @@if(context.marker == true){<span>*</span>}
+   </span>}
+   <input type="@@type" name="@@name" id="@@name" placeholder="@@placeholder" @@if(context.required=true){required}>
+</label>

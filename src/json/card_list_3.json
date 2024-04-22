@@ -1,0 +1,43 @@
+[
+   {
+      "title": "Акустика",
+      "description": false,
+      "linkText": "Смотреть всё",
+      "link": "#0",
+      "swiperName": "acoustics",
+      "cards": [
+         {
+            "status": "",
+            "statusName": "",
+            "image": "img-9.png",
+            "description": "Penaudio Karelia - напольная акустика",
+            "price": "192 000 ₽",
+            "condition": "disabled"
+         },
+         {
+            "status": "violet",
+            "statusName": "Новинка",
+            "image": "img-10.png",
+            "description": "Radiotehnika Alfa 1.02 - напольная акустика",
+            "price": "135 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "green",
+            "statusName": "Скидка",
+            "image": "img-11.png",
+            "description": "Полочная акустика Klipsch R-40M Black",
+            "price": "55 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "orange",
+            "statusName": "Хит",
+            "image": "img-12.png",
+            "description": "Колонки компьютерные Sven 320",
+            "price": "40 000 ₽",
+            "condition": "disabled"
+         }
+      ]
+   }
+]

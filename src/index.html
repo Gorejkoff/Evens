@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Evens"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper index">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/main-screen.html',{})
+
+         @@loop("html/card_block.html", "json/card_list_1.json")
+
+         @@include('html/info.html',{})
+
+         @@loop("html/card_block.html", "json/card_list_2.json")
+
+         @@loop("html/card_block.html", "json/card_list_3.json")
+
+         @@loop("html/card_block.html", "json/card_list_4.json")
+
+         @@include('html/brands.html',{})
+
+         @@include('html/poster.html',{})
+
+         @@loop("html/news.html", "json/news-1.json")
+
+         @@include('html/seo.html',{})
+
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

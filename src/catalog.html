@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Catalog"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Каталог", "link": "catalog.html"} ]})
+
+         @@include('html/brand/brand.html',{})
+
+         <div class="page-title" data-da=".main,1,768">
+            <div class="page-title__container">
+               <h1 class="title ">Процессоры</h1>
+            </div>
+         </div>
+
+         <div class="margin-section">
+            <div class="catalog__container">
+               <div class="catalog__body">
+                  @@include('html/filter/filter.html',{"file": "filter.jsoan"})
+                  <div>
+                     @@include('html/sort/sort.html',{})
+                     <div class="catalog__list">
+                        @@loop("html/card/card_item.html", "../src/json/catalog_page.json")
+                     </div>
+                     @@include('html/pagination.html',{})
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         @@include('html/seo.html',{})
+
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

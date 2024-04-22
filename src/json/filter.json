@@ -1,0 +1,102 @@
+[
+   {
+      "category": "Производитель",
+      "nameInput": "manufacture",
+      "list": [
+         {
+            "text": "AMD",
+            "value": "amd"
+         },
+         {
+            "text": "Intel",
+            "value": "Intel"
+         }
+      ]
+   },
+   {
+      "category": "Наличие",
+      "nameInput": "have",
+      "list": [
+         {
+            "text": "Все",
+            "value": "all"
+         },
+         {
+            "text": "В наличии",
+            "value": "stock"
+         }
+      ]
+   },
+   {
+      "category": "Тип процессора",
+      "nameInput": "processor_type",
+      "list": [
+         {
+            "text": "AMD A10",
+            "value": "A10"
+         },
+         {
+            "text": "AMD A6",
+            "value": "A6"
+         },
+         {
+            "text": "AMD A8",
+            "value": "A8"
+         },
+         {
+            "text": "AMD Athlon",
+            "value": "Athlon"
+         },
+         {
+            "text": "AMD Ryzen 3",
+            "value": "Ryzen_3"
+         },
+         {
+            "text": "AMD A10",
+            "value": "A10"
+         },
+         {
+            "text": "AMD A6",
+            "value": "A6"
+         }
+      ]
+   },
+   {
+      "category": "Количество ядер",
+      "nameInput": "number_cores",
+      "list": [
+         {
+            "text": "2",
+            "value": "2"
+         },
+         {
+            "text": "4",
+            "value": "4"
+         },
+         {
+            "text": "6",
+            "value": "6"
+         },
+         {
+            "text": "8",
+            "value": "8"
+         },
+         {
+            "text": "12",
+            "value": "12"
+         },
+         {
+            "text": "2",
+            "value": "2"
+         },
+         {
+            "text": "4",
+            "value": "4"
+         },
+         {
+            "text": "6",
+            "value": "6"
+         }
+      ]
+   }
+]

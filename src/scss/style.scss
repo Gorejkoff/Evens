@@ -1,0 +1,57 @@
+@import "fonts";
+@import "normalize";
+@import "mixin";
+@import "rules";
+
+body {
+   font-family: "Mulish";
+   color: var(--color-black);
+}
+
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.main {
+   position: relative;
+   flex: 1 1 auto;
+   overflow: hidden;
+}
+
+
+
+@import "header";
+@import "header-nav";
+@import "nav-mobile";
+@import "catalog-nav";
+@import "catalog-nav-content";
+@import "modal";
+@import "card";
+@import "info";
+@import "poster";
+@import "news";
+@import "seo";
+@import "brand";
+@import "bread_crumbs";
+@import "pagination";
+@import "filter";
+@import "check";
+@import "catalog";
+@import "sort";
+@import "main_screen";
+@import "product";
+@import "swiper_pagination";
+@import "specifications";
+@import "basket";
+@import "order_registration";
+@import "check";
+@import "order_completed";
+@import "brands";
+
+
+
+
+
+@import "footer";

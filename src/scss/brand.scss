@@ -1,0 +1,83 @@
+.brand {
+
+   &__container {}
+
+   &__card {
+      display: flex;
+      align-items: flex-end;
+      min-height: 62.22vw;
+      border-radius: 10px;
+      background-color: var(--color-gray-platinum);
+      color: var(--color-violet);
+      overflow: hidden;
+      transition: color 0.2s, background-color 0.2s;
+
+      @media (min-width:768px) {
+         min-height: 180px;
+      }
+
+      @media (min-width:1024px) {
+         min-height: 224px;
+      }
+
+      &:hover {
+         color: var(--color-white);
+         background-color: var(--color-violet);
+      }
+   }
+
+   &__name {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      padding: 20px 20px 0;
+      font-size: 20px;
+      font-weight: 700;
+   }
+
+   &__image {
+      width: 100%;
+      margin-top: -10px;
+   }
+
+   &__image-body {
+      position: relative;
+      padding-bottom: 62.7%;
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 10%;
+         width: 120%;
+         height: 120%;
+         object-fit: cover;
+
+         @media (min-width:768px) {
+            top: 0%;
+            left: 0%;
+            width: 140%;
+            height: 140%;
+         }
+
+         @media (min-width:1024px) {
+            top: 20%;
+            left: 30%;
+            width: 100%;
+            height: 100%;
+
+         }
+      }
+   }
+}
+
+.swiper-brand-main {
+   @media (min-width:1024px) {
+      @include sizeMaxMinPc (max-width, 965, 701);
+   }
+
+   @media (min-width:1344px) {
+      max-width: 965px;
+   }
+
+}

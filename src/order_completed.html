@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Order Completed"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Корзина", "link": "basket.html"}, {"name": "Оформление заказа", "link": "order_registration.html"}]})
+
+
+
+         <div class="order-completed margin-section">
+            <div class="order-completed__container">
+               <div class="order-completed__body">
+                  <div class="order-completed__content">
+                     <div class="order-completed__content-title">Поздравляем!</div>
+                     <div class="order-completed__content-text">Ваш заказ успешно оформлен. Узнать статус заказа Вы можете в личном кабинете на странице <a href="#0">«Мои заказы»</a>. Спасибо за покупку!</div>
+                     <a class="button-green" href="index.html">Вернуться на главную</a>
+                  </div>
+                  <div class="order-completed__image">
+                     <div class="order-completed__image-body">
+                        <img src="@img/png/completed.png" alt="довольный компьютер">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+
+         @@include('html/info.html',{})
+
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

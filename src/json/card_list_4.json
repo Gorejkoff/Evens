@@ -1,0 +1,43 @@
+[
+   {
+      "title": "Скоростные накопители",
+      "description": false,
+      "linkText": "Смотреть всё",
+      "link": "#0",
+      "swiperName": "storage",
+      "cards": [
+         {
+            "status": "",
+            "statusName": "",
+            "image": "img-13.png",
+            "description": "Внешний SSD диск 2TB SAMSUNG T7 TOUCH (MU-PC2T0K/WW) BLACK",
+            "price": "22 000 ₽",
+            "condition": "disabled"
+         },
+         {
+            "status": "violet",
+            "statusName": "Новинка",
+            "image": "img-14.png",
+            "description": "Внешний SSD диск 2Tb SanDisk Extreme Pro Portable (SDSSDE61-2T00-G25)",
+            "price": "35 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "green",
+            "statusName": "Скидка",
+            "image": "img-15.png",
+            "description": "Внешний SSD диск Samsung 1.8&quot; T7 500 Gb USB 3.2 Type-C Titanium MU-PC500T/WW",
+            "price": "37 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "orange",
+            "statusName": "Хит",
+            "image": "img-16.png",
+            "description": "Внешний диск SSD SanDisk Portable 2TB (SDSSDE30-2T00-G25)",
+            "price": "40 000 ₽",
+            "condition": ""
+         }
+      ]
+   }
+]

@@ -1,0 +1,45 @@
+.bread-crumbs {
+
+   &__container {}
+
+   &__body {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      display: flex;
+
+      a {
+         font-size: 12px;
+
+         @media (min-width:768px) {
+            font-size: 14px;
+         }
+
+         @media (min-width:1024px) {
+            font-size: 16px;
+         }
+      }
+
+      li:not(:last-child) {
+
+         &::after {
+            content: '/';
+            padding-left: 5px;
+            padding-right: 5px;
+         }
+
+
+
+
+      }
+
+
+
+      li:last-child {
+         pointer-events: none;
+
+         a {
+            color: var(--color-gray);
+         }
+      }
+   }
+}

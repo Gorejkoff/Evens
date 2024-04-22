@@ -1,0 +1,18 @@
+<section id="modal_reviews" class="modal modal__reviews js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Оставить отзыв</h2>
+            <form action="#0" method="post" name="write" id="write">
+               @@include('../modal/modal_modules/modal_inputs.html',{})
+               @@include('../modal/modal_modules/modal_textarea.html',{})
+               @@include('../modal/modal_modules/modal_button.html',{})
+               <div class="modal__check">
+                  @@include('../check/check.html',{"type":"checkbox","name": "personal-data", "text": "Я согласен на ","linkText": "обработку персональных данных", "link": "#0"})
+               </div>
+            </form>
+         </div>
+         @@include('../modal/modal_modules/modal_button_close.html',{})
+      </div>
+   </div>
+</section>

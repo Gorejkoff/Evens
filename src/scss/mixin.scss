@@ -1,0 +1,28 @@
+// медиа
+$minTablet: 'min-width:768px';
+$minDesktop: 'min-width:1344px';
+
+@mixin sizeMaxMinPc ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 1024px)/(1344 - 1024)*($max - $min));
+}
+
+@mixin sizeMaxMinTablet ($prop, $max, $min) {
+   $minpx : $min + px;
+   #{$prop}: calc($minpx + (100vw - 768px)/(1344 - 768)*($max - $min));
+}
+
+@mixin sizeMaxMinTabletFlex ($grow, $shrink, $max, $min) {
+   $minpx : $min + px;
+   flex: $grow $shrink calc($minpx + (100vw - 768px)/(1344 - 768)*($max - $min));
+}
+
+@mixin sizeMaxMinPcFlex ($grow, $shrink, $max, $min) {
+   $minpx : $min + px;
+   flex: $grow $shrink calc($minpx + (100vw - 1024px)/(1344 - 1024)*($max - $min));
+}
+
+// @mixin sizeMaxMinMobile ($prop, $max, $min) {
+//    $minpx : $min + px;
+//    #{$prop}: calc($minpx + (100vw - 375px)/(1024 - 375)*($max - $min));
+// }

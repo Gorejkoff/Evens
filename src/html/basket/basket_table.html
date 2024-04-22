@@ -1,0 +1,89 @@
+<div class="basket margin-section">
+   <div class="basket__container">
+      <form action="#" method="post" name="" id="basket">
+         <div class="basket__body">
+            <div class="basket__header-product">Товар</div>
+            <div class="basket__header-quantity ">Количество</div>
+            <div class="basket__header-price">Цена</div>
+            <div class="basket__header-sum">Всего</div>
+
+            <div class="basket__table-img">
+               <div class="basket__img-body">
+                  <img src="@img/png/catalog-1.png" alt="img">
+               </div>
+            </div>
+            <div class="basket__table-name">
+               <span class="basket__name-article">Артикул: 21018900054</span>
+               <a href="product_card.html">AMD A10-9700 OEM</a>
+            </div>
+            <div class="basket__table-quantity">
+               <div class="basket__quantity">
+                  <input type="number" min="1" value="1" name="">
+                  <button class="basket__dicrement" type="button">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,4 L8,4 " stroke-width="2" stroke="#282828" />
+                     </svg>
+                  </button>
+                  <button class="basket__increment" type="button">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4,0 L4,8 M0,4 L8,4" stroke="#282828" stroke-width="2" />
+                     </svg>
+                  </button>
+               </div>
+            </div>
+            <div class="basket__table-price">465 270 ₽</div>
+            <div class="basket__table-sum">5 270 ₽</div>
+            <div class="basket__table-delete">
+               <button type="button">
+                  <img src="@img/svg/delete.svg" alt="удалить">
+               </button>
+            </div>
+
+            <div class="basket__table-img">
+               <div class="basket__img-body">
+                  <img src="@img/png/catalog-1.png" alt="img">
+               </div>
+            </div>
+            <div class="basket__table-name">
+               <span class="basket__name-article">Артикул: 21018900054</span>
+               <a href="product_card.html">AMD A10-9500 OEM</a>
+            </div>
+            <div class="basket__table-quantity">
+               <div class="basket__quantity">
+                  <input type="number" min="1" value="1" name="">
+                  <button class="basket__dicrement" type="button">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,4 L8,4 " stroke-width="2" stroke="#282828" />
+                     </svg>
+                  </button>
+                  <button class="basket__increment" type="button">
+                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4,0 L4,8 M0,4 L8,4" stroke="#282828" stroke-width="2" />
+                     </svg>
+                  </button>
+               </div>
+            </div>
+            <div class="basket__table-price">5 270 ₽</div>
+            <div class="basket__table-sum">5 270 ₽</div>
+            <div class="basket__table-delete">
+               <button type="button">
+                  <img src="@img/svg/delete.svg" alt="удалить">
+               </button>
+            </div>
+         </div>
+      </form>
+
+      <div class="basket__total">
+         Итого:
+         <span class="basket__total-number">11 440 ₽</span>
+      </div>
+
+      @@if(context.prop == "link"){
+      @@include('../basket/basket_registration_link.html',{})
+      }
+      @@if(context.prop == "submit"){
+      @@include('../basket/basket_registration_submit.html',{})
+      }
+
+   </div>
+</div>

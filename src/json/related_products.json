@@ -1,0 +1,59 @@
+[
+   {
+      "title": "Похожие товары",
+      "description": false,
+      "linkText": "Смотреть всё",
+      "link": "catalog.html",
+      "swiperName": "related-products",
+      "cards": [
+         {
+            "status": "orange",
+            "statusName": "Хит",
+            "image": "catalog-1.png",
+            "description": "Процессор AMD A10 9700 OEM",
+            "price": "120 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "green",
+            "statusName": "Скидка",
+            "image": "catalog-1.png",
+            "description": "Процессор AMD A10 9700 OEM",
+            "price": "90 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "violet",
+            "statusName": "Новинка",
+            "image": "catalog-1.png",
+            "description": "Процессор AMD A10 9700 OEM",
+            "price": "130 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "orange",
+            "statusName": "Хит",
+            "image": "catalog-1.png",
+            "description": "Процессор AMD A10 9700 OEM",
+            "price": "120 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "green",
+            "statusName": "Скидка",
+            "image": "catalog-1.png",
+            "description": "Процессор AMD A10 9700 OEM",
+            "price": "90 000 ₽",
+            "condition": ""
+         },
+         {
+            "status": "violet",
+            "statusName": "Новинка",
+            "image": "catalog-1.png",
+            "description": "Процессор AMD A10 9700 OEM",
+            "price": "130 000 ₽",
+            "condition": ""
+         }
+      ]
+   }
+]

@@ -1,0 +1,228 @@
+[class^="basket__header"] {
+   padding: 10px;
+   font-weight: 700;
+   line-height: 156%;
+   background-color: var(--color-gray-light);
+}
+
+[class^="basket__table"] {
+   display: flex;
+   align-items: center;
+   padding-bottom: 10px;
+   padding-top: 10px;
+
+   @media (min-width:768px) {
+      border-bottom: 1px solid var(--color-gray);
+   }
+}
+
+.basket {
+
+   &__container {}
+
+   &__body {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 10px;
+
+      @media (min-width:768px) {
+         grid-template-columns: 86px 1fr auto auto auto 25px;
+         gap: 0px;
+      }
+   }
+
+   &__header-product {
+      grid-column: span 2;
+   }
+
+   &__header-quantity,
+   &__header-price,
+   &__header-sum,
+   &__table-price {
+      display: none;
+
+      @media (min-width:768px) {
+         display: flex;
+      }
+   }
+
+   &__header-sum {
+      grid-column: span 2;
+   }
+
+   &__table-img {}
+
+   &__img-body {
+      position: relative;
+      width: 86px;
+      height: 62px;
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+   }
+
+   &__table-name {
+      padding-left: 24px;
+      padding-right: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 5px;
+
+      a {
+         transition: color 0.2s;
+      }
+
+      a:hover {
+         color: var(--color-violet);
+      }
+   }
+
+   &__name-article {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--color-gray);
+   }
+
+   &__table-quantity {
+      min-width: 120px;
+
+      @media (min-width:768px) {
+         padding-right: 20px;
+      }
+
+      @media (min-width:1024px) and (max-width:1343.98px) {
+         @include sizeMaxMinPc (min-width, 220, 120)
+      }
+
+      @media (min-width:1344px) {
+         min-width: 220px;
+      }
+
+      @media (max-width:767.98px) {
+         grid-column: span 2;
+      }
+   }
+
+   &__quantity {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 42px;
+      border-radius: 2px;
+      width: 100%;
+      border: 1px solid var(--color-gray);
+
+      @media (min-width:768px) {
+         min-width: 116px;
+         width: auto;
+      }
+
+      input {
+         width: 50px;
+         font-weight: 700;
+         text-align: center;
+      }
+   }
+
+   &__table-price,
+   &__table-sum {
+      min-width: 100px;
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--color-violet);
+
+      @media (min-width:768px) {
+         padding-right: 20px;
+      }
+
+      @media (min-width:1024px) and (max-width:1343.98px) {
+         @include sizeMaxMinPc (min-width, 215, 100)
+      }
+
+      @media (min-width:1344px) {
+         min-width: 215px;
+      }
+
+      @media (max-width:767.98px) {
+         grid-column: span 2;
+         justify-content: center;
+      }
+
+
+   }
+
+   &__table-delete {
+      @media (max-width:767.98px) {
+         grid-column: span 2;
+         border-bottom: 1px solid var(--color-gray);
+
+         button {
+            margin: 0 auto;
+         }
+      }
+   }
+
+   &__dicrement,
+   &__increment {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:hover {
+         path {
+            stroke: var(--color-violet);
+         }
+      }
+   }
+
+   &__dicrement {
+      left: 5px;
+   }
+
+   &__increment {
+      right: 5px;
+   }
+
+   &__total {
+      margin-top: 20px;
+      font-weight: 700;
+      font-size: 20px;
+
+      @media (min-width:768px) {
+         text-align: right;
+      }
+   }
+
+   &__total-number {
+      margin-left: 50px;
+      color: var(--color-violet);
+   }
+
+   &__button {
+      margin-top: 20px;
+      text-align: right;
+
+      a,
+      button {
+         display: inline-block;
+
+         @media (max-width:767.98px) {
+            width: 100%;
+         }
+      }
+   }
+}

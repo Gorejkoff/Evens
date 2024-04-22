@@ -1,0 +1,16 @@
+<div class="border-bottom js-filter-category">
+   <button class="filter__category js-filter-open" type="button">
+      <div>@@category</div>
+      <img src="@img/svg/arrow-nav-bottom.svg" alt="указатель">
+   </button>
+   <div class="filter__list js-filter__block">
+      <div class="filter__list-padding">
+         <ol class="scroll">
+            @@for (var i = 0; i < context.list.length; i++) { <li>
+               @@include('../filter/check.html',{ "nameInput": "@@nameInput", "text": "`+context.list[i].text+`", "value": "`+context.list[i].value+`" })
+               </li>
+               }
+         </ol>
+      </div>
+   </div>
+</div>

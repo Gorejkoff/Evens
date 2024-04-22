@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <title>"Order Completed"</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width" initial-scale=1.0>
+
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Medium.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-SemiBold.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Bold.woff2" crossorigin>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      <header id="header" class="header">
+   <div class="header__container">
+      <div class="header__body js-header-da">
+         <a class="header__logo" href="index.html">
+            <img src="./img/svg/logo.svg" alt="логотип Evens">
+         </a>
+
+
+         <button class="header__phone" type="button">
+            <img src="./img/svg/fone.svg" alt="иконка телефона">
+         </button>
+      </div>
+   </div>
+</header>
+      <header id="header_nav" class="header-nav">
+   <div class="header-nav__container">
+      <nav class="header-nav__body js-header-nav-da">
+         <button id="burger" class="header-nav__burger" type="button">
+            <img src="./img/svg/menu-2.svg" alt="кнопка открыть меню">
+         </button>
+
+         <form class="header-nav__search" action="search" method="post" name="search" id="search">
+            <input type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
+            <button class="header-nav__search-submit" type="button">
+               <img src="./img/svg/search.svg" alt="поиск">
+            </button>
+            <button class="header-nav__search-back" type="button">
+               <img src="./img/svg/arrow-nav-left.svg" alt="кнопка назад">
+            </button>
+         </form>
+         <ol class="header-nav__office">
+            <li>
+               <button class="header-nav__button-search" data-message="Поиск" type="button">
+                  <img src="./img/svg/search-2.svg" alt="поиск">
+               </button>
+            </li>
+            <li>
+               <a href="#0" data-message="У вас пока нет товаров для сравнения">
+                  <img src="./img/svg/compare.svg" alt="сравнение">
+               </a>
+            </li>
+            <li>
+               <a href="#0" data-quantity="4" data-message="У вас пока нет избранных товаров">
+                  <img src="./img/svg/favourites.svg" alt="избранное">
+               </a>
+            </li>
+            <li>
+               <a href="basket.html" data-quantity="20">
+                  <img src="./img/svg/shop.svg" alt="корзина">
+               </a>
+            </li>
+            <li>
+               <a href="#0">
+                  <img src="./img/svg/user.svg" alt="кабинет">
+               </a>
+            </li>
+         </ol>
+      </nav>
+      <div id="catalog_nav_wrapper" class="catalog-nav-wrapper">
+   <div class="catalog-nav-wrapper__container">
+      <div class="catalog-nav-wrapper__body js-catalog-nav-body">
+         <div class="catalog-nav">
+            <div class="catalog-nav__body">
+               <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+               <button class="catalog-nav__button-other" type="button">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M5 12H19M12 5V19" stroke="#9604CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                  Собрать компьютер
+               </button>
+               <ol>
+                  <li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="1">
+      <span>Комплектующие</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="2">
+      <span>Готовые компьютеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="3">
+      <span>Компоненты СВО</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="4">
+      <span>Сетевое оборудование</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="5">
+      <span>Мониторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="6">
+      <span>ИБП, Стабилизаторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="7">
+      <span>Принтеры, сканеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="8">
+      <span>Манипуляторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="9">
+      <span>Мультимедиа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="10">
+      <span>Программное обеспечение</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="11">
+      <span>Аксессуары</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="12">
+      <span>Кабельная продукция</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="13">
+      <span>Товары для майнинга</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="14">
+      <span>Устройства видеозахвата</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="15">
+      <span>Распродажа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li>
+               </ol>
+            </div>
+         </div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="1">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         
+<div class="catalog-nav__list-title">Комплектующие</div>
+
+         <ol>
+            
+   
+
+<li>
+   <a href="#0">Беспроводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Коммутаторы</a>
+   
+   <ol>  <li><a href=index.htm> Коммутаторы сетевые</a>
+</li> <li><a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li><a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Точки доступа</a>
+   
+</li>
+<li>
+   <a href="#0">Мобильный интернет</a>
+   
+   <ol>  <li><a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li><a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li><a href=undefined> Модемы</a>
+</li> <li><a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Wi-Fi адаптеры</a>
+   
+   <ol>  <li><a href=index.htm> PCI-E адаптеры</a>
+</li> <li><a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Усилители сигнала Wi-Fi</a>
+   
+   <ol>  <li><a href=index.htm> MESH системы</a>
+</li> <li><a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Bluetooth адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Проводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Powerline адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Кабели патч-корды, коннекторы</a>
+   
+   <ol>  <li><a href=index.htm> Витая пара</a>
+</li> <li><a href=index.htm> Патч-корды</a>
+</li> <li><a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Антенны</a>
+   
+   <ol>  <li><a href=index.htm> LTE антенны</a>
+</li> <li><a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Кабельные сборки, пигтейлы, переходники</a>
+   
+</li>
+<li>
+   <a href="#0">LAN аксессуары</a>
+   
+</li>
+<li>
+   <a href="#0">Кронштейны, крепежи, гермобоксы</a>
+   
+</li>
+<li>
+   <a href="#0">Инструменты сетевого оборудования</a>
+   
+</li>
+<li>
+   <a href="#0">Телекомму&shy;никационные шкафы и аксессуары</a>
+   
+   <ol>  <li><a href=index.htm> Сетевые шкафы</a>
+</li> <li><a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">PoE инжекторы</a>
+   
+</li>
+<li>
+   <a href="#0">Медиаконвертеры</a>
+   
+</li>
+<li>
+   <a href="#0">ADSL маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые камеры</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые хранилища (NAS)</a>
+   
+</li>
+<li>
+   <a href="#0">Умный дом</a>
+   
+</li>
+<li>
+   <a href="#0">IP-телефония</a>
+   
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="2">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         
+<div class="catalog-nav__list-title">Готовые компьютеры</div>
+
+         <ol>
+            
+   
+
+<li>
+   <a href="#0">Готовые компьютеры</a>
+   
+</li>
+<li>
+   <a href="#0">Коммутаторы</a>
+   
+   <ol>  <li><a href=index.htm> Коммутаторы сетевые</a>
+</li> <li><a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li><a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Точки доступа</a>
+   
+</li>
+<li>
+   <a href="#0">Мобильный интернет</a>
+   
+   <ol>  <li><a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li><a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li><a href=undefined> Модемы</a>
+</li> <li><a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Wi-Fi адаптеры</a>
+   
+   <ol>  <li><a href=index.htm> PCI-E адаптеры</a>
+</li> <li><a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Усилители сигнала Wi-Fi</a>
+   
+   <ol>  <li><a href=index.htm> MESH системы</a>
+</li> <li><a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Bluetooth адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Проводные маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Powerline адаптеры</a>
+   
+</li>
+<li>
+   <a href="#0">Кабели патч-корды, коннекторы</a>
+   
+   <ol>  <li><a href=index.htm> Витая пара</a>
+</li> <li><a href=index.htm> Патч-корды</a>
+</li> <li><a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Антенны</a>
+   
+   <ol>  <li><a href=index.htm> LTE антенны</a>
+</li> <li><a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">Кабельные сборки, пигтейлы, переходники</a>
+   
+</li>
+<li>
+   <a href="#0">LAN аксессуары</a>
+   
+</li>
+<li>
+   <a href="#0">Кронштейны, крепежи, гермобоксы</a>
+   
+</li>
+<li>
+   <a href="#0">Инструменты сетевого оборудования</a>
+   
+</li>
+<li>
+   <a href="#0">Телекомму&shy;никационные шкафы и аксессуары</a>
+   
+   <ol>  <li><a href=index.htm> Сетевые шкафы</a>
+</li> <li><a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li>
+<li>
+   <a href="#0">PoE инжекторы</a>
+   
+</li>
+<li>
+   <a href="#0">Медиаконвертеры</a>
+   
+</li>
+<li>
+   <a href="#0">ADSL маршрутизаторы</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые камеры</a>
+   
+</li>
+<li>
+   <a href="#0">Сетевые хранилища (NAS)</a>
+   
+</li>
+<li>
+   <a href="#0">Умный дом</a>
+   
+</li>
+<li>
+   <a href="#0">IP-телефония</a>
+   
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+      </div>
+   </div>
+</div>
+   </div>
+</header>
+
+      <main class="main">
+
+         <div class="bread-crumbs">
+   <div class="bread-crumbs__container">
+      <ol class="bread-crumbs__body">
+          <li><a href="index.html">Главная</a></li>  <li><a href="basket.html">Корзина</a></li>  <li><a href="order_registration.html">Оформление заказа</a></li> 
+      </ol>
+   </div>
+</div>
+
+
+
+         <div class="order-completed margin-section">
+            <div class="order-completed__container">
+               <div class="order-completed__body">
+                  <div class="order-completed__content">
+                     <div class="order-completed__content-title">Поздравляем!</div>
+                     <div class="order-completed__content-text">Ваш заказ успешно оформлен. Узнать статус заказа Вы можете в личном кабинете на странице <a href="#0">«Мои заказы»</a>. Спасибо за покупку!</div>
+                     <a class="button-green" href="index.html">Вернуться на главную</a>
+                  </div>
+                  <div class="order-completed__image">
+                     <div class="order-completed__image-body">
+                        <img src="./img/png/completed.png" alt="довольный компьютер">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+
+         <div class="info margin-section">
+   <div class="info__container">
+      <div class="info__body">
+         <div class="info__block">
+            <div class="info__image">
+               <img src="./img/svg/protection.svg" alt="img">
+            </div>
+            <div class="info__content">
+               <div class="info__title">3 года гарантии</div>
+               <div class="info__text">Компьютеры EvensPC имеют гарантию на комплектующие и сервисное обслуживание</div>
+            </div>
+         </div>
+         <div class="info__block">
+            <div class="info__image">
+               <img src="./img/svg/efficiency.svg" alt="img">
+            </div>
+            <div class="info__content">
+               <div class="info__title">Оперативная сборка ПК</div>
+               <div class="info__text">Мы качественно соберем системный блок за 1 - 2 дня с нужными Вам конфигурациями</div>
+            </div>
+         </div>
+         <div class="info__block">
+            <div class="info__image">
+               <img src="./img/svg/suport.svg" alt="img">
+            </div>
+            <div class="info__content">
+               <div class="info__title">Консультация и поддержка</div>
+               <div class="info__text">Наши специалисты готовы предоставить профессиональную консультацию на любой вопрос</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+      </main>
+
+      <footer class="footer">
+   <div class="footer__container">
+      <div class="footer__body">
+         <section class="footer__info">
+            <a href="index.html" class="footer__logo">
+               <img src="./img/svg/logo.svg" alt="логотип Evens">
+            </a>
+            <h2 class="footer__text">Интернет — магазин компьютерной техники и электроники!</h2>
+            <address>
+               <p class="footer__text">г. Москва, Пятницкое шоссе, д. 18, <span class="footer__p-smaller">ТК «Митинский Радиорынок», 2 этаж, пав. 379</span></p>
+               <a class="footer__text-link" href="#0">Показать на карте</a>
+            </address>
+            <div class="footer__fone">
+               <button class="footer__block js-modal-open" type="button" data-modal_open="modal-call">
+                  <div class="footer__number">+7 965 130 55 70</div>
+                  <div class="footer__text-link">Заказать звонок</div>
+               </button>
+               <button class="footer__block js-modal-open" type="button" data-modal_open="modal_write">
+                  <div class="footer__number">+7 909 670 05 09</div>
+                  <div class="footer__text-link">Напишите нам</div>
+               </button>
+            </div>
+            <div class="footer__social">
+               <a href="#0">
+                  <img src="./img/svg/whats_app.svg" alt="иконка социальной сети whats app">
+               </a>
+               <a href="#0">
+                  <img src="./img/svg/vk.svg" alt="иконка социальной сети в контакте">
+               </a>
+            </div>
+         </section>
+         <nav class="footer__nav">
+            <h2 class="footer__nav-title">Информация</h2>
+            <ol class="footer__nav-links">
+               <li>
+                  <a href="#0">Вакансии</a>
+               </li>
+               <li>
+                  <a href="#0">Возврат и обмен</a>
+               </li>
+               <li>
+                  <a href="#0">Доставка по Москве</a>
+               </li>
+               <li>
+                  <a href="#0">Контакты</a>
+               </li>
+               <li>
+                  <a href="#0">Акции</a>
+               </li>
+               <li>
+                  <a href="#0">Гарантийное обслуживание</a>
+               </li>
+               <li>
+                  <a href="#0">Гарантия на системные блоки</a>
+               </li>
+               <li>
+                  <a href="#0">Розничная покупка</a>
+               </li>
+               <li>
+                  <a href="#0">Покупка на организацию</a>
+               </li>
+            </ol>
+         </nav>
+         <nav class="footer__nav">
+            <h2 class="footer__nav-title">Дополнительно</h2>
+            <ol class="footer__nav-links">
+               <li>
+                  <a href="#0">Оптовым клиентам</a>
+               </li>
+               <li>
+                  <a href="#0">Реквизиты</a>
+               </li>
+               <li>
+                  <a href="#0">Законы о ЗПП</a>
+               </li>
+               <li>
+                  <a href="#0">Соглашение</a>
+               </li>
+               <li>
+                  <a href="#0">Пользовательское соглашение</a>
+               </li>
+               <li>
+                  <a href="#0">О компании</a>
+               </li>
+            </ol>
+         </nav>
+      </div>
+
+      <div class="footer__bottom">
+         <span>© 2023 EvensPC</span>
+         <a href="#0">Пользовательское соглашение</a>
+         <a href="#0">Политика конфиденциальности</a>
+      </div>
+   </div>
+</footer>
+
+      <div class="menu-mobile">
+   <div class="menu-mobile__container">
+      <div class="menu-mobile__body">
+
+         <div class="header-nav__catalog" data-da=".js-header-nav-da,1,768">
+            <button class="header-nav__catalog-button js-open-catalog-nav" type="button">
+               <img src="./img/svg/menu.svg" alt="кнопка открыть меню">
+               Каталог товаров
+            </button>
+
+            <button id="closeMenu" class="menu-mobile__close" type="button">
+               <img src="./img/svg/close.svg" alt="закрыть">
+            </button>
+
+
+         </div>
+         <ol class="header-nav__links js-header-links" data-da=".js-header-nav-da,2,768">
+            <li>
+               <a href="#0">Контакты</a>
+            </li>
+            <li>
+               <a href="#0">Новости</a>
+            </li>
+            <li class="header-nav__menu-tab js-menu-tab">
+               <button class="js-menu-tab-button" type="button">
+                  Информация
+                  <img src="./img/svg/arrow-nav-bottom.svg" alt="стрелка указывает вниз">
+               </button>
+               <div class="header-nav__info js-menu-tab-body">
+                  <ol class=" js-menu-tab-content">
+                     <li><a href="#0">Оплата</a></li>
+                     <li><a href="#0">Доставка</a></li>
+                     <li><a href="#0">Самовывоз</a></li>
+                     <li><a href="#0">Гарантия</a></li>
+                  </ol>
+               </div>
+            </li>
+         </ol>
+
+         <div class="header__build js-modal-open" data-da=".js-header-da,1,768" data-modal_open="modal-build-pc">
+            <button type="button">Собрать ПК</button>
+         </div>
+         <div class="header__social" data-da=".js-header-da,2,768">
+            <a href="#0">
+               <img src="./img/svg/vk.svg" alt="иконка социальной сети в контакте">
+            </a>
+            <a href="#0">
+               <img src="./img/svg/whats_app.svg" alt="иконка социальной сети whats app">
+            </a>
+         </div>
+         <div class="header__contacts" data-da=".js-header-da,3,768">
+            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal-call">
+               <p class="header__contacts-number">+7 965 130 55 70</p>
+               <p class="header__contacts-text">Заказать звонок</p>
+            </button>
+            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal_write">
+               <p class="header__contacts-number">+7 909 670 05 09</p>
+               <p class="header__contacts-text">Напишите нам</p>
+            </button>
+         </div>
+         <div class="header__address" data-da=".js-header-da,4,768">
+            <p class="header__address-item">г. Москва, Пятницкое шоссе, <wbr/>д. 18</p>
+            <p class="header__address-correction">ТК «Митинский Радиорынок», <wbr/>2 этаж, пав. 379</p>
+         </div>
+
+
+
+      </div>
+   </div>
+</div>
+
+      <section id="modal-build-pc" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Собрать ПК</h2>
+            <p class="modal__text">Пожалуйста, оставьте заявку и наши специалистыпомогут Вами подобрать комплектующие и рассчитать стоимость.</p>
+            <p class="modal__text">Или позвоните нам: <span class="modal__phone">+7 909 670 05 09</span></p>
+            <form action="#0" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <textarea class="modal__textarea" name="" id="" placeholder="Ваше сообщение"></textarea>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="#0"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <div class="modal__image">
+            <img src="./img/webp/pc.webp" alt="системный блок">
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+      <section id="modal-call" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Заказать звонок</h2>
+            <p class="modal__text">Оставьте заявку и мы перезвоним Вам в самое ближайшее время!</p>
+            <form action="#0" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="#0"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+      <section id="modal_write" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Напишите нам</h2>
+            <p class="modal__text">У Вас есть вопрос или пожелание? Пожалуйста, напишите нам!</p>
+            <p class="modal__text">Или позвоните нам: <span class="modal__phone">+7 909 670 05 09</span></p>
+            <form action="#0" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <textarea class="modal__textarea" name="" id="" placeholder="Ваше сообщение"></textarea>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="#0"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+   </div>
+
+
+   <script defer src='./js/app.js'></script>
+<script defer src='./js/swiper.js'></script>
+
+
+</body>
+
+</html>

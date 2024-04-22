@@ -1,0 +1,167 @@
+.main-screen {
+   position: relative;
+   color: var(--color-white);
+
+   @media (min-width:768px) {
+      margin-top: 20px;
+   }
+
+   &__container {}
+
+   &__body {
+      display: flex;
+      gap: 25px;
+   }
+
+   &__nav {
+      position: relative;
+      display: none;
+
+      @media (min-width:1024px) {
+         display: block;
+         @include sizeMaxMinPcFlex (0, 0, 306, 250);
+      }
+
+      @media (min-width:1344px) {
+         flex: 0 0 306px;
+      }
+   }
+
+   &__content {
+      position: relative;
+      width: 100%;
+
+      @media (min-width:1024px) {
+         @include sizeMaxMinPcFlex (0, 0, 965, 701);
+      }
+
+      @media (min-width:1344px) {
+         flex: 0 0 965px;
+      }
+
+   }
+
+
+   &__card {
+      padding: 20px 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      overflow: hidden;
+      min-height: 125vw;
+
+      @media (min-width:768px) {
+         padding: 20px 33px;
+         min-height: 50vw;
+      }
+
+      @media (min-width:1024px) {
+         padding: 20px 40px;
+         min-height: 440px;
+
+      }
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         z-index: -1;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+
+   &__image-body {}
+
+   &__title {
+      margin-bottom: 10px;
+      max-width: 420px;
+      font-weight: 700;
+      font-size: 30px;
+
+      @media (min-width:1024px) {
+         margin-bottom: 20px;
+         font-size: 50px;
+      }
+   }
+
+   &__text {
+      margin-bottom: 10px;
+      max-width: 420px;
+      font-size: 14px;
+
+      @media (min-width:768px) {
+         font-size: 16px;
+      }
+
+      @media (min-width:1024px) {
+         margin-bottom: 20px;
+         font-size: 20px;
+      }
+   }
+
+   &__button {
+      margin-bottom: 40px;
+      width: 200px;
+      height: 50px;
+
+      @media (min-width:768px) {
+         margin-bottom: 80px;
+      }
+
+      @media (min-width:1024px) {
+         margin-bottom: 60px;
+      }
+   }
+
+   .swiper {
+      overflow: hidden;
+   }
+
+   .swiper-main-pagination {
+      padding: 0 40px;
+      position: absolute;
+      bottom: 30px;
+      width: 100%;
+      z-index: 2;
+      justify-content: flex-start;
+
+      @media (min-width:768px) {
+         bottom: 20px;
+      }
+
+      @media (min-width:1024px) {
+         bottom: 40px;
+      }
+
+      .swiper-pagination-bullet {
+         background-color: var(--color-white);
+      }
+   }
+
+
+}
+
+.swiper-main {
+   position: relative;
+   margin-bottom: 20px;
+   margin-left: -20px;
+   margin-right: -20px;
+
+   @media (min-width:768px) {
+      margin-left: 0;
+      margin-right: 0;
+   }
+
+   @media (min-width:1024px) {
+      @include sizeMaxMinPc (max-width, 965, 701);
+   }
+
+   @media (min-width:1344px) {
+      max-width: 965px;
+   }
+
+}

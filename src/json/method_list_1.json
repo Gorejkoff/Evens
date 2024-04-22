@@ -1,0 +1,37 @@
+[
+   {
+      "type": "radio",
+      "name": "receiving",
+      "text": "Самовывоз из магазина - 0 ₽",
+      "buttonName": "js-method-button",
+      "buttonNumber": "1"
+   },
+   {
+      "type": "radio",
+      "name": "receiving",
+      "text": "Доставка в пределах МКАД (Вес: 0.09кг) - 390 ₽",
+      "buttonName": "js-method-button",
+      "buttonNumber": "2"
+   },
+   {
+      "type": "radio",
+      "name": "receiving",
+      "text": "Доставка за пределами МКАД ( +30 руб. за 1км. от МКАД) - 500 ₽",
+      "buttonName": "js-method-button",
+      "buttonNumber": "3"
+   },
+   {
+      "type": "radio",
+      "name": "receiving",
+      "text": "СДЭК до двери",
+      "buttonName": "js-method-button",
+      "buttonNumber": "4"
+   },
+   {
+      "type": "radio",
+      "name": "receiving",
+      "text": "СДЭК до ПВЗ",
+      "buttonName": "js-method-button",
+      "buttonNumber": "5"
+   }
+]

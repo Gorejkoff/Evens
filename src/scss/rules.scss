@@ -1,0 +1,255 @@
+:root {
+   --color-violet: #9604CF;
+   --color-white: #ffffff;
+   --color-black-dark: #000000;
+   --color-black: #282828;
+   --color-green: #45CC2E;
+   --color-gray: #C5C7C6;
+   --color-gray-light: #F6F6F6;
+   --color-gray-platinum: #E7E7E7;
+   --color-orange: #F5CB36;
+   --color-blue: #178DF9;
+}
+
+.hidden {
+   display: none;
+}
+
+.body-overflow {
+   overflow: hidden;
+}
+
+[class*="__container"] {
+   padding-left: 20px;
+   padding-right: 20px;
+   margin: 0 auto;
+   width: 100%;
+   // 1296 + 24 + 24 = 1344
+   max-width: 1344px;
+
+   @media (min-width:768px) {
+      padding-left: 24px;
+      padding-right: 24px;
+   }
+}
+
+.margin-section {
+   margin-bottom: 40px;
+
+   @media (min-width:1024px) {
+      margin-bottom: 80px;
+   }
+}
+
+.border-bottom {
+   border-bottom: 1px solid var(--color-gray);
+}
+
+.page-title {
+   margin-bottom: 20px;
+}
+
+.title {
+   font-size: 30px;
+   font-weight: 700;
+
+   @media (min-width:1024px) {
+      font-size: 50px;
+   }
+}
+
+.hover-inner-menu {
+   text-align: center;
+   transition: background-color 0.2s, color 0.2s;
+
+   @media (min-width:768px) {
+      text-align: start;
+   }
+}
+
+.hover-inner-menu:hover {
+   color: var(--color-white);
+   background-color: var(--color-violet);
+}
+
+.hover-underline {
+   span {
+      position: relative;
+   }
+
+   span::before {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      z-index: 2;
+      width: 0;
+      height: 1px;
+      background-color: var(--color-violet);
+      transition: width 0.2s;
+   }
+
+   &:hover span::before {
+      width: 100%;
+   }
+}
+
+.scroll::-webkit-scrollbar {
+   width: 4px;
+   height: 4px;
+}
+
+.scroll::-webkit-scrollbar-track {
+   border-radius: 2px;
+   background-color: var(--color-gray);
+}
+
+.scroll::-webkit-scrollbar-thumb {
+   background-color: var(--color-green);
+   background-clip: content-box;
+   border-radius: 2px;
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+   -webkit-appearance: none;
+   margin: 0px;
+}
+
+.orange {
+   background-color: var(--color-orange);
+}
+
+.green {
+   background-color: var(--color-green);
+}
+
+.violet {
+   background-color: var(--color-violet);
+}
+
+.burger-active {
+   overflow: hidden;
+}
+
+.burger-active .menu-mobile {
+   left: 0;
+}
+
+.js-menu-tab-body {
+   height: 0;
+   overflow: hidden;
+   pointer-events: none;
+   transition: height 0.3s;
+}
+
+.js-menu-tab {
+   position: relative;
+   z-index: 1;
+   margin-top: -11px;
+   margin-bottom: -11px;
+}
+
+.js-menu-tab.active {
+   z-index: 2;
+}
+
+.js-menu-tab.active .js-menu-tab-body {
+   pointer-events: all;
+}
+
+.js-menu-tab-button img {
+   transition: transform 0.3s;
+}
+
+.js-menu-tab.active .js-menu-tab-button img {
+   transform: rotate3d(1, 0, 0, 180deg);
+}
+
+.js-tab-content {
+   height: 0px;
+   overflow: hidden;
+   transition: height 0.3s;
+}
+
+.js-modal-hidden {
+   display: none;
+}
+
+.js-modal-visible {
+   display: block;
+}
+
+.js-method-tab {
+   display: none;
+
+   &.active {
+      display: block;
+   }
+}
+
+.button-green {
+   padding: 14px 16px;
+   min-height: 48px;
+   color: var(--color-white);
+   background-color: var(--color-green);
+   border-radius: 2px;
+}
+
+.button-transparent {
+   padding: 14px 16px;
+   min-height: 48px;
+   color: var(--color-green);
+   border: 1px solid var(--color-green);
+   border-radius: 2px;
+}
+
+.button-transparent,
+.button-green {
+   transition: all 0.2s;
+}
+
+.button-green:disabled,
+.button-transparent:disabled {
+   color: var(--color-gray) !important;
+   border: 1px solid var(--color-gray) !important;
+   background-color: var(--color-white) !important;
+   pointer-events: none;
+}
+
+.button-transition {
+   padding-top: 30px;
+   display: flex;
+   justify-content: center;
+
+   @media (min-width:1024px) {
+      display: none;
+   }
+}
+
+.link-transition {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   color: var(--color-violet);
+}
+
+.swiper-wrapper {
+   position: relative;
+   z-index: 1;
+   display: flex;
+   transition-property: transform;
+}
+
+.swiper-slide {
+   flex-shrink: 0;
+   width: 100%;
+   height: 100%;
+   position: relative;
+   transition-property: transform;
+   display: block;
+}

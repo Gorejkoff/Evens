@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Product Card"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Процессоры", "link": "catalog.html"}, {"name": "Процессор AMD A10 9700 OEM", "link": "product_card.html"} ]})
+
+         @@include('html/title/page_title.html',{"title": "Процессор AMD A10 9700 OEM"})
+
+
+         @@include('html/product_card/product_wrapper.html',{})
+
+
+
+
+         @@loop("html/card_block.html", "json/related_products.json")
+
+
+         @@include('html/info.html',{})
+
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+
+      @@include('html/modal/modal_reviews.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

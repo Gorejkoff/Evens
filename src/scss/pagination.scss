@@ -1,0 +1,30 @@
+.pagination {
+   margin-top: 30px;
+
+   &__container {}
+
+   &__body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      a {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         width: 34px;
+         height: 34px;
+         border-radius: 2px;
+         background-color: var(--color-gray-light);
+         color: var(--color-black);
+         transition: color 0.2s, background-color 0.2s;
+
+         &.active,
+         &:hover {
+            background-color: var(--color-green);
+            color: var(--color-white);
+         }
+      }
+   }
+}
