@@ -77,10 +77,11 @@
    &__image-body {}
 
    &__title {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       max-width: 420px;
       font-weight: 700;
       font-size: 30px;
+      line-height: 120%;
 
       @media (min-width:1024px) {
          margin-bottom: 20px;
@@ -89,9 +90,10 @@
    }
 
    &__text {
-      margin-bottom: 10px;
+      margin-bottom: 25px;
       max-width: 420px;
       font-size: 14px;
+      line-height: 115%;
 
       @media (min-width:768px) {
          font-size: 16px;
@@ -122,7 +124,7 @@
    }
 
    .swiper-main-pagination {
-      padding: 0 40px;
+      padding: 0 20px;
       position: absolute;
       bottom: 30px;
       width: 100%;
@@ -130,6 +132,7 @@
       justify-content: flex-start;
 
       @media (min-width:768px) {
+         padding: 0 40px;
          bottom: 20px;
       }
 

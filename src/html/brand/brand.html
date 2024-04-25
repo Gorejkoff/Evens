@@ -1,16 +1,38 @@
-<div class="brand margin-section">
+<div id="brand" class="brand margin-section">
    <div class="brand__container">
       <div class="swiper swiper-brand">
-         <div class="swiper-wrapper">
-
+         <div id="brand-body" class="brand__body swiper-wrapper">
             @@loop('../brand/brand_card.html', [
             { "name": "Intel LGA 1700", "image": "brand-1.png", "link": "#0" },
+            { "name": "Intel LGA 1200", "image": "brand-3.png", "link": "#0" },
+            { "name": "AMD AM9", "image": "brand-2.png", "link": "#0" },
+            { "name": "Intel LGA 1700", "image": "brand-1.png", "link": "#0" },
+            { "name": "Intel LGA 1200", "image": "brand-3.png", "link": "#0" },
+            { "name": "AMD AM4", "image": "brand-4.png", "link": "#0" },
+            { "name": "AMD AM9", "image": "brand-2.png", "link": "#0" },
+            { "name": "Intel LGA 1700", "image": "brand-1.png", "link": "#0" },
+            { "name": "AMD AM4", "image": "brand-4.png", "link": "#0" },
+            { "name": "AMD AM9", "image": "brand-2.png", "link": "#0" },
+            { "name": "AMD AM4", "image": "brand-4.png", "link": "#0" },
+            { "name": "Intel LGA 1200", "image": "brand-3.png", "link": "#0" },
+            { "name": "Intel LGA 1200", "image": "brand-3.png", "link": "#0" },
+            { "name": "AMD AM9", "image": "brand-2.png", "link": "#0" },
+            { "name": "Intel LGA 1200", "image": "brand-3.png", "link": "#0" },
+            { "name": "AMD AM4", "image": "brand-4.png", "link": "#0" }, { "name": "Intel LGA 1700", "image": "brand-1.png", "link": "#0" },
+            { "name": "Intel LGA 1700", "image": "brand-1.png", "link": "#0" },
+            { "name": "AMD AM4", "image": "brand-4.png", "link": "#0" }, { "name": "Intel LGA 1700", "image": "brand-1.png", "link": "#0" },
+            { "name": "AMD AM9", "image": "brand-2.png", "link": "#0" },
             { "name": "AMD AM9", "image": "brand-2.png", "link": "#0" },
             { "name": "Intel LGA 1200", "image": "brand-3.png", "link": "#0" },
             { "name": "AMD AM4", "image": "brand-4.png", "link": "#0" }
             ])
-
          </div>
+      </div>
+      <div class="brand__more">
+         <button id="brand-more" type="button">
+            Больше категорий
+            <img src="@img/svg/arrow-nav-bottom.svg" alt="стрелка вниз">
+         </button>
       </div>
    </div>
 </div>

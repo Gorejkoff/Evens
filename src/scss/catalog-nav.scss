@@ -86,8 +86,6 @@
       flex: 0 0 306px;
    }
 
-   &__body {}
-
    &__button,
    &__button-other {
       padding: 10px;
@@ -96,7 +94,12 @@
       align-items: center;
       gap: 10px;
       width: 100%;
+      font-size: 16px;
       transition: all 0.2s;
+
+      @media (min-width:768px) and (max-width:1023.98px) {
+         font-size: 14;
+      }
    }
 
    &__button-other {
@@ -114,7 +117,6 @@
    &__button {
       text-align: start;
       border-top: 1px solid var(--color-gray-light);
-
 
       path {
          transition: all 0.2s;

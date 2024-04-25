@@ -3,10 +3,11 @@
       <div class="card__image">
          <img src="@img/png/@@image" alt="образец товара">
       </div>
+      <div class="card__article">Артикул: 21018900054</div>
       <h3 class="card__description">@@description</h3>
-      <div class="card__price">@@price</div>
+      <div class="card__price">@@if(wasprice){<span class="card__wasprice">@@wasprice</span>}<span>@@price</span></div>
       <div class="card__button">
-         <button class="button-transparent" type="button" @@condition>Добавить в корзину</button>
+         <button class="button-transparent" type="button" @@condition>@@if(condition){Нет в наличии} @@if(!condition){Добавить в корзину}</button>
       </div>
       <div class="card__top-buttons">
          <button class="card__compare" type="button">

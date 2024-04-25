@@ -130,5 +130,13 @@
       li:not(:last-child) {
          margin-bottom: 6px;
       }
+
+      a {
+         transition: color 0.2s;
+      }
+
+      a:hover {
+         color: var(--color-violet);
+      }
    }
 }

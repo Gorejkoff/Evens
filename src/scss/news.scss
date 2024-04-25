@@ -11,7 +11,6 @@
 
    &__body {
       display: flex;
-      gap: 24px;
    }
 
    &__card {
@@ -41,16 +40,32 @@
    }
 
    &__card-title {
-      font-size: 20px;
-      font-weight: 700;
+      margin-bottom: 5px;
 
       a {
+         line-height: 115%;
+         font-weight: 700;
+         font-size: 20px;
          color: var(--color-black);
          transition: color 0.2s;
 
          &:hover {
             color: var(--color-green);
          }
+      }
+   }
+
+   &__card-text {
+      margin-bottom: 5px;
+      font-size: 12px;
+      line-height: 115%;
+
+      @media (min-width:768px) {
+         font-size: 14px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 16px;
       }
    }
 

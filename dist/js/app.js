@@ -37,6 +37,12 @@ function setDataHeightHeader() {
 };
 if (HEADER) { setDataHeightHeader() }
 
+// для адаптива блока с брэндами товара в каталоге
+const brandBody = document.getElementById('brand-body');
+if (brandBody) {
+   brandBody.children.length > 12 && document.getElementById('brand').classList.add('card-hidden');
+}
+
 // анализ прокрутки для адаптива меню
 let ignoreHeaderHight;
 /* === СОБЫТИЕ СКРОЛЛА === */
@@ -131,6 +137,10 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('.basket__increment')) {
       const input = event.target.closest('.basket__quantity').querySelector('input');
       input.value = Number(input.value) + 1;
+   }
+   // открывает полсый список бредов в каталоге
+   if (event.target.closest('#brand-more')) {
+      document.getElementById('brand').classList.remove('card-hidden');
    }
 })
 

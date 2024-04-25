@@ -80,6 +80,7 @@
    &__status {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 25px;
    }
 
@@ -112,7 +113,6 @@
 
 .product-buttons {
    padding-bottom: 20px;
-   margin-bottom: 20px;
    border-bottom: 1px solid var(--color-gray);
 
    @media (min-width:768px) and (max-width:1023.98px) {
@@ -165,11 +165,6 @@
 }
 
 .product-transfer {
-   @media (max-width:767.98px) {
-      &>*:not(:last-child) {
-         margin-bottom: 20px;
-      }
-   }
 
    @media (min-width:768px) and (max-width:1023.98px) {
       padding: 20px;
@@ -183,19 +178,26 @@
 
    &__buttons {
       margin-bottom: 20px;
-      display: flex;
+      display: none;
       justify-content: space-between;
       gap: 10px;
+
+      @media (min-width:768px) and (max-width:1023.98px) {
+         display: flex;
+      }
    }
 
+   &__delivery {
+      margin-bottom: 10px;
 
+      @media (min-width:768px) and (max-width:1023.98px) {
+         margin-bottom: 0;
+      }
+
+   }
 
    &__delivery,
    &__payment {
-
-      &>*:not(:last-child) {
-         margin-bottom: 20px;
-      }
 
       @media (min-width:768px) and (max-width:1023.98px) {
          display: none;
@@ -209,6 +211,7 @@
    &__title {
       font-weight: 700;
       font-size: 18px;
+      line-height: 222%;
 
       @media (min-width:768px) and (max-width:1023.98px) {
          color: var(--color-gray);
@@ -227,11 +230,13 @@
       @media (min-width:768px) and (max-width:1023.98px) {
          display: flex;
          flex-wrap: wrap;
+         gap: 10px;
       }
 
       li {
          margin-left: 22px;
          list-style-type: disc;
+         line-height: 143%;
 
          @media (min-width:768px) and (max-width:1023.98px) {
             flex: 1 1 40%;
@@ -242,7 +247,6 @@
          }
 
          &>*:not(:first-child) {
-            padding-top: 10px;
             margin-left: -22px;
          }
       }
@@ -261,10 +265,10 @@
 
    &__how {
       color: var(--color-green);
+      white-space: nowrap;
    }
 
    &__condition {
-      font-size: 12px;
       color: var(--color-gray);
    }
 }

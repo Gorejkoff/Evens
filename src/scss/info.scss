@@ -35,8 +35,6 @@
       background-color: var(--color-gray-light);
    }
 
-   &__content {}
-
    &__title {
       margin-bottom: 10px;
       font-size: 14px;
@@ -53,6 +51,7 @@
 
    &__text {
       font-size: 12px;
+      line-height: 125%;
 
       @media (min-width:768px) {
          font-size: 14px;

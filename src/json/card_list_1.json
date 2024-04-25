@@ -12,6 +12,7 @@
             "image": "img-1.png",
             "description": "Игровой компьютер EvensPC Snow man",
             "price": "120 000 ₽",
+            "wasprice": "130 000 ₽",
             "condition": ""
          },
          {
@@ -20,6 +21,7 @@
             "image": "img-2.png",
             "description": "Игровой компьютер EvensPC Snow",
             "price": "100 000 ₽",
+            "wasprice": "",
             "condition": "disabled"
          },
          {
@@ -28,6 +30,7 @@
             "image": "img-3.png",
             "description": "Игровой компьютер EvensPC man",
             "price": "90 000 ₽",
+            "wasprice": "",
             "condition": ""
          },
          {
@@ -36,6 +39,7 @@
             "image": "img-4.png",
             "description": "Игровой компьютер EvensPC",
             "price": "130 000 ₽",
+            "wasprice": "",
             "condition": ""
          },
          {
@@ -44,6 +48,7 @@
             "image": "img-1.png",
             "description": "Игровой компьютер EvensPC Snow man",
             "price": "120 000 ₽",
+            "wasprice": "130 000 ₽",
             "condition": ""
          },
          {
@@ -52,6 +57,7 @@
             "image": "img-2.png",
             "description": "Игровой компьютер EvensPC Snow",
             "price": "100 000 ₽",
+            "wasprice": "",
             "condition": "disabled"
          },
          {
@@ -60,6 +66,7 @@
             "image": "img-3.png",
             "description": "Игровой компьютер EvensPC man",
             "price": "90 000 ₽",
+            "wasprice": "110 000 ₽",
             "condition": ""
          },
          {
@@ -68,6 +75,7 @@
             "image": "img-4.png",
             "description": "Игровой компьютер EvensPC",
             "price": "130 000 ₽",
+            "wasprice": "",
             "condition": ""
          }
       ]

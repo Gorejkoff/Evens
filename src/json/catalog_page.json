@@ -5,6 +5,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "4 350 ₽",
+      "wasprice": "",
       "condition": ""
    },
    {
@@ -13,6 +14,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "6 200 ₽",
+      "wasprice": "",
       "condition": "disabled"
    },
    {
@@ -21,6 +23,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "5 700 ₽",
+      "wasprice": "",
       "condition": ""
    },
    {
@@ -29,6 +32,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "4 350 ₽",
+      "wasprice": "",
       "condition": ""
    },
    {
@@ -37,6 +41,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "6 200 ₽",
+      "wasprice": "",
       "condition": "disabled"
    },
    {
@@ -45,6 +50,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "5 700 ₽",
+      "wasprice": "",
       "condition": ""
    },
    {
@@ -53,6 +59,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "4 350 ₽",
+      "wasprice": "",
       "condition": ""
    },
    {
@@ -61,6 +68,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "6 200 ₽",
+      "wasprice": "",
       "condition": "disabled"
    },
    {
@@ -69,6 +77,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "5 700 ₽",
+      "wasprice": "",
       "condition": ""
    },
    {
@@ -77,6 +86,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "4 350 ₽",
+      "wasprice": "",
       "condition": ""
    },
    {
@@ -85,6 +95,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "6 200 ₽",
+      "wasprice": "",
       "condition": "disabled"
    },
    {
@@ -93,6 +104,7 @@
       "image": "catalog-1.png",
       "description": "Процессор AMD A10 9700 OEM",
       "price": "5 700 ₽",
+      "wasprice": "",
       "condition": ""
    }
 ]

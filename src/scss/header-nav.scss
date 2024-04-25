@@ -12,12 +12,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
-      min-height: 49px;
+      gap: 16px;
+      min-height: 46px;
 
-      @media (min-width:768px) {
-         padding-top: 10px;
-         padding-bottom: 10px;
+      @media (min-width:1024px) {
+         gap: 30px;
          min-height: 69px;
       }
    }
@@ -60,7 +59,11 @@
       align-self: stretch;
       display: flex;
       align-items: stretch;
-      gap: 30px;
+      gap: 16px;
+
+      @media (min-width:1024px) {
+         gap: 30px;
+      }
 
       &>li {
          position: relative;
@@ -110,31 +113,51 @@
       }
 
       input {
-         padding: 10px 40px;
+         padding: 4px 25px 4px 10px;
          width: 100%;
          min-height: 100%;
          font-weight: 500;
-         font-size: 14px;
-         color: var(--color-gray);
+         font-size: 12px;
+         color: var(--color-black);
          background-color: var(--color-white);
 
          @media (min-width:768px) {
-            padding: 10px 20px;
             border-radius: 6px;
-            min-height: 48px;
+            font-size: 14px;
+            min-height: 26px;
             border: 1px solid var(--color-gray);
+         }
+
+         @media (min-width:1024px) {
+            padding: 10px 45px 10px 10px;
+            min-height: 49px;
          }
 
          &::-webkit-input-placeholder {
             color: var(--color-gray);
+            font-size: 12px;
+
+            @media (min-width:1024px) {
+               font-size: 14px;
+            }
          }
 
          &::-moz-placeholder {
             color: var(--color-gray);
+            font-size: 12px;
+
+            @media (min-width:1024px) {
+               font-size: 14px;
+            }
          }
 
          &::placeholder {
             color: var(--color-gray);
+            font-size: 12px;
+
+            @media (min-width:1024px) {
+               font-size: 14px;
+            }
          }
       }
    }
@@ -142,15 +165,23 @@
    &__search-submit {
       position: absolute;
       top: 50%;
-      right: 20px;
+      right: 7px;
       z-index: 10;
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      width: 29px;
+      max-width: 17px;
+      width: 17px;
 
-      @media (min-width:768px) {
+      img {
+         width: 100%;
+      }
+
+      @media (min-width:1024px) {
          right: 10px;
+         width: 29px;
+         max-width: 29px;
+
       }
    }
 

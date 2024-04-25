@@ -81,13 +81,13 @@
    }
 
    &__title {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-size: 30px;
       font-weight: 700;
       color: var(--color-green);
 
       @media (min-width:768px) {
-         margin-bottom: 30px;
+         margin-bottom: 40px;
       }
 
       @media (min-width:1024px) {
@@ -97,7 +97,7 @@
    }
 
    &__text {
-      line-height: 120%;
+      line-height: 125%;
       color: var(--color-white);
       font-size: 12px;
       margin-bottom: 20px;

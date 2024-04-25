@@ -1,17 +1,32 @@
 .brands {
 
+   &__item {
+      // flex: 0 0 196px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-   &__container {}
+      svg {
+         max-height: 37px;
+         max-width: 100%;
+      }
 
-   &__swiper {}
+      path {
+         transition: fill 0.2s;
+      }
 
-   &__item {}
+      &:hover {
+         path {
+            fill: var(--color-violet);
+         }
+      }
+   }
+
+   @media (max-width:1024px) {
+      .swiper-slide-active {
+         path {
+            fill: var(--color-violet);
+         }
+      }
+   }
 }
-
-.margin-section {}
-
-.swiper {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}

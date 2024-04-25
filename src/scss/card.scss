@@ -5,17 +5,23 @@
    }
 
    &__title {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 20px;
+      line-height: 250%;
    }
 
    &__text {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       max-width: 520px;
-      font-size: 20px;
+      font-size: 14px;
+      line-height: 120%;
+
+      @media (min-width:768px) {
+         font-size: 20px;
+      }
    }
 
    .card-block-pagination {
@@ -30,7 +36,7 @@
 
 .card {
    margin-bottom: 5px;
-   padding: 10px 7px;
+   padding: 10px 5px;
    border-radius: 10px;
 
    &__link {
@@ -53,8 +59,16 @@
       }
    }
 
+   &__article {
+      margin-bottom: 10px;
+      font-weight: 600;
+      font-size: 12px;
+      text-align: center;
+      color: var(--color-gray);
+   }
+
    &__description {
-      margin-bottom: 25px;
+      margin-bottom: 20px;
       font-size: 20px;
       font-weight: 700;
       line-height: 120%;
@@ -67,11 +81,23 @@
    }
 
    &__price {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 10px;
       font-weight: 700;
       font-size: 24px;
       text-align: center;
       color: var(--color-violet);
+   }
+
+   &__wasprice {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--color-gray);
+      text-decoration: line-through;
    }
 
    &__button {
@@ -122,9 +148,12 @@
       top: 10px;
       left: 7px;
       z-index: 2;
+      display: flex;
+      align-items: center;
       border-radius: 2px;
       padding: 6px;
       min-height: 27px;
       color: var(--color-white);
+      font-size: 12px;
    }
 }

@@ -1,6 +1,12 @@
 .brand {
 
-   &__container {}
+   &__body {
+      @media (min-width:768px) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+         gap: 24px;
+      }
+   }
 
    &__card {
       display: flex;
@@ -24,6 +30,8 @@
          color: var(--color-white);
          background-color: var(--color-violet);
       }
+
+
    }
 
    &__name {
@@ -69,6 +77,25 @@
          }
       }
    }
+
+   &__more {
+      margin-top: 24px;
+      display: none;
+
+      .card-hidden & {
+         @media (min-width:768px) {
+            display: block;
+         }
+      }
+
+      button {
+         margin: 0 auto;
+         display: flex;
+         align-items: center;
+         gap: 10px;
+         color: var(--color-violet);
+      }
+   }
 }
 
 .swiper-brand-main {
@@ -79,5 +106,17 @@
    @media (min-width:1344px) {
       max-width: 965px;
    }
+}
 
+
+.brand {
+   @media (min-width:768px) {
+      .brand__card {
+         margin: 0 !important;
+      }
+
+      &.card-hidden .brand__card:nth-child(1n+13) {
+         display: none;
+      }
+   }
 }
