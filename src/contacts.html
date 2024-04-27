@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Privacy Policy"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Контакты", "link": "contacts.html"}]})
+
+         @@include('html/title/page_title.html',{"title": "Контакты"})
+
+         <div class="contacts margin-section">
+            <div class="contacts__container">
+               <section class="contacts__body">
+                  <div class="contacts__content">
+
+
+
+                     <div class="contacts__logo">
+                        <img src="@img/svg/logo.svg" alt="логотип Evens">
+                        <h2>Магазин компьютерной<br> техники и электроники!</h2>
+                     </div>
+
+                     <div class="contacts__shell">
+                        <div class="margin-section__adaptive">
+                           <div class="contacts__phone">
+                              <img src="@img/svg/phone.svg" alt="шконка телефон">
+                              <div>
+                                 <span>+7 965 130-55-70</span>
+                                 <span>+7 909 670 05 09</span>
+                              </div>
+                           </div>
+                           <div class="contacts__address" data-da=".contacts__shell, last,768,.margin-section__adaptive,1,1024">
+                              <img src="@img/svg/geo.svg" alt="img">
+                              <div>
+                                 <span>г. Москва, Пятницкое шоссе, д. 18,<br>ТК «Митинский Радиорынок», 2 этаж, пав. 379 <br>Ежедневно с 10 до 19</span>
+                                 <a href="404.html">Проложить маршрут</a>
+                                 <a href="404.html">Как нас найти в ТЦ (видеомаршрут)</a>
+                              </div>
+                           </div>
+                           <a href="404.html" class="contacts__block">
+                              <img src="@img/svg/vk.svg" alt="иконка в контакте">
+                              <div>Мы Вконтакте</div>
+                           </a>
+                           <a href="404.html" class="contacts__block">
+                              <img src="@img/svg/whats_app.svg" alt="иконка в контакте">
+                              <div>Наш WhatsApp</div>
+                           </a>
+                        </div>
+                     </div>
+
+
+
+                  </div>
+                  <div class="contacts__map">
+                     <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad48beccebc6b130d597f1bb4fe0c2bc67101a22ac6f9502c756f7db0b377dba3&amp;lang=ru_RU&amp;scroll=true"></script>
+                  </div>
+
+               </section>
+            </div>
+         </div>
+
+
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

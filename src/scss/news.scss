@@ -1,7 +1,5 @@
 .news {
 
-   &__container {}
-
    &__title {
       margin-bottom: 30px;
       display: flex;
@@ -81,4 +79,52 @@
          display: none;
       }
    }
+}
+
+.news-page {
+   &__body {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+
+      @media (min-width:768px) {
+         grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @media (min-width:1024px) {
+         grid-template-columns: 1fr 1fr 1fr 1fr;
+      }
+   }
+}
+
+.naws-item {
+
+   &__text {
+      margin-bottom: 20px;
+      font-size: 14px;
+
+      @media (min-width:768px) {
+         font-size: 16px;
+      }
+   }
+
+   &__theme {
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      @media (min-width:1024px) {
+         margin-bottom: 40px;
+      }
+
+      span {
+         padding: 12px 20px;
+         font-size: 16px;
+         border-radius: 4px;
+         background-color: var(--color-gray-light);
+      }
+   }
+
+   &__video {}
 }

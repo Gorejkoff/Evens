@@ -1,0 +1,50 @@
+.page-404 {
+   &__body {
+      @media (min-width:768px) {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 20px;
+      }
+   }
+
+   &__content {
+      margin-bottom: 20px;
+
+      @media (min-width:768px) {
+         margin: 0;
+         flex: 0 0 30%;
+      }
+   }
+
+   &__title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 30px;
+      color: var(--color-violet);
+   }
+
+   &__text {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 120%;
+   }
+
+   &__link {
+      display: block;
+      font-size: 16px;
+
+      @media (min-width:768px) {
+         display: inline-flex;
+         align-items: center;
+      }
+   }
+
+   &__image {
+      flex: 0 0 55%;
+
+      img {
+         width: 100%;
+      }
+   }
+}

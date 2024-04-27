@@ -6367,3 +6367,22 @@ if (document.querySelector('.brands__swiper')) {
       }
    });
 }
+
+if (document.querySelector('.swiper-certificate')) {
+   const swiper = new Swiper('.swiper-certificate', {
+      keyboard: {
+         enabled: true,
+         onlyInViewport: true,
+      },
+      centeredSlides: true,
+      loop: true,
+      // autoplay: {
+      //    delay: 2000,
+      // },
+      spaceBetween: 24,
+      speed: 300,
+      slidesPerView: 6,
+
+   });
+
+}

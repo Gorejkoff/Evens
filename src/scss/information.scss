@@ -20,6 +20,12 @@
    &__block {
       margin-bottom: 30px;
 
+      img {
+         margin-top: 20px;
+         margin-bottom: 20px;
+         max-width: 417px;
+         width: 100%;
+      }
 
       p {
          margin-bottom: 10px;
@@ -154,6 +160,46 @@
       }
    }
 
+   &__block-text {
+      margin-bottom: 20px;
+      font-size: 12px;
+      line-height: 120%;
+
+      @media (min-width:768px) {
+         font-size: 14px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 16px;
+         margin-bottom: 40px;
+      }
+
+      img {
+         margin-bottom: 20px;
+         display: block;
+
+
+         width: 100%;
+
+         @media (min-width:768px) {
+            float: right;
+            margin-left: 12px;
+            margin-bottom: 12px;
+            @include sizeMaxMinTablet(max-width, 417, 348)
+         }
+
+         @media (min-width:1024px) {
+            margin-left: 26px;
+            margin-bottom: 26px;
+         }
+
+         @media (min-width:1344px) {
+            max-width: 417px;
+         }
+      }
+   }
+
+
    input {
       margin-bottom: 10px;
    }
@@ -162,5 +208,92 @@
       margin-top: 20px;
       margin-bottom: 10px;
       width: 100%;
+   }
+
+   &__list {
+      h2 {
+         margin-bottom: 20px;
+         font-weight: 700;
+         font-size: 20px;
+
+         @media (min-width:1024px) {
+            font-size: 30px;
+         }
+      }
+
+      &>ol {
+         counter-reset: item;
+
+         &>li {
+            margin-bottom: 30px;
+            color: var(--color-violet);
+            font-size: 18px;
+
+            @media (min-width:1024px) {
+               font-size: 20px;
+            }
+
+            &>div {
+               margin-top: 10px;
+               margin-bottom: 10px;
+               font-size: 12px;
+               line-height: 156%;
+               color: var(--color-black);
+
+               @media (min-width:768px) {
+                  font-size: 14px;
+               }
+
+               @media (min-width:1024px) {
+                  font-size: 16px;
+               }
+            }
+
+            &::before {
+               content: counter(item) '.';
+               counter-increment: item;
+               margin-right: 3px;
+            }
+
+            &>ol {
+               &:first-child {
+                  margin-top: 20px;
+               }
+
+               counter-reset: item2;
+
+               &>li {
+                  margin-bottom: 10px;
+                  font-size: 12px;
+                  line-height: 156%;
+                  color: var(--color-black);
+
+                  @media (min-width:768px) {
+                     font-size: 14px;
+                  }
+
+                  @media (min-width:1024px) {
+                     font-size: 16px;
+                  }
+
+                  &::before {
+                     content: counter(item) '.' counter(item2) '.';
+                     counter-increment: item2;
+                     margin-right: 3px;
+                  }
+               }
+            }
+         }
+      }
+
+      ul {
+         &>li {
+            padding-top: 10px;
+
+            &::before {
+               content: '— ';
+            }
+         }
+      }
    }
 }

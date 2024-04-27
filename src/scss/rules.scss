@@ -74,6 +74,7 @@
 
 .hover-underline {
    span {
+      color: var(--color-violet);
       position: relative;
    }
 
@@ -96,18 +97,47 @@
 
 .scroll::-webkit-scrollbar {
    width: 4px;
-   height: 4px;
+   height: 10px;
+   border-radius: 5px;
 }
 
 .scroll::-webkit-scrollbar-track {
-   border-radius: 2px;
+   border-radius: 5px;
    background-color: var(--color-gray);
 }
 
 .scroll::-webkit-scrollbar-thumb {
    background-color: var(--color-green);
    background-clip: content-box;
-   border-radius: 2px;
+   border-radius: 5px;
+}
+
+.imitation-scrollbar {
+   display: none;
+   --width-scroll: 100px;
+   position: relative;
+   width: 100%;
+   height: 10px;
+   background-color: var(--color-gray);
+   border-radius: 5px;
+
+   @media (min-width:768px) {
+      display: block;
+   }
+
+   span {
+      position: absolute;
+      top: 0;
+      left: var(--offset-scroll, 0px);
+      height: 100%;
+      width: var(--width-scroll);
+      background-color: var(--color-green);
+      border-radius: 5px;
+   }
+
+   &#scroll-card {
+      margin-bottom: 60px;
+   }
 }
 
 input[type="number"] {
@@ -210,6 +240,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .button-transparent,
 .button-green {
+   text-align: center;
    transition: all 0.2s;
 }
 
@@ -257,6 +288,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .button {
 
+   &__delete,
    &__compare,
    &__favourites {
       display: flex;
@@ -264,12 +296,30 @@ input[type="number"]::-webkit-outer-spin-button {
       gap: 10px;
       white-space: nowrap;
 
+      path {
+         transition: fill 0.2s, stroke 0.2s;
+      }
+   }
+
+   &__delete,
+   &__compare {
+
+      &:hover,
+      &.active {
+         path {
+            fill: var(--color-green);
+         }
+      }
+   }
+
+   &__favourites {
+
+      &:hover,
       &.active {
          path {
             stroke: var(--color-green);
             fill: var(--color-green);
          }
-
       }
    }
 }

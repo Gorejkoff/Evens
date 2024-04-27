@@ -11,6 +11,10 @@
       align-items: center;
       gap: 20px;
       line-height: 250%;
+
+      @media (min-width:1024px) {
+         margin-bottom: 30px;
+      }
    }
 
    &__text {
@@ -38,6 +42,12 @@
    margin-bottom: 5px;
    padding: 10px 5px;
    border-radius: 10px;
+
+   @media (min-width:1024px) {
+      &:nth-child(1n+5) {
+         display: none;
+      }
+   }
 
    &__link {
       display: block;
