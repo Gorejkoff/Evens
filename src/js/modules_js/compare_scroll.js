@@ -41,6 +41,16 @@ if (COMPARE_BODY && COMPARE_CARD && COMPARE_VALUE.length > 0) {
       startPosition = COMPARE_VALUE[0].scrollLeft;
    }
 
+   function scrollBarHidden(element) {
+      if (calcPath(element) <= 0) {
+         IMITATION_SCROLLBAR_CARD.style.display = "none";
+         IMITATION_SCROLLBAR_VALUE.style.display = "none";
+      } else {
+         IMITATION_SCROLLBAR_CARD.style.display = "";
+         IMITATION_SCROLLBAR_VALUE.style.display = "";
+      }
+   }
+
    function stoptScroll() { mouseDown = false };
 
    function calcOffset() {
@@ -63,11 +73,12 @@ if (COMPARE_BODY && COMPARE_CARD && COMPARE_VALUE.length > 0) {
    function calcPathScrollBar(element) {
       return element.scrollWidth - element.querySelector('span').scrollWidth;
    }
-   setWidthScrollThumb(IMITATION_SCROLLBAR_CARD, COMPARE_CARD);
-   setWidthScrollThumb(IMITATION_SCROLLBAR_VALUE, COMPARE_VALUE[0]);
 
-   window.addEventListener('resize', () => {
+   function initScroll() {
       setWidthScrollThumb(IMITATION_SCROLLBAR_CARD, COMPARE_CARD);
       setWidthScrollThumb(IMITATION_SCROLLBAR_VALUE, COMPARE_VALUE[0]);
-   })
+      scrollBarHidden(COMPARE_CARD);
+   }
+   initScroll();
+   window.addEventListener('resize', () => { initScroll() })
 }

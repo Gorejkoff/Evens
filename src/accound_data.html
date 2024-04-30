@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Accound Data"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Личный кабинет", "link": "accound_data.html"}]})
+
+         <div class="accound margin-section">
+            <div class="accound__container">
+               <h1 class="accound__title">Личный кабинет</h1>
+               <div class="accound__body">
+
+                  @@include('html/accound/accound_menu.html',{"active": "data"})
+
+                  <div class="accound__data">
+                     <div class="accound__name-block">
+                        <div class="accound__name">Константинопольский Константин</div>
+                        <button class="accound__edit-button js-save-init" type="button">
+                           <img src="@img/svg/edit.svg" alt="карандаш">
+                           Редактировать профиль
+                        </button>
+                     </div>
+                     <form class="accound__form" action="#" method="post" name="personal_data" id="personal-data">
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "name", "title" : "Ваше имя", "placeholder": "Введите ваше имя", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "phone", "title" : "Телефон", "placeholder": "Введите ваш телефон", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "e-mail", "title" : "Ваш e-meil", "placeholder": "Введите ваш e-mail", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "password", "title" : "Пароль", "placeholder": "Введите ваш пароль", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "index", "title" : "Адрес доставки", "placeholder": "Индекс", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "city", "placeholder": "Город", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "street", "placeholder": "Улица", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "house", "placeholder": "Дом", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "apartment", "placeholder": "Квартира", "type": "text"})
+                        <div class="accound__data-button" data-da=".accound__form,4,1024">
+                           <button class="js-data-save button-green" type="submit" disabled>Сохранить</button>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

@@ -17,6 +17,8 @@ body {
 .main {
    position: relative;
    flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
    overflow: hidden;
 }
 
@@ -56,6 +58,9 @@ body {
 @import "404";
 @import "contacts";
 @import "about_us";
+@import "log";
+@import "enter_code";
+@import "accound";
 
 
 

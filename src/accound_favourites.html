@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Accound Favourites"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Личный кабинет", "link": "accound_favourites.html"}]})
+
+         <div class="accound margin-section">
+            <div class="accound__container">
+               <h1 class="accound__title">Личный кабинет</h1>
+               <div class="accound__body">
+
+                  @@include('html/accound/accound_menu.html',{"active": "favourites"})
+
+                  <div class="accound__favourites">
+                     @@include('html/favourites/favourites_card.html',{})
+                     @@include('html/favourites/favourites_card.html',{})
+                     @@include('html/favourites/favourites_card.html',{})
+                     <div class="accound__total">
+                        3 товара на сумму:
+                        <span>11 440 ₽</span>
+                     </div>
+                  </div>
+
+
+               </div>
+
+            </div>
+         </div>
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

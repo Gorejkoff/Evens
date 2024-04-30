@@ -142,6 +142,28 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('#brand-more')) {
       document.getElementById('brand').classList.remove('card-hidden');
    }
+   // смена текста на странице входа в ЛК
+   if (event.target.closest('.js-log-button')) {
+      document.querySelector('.js-log-email').style.display = 'none';
+      document.querySelector('.js-log-code').style.display = 'block';
+   }
+   // едактировать форму в ЛК
+   if (event.target.closest('.js-save-init')) {
+      accessForm(false);
+   }
+   // открывает вкладку товаров в "мои змказы"
+   if (event.target.closest('.accound__orders-open')) {
+      event.target.closest('.accound__orders-shell').classList.toggle('active');
+   }
+
+   // увеличение картинки слайдера 'about us'
+   if (event.target.closest('.js-scale-img')) {
+      let src = event.target.closest('img').getAttribute('src');
+      document.body.insertAdjacentHTML('beforeend', `<div class="show-image"><div class="show-image__container"><img src="${src}" alt="картинка"></div></div>`);
+   }
+   if (event.target.closest('.show-image')) {
+      event.target.closest('.show-image').remove();
+   }
 })
 
 /* === СОБЫТИЕ МЫШЬ НАД ЭЛЕМЕНТОМ === */
@@ -189,4 +211,16 @@ function closeCatalogNav() {
 }
 function validationQuantityBasket(e) {
    if (e.value < 1) { e.value = 1; }
+}
+
+// переход фокуса при вводе кода
+const INPUTS_CODE = document.querySelectorAll('.enter-code__inputs input');
+if (INPUTS_CODE.length > 0) {
+   INPUTS_CODE.forEach((e, i) => {
+      e.addEventListener('input', () => {
+         if (e.value.length > 1) { e.value = e.value.slice(0, 1) }
+         if (e.value.length == 1 && INPUTS_CODE.length > i + 1) { INPUTS_CODE[i + 1].focus() }
+
+      })
+   })
 }

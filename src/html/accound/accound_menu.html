@@ -1,0 +1,32 @@
+<ol class="accound__menu">
+   <li>
+      <a @@if(context.active=="data" ){class="active" } href="accound_data.html">
+         <span class="accound__menu-img"><img src="@img/svg/personal-data.svg" alt="иконка в виде домика"></span>
+         Личные данные
+      </a>
+   </li>
+   <li>
+      <a @@if(context.active=="orders" ){class="active" } href="accound_orders.html">
+         <span class="accound__menu-img"><img src="@img/svg/personal-orders.svg" alt="иконка в виде папки с документами"></span>
+         Мои заказы
+      </a>
+   </li>
+   <li>
+      <a @@if(context.active=="favourites" ){class="active" } href="accound_favourites.html">
+         <span class="accound__menu-img"><img src="@img/svg/favourites-3.svg" alt="иконка в виде сердца"></span>
+         Избранное
+      </a>
+   </li>
+   <li>
+      <a @@if(context.active=="comparison" ){class="active" } href="accound_comparison.html">
+         <span class="accound__menu-img"><img src="@img/svg/compare-3.svg" alt="иконка в виде графика"></span>
+         Сравнения
+      </a>
+   </li>
+   <li>
+      <a @@if(context.active=="exit" ){class="active" } href="accound_data.html">
+         <span class="accound__menu-img"><img src="@img/svg/exit.svg" alt="иконка в виде двери"></span>
+         Выйти
+      </a>
+   </li>
+</ol>

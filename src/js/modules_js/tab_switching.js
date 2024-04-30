@@ -29,3 +29,7 @@ if (document.querySelector('.js-transfer-tabs')) {
 if (document.querySelector('.js-method')) {
    new TabsSwitching('.js-method', '.js-method-button', '.js-method-tab').init();
 }
+
+if (document.querySelector('.js-orders-tabs')) {
+   new TabsSwitching('.js-orders-tabs', '.js-orders-button', '.js-orders-tab').init();
+}

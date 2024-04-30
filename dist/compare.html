@@ -28,7 +28,7 @@
          </a>
 
 
-         <button class="header__phone" type="button">
+         <button class="header__phone js-modal-open" type="button" data-modal_open="modal-call">
             <img src="./img/svg/fone.svg" alt="иконка телефона">
          </button>
       </div>
@@ -71,7 +71,7 @@
                </a>
             </li>
             <li>
-               <a href="404.html">
+               <a href="log_in.html">
                   <img src="./img/svg/user.svg" alt="кабинет">
                </a>
             </li>
@@ -475,10 +475,10 @@
 
          <div class="compare margin-section">
    <div class="compare__container">
-
-      <div class="compare__body">
-         <div class="compare__card">
-            <div class="compare__card-item">
+      <div class="compare__shell">
+   <div class="compare__body">
+      <div class="compare__card">
+         <div class="compare__card-item">
    <div class="compare__card-image">
       <img src="./img/png/catalog-1.png" alt="изображение товара">
    </div>
@@ -503,7 +503,7 @@
       </div>
    </div>
 </div>
-            <div class="compare__card-item">
+         <div class="compare__card-item">
    <div class="compare__card-image">
       <img src="./img/png/catalog-1.png" alt="изображение товара">
    </div>
@@ -528,7 +528,7 @@
       </div>
    </div>
 </div>
-            <div class="compare__card-item">
+         <div class="compare__card-item">
    <div class="compare__card-image">
       <img src="./img/png/catalog-1.png" alt="изображение товара">
    </div>
@@ -553,7 +553,7 @@
       </div>
    </div>
 </div>
-            <div class="compare__card-item">
+         <div class="compare__card-item">
    <div class="compare__card-image">
       <img src="./img/png/catalog-1.png" alt="изображение товара">
    </div>
@@ -578,60 +578,61 @@
       </div>
    </div>
 </div>
-         </div>
-         <div id="scroll-card" class="imitation-scrollbar"><span></span></div>
-         <div class="compare__message" data-da=".compare__container,0,768">
-            <img src="./img/svg/important.svg" alt="восклицательный знак">
-            <span>Чтобы сохранить список и иметь к нему доступ с различных устройств, <a class="" href="log_in.html"><span>войдите в личный кабинет</span></a></span>
-         </div>
-         <div class="compare__description">
-            <div class="compare__description-title">Сравнение характеристик</div>
-            <div class="compare__description-body">
-               <div class="compare__description-header">
-                  <span>Процессор AMD Ryzen 5 4500 OEM</span>
-                  <span>Процессор AMD Ryzen 5 4500 OEM</span>
-                  <span>Процессор AMD Ryzen 5 4500 OEM</span>
-                  <span>Процессор AMD Ryzen 5 4500 OEM</span>
-               </div>
-               <div class="compare__description-parameter">Сокет</div>
-               <div class="compare__description-value">
-                  <span>AM3</span>
-                  <span>AM4</span>
-                  <span>AM5</span>
-                  <span>AM6</span>
-               </div>
-               <div class="compare__description-parameter">Год релиза</div>
-               <div class="compare__description-value">
-                  <span>2019</span>
-                  <span>2018</span>
-                  <span>2017</span>
-                  <span>2016</span>
-               </div>
-               <div class="compare__description-parameter">Система охлаждения в комплекте</div>
-               <div class="compare__description-value">
-                  <span>Нет</span>
-                  <span>Нет</span>
-                  <span>Нет</span>
-                  <span>Нет</span>
-               </div>
-               <div class="compare__description-parameter">Модель</div>
-               <div class="compare__description-value">
-                  <span>AMD Ryzen 5 4500</span>
-                  <span>AMD PRO A10-9700E</span>
-                  <span>AMD PRO A10-9700E</span>
-                  <span>AMD Ryzen 5 4500</span>
-               </div>
-               <div class="compare__description-parameter">Код производителя</div>
-               <div class="compare__description-value">
-                  <span>[100-000000644]</span>
-                  <span>[AD970BAHM44AB]</span>
-                  <span>[100-000000644]</span>
-                  <span>[AD970BAHM44AB]</span>
-               </div>
+      </div>
+      <div id="scroll-card" class="imitation-scrollbar"><span></span></div>
+      <div class="compare__message" data-da=".compare__shell,0,768">
+         <img src="./img/svg/important.svg" alt="восклицательный знак">
+         <span>Чтобы сохранить список и иметь к нему доступ с различных устройств, <a class="" href="log_in.html"><span>войдите в личный кабинет</span></a></span>
+      </div>
+      <div class="compare__description">
+         <div class="compare__description-title">Сравнение характеристик</div>
+         <div class="compare__description-body">
+            <div class="compare__description-header">
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
             </div>
-            <div id="scroll-value" class="imitation-scrollbar"><span></span></div>
+            <div class="compare__description-parameter">Сокет</div>
+            <div class="compare__description-value">
+               <span>AM3</span>
+               <span>AM4</span>
+               <span>AM5</span>
+               <span>AM6</span>
+            </div>
+            <div class="compare__description-parameter">Год релиза</div>
+            <div class="compare__description-value">
+               <span>2019</span>
+               <span>2018</span>
+               <span>2017</span>
+               <span>2016</span>
+            </div>
+            <div class="compare__description-parameter">Система охлаждения в комплекте</div>
+            <div class="compare__description-value">
+               <span>Нет</span>
+               <span>Нет</span>
+               <span>Нет</span>
+               <span>Нет</span>
+            </div>
+            <div class="compare__description-parameter">Модель</div>
+            <div class="compare__description-value">
+               <span>AMD Ryzen 5 4500</span>
+               <span>AMD PRO A10-9700E</span>
+               <span>AMD PRO A10-9700E</span>
+               <span>AMD Ryzen 5 4500</span>
+            </div>
+            <div class="compare__description-parameter">Код производителя</div>
+            <div class="compare__description-value">
+               <span>[100-000000644]</span>
+               <span>[AD970BAHM44AB]</span>
+               <span>[100-000000644]</span>
+               <span>[AD970BAHM44AB]</span>
+            </div>
          </div>
+         <div id="scroll-value" class="imitation-scrollbar"><span></span></div>
       </div>
+   </div>
+</div>
    </div>
 </div>
 

@@ -6376,13 +6376,17 @@ if (document.querySelector('.swiper-certificate')) {
       },
       centeredSlides: true,
       loop: true,
-      // autoplay: {
-      //    delay: 2000,
-      // },
       spaceBetween: 24,
       speed: 300,
-      slidesPerView: 6,
-
+      slidesPerView: 1.6,
+      breakpoints: {
+         768: {
+            slidesPerView: 5
+         },
+         1024: {
+            slidesPerView: 6,
+         }
+      }
    });
 
 }

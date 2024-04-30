@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Log in"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Вход", "link": "log_in.html"}]})
+
+         <div class="log">
+            <div class="log__container">
+               <form class="log__body" action="#" method="post" name="" id="">
+
+                  <div class="log__title">Личный кабинет</div>
+
+                  <div class="js-log-email">
+                     <div class="log__subscribe">Введите свой e-mail и получите уникальный код для входа</div>
+                     @@include('html/registration/input.html',{"required": true, "name": "E-mail", "title" : "E-mail", "placeholder": "Введите свой E-mail", "type": "text"})
+                     <div class="log__button">
+                        <button class="button-green js-log-button" type="button">Получить код</button>
+                     </div>
+                  </div>
+
+                  <div class="js-log-code">
+                     <div class="log__subscribe">Отлично! Проверьте свой e-mail</div>
+                     @@include('html/enter_code/enter_code.html',{})
+                     <div class="log__button">
+                        <!-- <button class="button-green" type="submit">Войти</button> -->
+                        <a href="accound_data.html" class="button-green">Войти</a>
+                     </div>
+                  </div>
+
+               </form>
+            </div>
+         </div>
+
+
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

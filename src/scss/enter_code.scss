@@ -1,0 +1,38 @@
+.enter-code {
+   display: flex;
+   justify-content: center;
+
+   &__body {}
+
+   &__title {
+      margin-bottom: 10px;
+      display: block;
+      font-weight: 600;
+      color: var(--color-gray);
+
+      span {
+         color: var(--color-green);
+      }
+   }
+
+   &__inputs {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+
+      input {
+         flex: 0 0 50px;
+         max-width: 50px;
+         height: 50px;
+         border: 1px solid var(--color-gray);
+         border-radius: 2px;
+         font-size: 50px;
+         text-align: center;
+      }
+   }
+
+}
+
+.js-log-code {
+   display: none;
+}

@@ -1,0 +1,60 @@
+.log {
+   padding-top: 60px;
+   padding-bottom: 60px;
+   flex: 1 1 auto;
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+
+   &__container {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+   }
+
+   &__body {
+      max-width: 636px;
+   }
+
+   &__title {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 30px;
+      text-align: center;
+
+      @media (min-width:1024px) {
+         font-size: 50px;
+      }
+   }
+
+   &__subscribe {
+      margin-bottom: 30px;
+      font-size: 16px;
+      text-align: center;
+
+      @media (min-width:768px) {
+         font-size: 20px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 30px;
+      }
+   }
+
+   &__button {
+      padding-top: 30px;
+      text-align: center;
+
+      a,
+      button {
+         display: inline-block;
+         width: 100%;
+
+         @media (min-width:768px) {
+            max-width: 415px;
+         }
+      }
+   }
+}

@@ -1,0 +1,951 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   <title>"Accound Comparison"</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width" initial-scale=1.0>
+
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Regular.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Medium.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-SemiBold.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Bold.woff2" crossorigin>
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      <header id="header" class="header">
+   <div class="header__container">
+      <div class="header__body js-header-da">
+         <a class="header__logo" href="index.html">
+            <img src="./img/svg/logo.svg" alt="логотип Evens">
+         </a>
+
+
+         <button class="header__phone js-modal-open" type="button" data-modal_open="modal-call">
+            <img src="./img/svg/fone.svg" alt="иконка телефона">
+         </button>
+      </div>
+   </div>
+</header>
+      <header id="header_nav" class="header-nav">
+   <div class="header-nav__container">
+      <nav class="header-nav__body js-header-nav-da">
+         <button id="burger" class="header-nav__burger" type="button">
+            <img src="./img/svg/menu-2.svg" alt="кнопка открыть меню">
+         </button>
+         <form class="header-nav__search" action="search" method="post" name="search" id="search">
+            <input type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
+            <button class="header-nav__search-submit" type="button">
+               <img src="./img/svg/search.svg" alt="поиск">
+            </button>
+            <button class="header-nav__search-back" type="button">
+               <img src="./img/svg/arrow-nav-left.svg" alt="кнопка назад">
+            </button>
+         </form>
+         <ol class="header-nav__office">
+            <li class="header-nav__button-search">
+               <button data-message="Поиск" type="button">
+                  <img src="./img/svg/search-2.svg" alt="поиск">
+               </button>
+            </li>
+            <li>
+               <a href="compare.html" data-message="У вас пока нет товаров для сравнения">
+                  <img src="./img/svg/compare.svg" alt="сравнение">
+               </a>
+            </li>
+            <li>
+               <a href="favourites.html" data-quantity="4" data-message="У вас пока нет избранных товаров">
+                  <img src="./img/svg/favourites.svg" alt="избранное">
+               </a>
+            </li>
+            <li>
+               <a href="basket.html" data-quantity="20">
+                  <img src="./img/svg/shop.svg" alt="корзина">
+               </a>
+            </li>
+            <li>
+               <a href="log_in.html">
+                  <img src="./img/svg/user.svg" alt="кабинет">
+               </a>
+            </li>
+         </ol>
+      </nav>
+      <div id="catalog_nav_wrapper" class="catalog-nav-wrapper">
+   <div class="catalog-nav-wrapper__container">
+      <div class="catalog-nav-wrapper__body js-catalog-nav-body">
+         <div class="catalog-nav">
+            <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+            <button class="catalog-nav__button-other js-modal-open" type="button" data-modal_open="modal-build-pc">
+               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 12H19M12 5V19" stroke="#9604CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+               Собрать компьютер
+            </button>
+            <ol>
+               <li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="1">
+      <span>Комплектующие</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="2">
+      <span>Готовые компьютеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="3">
+      <span>Компоненты СВО</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="4">
+      <span>Сетевое оборудование</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="5">
+      <span>Мониторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="6">
+      <span>ИБП, Стабилизаторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="7">
+      <span>Принтеры, сканеры</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="8">
+      <span>Манипуляторы</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="9">
+      <span>Мультимедиа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="10">
+      <span>Программное обеспечение</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="11">
+      <span>Аксессуары</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="12">
+      <span>Кабельная продукция</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="13">
+      <span>Товары для майнинга</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="14">
+      <span>Устройства видеозахвата</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li><li>
+   <button class="catalog-nav__button js-catalog-nav-button" type="button" data-number="15">
+      <span>Распродажа</span>
+      <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+         <path d="M1,1 L5,5 L1,9" stroke="#9604CF" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" />
+      </svg>
+   </button>
+</li>
+            </ol>
+         </div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="1">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         <div class="catalog-nav__list-title">Комплектующие</div>
+         <ol>
+             
+<li>
+   <a href="404.html">Беспроводные маршрутизаторы</a> 
+</li><li>
+   <a href="404.html">Коммутаторы</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Коммутаторы сетевые</a>
+</li> <li>
+         <a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li>
+         <a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Точки доступа</a> 
+</li><li>
+   <a href="404.html">Мобильный интернет</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li>
+         <a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li>
+         <a href=undefined> Модемы</a>
+</li> <li>
+         <a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Wi-Fi адаптеры</a> 
+   <ol>
+       <li>
+         <a href=index.htm> PCI-E адаптеры</a>
+</li> <li>
+         <a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Усилители сигнала Wi-Fi</a> 
+   <ol>
+       <li>
+         <a href=index.htm> MESH системы</a>
+</li> <li>
+         <a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Bluetooth адаптеры</a> 
+</li><li>
+   <a href="404.html">Проводные маршрутизаторы</a> 
+</li><li>
+   <a href="404.html">Powerline адаптеры</a> 
+</li><li>
+   <a href="404.html">Кабели патч-корды, коннекторы</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Витая пара</a>
+</li> <li>
+         <a href=index.htm> Патч-корды</a>
+</li> <li>
+         <a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Антенны</a> 
+   <ol>
+       <li>
+         <a href=index.htm> LTE антенны</a>
+</li> <li>
+         <a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Кабельные сборки, пигтейлы, переходники</a> 
+</li><li>
+   <a href="404.html">LAN аксессуары</a> 
+</li><li>
+   <a href="404.html">Кронштейны, крепежи, гермобоксы</a> 
+</li><li>
+   <a href="404.html">Инструменты сетевого оборудования</a> 
+</li><li>
+   <a href="404.html">Телекомму&shy;никационные шкафы и аксессуары</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Сетевые шкафы</a>
+</li> <li>
+         <a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">PoE инжекторы</a> 
+</li><li>
+   <a href="404.html">Медиаконвертеры</a> 
+</li><li>
+   <a href="404.html">ADSL маршрутизаторы</a> 
+</li><li>
+   <a href="404.html">Сетевые камеры</a> 
+</li><li>
+   <a href="404.html">Сетевые хранилища (NAS)</a> 
+</li><li>
+   <a href="404.html">Умный дом</a> 
+</li><li>
+   <a href="404.html">IP-телефония</a> 
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+         <div class="catalog-nav-content js-catalog-nav-content" data-number="2">
+   <div class="catalog-nav-content__container">
+      <div class="catalog-nav-content__body">
+         <div class="catalog-nav__mobile-button">
+   <button class="catalog-nav__back js-nav-back" type="button">
+      <img src="./img/svg/arrow-nav-left.svg" alt="кнопка вернуться назад">
+      Назад
+   </button>
+   <button class="catalog-nav__close js-nav-close" type="button">
+      <img src="./img/svg/close.svg" alt="кнопка закрыть">
+   </button>
+</div>
+         <div class="catalog-nav__list-title">Готовые компьютеры</div>
+         <ol>
+             
+<li>
+   <a href="404.html">Готовые компьютеры</a> 
+</li><li>
+   <a href="404.html">Коммутаторы</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Коммутаторы сетевые</a>
+</li> <li>
+         <a href=index.htm> Контроллеры беспроводных сетей</a>
+</li> <li>
+         <a href=index.htm> KVM переключатели</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Точки доступа</a> 
+</li><li>
+   <a href="404.html">Мобильный интернет</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Стационарные роутеры 4G-LTE</a>
+</li> <li>
+         <a href=index.htm> Портативные роутеры 4G-LTE</a>
+</li> <li>
+         <a href=undefined> Модемы</a>
+</li> <li>
+         <a href=index.htm> Роутеры для гермобокса</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Wi-Fi адаптеры</a> 
+   <ol>
+       <li>
+         <a href=index.htm> PCI-E адаптеры</a>
+</li> <li>
+         <a href=index.htm> USB адаптеры</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Усилители сигнала Wi-Fi</a> 
+   <ol>
+       <li>
+         <a href=index.htm> MESH системы</a>
+</li> <li>
+         <a href=index.htm> Ретрансляторы</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Bluetooth адаптеры</a> 
+</li><li>
+   <a href="404.html">Проводные маршрутизаторы</a> 
+</li><li>
+   <a href="404.html">Powerline адаптеры</a> 
+</li><li>
+   <a href="404.html">Кабели патч-корды, коннекторы</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Витая пара</a>
+</li> <li>
+         <a href=index.htm> Патч-корды</a>
+</li> <li>
+         <a href=index.htm> Розетки и коннекторы</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Антенны</a> 
+   <ol>
+       <li>
+         <a href=index.htm> LTE антенны</a>
+</li> <li>
+         <a href=index.htm> Wi-Fi антенны</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">Кабельные сборки, пигтейлы, переходники</a> 
+</li><li>
+   <a href="404.html">LAN аксессуары</a> 
+</li><li>
+   <a href="404.html">Кронштейны, крепежи, гермобоксы</a> 
+</li><li>
+   <a href="404.html">Инструменты сетевого оборудования</a> 
+</li><li>
+   <a href="404.html">Телекомму&shy;никационные шкафы и аксессуары</a> 
+   <ol>
+       <li>
+         <a href=index.htm> Сетевые шкафы</a>
+</li> <li>
+         <a href=index.htm> Аксессуары для сетевых шкафов</a>
+</li>
+</ol>
+</li><li>
+   <a href="404.html">PoE инжекторы</a> 
+</li><li>
+   <a href="404.html">Медиаконвертеры</a> 
+</li><li>
+   <a href="404.html">ADSL маршрутизаторы</a> 
+</li><li>
+   <a href="404.html">Сетевые камеры</a> 
+</li><li>
+   <a href="404.html">Сетевые хранилища (NAS)</a> 
+</li><li>
+   <a href="404.html">Умный дом</a> 
+</li><li>
+   <a href="404.html">IP-телефония</a> 
+</li>
+         </ol>
+      </div>
+   </div>
+</div>
+      </div>
+   </div>
+</div>
+   </div>
+</header>
+
+      <main class="main">
+
+         <div class="bread-crumbs">
+   <div class="bread-crumbs__container">
+      <ol class="bread-crumbs__body">
+          <li><a href="index.html">Главная</a></li>  <li><a href="accound_comparison.html">Личный кабинет</a></li> 
+      </ol>
+   </div>
+</div>
+
+         <div class="accound margin-section">
+            <div class="accound__container">
+               <h1 class="accound__title">Личный кабинет</h1>
+               <div class="accound__body">
+                  <ol class="accound__menu">
+   <li>
+      <a  href="accound_data.html">
+         <span class="accound__menu-img"><img src="./img/svg/personal-data.svg" alt="иконка в виде домика"></span>
+         Личные данные
+      </a>
+   </li>
+   <li>
+      <a  href="accound_orders.html">
+         <span class="accound__menu-img"><img src="./img/svg/personal-orders.svg" alt="иконка в виде папки с документами"></span>
+         Мои заказы
+      </a>
+   </li>
+   <li>
+      <a  href="accound_favourites.html">
+         <span class="accound__menu-img"><img src="./img/svg/favourites-3.svg" alt="иконка в виде сердца"></span>
+         Избранное
+      </a>
+   </li>
+   <li>
+      <a class="active"  href="accound_comparison.html">
+         <span class="accound__menu-img"><img src="./img/svg/compare-3.svg" alt="иконка в виде графика"></span>
+         Сравнения
+      </a>
+   </li>
+   <li>
+      <a  href="accound_data.html">
+         <span class="accound__menu-img"><img src="./img/svg/exit.svg" alt="иконка в виде двери"></span>
+         Выйти
+      </a>
+   </li>
+</ol>
+                  <div class="accound__comparison">
+                     <div class="compare__shell">
+   <div class="compare__body">
+      <div class="compare__card">
+         <div class="compare__card-item">
+   <div class="compare__card-image">
+      <img src="./img/png/catalog-1.png" alt="изображение товара">
+   </div>
+   <div class="compare__data">
+      <div class="compare__name">Процессор AMD Ryzen 5 4500 OEM</div>
+      <div class="compare__block">
+         <div class="compare__price">486 270 ₽</div>
+         <button class="button-transparent" type="button"><span class="text-pc">Добавить в корзину</span><span class="text-mob">В корзину</span></button>
+      </div>
+      <div class="compare__buttons">
+         <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">В избранное</span>
+</button>
+         <button class="button__delete" type="button">
+   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.38542 1.62H5.20833C5.30573 1.62 5.38542 1.539 5.38542 1.44V1.62H12.1146V1.44C12.1146 1.539 12.1943 1.62 12.2917 1.62H12.1146V3.24H13.7083V1.44C13.7083 0.64575 13.073 0 12.2917 0H5.20833C4.42695 0 3.79167 0.64575 3.79167 1.44V3.24H5.38542V1.62ZM16.5417 3.24H0.958333C0.566536 3.24 0.25 3.56175 0.25 3.96V4.68C0.25 4.779 0.329687 4.86 0.427083 4.86H1.76406L2.31081 16.6275C2.34622 17.3948 2.97044 18 3.72526 18H13.7747C14.5318 18 15.1538 17.397 15.1892 16.6275L15.7359 4.86H17.0729C17.1703 4.86 17.25 4.779 17.25 4.68V3.96C17.25 3.56175 16.9335 3.24 16.5417 3.24ZM13.6043 16.38H3.8957L3.36003 4.86H14.14L13.6043 16.38Z" fill="#C5C7C6" />
+   </svg>
+</button>
+      </div>
+   </div>
+</div>
+         <div class="compare__card-item">
+   <div class="compare__card-image">
+      <img src="./img/png/catalog-1.png" alt="изображение товара">
+   </div>
+   <div class="compare__data">
+      <div class="compare__name">Процессор AMD Ryzen 5 4500 OEM</div>
+      <div class="compare__block">
+         <div class="compare__price">486 270 ₽</div>
+         <button class="button-transparent" type="button"><span class="text-pc">Добавить в корзину</span><span class="text-mob">В корзину</span></button>
+      </div>
+      <div class="compare__buttons">
+         <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">В избранное</span>
+</button>
+         <button class="button__delete" type="button">
+   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.38542 1.62H5.20833C5.30573 1.62 5.38542 1.539 5.38542 1.44V1.62H12.1146V1.44C12.1146 1.539 12.1943 1.62 12.2917 1.62H12.1146V3.24H13.7083V1.44C13.7083 0.64575 13.073 0 12.2917 0H5.20833C4.42695 0 3.79167 0.64575 3.79167 1.44V3.24H5.38542V1.62ZM16.5417 3.24H0.958333C0.566536 3.24 0.25 3.56175 0.25 3.96V4.68C0.25 4.779 0.329687 4.86 0.427083 4.86H1.76406L2.31081 16.6275C2.34622 17.3948 2.97044 18 3.72526 18H13.7747C14.5318 18 15.1538 17.397 15.1892 16.6275L15.7359 4.86H17.0729C17.1703 4.86 17.25 4.779 17.25 4.68V3.96C17.25 3.56175 16.9335 3.24 16.5417 3.24ZM13.6043 16.38H3.8957L3.36003 4.86H14.14L13.6043 16.38Z" fill="#C5C7C6" />
+   </svg>
+</button>
+      </div>
+   </div>
+</div>
+         <div class="compare__card-item">
+   <div class="compare__card-image">
+      <img src="./img/png/catalog-1.png" alt="изображение товара">
+   </div>
+   <div class="compare__data">
+      <div class="compare__name">Процессор AMD Ryzen 5 4500 OEM</div>
+      <div class="compare__block">
+         <div class="compare__price">486 270 ₽</div>
+         <button class="button-transparent" type="button"><span class="text-pc">Добавить в корзину</span><span class="text-mob">В корзину</span></button>
+      </div>
+      <div class="compare__buttons">
+         <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">В избранное</span>
+</button>
+         <button class="button__delete" type="button">
+   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.38542 1.62H5.20833C5.30573 1.62 5.38542 1.539 5.38542 1.44V1.62H12.1146V1.44C12.1146 1.539 12.1943 1.62 12.2917 1.62H12.1146V3.24H13.7083V1.44C13.7083 0.64575 13.073 0 12.2917 0H5.20833C4.42695 0 3.79167 0.64575 3.79167 1.44V3.24H5.38542V1.62ZM16.5417 3.24H0.958333C0.566536 3.24 0.25 3.56175 0.25 3.96V4.68C0.25 4.779 0.329687 4.86 0.427083 4.86H1.76406L2.31081 16.6275C2.34622 17.3948 2.97044 18 3.72526 18H13.7747C14.5318 18 15.1538 17.397 15.1892 16.6275L15.7359 4.86H17.0729C17.1703 4.86 17.25 4.779 17.25 4.68V3.96C17.25 3.56175 16.9335 3.24 16.5417 3.24ZM13.6043 16.38H3.8957L3.36003 4.86H14.14L13.6043 16.38Z" fill="#C5C7C6" />
+   </svg>
+</button>
+      </div>
+   </div>
+</div>
+         <div class="compare__card-item">
+   <div class="compare__card-image">
+      <img src="./img/png/catalog-1.png" alt="изображение товара">
+   </div>
+   <div class="compare__data">
+      <div class="compare__name">Процессор AMD Ryzen 5 4500 OEM</div>
+      <div class="compare__block">
+         <div class="compare__price">486 270 ₽</div>
+         <button class="button-transparent" type="button"><span class="text-pc">Добавить в корзину</span><span class="text-mob">В корзину</span></button>
+      </div>
+      <div class="compare__buttons">
+         <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">В избранное</span>
+</button>
+         <button class="button__delete" type="button">
+   <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5.38542 1.62H5.20833C5.30573 1.62 5.38542 1.539 5.38542 1.44V1.62H12.1146V1.44C12.1146 1.539 12.1943 1.62 12.2917 1.62H12.1146V3.24H13.7083V1.44C13.7083 0.64575 13.073 0 12.2917 0H5.20833C4.42695 0 3.79167 0.64575 3.79167 1.44V3.24H5.38542V1.62ZM16.5417 3.24H0.958333C0.566536 3.24 0.25 3.56175 0.25 3.96V4.68C0.25 4.779 0.329687 4.86 0.427083 4.86H1.76406L2.31081 16.6275C2.34622 17.3948 2.97044 18 3.72526 18H13.7747C14.5318 18 15.1538 17.397 15.1892 16.6275L15.7359 4.86H17.0729C17.1703 4.86 17.25 4.779 17.25 4.68V3.96C17.25 3.56175 16.9335 3.24 16.5417 3.24ZM13.6043 16.38H3.8957L3.36003 4.86H14.14L13.6043 16.38Z" fill="#C5C7C6" />
+   </svg>
+</button>
+      </div>
+   </div>
+</div>
+      </div>
+      <div id="scroll-card" class="imitation-scrollbar"><span></span></div>
+      <div class="compare__message" data-da=".compare__shell,0,768">
+         <img src="./img/svg/important.svg" alt="восклицательный знак">
+         <span>Чтобы сохранить список и иметь к нему доступ с различных устройств, <a class="" href="log_in.html"><span>войдите в личный кабинет</span></a></span>
+      </div>
+      <div class="compare__description">
+         <div class="compare__description-title">Сравнение характеристик</div>
+         <div class="compare__description-body">
+            <div class="compare__description-header">
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
+               <span>Процессор AMD Ryzen 5 4500 OEM</span>
+            </div>
+            <div class="compare__description-parameter">Сокет</div>
+            <div class="compare__description-value">
+               <span>AM3</span>
+               <span>AM4</span>
+               <span>AM5</span>
+               <span>AM6</span>
+            </div>
+            <div class="compare__description-parameter">Год релиза</div>
+            <div class="compare__description-value">
+               <span>2019</span>
+               <span>2018</span>
+               <span>2017</span>
+               <span>2016</span>
+            </div>
+            <div class="compare__description-parameter">Система охлаждения в комплекте</div>
+            <div class="compare__description-value">
+               <span>Нет</span>
+               <span>Нет</span>
+               <span>Нет</span>
+               <span>Нет</span>
+            </div>
+            <div class="compare__description-parameter">Модель</div>
+            <div class="compare__description-value">
+               <span>AMD Ryzen 5 4500</span>
+               <span>AMD PRO A10-9700E</span>
+               <span>AMD PRO A10-9700E</span>
+               <span>AMD Ryzen 5 4500</span>
+            </div>
+            <div class="compare__description-parameter">Код производителя</div>
+            <div class="compare__description-value">
+               <span>[100-000000644]</span>
+               <span>[AD970BAHM44AB]</span>
+               <span>[100-000000644]</span>
+               <span>[AD970BAHM44AB]</span>
+            </div>
+         </div>
+         <div id="scroll-value" class="imitation-scrollbar"><span></span></div>
+      </div>
+   </div>
+</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      <footer class="footer">
+   <div class="footer__container">
+      <div class="footer__body">
+         <section class="footer__info">
+            <a href="index.html" class="footer__logo">
+               <img src="./img/svg/logo.svg" alt="логотип Evens">
+            </a>
+            <h2 class="footer__text">Интернет — магазин компьютерной техники и электроники!</h2>
+            <address>
+               <p class="footer__text">г. Москва, Пятницкое шоссе, д. 18, <span class="footer__p-smaller">ТК «Митинский Радиорынок», 2 этаж, пав. 379</span></p>
+               <a class="footer__text-link" href="404.html">Показать на карте</a>
+            </address>
+            <div class="footer__fone">
+               <button class="footer__block js-modal-open" type="button" data-modal_open="modal-call">
+                  <div class="footer__number">+7 965 130 55 70</div>
+                  <div class="footer__text-link">Заказать звонок</div>
+               </button>
+               <button class="footer__block js-modal-open" type="button" data-modal_open="modal_write">
+                  <div class="footer__number">+7 909 670 05 09</div>
+                  <div class="footer__text-link">Напишите нам</div>
+               </button>
+            </div>
+            <div class="footer__social">
+               <a href="404.html">
+                  <img src="./img/svg/whats_app.svg" alt="иконка социальной сети whats app">
+               </a>
+               <a href="404.html">
+                  <img src="./img/svg/vk.svg" alt="иконка социальной сети в контакте">
+               </a>
+            </div>
+         </section>
+         <nav class="footer__nav">
+            <h2 class="footer__nav-title">Информация</h2>
+            <ol class="footer__nav-links">
+               <li>
+                  <a href="404.html">Вакансии</a>
+               </li>
+               <li>
+                  <a href="404.html">Возврат и обмен</a>
+               </li>
+               <li>
+                  <a href="delivery.html">Доставка по Москве</a>
+               </li>
+               <li>
+                  <a href="contacts.html">Контакты</a>
+               </li>
+               <li>
+                  <a href="stocks.html">Акции</a>
+               </li>
+               <li>
+                  <a href="404.html">Гарантийное обслуживание</a>
+               </li>
+               <li>
+                  <a href="404.html">Гарантия на системные блоки</a>
+               </li>
+               <li>
+                  <a href="404.html">Розничная покупка</a>
+               </li>
+               <li>
+                  <a href="404.html">Покупка на организацию</a>
+               </li>
+            </ol>
+         </nav>
+         <nav class="footer__nav">
+            <h2 class="footer__nav-title">Дополнительно</h2>
+            <ol class="footer__nav-links">
+               <li>
+                  <a href="404.html">Оптовым клиентам</a>
+               </li>
+               <li>
+                  <a href="404.html">Реквизиты</a>
+               </li>
+               <li>
+                  <a href="404.html">Законы о ЗПП</a>
+               </li>
+               <li>
+                  <a href="404.html">Соглашение</a>
+               </li>
+               <li>
+                  <a href="404.html">Пользовательское соглашение</a>
+               </li>
+               <li>
+                  <a href="about_us.html">О компании</a>
+               </li>
+            </ol>
+         </nav>
+      </div>
+
+      <div class="footer__bottom">
+         <span>© 2023 EvensPC</span>
+         <a href="404.html">Пользовательское соглашение</a>
+         <a href="privacy_policy.html">Политика конфиденциальности</a>
+      </div>
+   </div>
+</footer>
+
+      <div class="menu-mobile">
+   <div class="menu-mobile__container">
+      <div class="menu-mobile__body">
+
+         <div class="header-nav__catalog" data-da=".js-header-nav-da,1,768">
+            <button class="header-nav__catalog-button js-open-catalog-nav" type="button">
+               <img src="./img/svg/menu.svg" alt="кнопка открыть меню">
+               Каталог товаров
+            </button>
+
+            <button id="closeMenu" class="menu-mobile__close" type="button">
+               <img src="./img/svg/close.svg" alt="закрыть">
+            </button>
+
+         </div>
+         <ol class="header-nav__links js-header-links" data-da=".js-header-nav-da,2,768">
+            <li>
+               <a href="contacts.html">Контакты</a>
+            </li>
+            <li>
+               <a href="news.html">Новости</a>
+            </li>
+            <li class="header-nav__menu-tab js-menu-tab">
+               <button class="js-menu-tab-button" type="button">
+                  Информация
+                  <img src="./img/svg/arrow-nav-bottom.svg" alt="стрелка указывает вниз">
+               </button>
+               <div class="header-nav__info js-menu-tab-body">
+                  <ol class=" js-menu-tab-content">
+                     <li><a href="payment.html">Оплата</a></li>
+                     <li><a href="delivery.html">Доставка</a></li>
+                     <li><a href="404.html">Самовывоз</a></li>
+                     <li><a href="warranty.html">Гарантия</a></li>
+                  </ol>
+               </div>
+            </li>
+         </ol>
+
+         <div class="header__build js-modal-open" data-da=".js-header-da,1,768" data-modal_open="modal-build-pc">
+            <button type="button">Собрать ПК</button>
+         </div>
+         <div class="header__social" data-da=".js-header-da,2,768">
+            <a href="404.html">
+               <img src="./img/svg/vk.svg" alt="иконка социальной сети в контакте">
+            </a>
+            <a href="404.html">
+               <img src="./img/svg/whats_app.svg" alt="иконка социальной сети whats app">
+            </a>
+         </div>
+         <div class="header__contacts" data-da=".js-header-da,3,768">
+            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal-call">
+               <p class="header__contacts-number">+7 965 130 55 70</p>
+               <p class="header__contacts-text">Заказать звонок</p>
+            </button>
+            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal_write">
+               <p class="header__contacts-number">+7 909 670 05 09</p>
+               <p class="header__contacts-text">Напишите нам</p>
+            </button>
+         </div>
+         <div class="header__address" data-da=".js-header-da,4,768">
+            <p class="header__address-item">г. Москва, Пятницкое шоссе, <wbr/>д. 18</p>
+            <p class="header__address-correction">ТК «Митинский Радиорынок», <wbr/>2 этаж, пав. 379</p>
+         </div>
+
+      </div>
+   </div>
+</div>
+
+      <section id="modal-build-pc" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Собрать ПК</h2>
+            <p class="modal__text">Пожалуйста, оставьте заявку и наши специалистыпомогут Вами подобрать комплектующие и рассчитать стоимость.</p>
+            <p class="modal__text">Или позвоните нам: <span class="modal__phone">+7 909 670 05 09</span></p>
+            <form action="404.html" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <textarea class="modal__textarea" name="" id="" placeholder="Ваше сообщение"></textarea>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="404.html"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <div class="modal__image">
+            <img src="./img/webp/pc.webp" alt="системный блок">
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+      <section id="modal-call" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Заказать звонок</h2>
+            <p class="modal__text">Оставьте заявку и мы перезвоним Вам в самое ближайшее время!</p>
+            <form action="404.html" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="404.html"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+      <section id="modal_write" class="modal js-modal-close js-modal-hidden">
+   <div class="modal__container">
+      <div class="modal__wrapper js-modal-stop-close">
+         <div class="modal__body">
+            <h2 class="modal__title">Напишите нам</h2>
+            <p class="modal__text">У Вас есть вопрос или пожелание? Пожалуйста, напишите нам!</p>
+            <p class="modal__text">Или позвоните нам: <span class="modal__phone">+7 909 670 05 09</span></p>
+            <form action="404.html" method="post" name="write" id="write">
+               <div class="modal__input-block">
+   <input class="modal__input" type="text" placeholder="Ваше имя" required>
+   <input class="modal__input" type="text" placeholder="Телефон или e-mail" required>
+</div>
+               <textarea class="modal__textarea" name="" id="" placeholder="Ваше сообщение"></textarea>
+               <div class="modal__button">
+   <button class="button-green" type="submit">Отправить</button>
+</div>
+               <div class="modal__check">
+                  <label class="check " >
+   <input type="checkbox" name="personal-data" id="" required>
+   <span class="check__item"></span>
+   <span class="check__text">Я согласен на 
+       <a class="hover-underline" href="404.html"><span>обработку персональных данных</span></a> 
+      
+   </span>
+</label>
+               </div>
+            </form>
+         </div>
+         <button class="modal__close js-modal-close" type="button">
+   <img src="./img/svg/close_2.svg" alt="кнопка закрыть">
+</button>
+      </div>
+   </div>
+</section>
+
+   </div>
+
+
+   <script defer src='./js/app.js'></script>
+<script defer src='./js/swiper.js'></script>
+
+
+</body>
+
+</html>

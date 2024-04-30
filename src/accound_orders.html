@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+   @@include('html/head.html',{"title":"Accound Orders"})
+</head>
+
+
+<body>
+
+
+   <div class="wrapper">
+
+      @@include('html/header.html',{})
+      @@include('html/header_nav.html',{})
+
+      <main class="main">
+
+         @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Личный кабинет", "link": "accound_orders.html"}]})
+
+         <div class="accound margin-section">
+            <div class="accound__container">
+               <h1 class="accound__title">Личный кабинет</h1>
+               <div class="accound__body">
+                  @@include('html/accound/accound_menu.html',{"active": "orders"})
+                  <div class="accound__orders js-orders-tabs">
+                     <div class="accound__orders-title">Мои заказы</div>
+                     <div class="accound__orders-buttons">
+                        <button class="js-orders-button active" type="button" data-button="0">Активные</button>
+                        <button class="js-orders-button" type="button" data-button="1">Закрытые</button>
+                     </div>
+                     <div class="js-orders-tab active" data-tab="0">
+
+                        <div class="accound__orders-shell orders-header">
+                           <div class="accound__orders-block">
+                              <div class="accound__orders-product">Товар / номер заказа</div>
+                              <div class="accound__orders-quantity">Количество</div>
+                              <div class="accound__orders-price">Цена</div>
+                              <div class="accound__orders-status">Статус</div>
+                           </div>
+                        </div>
+
+                        <div class="accound__orders-shell">
+                           <div class="accound__orders-block">
+                              <div class="accound__orders-product">
+                                 <div class="accound__orders-image">
+                                    <img src="@img/png/product-1.png" alt="изображение товара">
+                                 </div>
+                                 <div class="accound__orders-data">
+                                    <div class="accound__orders-name">2 товара</div>
+                                    <div class="accound__orders-namber">237485</div>
+                                 </div>
+                                 <button type="button" class="accound__orders-open">
+                                    <img src="@img/svg/arrow-nav-bottom.svg" alt="img">
+                                 </button>
+                              </div>
+                              <div class="accound__orders-quantity">
+                                 <span class="accound__orders-mobile">Количество</span>
+                                 1
+                              </div>
+                              <div class="accound__orders-price">
+                                 <span class="accound__orders-mobile">Цена</span>
+                                 5 270 ₽
+                              </div>
+                              <div class="accound__orders-status">
+                                 <span class="accound__orders-mobile">Статус</span>
+                                 <button type="button" class="accound__orders-status-delivery">Доставка</button>
+                                 <button type="button" class="accound__orders-open">
+                                    <img src="@img/svg/arrow-nav-bottom.svg" alt="img">
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="accound__orders-inner-block">
+                              <div class="accound__orders-product">
+                                 <div class="accound__orders-image">
+                                    <img src="@img/png/catalog-1.png" alt="изображение товара">
+                                 </div>
+                                 <div class="accound__orders-data">
+                                    <div class="accound__orders-name">AMD A10-9700 OEM</div>
+                                 </div>
+                              </div>
+                              <div class="accound__orders-quantity">
+                                 <span class="accound__orders-mobile">Количество</span>
+                                 1
+                              </div>
+                              <div class="accound__orders-price">
+                                 <span class="accound__orders-mobile">Цена</span>
+                                 5 270 ₽
+                              </div>
+                              <div class="accound__orders-status"></div>
+                           </div>
+                           <div class="accound__orders-inner-block">
+                              <div class="accound__orders-product">
+                                 <div class="accound__orders-image">
+                                    <img src="@img/png/catalog-1.png" alt="изображение товара">
+                                 </div>
+                                 <div class="accound__orders-data">
+                                    <div class="accound__orders-name">AMD A10-9700 OEM</div>
+                                 </div>
+                              </div>
+                              <div class="accound__orders-quantity">
+                                 <span class="accound__orders-mobile">Количество</span>
+                                 1
+                              </div>
+                              <div class="accound__orders-price">
+                                 <span class="accound__orders-mobile">Цена</span>
+                                 5 270 ₽
+                              </div>
+                              <div class="accound__orders-status"></div>
+                           </div>
+                        </div>
+
+                        <div class="accound__orders-shell">
+                           <div class="accound__orders-block">
+                              <div class="accound__orders-product">
+                                 <div class="accound__orders-image">
+                                    <img src="@img/png/product-1.png" alt="изображение товара">
+                                 </div>
+                                 <div class="accound__orders-data">
+                                    <div class="accound__orders-name">AMD A10-9700 OEM</div>
+                                    <div class="accound__orders-namber">237485</div>
+                                 </div>
+                                 <button type="button" class="accound__orders-open">
+                                    <img src="@img/svg/arrow-nav-bottom.svg" alt="img">
+                                 </button>
+                              </div>
+                              <div class="accound__orders-quantity">
+                                 <span class="accound__orders-mobile">Количество</span>
+                                 1
+                              </div>
+                              <div class="accound__orders-price">
+                                 <span class="accound__orders-mobile">Цена</span>
+                                 5 270 ₽
+                              </div>
+                              <div class="accound__orders-status">
+                                 <span class="accound__orders-mobile">Статус</span>
+                                 <span class="accound__orders-status-going">Собирается</span>
+                                 <button type="button" class="accound__orders-status-cancel">Отменить</button>
+                              </div>
+                           </div>
+                        </div>
+
+
+                        <div class="accound__total">
+                           Итого:
+                           <span>11 440 ₽</span>
+                        </div>
+
+                     </div>
+
+                     <div class="js-orders-tab" data-tab="1">
+
+                        <div class="accound__orders-shell">
+                           <div class="accound__orders-block">
+                              <div class="accound__orders-product">Товар / номер заказа</div>
+                              <div class="accound__orders-quantity">Количество</div>
+                              <div class="accound__orders-price">Цена</div>
+                              <div class="accound__orders-status">Статус</div>
+                           </div>
+                        </div>
+
+                        <div class="accound__orders-shell">
+                           <div class="accound__orders-block">
+                              <div class="accound__orders-product">
+                                 <div class="accound__orders-image">
+                                    <img src="@img/png/product-1.png" alt="изображение товара">
+                                 </div>
+                                 <div class="accound__orders-data">
+                                    <div class="accound__orders-name">2 товара</div>
+                                    <div class="accound__orders-namber">237485</div>
+                                 </div>
+                                 <button type="button" class="accound__orders-open">
+                                    <img src="@img/svg/arrow-nav-bottom.svg" alt="img">
+                                 </button>
+                              </div>
+                              <div class="accound__orders-quantity">
+                                 <span class="accound__orders-mobile">Количество</span>
+                                 1
+                              </div>
+                              <div class="accound__orders-price">
+                                 <span class="accound__orders-mobile">Цена</span>
+                                 5 270 ₽
+                              </div>
+                              <div class="accound__orders-status">
+                                 <span class="accound__orders-mobile">Статус</span>
+                                 <span class="accound__orders-status-cancel">Отменён</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="accound__orders-shell">
+                           <div class="accound__orders-block">
+                              <div class="accound__orders-product">
+                                 <div class="accound__orders-image">
+                                    <img src="@img/png/product-1.png" alt="изображение товара">
+                                 </div>
+                                 <div class="accound__orders-data">
+                                    <div class="accound__orders-name">AMD A10-9700 OEM</div>
+                                    <div class="accound__orders-namber">237485</div>
+                                 </div>
+                                 <button type="button" class="accound__orders-open">
+                                    <img src="@img/svg/arrow-nav-bottom.svg" alt="img">
+                                 </button>
+                              </div>
+                              <div class="accound__orders-quantity">
+                                 <span class="accound__orders-mobile">Количество</span>
+                                 1
+                              </div>
+                              <div class="accound__orders-price">
+                                 <span class="accound__orders-mobile">Цена</span>
+                                 985 270 ₽
+                              </div>
+                              <div class="accound__orders-status">
+                                 <span class="accound__orders-mobile">Статус</span>
+                                 <span class="accound__orders-status-delivered">Доставлен</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="accound__orders-shell">
+                           <div class="accound__orders-block">
+                              <div class="accound__orders-product">
+                                 <div class="accound__orders-image">
+                                    <img src="@img/png/product-1.png" alt="изображение товара">
+                                 </div>
+                                 <div class="accound__orders-data">
+                                    <div class="accound__orders-name">2 товара</div>
+                                    <div class="accound__orders-namber">237485</div>
+                                 </div>
+                                 <button type="button" class="accound__orders-open">
+                                    <img src="@img/svg/arrow-nav-bottom.svg" alt="img">
+                                 </button>
+                              </div>
+                              <div class="accound__orders-quantity">
+                                 <span class="accound__orders-mobile">Количество</span>
+                                 1
+                              </div>
+                              <div class="accound__orders-price">
+                                 <span class="accound__orders-mobile">Цена</span>
+                                 5 270 ₽
+                              </div>
+                              <div class="accound__orders-status">
+                                 <span class="accound__orders-mobile">Статус</span>
+                                 <span class="accound__orders-status-cancel">Отменён</span>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="accound__total">
+                           Итого:
+                           <span>11 440 ₽</span>
+                        </div>
+
+                     </div>
+
+                  </div>
+               </div>
+            </div>
+         </div>
+
+      </main>
+
+      @@include('html/footer.html',{})
+
+      @@include('html/nav_mobile.html',{})
+
+      @@include('html/modal/modal_build_pc.html',{})
+
+      @@include('html/modal/modal_call.html',{})
+
+      @@include('html/modal/modal_write.html',{})
+
+   </div>
+
+
+   @@include('html/scripts/scripts.html',{})
+
+
+</body>
+
+</html>

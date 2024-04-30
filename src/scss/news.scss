@@ -126,5 +126,17 @@
       }
    }
 
-   &__video {}
+   &__video {
+      position: relative;
+      padding-bottom: 52.42%;
+
+      iframe {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
 }
