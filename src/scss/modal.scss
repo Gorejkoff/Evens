@@ -108,37 +108,31 @@
    input::-webkit-input-placeholder {
       font-size: 14px;
       line-height: 136%;
-      color: var(--color-gray);
    }
 
    input::-moz-placeholder {
       font-size: 14px;
       line-height: 136%;
-      color: var(--color-gray);
    }
 
    input::placeholder {
       font-size: 14px;
       line-height: 136%;
-      color: var(--color-gray);
    }
 
    textarea::-webkit-input-placeholder {
       font-size: 14px;
       line-height: 136%;
-      color: var(--color-gray);
    }
 
    textarea::-moz-placeholder {
       font-size: 14px;
       line-height: 136%;
-      color: var(--color-gray);
    }
 
    textarea::placeholder {
       font-size: 14px;
       line-height: 136%;
-      color: var(--color-gray);
    }
 
    &__close {

@@ -1,5 +1,6 @@
 <div class="catalog-nav-content js-catalog-nav-content" data-number="@@number">
    <div class="catalog-nav-content__container">
+      @@include('../catalog_nav/catalog_search.html',{})
       <div class="catalog-nav-content__body">
          @@include('../catalog_nav/catalog_buttons.html',{})
          @@loop("../catalog_nav/catalog_nav_title.html", "json/@@jsonName")

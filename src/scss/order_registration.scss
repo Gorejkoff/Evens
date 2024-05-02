@@ -67,20 +67,6 @@
          &:focus {
             border-color: var(--color-green);
          }
-
-
-
-         &::-webkit-input-placeholder {
-            color: var(--color-gray);
-         }
-
-         &::-moz-placeholder {
-            color: var(--color-gray);
-         }
-
-         &::placeholder {
-            color: var(--color-gray);
-         }
       }
    }
 

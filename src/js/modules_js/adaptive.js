@@ -27,7 +27,7 @@ function startChange(mediaQuery, addressMove, e, listChildren, addressParent, da
    if (mediaQuery.matches) { moving(e, dataArray[1], addressMove); return; }
    if (listChildren.length > 0) {
       for (let z = 0; z < listChildren.length; z++) {
-         if (listChildren[z].dataset.n >= e.dataset.n) {
+         if (listChildren[z].dataset.n > e.dataset.n) {
             listChildren[z].before(e);
             break;
          } else if (z == listChildren.length - 1) {
