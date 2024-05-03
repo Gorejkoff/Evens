@@ -8,7 +8,6 @@
    transition: right 0.3s;
    pointer-events: none;
 
-
    @media (min-width:768px) {
       display: none;
       right: 0;
@@ -16,8 +15,6 @@
       width: 100%;
       height: auto;
    }
-
-   &__container {}
 
    &__body {
       position: relative;
@@ -70,9 +67,6 @@
       box-shadow: none;
    }
 }
-
-
-
 
 .catalog-nav {
    flex: 1 0 230px;
