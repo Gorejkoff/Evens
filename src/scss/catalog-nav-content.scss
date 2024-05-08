@@ -7,6 +7,11 @@
    background-color: var(--color-white);
    transition: right 0.3s;
 
+   @media (max-width:767.98px) {
+      max-height: calc(100vh - var(--height-header, 49) + 2px);
+      overflow-y: auto;
+   }
+
    @media (min-width:768px) {
       position: static;
       width: calc(100vw - 254px);

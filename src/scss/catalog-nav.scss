@@ -42,6 +42,11 @@
    }
 }
 
+.header-nav .catalog-nav-wrapper__body {
+   overflow-y: auto;
+   max-height: calc(100vh - var(--height-header) - var(--height-header-nav) + var(--ignore-header-hight));
+}
+
 .open.catalog-nav-wrapper {
    right: 0;
 

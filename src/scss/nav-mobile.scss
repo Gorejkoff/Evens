@@ -23,6 +23,9 @@
       flex-direction: column;
       align-items: center;
       gap: 20px;
+
+      max-height: calc(100vh - var(--height-header) - var(--height-header-nav) + var(--ignore-header-hight));
+      overflow-y: auto;
    }
 
    &__close {
