@@ -304,8 +304,6 @@ textarea {
    }
 }
 
-
-
 .button {
 
    &__delete,
@@ -357,7 +355,6 @@ textarea {
    background-color: rgba(0, 0, 0, 0.5);
 
    &__container {
-
       display: flex;
       align-items: center;
       justify-content: center;
@@ -397,7 +394,6 @@ textarea {
       object-fit: contain;
    }
 }
-
 
 [class*="copyrights-pane"] {
    display: none;

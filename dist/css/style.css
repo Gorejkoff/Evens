@@ -864,6 +864,44 @@ body {
   background-color: var(--color-violet);
   color: var(--color-white);
 }
+._pc .header-nav__office a[data-message]::before,
+._pc .header-nav__office button[data-message]::before {
+  content: attr(data-message);
+  padding: 10px 10px 10px 10px;
+  position: absolute;
+  bottom: calc(100% + 16px);
+  right: 50%;
+  z-index: 20;
+  transform: translateX(50%);
+  background-color: var(--color-white);
+  box-shadow: 0 4px 10px 0 rgba(34, 34, 34, 0.1);
+  border-radius: 4px;
+  max-width: 250px;
+  width: max-content;
+  font-size: 12px;
+  color: var(--color-black);
+  display: none;
+}
+._pc .header-nav__office a[data-message]::after,
+._pc .header-nav__office button[data-message]::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  z-index: 20;
+  transform: translateX(-50%);
+  width: 31px;
+  height: 16px;
+  border-top: 16px solid var(--color-white);
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  display: none;
+}
+._pc .header-nav__office a[data-message]:hover::after, ._pc .header-nav__office a[data-message]:hover::before,
+._pc .header-nav__office button[data-message]:hover::after,
+._pc .header-nav__office button[data-message]:hover::before {
+  display: block;
+}
 @media (min-width: 768px) {
   .header-nav__info {
     position: absolute;
