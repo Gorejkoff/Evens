@@ -159,9 +159,21 @@ document.addEventListener('click', (event) => {
    // увеличение картинки слайдера 'about us'
    if (event.target.closest('.js-scale-img')) {
       let src = event.target.closest('img').getAttribute('src');
-      document.body.insertAdjacentHTML('beforeend', `<div class="show-image"><div class="show-image__container"><img src="${src}" alt="картинка"></div></div>`);
+      document.body.insertAdjacentHTML(
+         'beforeend',
+         `<div class="show-image">
+            <div class="show-image__container">
+               <div class="show-image__image_body">
+                  <div class="show-image__close">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 15L15 1M15 15L1 1" stroke="#9604CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <img src="${src}" alt="картинка">
+               </div>
+            </div>
+         </div>`
+      );
    }
-   if (event.target.closest('.show-image')) {
+   if (event.target.closest('.show-image__close')) {
       event.target.closest('.show-image').remove();
    }
 })
@@ -277,6 +289,7 @@ function startChange(mediaQuery, addressMove, e, listChildren, addressParent, da
 };
 
 function searchDestination(e, n) {
+   if (e.classList.contains(n.slice(1))) { return e }
    if (e.parentElement.querySelector(n)) { return e.parentElement.querySelector(n) };
    return searchDestination(e.parentElement, n);
 }
@@ -556,6 +569,23 @@ if (document.querySelector('.filter')) {
    }
 }    
 
+if (document.getElementById('contacts-map')) {
+   ymaps.ready(init);
+   function init() {
+      var myMap = new ymaps.Map("contacts-map", {
+         center: [55.844334, 37.383633],
+         controls: [],
+         zoom: 17
+      });
+      var myPlacemark = new ymaps.Placemark([55.844334, 37.383633], {}, {
+         iconLayout: 'default#imageWithContent',
+         iconImageHref: '../../img/svg/icon_point.svg',
+         iconImageSize: [60, 73],
+         iconImageOffset: [-30, -73]
+      });
+      myMap.geoObjects.add(myPlacemark);
+   }
+}
 /* открывает, закрывает модальные окна. */
 /*
 добавить классы

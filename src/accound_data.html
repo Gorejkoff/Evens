@@ -35,9 +35,9 @@
                      </div>
                      <form class="accound__form" action="#" method="post" name="personal_data" id="personal-data">
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "name", "title" : "Ваше имя", "placeholder": "Введите ваше имя", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "surname", "title" : "Ваша фамилия", "placeholder": "Введите вашу фамилию", "type": "text"})
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "phone", "title" : "Телефон", "placeholder": "Введите ваш телефон", "type": "text"})
-                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "e-mail", "title" : "Ваш e-meil", "placeholder": "Введите ваш e-mail", "type": "text"})
-                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "password", "title" : "Пароль", "placeholder": "Введите ваш пароль", "type": "text"})
+                        @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "e-mail", "title" : "E-mail", "placeholder": "Введите ваш e-mail", "type": "text"})
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "index", "title" : "Адрес доставки", "placeholder": "Индекс", "type": "text"})
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "city", "placeholder": "Город", "type": "text"})
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "street", "placeholder": "Улица", "type": "text"})
@@ -67,7 +67,7 @@
 
 
    @@include('html/scripts/scripts.html',{})
-
+   <script defer src='./js/mask.js'></script>
 
 </body>
 

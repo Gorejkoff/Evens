@@ -22,12 +22,21 @@
       font-weight: 700;
       font-size: 30px;
       color: var(--color-violet);
+      line-height: 125%;
+
+      @media (min-width:1024px) {
+         font-size: 50px;
+      }
    }
 
    &__text {
       margin-bottom: 20px;
       font-size: 20px;
       line-height: 120%;
+
+      @media (min-width:1024px) {
+         font-size: 30px;
+      }
    }
 
    &__link {

@@ -60,6 +60,10 @@
          ._pc &:hover {
             color: var(--color-violet);
          }
+
+         &[data-quantity]::after {
+            content: '(' attr(data-quantity)')';
+         }
       }
    }
 
@@ -157,7 +161,11 @@
       font-weight: 700;
       font-size: 20px;
       line-height: 125%;
-      text-align: end;
+      text-align: center;
+
+      @media (min-width:768px) {
+         text-align: end;
+      }
 
       span {
          white-space: nowrap;
@@ -165,25 +173,26 @@
       }
    }
 
+   .card__image {
+      align-self: flex-start;
 
-   .favourites__image {
       @media (min-width:768px) and (max-width:1343.98px) {
          @include sizeMaxMinTabletFlex (0, 0, 193, 98)
       }
    }
 
    @media (min-width:768px) and (max-width:1024px) {
-      .favourites__name {
+      .card__name {
          font-size: 16px;
       }
 
-      .favourites__price {
+      .card__price {
          button {
             font-size: 14px;
          }
       }
 
-      .favourites__price-item {
+      .card__price-item {
          font-size: 20px;
       }
    }
@@ -239,6 +248,15 @@
       }
    }
 
+   &__orders-block {}
+
+   &__orders-inner-block {
+      display: none;
+      margin-left: 20px;
+      border-bottom: 1px solid var(--color-gray-light);
+   }
+
+   &__orders-shell {}
 
    &__orders-shell.orders-header {
       background-color: var(--color-gray-light);
@@ -260,8 +278,6 @@
    }
 
    &__orders-shell:not(:first-child) {
-      border-bottom: 1px solid var(--color-gray);
-
       .accound__orders-price {
          color: var(--color-violet);
          font-weight: 700;
@@ -276,6 +292,10 @@
          }
       }
 
+      .accound__orders-block {
+         border-bottom: 1px solid var(--color-gray);
+      }
+
       .accound__orders-inner-block {
          .accound__orders-price {
             color: var(--color-black);
@@ -283,10 +303,7 @@
       }
    }
 
-   &__orders-inner-block {
-      display: none;
-      margin-left: 20px;
-   }
+
 
    &__orders-shell.active {
 
@@ -302,8 +319,6 @@
             transform: rotate3d(1, 0, 0, 180deg);
          }
       }
-
-
    }
 
    &__orders-open {
@@ -328,7 +343,6 @@
          @media (min-width:768px) {
             display: none;
          }
-
       }
 
       @media (min-width:1024px) {
@@ -337,6 +351,8 @@
    }
 
    &__orders-image {
+      border: 1px solid var(--color-gray-light);
+
       img {
          width: 86px;
          max-width: 86px;
@@ -374,14 +390,18 @@
    }
 
    &__orders-quantity {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      justify-content: space-between;
+      align-items: center;
       text-align: center;
       font-weight: 700;
-      justify-content: space-between;
 
       @media (min-width:768px) {
+         padding-top: 0;
+         padding-bottom: 0;
          display: flex;
          flex: 0 0 85px;
-         display: block;
       }
 
       @media (min-width:1024px) {
@@ -432,7 +452,7 @@
          display: none;
 
          @media (min-width:768px) {
-            display: block;
+            display: flex;
          }
       }
    }
@@ -443,14 +463,14 @@
       justify-content: space-between;
 
       @media (min-width:768px) {
-         display: block;
+         display: flex;
+         justify-content: center;
       }
 
       @media (min-width:1024px) {
          flex: 0 0 100px;
       }
    }
-
 
    &__orders-status-going {
       color: var(--color-orange);
@@ -470,6 +490,11 @@
 
       @media (min-width:768px) {
          font-size: 14px;
+      }
+
+      @media (min-width:768px) and (max-width:1023.98px) {
+         display: block;
+         margin: 20px auto;
       }
    }
 
@@ -507,7 +532,6 @@
          display: none;
       }
    }
-
 }
 
 @media (max-width:1024px) {

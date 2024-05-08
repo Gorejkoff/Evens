@@ -78,14 +78,13 @@
       gap: 20px;
    }
 
-   &__contacts-block {}
-
    &__contacts-number {
       font-weight: 700;
       white-space: nowrap;
    }
 
    &__contacts-text {
+      text-align: left;
       font-size: 14px;
       color: var(--color-violet);
    }

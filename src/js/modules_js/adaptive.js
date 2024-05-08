@@ -40,6 +40,7 @@ function startChange(mediaQuery, addressMove, e, listChildren, addressParent, da
 };
 
 function searchDestination(e, n) {
+   if (e.classList.contains(n.slice(1))) { return e }
    if (e.parentElement.querySelector(n)) { return e.parentElement.querySelector(n) };
    return searchDestination(e.parentElement, n);
 }

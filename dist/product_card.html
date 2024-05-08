@@ -510,11 +510,9 @@
    <div class="product-data__article">
       <div class="product-data__article-item">
          <div>Артикул:</div>
-         <div class="product-data__article-number">21018900054</div>
+         <div>21018900054</div>
       </div>
-      <div class="product-data__icon">
-         <img src="./img/svg/amd.svg" alt="логотип AMD">
-      </div>
+      <img src="./img/svg/amd.svg" alt="логотип AMD">
    </div>
    <div class="product-data__status">
       <div class="product-data__status-name orange">Хит</div>
@@ -544,7 +542,11 @@
    </div>
    <div class="product-buttons__footer">
       <button class="button__compare" type="button">
-   <img src="./img/svg/compare-2.svg" alt="к сравнению">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
    <span class="button__text">К сравнению</span>
 </button>
       <button class="button__favourites " type="button">
@@ -597,14 +599,9 @@
    <div class="product-transfer__payment js-transfer-tab" data-tab="2">
       <div class="product-transfer__title js-transfer-button" data-da=".product-transfer__buttons,1,768,.product-transfer__payment,0,1024" data-button="2">Варианты оплаты</div>
       <ol class="product-transfer__list">
-         <li>
-            <p>Для физических лиц</p>
-            <p>Наличный расчет</p>
-         </li>
-         <li>
-            <p>Для юридических лиц</p>
-            <p>Безналичный расчет без НДС</p>
-         </li>
+         <li> Наличными при получении</li>
+         <li> Картой в магазине (+2% к заказу)</li>
+         <li>Онлайн оплата (+6% к заказу)</li>
       </ol>
    </div>
 </div>
@@ -725,168 +722,228 @@
       </div>
       
       <div class="swiper swiper-card">
-         <div class="swiper-wrapper">
+         <div class="swiper-wrapper view-grid">
              <article class="card swiper-slide">
-   <a class="card__link" href="product_card.html">
+   
       <div class="card__image">
-         <img src="./img/png/catalog-1.png" alt="образец товара">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
       </div>
       <div class="card__article">Артикул: 21018900054</div>
-      <h3 class="card__description">Процессор AMD A10 9700 OEM</h3>
-      <div class="card__price"><span>120 000 ₽</span></div>
-      <div class="card__button">
-         <button class="button-transparent" type="button" > Добавить в корзину</button>
-      </div>
-      <div class="card__top-buttons">
-         <button class="card__compare" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-            </svg>
-         </button>
-         <button class="card__favourites" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-            </svg>
-         </button>
-      </div>
-      <div class="card__status orange">Хит</div>
+      <div class="card__data">
+         <div class="card__header">
+            <div class="card__status orange">Хит</div>
+            <div class="card__buttons">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+         </div>
+         <h3 class="card__title-card">undefined</h3>
+         <div class="card__footer">
+            <div class="card__price"><span>120 000 ₽</span></div>
+            <div class="card__button">
+               <button class="button-transparent" type="button" > Добавить в корзину</button>
+            </div>
+         </div>
+         
    </a>
 </article>  <article class="card swiper-slide">
-   <a class="card__link" href="product_card.html">
+   
       <div class="card__image">
-         <img src="./img/png/catalog-1.png" alt="образец товара">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
       </div>
       <div class="card__article">Артикул: 21018900054</div>
-      <h3 class="card__description">Процессор AMD A10 9700 OEM</h3>
-      <div class="card__price"><span>90 000 ₽</span></div>
-      <div class="card__button">
-         <button class="button-transparent" type="button" > Добавить в корзину</button>
-      </div>
-      <div class="card__top-buttons">
-         <button class="card__compare" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-            </svg>
-         </button>
-         <button class="card__favourites" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-            </svg>
-         </button>
-      </div>
-      <div class="card__status green">Скидка</div>
+      <div class="card__data">
+         <div class="card__header">
+            <div class="card__status green">Скидка</div>
+            <div class="card__buttons">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+         </div>
+         <h3 class="card__title-card">undefined</h3>
+         <div class="card__footer">
+            <div class="card__price"><span>90 000 ₽</span></div>
+            <div class="card__button">
+               <button class="button-transparent" type="button" > Добавить в корзину</button>
+            </div>
+         </div>
+         
    </a>
 </article>  <article class="card swiper-slide">
-   <a class="card__link" href="product_card.html">
+   
       <div class="card__image">
-         <img src="./img/png/catalog-1.png" alt="образец товара">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
       </div>
       <div class="card__article">Артикул: 21018900054</div>
-      <h3 class="card__description">Процессор AMD A10 9700 OEM</h3>
-      <div class="card__price"><span>130 000 ₽</span></div>
-      <div class="card__button">
-         <button class="button-transparent" type="button" > Добавить в корзину</button>
-      </div>
-      <div class="card__top-buttons">
-         <button class="card__compare" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-            </svg>
-         </button>
-         <button class="card__favourites" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-            </svg>
-         </button>
-      </div>
-      <div class="card__status violet">Новинка</div>
+      <div class="card__data">
+         <div class="card__header">
+            <div class="card__status violet">Новинка</div>
+            <div class="card__buttons">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+         </div>
+         <h3 class="card__title-card">undefined</h3>
+         <div class="card__footer">
+            <div class="card__price"><span>130 000 ₽</span></div>
+            <div class="card__button">
+               <button class="button-transparent" type="button" > Добавить в корзину</button>
+            </div>
+         </div>
+         
    </a>
 </article>  <article class="card swiper-slide">
-   <a class="card__link" href="product_card.html">
+   
       <div class="card__image">
-         <img src="./img/png/catalog-1.png" alt="образец товара">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
       </div>
       <div class="card__article">Артикул: 21018900054</div>
-      <h3 class="card__description">Процессор AMD A10 9700 OEM</h3>
-      <div class="card__price"><span>120 000 ₽</span></div>
-      <div class="card__button">
-         <button class="button-transparent" type="button" > Добавить в корзину</button>
-      </div>
-      <div class="card__top-buttons">
-         <button class="card__compare" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-            </svg>
-         </button>
-         <button class="card__favourites" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-            </svg>
-         </button>
-      </div>
-      <div class="card__status orange">Хит</div>
+      <div class="card__data">
+         <div class="card__header">
+            <div class="card__status orange">Хит</div>
+            <div class="card__buttons">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+         </div>
+         <h3 class="card__title-card">undefined</h3>
+         <div class="card__footer">
+            <div class="card__price"><span>120 000 ₽</span></div>
+            <div class="card__button">
+               <button class="button-transparent" type="button" > Добавить в корзину</button>
+            </div>
+         </div>
+         
    </a>
 </article>  <article class="card swiper-slide">
-   <a class="card__link" href="product_card.html">
+   
       <div class="card__image">
-         <img src="./img/png/catalog-1.png" alt="образец товара">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
       </div>
       <div class="card__article">Артикул: 21018900054</div>
-      <h3 class="card__description">Процессор AMD A10 9700 OEM</h3>
-      <div class="card__price"><span>90 000 ₽</span></div>
-      <div class="card__button">
-         <button class="button-transparent" type="button" > Добавить в корзину</button>
-      </div>
-      <div class="card__top-buttons">
-         <button class="card__compare" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-            </svg>
-         </button>
-         <button class="card__favourites" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-            </svg>
-         </button>
-      </div>
-      <div class="card__status green">Скидка</div>
+      <div class="card__data">
+         <div class="card__header">
+            <div class="card__status green">Скидка</div>
+            <div class="card__buttons">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+         </div>
+         <h3 class="card__title-card">undefined</h3>
+         <div class="card__footer">
+            <div class="card__price"><span>90 000 ₽</span></div>
+            <div class="card__button">
+               <button class="button-transparent" type="button" > Добавить в корзину</button>
+            </div>
+         </div>
+         
    </a>
 </article>  <article class="card swiper-slide">
-   <a class="card__link" href="product_card.html">
+   
       <div class="card__image">
-         <img src="./img/png/catalog-1.png" alt="образец товара">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
       </div>
       <div class="card__article">Артикул: 21018900054</div>
-      <h3 class="card__description">Процессор AMD A10 9700 OEM</h3>
-      <div class="card__price"><span>130 000 ₽</span></div>
-      <div class="card__button">
-         <button class="button-transparent" type="button" > Добавить в корзину</button>
-      </div>
-      <div class="card__top-buttons">
-         <button class="card__compare" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-               <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-               <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-            </svg>
-         </button>
-         <button class="card__favourites" type="button">
-            <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-            </svg>
-         </button>
-      </div>
-      <div class="card__status violet">Новинка</div>
+      <div class="card__data">
+         <div class="card__header">
+            <div class="card__status violet">Новинка</div>
+            <div class="card__buttons">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+         </div>
+         <h3 class="card__title-card">undefined</h3>
+         <div class="card__footer">
+            <div class="card__price"><span>130 000 ₽</span></div>
+            <div class="card__button">
+               <button class="button-transparent" type="button" > Добавить в корзину</button>
+            </div>
+         </div>
+         
    </a>
 </article>  </div>
                <div class="card-block-pagination swiper-pagination"></div>
@@ -1083,11 +1140,11 @@
             </a>
          </div>
          <div class="header__contacts" data-da=".js-header-da,3,768">
-            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal-call">
+            <button class="js-modal-open" type="button" data-modal_open="modal-call">
                <p class="header__contacts-number">+7 965 130 55 70</p>
                <p class="header__contacts-text">Заказать звонок</p>
             </button>
-            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal_write">
+            <button class="js-modal-open" type="button" data-modal_open="modal_write">
                <p class="header__contacts-number">+7 909 670 05 09</p>
                <p class="header__contacts-text">Напишите нам</p>
             </button>

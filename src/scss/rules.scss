@@ -53,6 +53,7 @@
 .title {
    font-size: 30px;
    font-weight: 700;
+   line-height: 125%;
 
    @media (min-width:1024px) {
       font-size: 50px;
@@ -196,8 +197,8 @@ textarea {
 .js-menu-tab {
    position: relative;
    z-index: 1;
-   margin-top: -11px;
-   margin-bottom: -11px;
+   margin-top: -7px;
+   margin-bottom: -7px;
 }
 
 .js-menu-tab.active {
@@ -291,17 +292,19 @@ textarea {
    z-index: 1;
    display: flex;
    transition-property: transform;
+
+   .swiper-slide {
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition-property: transform;
+      display: block;
+      touch-action: pan-y;
+   }
 }
 
-.swiper-slide {
-   flex-shrink: 0;
-   width: 100%;
-   height: 100%;
-   position: relative;
-   transition-property: transform;
-   display: block;
-   touch-action: pan-y;
-}
+
 
 .button {
 
@@ -313,6 +316,7 @@ textarea {
       gap: 10px;
       white-space: nowrap;
 
+      rect,
       path {
          transition: fill 0.2s, stroke 0.2s;
       }
@@ -323,6 +327,8 @@ textarea {
 
       &:hover,
       &.active {
+
+         rect,
          path {
             fill: var(--color-green);
          }
@@ -351,19 +357,48 @@ textarea {
    background-color: rgba(0, 0, 0, 0.5);
 
    &__container {
-      height: 100%;
+
       display: flex;
       align-items: center;
       justify-content: center;
    }
 
-   img {
+   &__image_body {
+      padding-left: 50px;
+      padding-right: 50px;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      max-width: 95%;
-      max-height: 90%;
+      height: max-content;
+      width: max-content;
+   }
+
+   &__close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+         width: 14px;
+      }
+   }
+
+   img {
+      max-height: 95vh;
+      max-width: calc(100vw - 120px);
       object-fit: contain;
    }
+}
+
+
+[class*="copyrights-pane"] {
+   display: none;
 }

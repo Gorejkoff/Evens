@@ -7,37 +7,41 @@
       "swiperName": "screen",
       "cards": [
          {
+            "grid": true,
             "status": "orange",
             "statusName": "Хит",
             "image": "img-5.png",
-            "description": "27&quot; Монитор Xiaomi RMMNT27NF Black 75Hz 1920x1080 IPS",
+            "titleCard": "27&quot; Монитор Xiaomi RMMNT27NF Black 75Hz 1920x1080 IPS",
             "price": "122 000 ₽",
             "wasprice": "",
             "condition": ""
          },
          {
+            "grid": true,
             "status": "violet",
             "statusName": "Новинка",
             "image": "img-6.png",
-            "description": "34&quot; Монитор Huawei MateView GT ZQE-CBA Black 165Hz 3440x1440 VA",
+            "titleCard": "34&quot; Монитор Huawei MateView GT ZQE-CBA Black 165Hz 3440x1440 VA",
             "price": "135 000 ₽",
             "wasprice": "",
             "condition": ""
          },
          {
+            "grid": true,
             "status": "green",
             "statusName": "Скидка",
             "image": "img-7.png",
-            "description": "Monitor ЖК-монитор с док-станцией USB-C 279C9/01 | Philips",
+            "titleCard": "Monitor ЖК-монитор с док-станцией USB-C 279C9/01 | Philips",
             "price": "95 000 ₽",
             "wasprice": "",
             "condition": ""
          },
          {
+            "grid": true,
             "status": "",
             "statusName": "",
             "image": "img-8.png",
-            "description": "23.8&quot; Монитор MSI Modern MD241PW белый",
+            "titleCard": "23.8&quot; Монитор MSI Modern MD241PW белый",
             "price": "80 000 ₽",
             "wasprice": "",
             "condition": "disabled"

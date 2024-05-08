@@ -25,10 +25,34 @@
 
                   @@include('html/accound/accound_menu.html',{"active": "favourites"})
 
-                  <div class="accound__favourites">
-                     <!--   @@include('html/favourites/favourites_card.html',{})
-                     @@include('html/favourites/favourites_card.html',{})
-                     @@include('html/favourites/favourites_card.html',{}) -->
+                  <div class="accound__favourites view-block">
+                     @@include('html/card/card_item.html', {
+                     "status": "orange",
+                     "statusName": "Хит",
+                     "image": "catalog-1.png",
+                     "titleCard": "Процессор AMD A10 9700 OEM",
+                     "price": "4 350 ₽",
+                     "wasprice": "",
+                     "condition": ""
+                     })
+                     @@include('html/card/card_item.html', {
+                     "status": "orange",
+                     "statusName": "Хит",
+                     "image": "catalog-1.png",
+                     "titleCard": "Процессор AMD A10 9700 OEM",
+                     "price": "4 350 ₽",
+                     "wasprice": "",
+                     "condition": ""
+                     })
+                     @@include('html/card/card_item.html', {
+                     "status": "orange",
+                     "statusName": "Хит",
+                     "image": "catalog-1.png",
+                     "titleCard": "Процессор AMD A10 9700 OEM",
+                     "price": "4 350 ₽",
+                     "wasprice": "",
+                     "condition": ""
+                     })
                      <div class="accound__total">
                         3 товара на сумму:
                         <span>11 440 ₽</span>

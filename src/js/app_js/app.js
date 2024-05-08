@@ -159,9 +159,21 @@ document.addEventListener('click', (event) => {
    // увеличение картинки слайдера 'about us'
    if (event.target.closest('.js-scale-img')) {
       let src = event.target.closest('img').getAttribute('src');
-      document.body.insertAdjacentHTML('beforeend', `<div class="show-image"><div class="show-image__container"><img src="${src}" alt="картинка"></div></div>`);
+      document.body.insertAdjacentHTML(
+         'beforeend',
+         `<div class="show-image">
+            <div class="show-image__container">
+               <div class="show-image__image_body">
+                  <div class="show-image__close">
+                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 15L15 1M15 15L1 1" stroke="#9604CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </div>
+                  <img src="${src}" alt="картинка">
+               </div>
+            </div>
+         </div>`
+      );
    }
-   if (event.target.closest('.show-image')) {
+   if (event.target.closest('.show-image__close')) {
       event.target.closest('.show-image').remove();
    }
 })

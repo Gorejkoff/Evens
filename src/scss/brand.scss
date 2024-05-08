@@ -13,10 +13,15 @@
       align-items: flex-end;
       min-height: 62.22vw;
       border-radius: 10px;
-      background-color: var(--color-gray-platinum);
       color: var(--color-violet);
+      background-color: var(--color-gray-platinum);
       overflow: hidden;
       transition: color 0.2s, background-color 0.2s;
+
+      &:hover {
+         color: var(--color-white);
+         background-color: var(--color-violet);
+      }
 
       @media (min-width:768px) {
          min-height: 180px;
@@ -25,13 +30,6 @@
       @media (min-width:1024px) {
          min-height: 224px;
       }
-
-      &:hover {
-         color: var(--color-white);
-         background-color: var(--color-violet);
-      }
-
-
    }
 
    &__name {
@@ -99,6 +97,17 @@
 }
 
 .swiper-brand-main {
+   .swiper-slide {
+      transition: color 0.2s, background-color 0.2s;
+   }
+
+   @media (max-width:767.98px) {
+      .swiper-slide-active {
+         background-color: var(--color-violet);
+         color: var(--color-white)
+      }
+   }
+
    @media (min-width:1024px) {
       @include sizeMaxMinPc (max-width, 965, 701);
    }

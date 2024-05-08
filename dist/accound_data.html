@@ -494,7 +494,7 @@
       </a>
    </li>
    <li>
-      <a  href="accound_favourites.html">
+      <a  href="accound_favourites.html" data-quantity="3">
          <span class="accound__menu-img"><img src="./img/svg/favourites-3.svg" alt="иконка в виде сердца"></span>
          Избранное
       </a>
@@ -529,22 +529,22 @@
    <input type="text" name="name" id="name" placeholder="Введите ваше имя" required disabled>
 </label>
                         <label class="order-registration__input">
+   <span class="order-registration__input-title">Ваша фамилия
+      
+   </span>
+   <input type="text" name="surname" id="surname" placeholder="Введите вашу фамилию" required disabled>
+</label>
+                        <label class="order-registration__input">
    <span class="order-registration__input-title">Телефон
       
    </span>
    <input type="text" name="phone" id="phone" placeholder="Введите ваш телефон" required disabled>
 </label>
                         <label class="order-registration__input">
-   <span class="order-registration__input-title">Ваш e-meil
+   <span class="order-registration__input-title">E-mail
       
    </span>
    <input type="text" name="e-mail" id="e-mail" placeholder="Введите ваш e-mail" required disabled>
-</label>
-                        <label class="order-registration__input">
-   <span class="order-registration__input-title">Пароль
-      
-   </span>
-   <input type="text" name="password" id="password" placeholder="Введите ваш пароль" required disabled>
 </label>
                         <label class="order-registration__input">
    <span class="order-registration__input-title">Адрес доставки
@@ -724,11 +724,11 @@
             </a>
          </div>
          <div class="header__contacts" data-da=".js-header-da,3,768">
-            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal-call">
+            <button class="js-modal-open" type="button" data-modal_open="modal-call">
                <p class="header__contacts-number">+7 965 130 55 70</p>
                <p class="header__contacts-text">Заказать звонок</p>
             </button>
-            <button class="header__contacts-block js-modal-open" type="button" data-modal_open="modal_write">
+            <button class="js-modal-open" type="button" data-modal_open="modal_write">
                <p class="header__contacts-number">+7 909 670 05 09</p>
                <p class="header__contacts-text">Напишите нам</p>
             </button>
@@ -853,7 +853,7 @@
 
    <script defer src='./js/app.js'></script>
 <script defer src='./js/swiper.js'></script>
-
+   <script defer src='./js/mask.js'></script>
 
 </body>
 

@@ -28,11 +28,10 @@
                   @@include('html/filter/filter.html',{"file": "filter.jsoan"})
                   <div>
                      @@include('html/sort/sort.html',{})
-                     <div class="page-title" data-da=".main,1,768">
-
+                     <div class="page-title" data-da=".page-title__container,1,768">
                         <h1 class="title ">Процессоры</h1>
                      </div>
-                     <div class="catalog__list">
+                     <div class="catalog__list view-grid">
                         @@loop("html/card/card_item.html", "../src/json/catalog_page.json")
                      </div>
                      @@include('html/pagination.html',{})

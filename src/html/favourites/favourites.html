@@ -1,8 +1,15 @@
 <div class="favourites margin-section">
    <div class="favourites__container">
-      <div class="favourites__body">
-         @@include('../favourites/favourites_card.html',{})
-         @@include('../favourites/favourites_card.html',{})
+      <div class="favourites__body view-block">
+         @@include('../card/card_item.html', {
+         "status": "orange",
+         "statusName": "Хит",
+         "image": "catalog-1.png",
+         "titleCard": "Процессор AMD A10 9700 OEM",
+         "price": "4 350 ₽",
+         "wasprice": "",
+         "condition": ""
+         })
       </div>
       <div class="favourites__sum">
          1 товар на сумму: <span class="favourites__sum-number">11 440 ₽</span>

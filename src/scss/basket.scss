@@ -195,18 +195,28 @@
       right: 5px;
    }
 
-   &__total {
-      margin-top: 20px;
-      font-weight: 700;
-      font-size: 20px;
+   &__total-group {
+      max-width: max-content;
+      margin-left: auto;
 
-      @media (min-width:768px) {
-         text-align: right;
+      a,
+      button {
+         min-width: 100%;
       }
    }
 
+   &__total {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-weight: 700;
+      font-size: 20px;
+
+   }
+
    &__total-number {
-      margin-left: 50px;
       color: var(--color-violet);
    }
 

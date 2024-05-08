@@ -88,6 +88,16 @@
       img {
          width: 100%;
       }
+   }
 
+   .swiper-certificate-pagination.swiper-pagination {
+      display: none;
+      margin-top: 30px;
+
+      @media (min-width:1024px) {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
    }
 }

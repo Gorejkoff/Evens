@@ -5,8 +5,8 @@
       </div>
       @@if(description !== false){ <p class="card-block__text">@@description</p> }
       <div class="swiper swiper-card">
-         <div class="swiper-wrapper">
-            @@for (var i = 0; i < context.cards.length; i++) { @@include('../html/card/card_item.html',{ "description" : "`+context.cards[i].description+`" , "wasprice" : "`+context.cards[i].wasprice+`" , "price" : "`+context.cards[i].price+`" , "condition" : "`+context.cards[i].condition+`" , "status" : "`+context.cards[i].status+`" , "statusName" :"`+context.cards[i].statusName+`", "image" : "`+context.cards[i].image+`" }) } </div>
+         <div class="swiper-wrapper view-grid">
+            @@for (var i = 0; i < context.cards.length; i++) { @@include('../html/card/card_item.html',{ "titleCard" : "`+context.cards[i].titleCard+`" , "wasprice" : "`+context.cards[i].wasprice+`" , "price" : "`+context.cards[i].price+`" , "condition" : "`+context.cards[i].condition+`" , "status" : "`+context.cards[i].status+`" , "statusName" :"`+context.cards[i].statusName+`", "image" : "`+context.cards[i].image+`" }) } </div>
                <div class="card-block-pagination swiper-pagination"></div>
                <div class="button-transition">
                   @@include('../html/link_transition.html',{"text": "@@linkText", "link": "@@link", "adaptive": ".card-block__title,last,1024"})

@@ -22,8 +22,6 @@
       }
    }
 
-   &__shell {}
-
    &__body {
       --column-width: 45%;
 
@@ -52,8 +50,6 @@
 
    &__card-item {
       flex: 1 1 auto;
-      display: flex;
-      gap: 24px;
       border: 1px solid var(--color-gray);
       border-radius: 10px;
       padding: 20px 10px;
@@ -64,6 +60,17 @@
 
       @media (min-width:1024px) {
          padding: 20px;
+      }
+   }
+
+   &__card-group {
+      margin-bottom: 20px;
+
+      display: flex;
+      gap: 24px;
+
+      @media (min-width:768px) {
+         margin-bottom: 0;
       }
    }
 
@@ -85,29 +92,42 @@
       margin-bottom: 20px;
       font-weight: 700;
       font-size: 16px;
+      line-height: 125%;
    }
 
    &__block {
-      margin-bottom: 45px;
+      margin-bottom: 10px;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: space-between;
-      gap: 10px;
+      gap: 20px;
+
+      @media (min-width:768px) {
+         margin-bottom: 30px;
+         flex-direction: row;
+         gap: 10px;
+      }
 
       button {
          font-size: 14px;
+         width: 100%;
 
-         .text-pc {
+         .text-short {
             display: none;
          }
 
-         @media (min-width:1024px) {
-            .text-pc {
-               display: block;
+         @media (min-width:768px) {
+            width: auto;
+         }
+
+         @media (min-width:768px) and (max-width: 1023.98px) {
+            .text-full {
+               display: none;
             }
 
-            .text-mob {
-               display: none;
+            .text-short {
+               display: block;
             }
          }
       }
@@ -122,8 +142,44 @@
 
    &__buttons {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
+      gap: 10px;
+
+      @media (min-width:768px) {
+         justify-content: space-between;
+         flex-direction: row;
+      }
+   }
+
+   &__buttons-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      button {
+         min-height: 40px;
+      }
+
+      @media (min-width:768px) {
+         display: none;
+      }
+   }
+
+   &__status-shell {
+      flex: 1 1 auto;
+   }
+
+   &__status {
+      border-radius: 2px;
+      padding: 6px 20px;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-white);
    }
 
    &__description {

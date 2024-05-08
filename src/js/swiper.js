@@ -6385,6 +6385,10 @@ if (document.querySelector('.swiper-certificate')) {
          },
          1024: {
             slidesPerView: 6,
+            pagination: {
+               el: '.swiper-certificate-pagination',
+               clickable: true,
+            },
          }
       }
    });

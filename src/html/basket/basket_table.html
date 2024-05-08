@@ -1,5 +1,6 @@
 <div class="basket margin-section">
    <div class="basket__container">
+      <div class="order-registration__title">Ваш заказ</div>
       <form action="#" method="post" name="" id="basket">
          <div class="basket__body">
             <div class="basket__header-product">Товар</div>
@@ -72,18 +73,18 @@
             </div>
          </div>
       </form>
-
-      <div class="basket__total">
-         Итого:
-         <span class="basket__total-number">11 440 ₽</span>
+      <div class="basket__total-group">
+         <div class="basket__total">
+            Итого:
+            <span class="basket__total-number">11 440 ₽</span>
+         </div>
+         @@if(context.prop == "link"){
+         @@include('../basket/basket_registration_link.html',{})
+         }
+         @@if(context.prop == "submit"){
+         @@include('../basket/basket_registration_submit.html',{})
+         }
       </div>
-
-      @@if(context.prop == "link"){
-      @@include('../basket/basket_registration_link.html',{})
-      }
-      @@if(context.prop == "submit"){
-      @@include('../basket/basket_registration_submit.html',{})
-      }
 
    </div>
 </div>
