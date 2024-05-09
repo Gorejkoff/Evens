@@ -16,6 +16,11 @@
       height: 100vh;
       overflow-y: auto;
 
+      &::-webkit-scrollbar {
+         display: none;
+      }
+
+
       @media (max-height:600px) {
          align-items: flex-start;
       }

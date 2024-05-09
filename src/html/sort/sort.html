@@ -1,36 +1,6 @@
 <div class="sort">
    @@include('../filter/filter_open.html',{})
-   <div class="sort__block">
-      <p class="sort__name">Сортировать по:</p>
-      <div class="sort__body js-tab-body">
-         <button class="sort__button js-tab-button" type="button">
-            <span id="sort-button-text">По умолчанию</span>
-            <img src="@img/svg/arrow-bottom.svg" alt="стрелка указывает вниз">
-         </button>
-         <form class="sort__tab js-tab-content" action="#" method="post" name="sort" id="sort">
-            <ol class="js-tab-content-inner">
-               <li>
-                  <label class="js-sort-value">
-                     <input type="radio" name="sort-item" value="Increasing">
-                     <span class="sort__value hover-inner-menu">По возрастанию цены</span>
-                  </label>
-               </li>
-               <li>
-                  <label class="js-sort-value">
-                     <input type="radio" name="sort-item" value="popularity">
-                     <span class="sort__value hover-inner-menu">По популярности</span>
-                  </label>
-               </li>
-               <li>
-                  <label class="js-sort-value">
-                     <input type="radio" name="sort-item" value="date">
-                     <span class="sort__value hover-inner-menu">По дате</span>
-                  </label>
-               </li>
-            </ol>
-         </form>
-      </div>
-   </div>
+   @@include('../sort/sort_by.html',{})
    <div class="number-product">
       <p>Вариантов найдено:</p>
       <span class="number-product__item">40</span>

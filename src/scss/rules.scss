@@ -398,3 +398,35 @@ textarea {
 [class*="copyrights-pane"] {
    display: none;
 }
+
+.search-result {
+   // display: none;
+
+   ol {
+      padding-top: 20px;
+   }
+
+   li {
+      padding-bottom: 10px;
+
+      a {
+         color: var(--color-black);
+         font-weight: 700;
+
+         span {
+            color: var(--color-green);
+         }
+      }
+   }
+
+   &__button {
+      text-align: center;
+
+      a {
+         margin-top: 20px;
+         margin-bottom: 20px;
+         display: inline-block;
+      }
+   }
+
+}

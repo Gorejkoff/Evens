@@ -20,6 +20,51 @@
 
          @@include('html/title/page_title.html',{"title": "Поиск"})
 
+         <div class="search">
+            <div class="search__container">
+               <div class="search__body">
+                  <div class="search__sort">
+                     <div class="search__sort-option">
+                        <div class="search__sort-option-title">По ключевым словам</div>
+                        <div class="search__sort-option-value">
+                           <input type="text" name="" id="" placeholder="Введите ключевое слово" value="Игровой">
+                        </div>
+                     </div>
+                     <div class="search__sort-option">
+                        <div class="search__sort-option-title">По категориям</div>
+                        <div class="search__sort-option-value">
+                           Все категории
+                           <button type="button">
+                              <img src="@img/svg/arrow-nav-bottom.svg" alt="стрелка указывает вниз">
+                           </button>
+                        </div>
+                     </div>
+                     <button class="button-green" type="submit">Поиск</button>
+                  </div>
+                  <div class="search__keywords">
+                     <span>
+                        Игровой
+                        <button type="button">
+                           <img src="@img/svg/close_4.svg" alt="Закрыть">
+                        </button>
+                     </span>
+                     <span>
+                        Игровой
+                        <button type="button">
+                           <img src="@img/svg/close_4.svg" alt="Закрыть">
+                        </button>
+                     </span>
+                  </div>
+                  <div class="search__header">
+
+                     @@include('html/sort/sort_by.html',{})
+                  </div>
+
+
+               </div>
+            </div>
+         </div>
+
       </main>
 
       @@include('html/footer.html',{})

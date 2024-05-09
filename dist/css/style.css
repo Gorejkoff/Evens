@@ -503,6 +503,28 @@ textarea::placeholder {
   display: none;
 }
 
+.search-result ol {
+  padding-top: 20px;
+}
+.search-result li {
+  padding-bottom: 10px;
+}
+.search-result li a {
+  color: var(--color-black);
+  font-weight: 700;
+}
+.search-result li a span {
+  color: var(--color-green);
+}
+.search-result__button {
+  text-align: center;
+}
+.search-result__button a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
 body {
   font-family: "Mulish";
   color: var(--color-black);
@@ -1223,9 +1245,13 @@ body {
   }
 }
 .catalog-nav__search {
+  padding-left: 10px;
+  padding-right: 10px;
   position: relative;
   margin-bottom: 30px;
   display: none;
+  border: 1px solid var(--color-gray);
+  border-radius: 6px;
 }
 @media (min-width: 768px) {
   .catalog-nav__search {
@@ -1233,20 +1259,19 @@ body {
   }
 }
 .catalog-nav__search input {
-  border: 1px solid var(--color-gray);
-  border-radius: 6px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100%;
+  min-height: 48px;
   font-weight: 500;
   font-size: 14px;
 }
-.catalog-nav__search button {
+.catalog-nav__search-button {
   position: absolute;
-  top: 50%;
+  top: 10px;
   right: 10px;
-  transform: translateY(-50%);
 }
-.catalog-nav__search button img {
+.catalog-nav__search-button img {
   width: 28px;
   max-width: 28px;
   max-height: 28px;
@@ -1287,6 +1312,9 @@ body {
   .catalog-nav-content.open {
     display: block;
   }
+}
+.catalog-nav-content__container {
+  background-color: var(--color-white);
 }
 @media (min-width: 768px) {
   .catalog-nav-content__container {
@@ -1358,6 +1386,9 @@ body {
   justify-content: center;
   height: 100vh;
   overflow-y: auto;
+}
+.modal__container::-webkit-scrollbar {
+  display: none;
 }
 @media (max-height: 600px) {
   .modal__container {
@@ -4900,10 +4931,13 @@ table.specifications tbody td:nth-child(2n) {
     gap: 20px;
   }
 }
+.accound__orders-block .accound__orders-namber {
+  display: none;
+}
 .accound__orders-inner-block {
   display: none;
   margin-left: 20px;
-  border-bottom: 1px solid var(--color-gray-light);
+  border-top: 1px solid var(--color-gray-light);
 }
 .accound__orders-shell.orders-header {
   background-color: var(--color-gray-light);
@@ -4925,6 +4959,9 @@ table.specifications tbody td:nth-child(2n) {
     font-size: 16px;
   }
 }
+.accound__orders-shell:not(:first-child) {
+  border-bottom: 1px solid var(--color-gray);
+}
 .accound__orders-shell:not(:first-child) .accound__orders-price {
   color: var(--color-violet);
   font-weight: 700;
@@ -4939,9 +4976,6 @@ table.specifications tbody td:nth-child(2n) {
   .accound__orders-shell:not(:first-child) .accound__orders-price {
     font-size: 20px;
   }
-}
-.accound__orders-shell:not(:first-child) .accound__orders-block {
-  border-bottom: 1px solid var(--color-gray);
 }
 .accound__orders-shell:not(:first-child) .accound__orders-inner-block .accound__orders-price {
   color: var(--color-black);
@@ -5073,12 +5107,12 @@ table.specifications tbody td:nth-child(2n) {
 @media (min-width: 768px) {
   .accound__orders-status {
     display: flex;
-    flex: 0 0 100px;
+    flex: 0 1 120px;
   }
 }
 @media (min-width: 1024px) {
   .accound__orders-status {
-    flex: 0 0 200px;
+    flex: 0 0 210px;
   }
 }
 .accound__orders-status .accound__orders-open {
@@ -5176,6 +5210,65 @@ table.specifications tbody td:nth-child(2n) {
     font-size: 12px;
   }
 }
+.search__sort {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+.search__sort .button-green {
+  padding: 10px 16px;
+  font-size: 20px;
+  min-height: 45px;
+}
+.search__sort-option {
+  flex: 1 1 10%;
+}
+.search__sort-option-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 136%;
+  color: var(--color-gray);
+}
+.search__sort-option-value {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 50px;
+  border-radius: 2px;
+  border: 1px solid var(--color-gray);
+  font-size: 14px;
+  color: var(--color-black);
+}
+.search__sort-option-value button {
+  display: flex;
+  align-items: center;
+}
+.search__keywords {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.search__keywords span {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 40px;
+  font-size: 16px;
+  background-color: var(--color-gray-light);
+  border-radius: 4px;
+}
+.search__keywords span button {
+  display: flex;
+  align-items: center;
+}
+.search__keywords span button img {
+  width: 8px;
+}
+
 .footer {
   padding-top: 30px;
   padding-bottom: 30px;

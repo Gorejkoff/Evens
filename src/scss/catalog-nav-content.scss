@@ -32,6 +32,8 @@
    }
 
    &__container {
+      background-color: var(--color-white);
+
       @media (min-width:768px) {
          padding-left: 0;
          padding-right: 0;
