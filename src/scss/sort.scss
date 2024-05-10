@@ -3,10 +3,6 @@
    display: flex;
    justify-content: space-between;
 
-   input {
-      display: none;
-   }
-
    @media (min-width:768px) {
       margin-bottom: 10px;
    }
@@ -75,6 +71,10 @@
          left: -20px;
          right: auto;
       }
+
+      input {
+         display: none;
+      }
    }
 
    &__value {
@@ -83,15 +83,19 @@
       width: 170px;
       cursor: pointer;
    }
+
+   .number-product {
+      display: none;
+
+      @media (min-width:1024px) {
+         display: flex;
+      }
+   }
 }
 
 .number-product {
-   display: none;
+   display: flex;
    gap: 20px;
-
-   @media (min-width:1024px) {
-      display: flex;
-   }
 
    &__item {
       font-weight: 700;

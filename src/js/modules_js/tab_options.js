@@ -62,9 +62,9 @@ class TabsOpen {
    resize = () => window.addEventListener('resize', this.adjustment);
 }
 
-if (document.querySelector('.sort')) {
+if (document.querySelector('.js-sort')) {
    let tebSort = new TabsOpen({
-      name: '.sort',
+      name: '.js-sort',
       hover: true,
       closeAllTabs: true,
       closeClickContent: true,

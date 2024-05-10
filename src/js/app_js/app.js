@@ -176,6 +176,18 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('.show-image__close')) {
       event.target.closest('.show-image').remove();
    }
+   if (event.target.closest('.js-grid')) {
+      event.target.closest('.js-grid').classList.add('active');
+      document.querySelector('.js-block').classList.remove('active');
+      document.querySelector('.js-change-view').classList.remove('view-block');
+      document.querySelector('.js-change-view').classList.add('view-grid');
+   }
+   if (event.target.closest('.js-block')) {
+      event.target.closest('.js-block').classList.add('active');
+      document.querySelector('.js-grid').classList.remove('active');
+      document.querySelector('.js-change-view').classList.add('view-block');
+      document.querySelector('.js-change-view').classList.remove('view-grid');
+   }
 })
 
 /* === СОБЫТИЕ МЫШЬ НАД ЭЛЕМЕНТОМ === */

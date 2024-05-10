@@ -87,14 +87,23 @@
          padding-left: 30px;
          padding-right: 30px;
          margin-bottom: 20px;
-         font-size: 20px;
-         font-weight: 700;
-         line-height: 120%;
          height: calc(3em * 1.2);
          -webkit-line-clamp: 3;
          display: -webkit-box;
          -webkit-box-orient: vertical;
          overflow: hidden;
+         line-height: 120%;
+         font-weight: 700;
+         font-size: 20px;
+         color: var(--color-black);
+
+         a {
+            display: block;
+            line-height: 120%;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--color-black);
+         }
 
          @media (min-width:768px) {
             padding-left: 0px;
@@ -274,6 +283,13 @@
          font-weight: 700;
          font-size: 20px;
 
+         a {
+            font-weight: 700;
+            font-size: 20px;
+            text-align: center;
+            color: var(--color-black);
+         }
+
          @media (min-width:768px) {
             text-align: left;
          }
@@ -291,9 +307,19 @@
       }
 
       &__price {
+         display: flex;
+         align-items: flex-end;
+         gap: 24px;
          font-weight: 700;
          font-size: 24px;
          color: var(--color-violet);
+      }
+
+      &__wasprice {
+         font-weight: 700;
+         font-size: 16px;
+         color: var(--color-gray);
+         text-decoration: line-through;
       }
    }
 }

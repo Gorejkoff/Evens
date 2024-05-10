@@ -7,8 +7,13 @@
    &__sort {
       margin-bottom: 20px;
       display: flex;
-      align-items: flex-end;
+      flex-direction: column;
       gap: 24px;
+
+      @media (min-width:768px) {
+         align-items: flex-end;
+         flex-direction: row;
+      }
 
       .button-green {
          padding: 10px 16px;
@@ -71,6 +76,83 @@
             }
          }
       }
-
    }
+
+   &__header {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      @media (min-width:768px) {
+
+         align-items: flex-end;
+      }
+
+      @media (max-width:1023.98px) {
+         justify-content: space-between;
+      }
+   }
+
+   &__quantity-product {
+      @media (min-width:1024px) {
+         flex: 0 0 307px;
+      }
+   }
+
+   &__view {
+      display: flex;
+      gap: 10px;
+
+      @media (min-width:1024px) {
+         flex: 1 1 auto;
+      }
+
+      button {
+         svg {
+            width: 23px;
+            height: 23px;
+         }
+
+         &.active {
+            svg {
+               rect {
+                  fill: var(--color-violet)
+               }
+            }
+         }
+      }
+   }
+
+   &__content {
+      display: flex;
+      gap: 24px;
+   }
+
+   &__categories-title {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 250%;
+      color: var(--color-violet);
+   }
+
+
+   &__list {
+      flex: 1 1 auto;
+   }
+
+   &__shell {
+
+      &.view-grid {
+         display: grid;
+         grid-template-columns: 1fr;
+         gap: 20px;
+
+         @media (min-width:768px) {
+            grid-template-columns: 1fr 1fr 1fr;
+         }
+      }
+   }
+
 }

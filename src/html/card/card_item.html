@@ -14,7 +14,7 @@
                @@include('../buttons/button_favourites.html',{"text": "Удалить из избранного", "state": ""})
             </div>
          </div>
-         <h3 class="card__title-card">@@titleCard</h3>
+         <h3 class="card__title-card"> @@if(context.grid == false){<a href="product_card.html">}@@titleCard @@if(context.grid == false){</a>}</h3>
          <div class="card__footer">
             <div class="card__price">@@if(wasprice){<span class="card__wasprice">@@wasprice</span>}<span>@@price</span></div>
             <div class="card__button">

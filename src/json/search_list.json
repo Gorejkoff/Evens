@@ -1,0 +1,92 @@
+[
+   {
+      "grid": false,
+      "status": "orange",
+      "statusName": "Хит",
+      "image": "img-1.png",
+      "titleCard": "Игровой компьютер EvensPC Snow man",
+      "price": "120 000 ₽",
+      "wasprice": "130 000 ₽",
+      "condition": ""
+   },
+   {
+      "grid": false,
+      "status": "",
+      "statusName": "",
+      "image": "img-2.png",
+      "titleCard": "Игровой компьютер EvensPC Snow",
+      "price": "100 000 ₽",
+      "wasprice": "",
+      "condition": "disabled"
+   },
+   {
+      "grid": false,
+      "status": "green",
+      "statusName": "Скидка",
+      "image": "img-3.png",
+      "titleCard": "Игровой компьютер EvensPC man",
+      "price": "90 000 ₽",
+      "wasprice": "",
+      "condition": ""
+   },
+   {
+      "grid": false,
+      "status": "violet",
+      "statusName": "Новинка",
+      "image": "img-4.png",
+      "titleCard": "Игровой компьютер EvensPC",
+      "price": "130 000 ₽",
+      "wasprice": "",
+      "condition": ""
+   },
+   {
+      "grid": false,
+      "status": "orange",
+      "statusName": "Хит",
+      "image": "img-1.png",
+      "titleCard": "Игровой компьютер EvensPC Snow man",
+      "price": "120 000 ₽",
+      "wasprice": "130 000 ₽",
+      "condition": ""
+   },
+   {
+      "grid": false,
+      "status": "",
+      "statusName": "",
+      "image": "img-2.png",
+      "titleCard": "Игровой компьютер EvensPC Snow",
+      "price": "100 000 ₽",
+      "wasprice": "",
+      "condition": "disabled"
+   },
+   {
+      "grid": false,
+      "status": "green",
+      "statusName": "Скидка",
+      "image": "img-3.png",
+      "titleCard": "Игровой компьютер EvensPC man",
+      "price": "90 000 ₽",
+      "wasprice": "110 000 ₽",
+      "condition": ""
+   },
+   {
+      "grid": false,
+      "status": "violet",
+      "statusName": "Новинка",
+      "image": "img-4.png",
+      "titleCard": "Игровой компьютер EvensPC",
+      "price": "130 000 ₽",
+      "wasprice": "",
+      "condition": ""
+   },
+   {
+      "grid": false,
+      "status": "orange",
+      "statusName": "Хит",
+      "image": "img-1.png",
+      "titleCard": "Игровой компьютер EvensPC Snow man",
+      "price": "120 000 ₽",
+      "wasprice": "130 000 ₽",
+      "condition": ""
+   }
+]
