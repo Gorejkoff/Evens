@@ -1,4 +1,4 @@
-.page-404 {
+.page-info {
    &__body {
       @media (min-width:768px) {
          display: flex;
@@ -15,6 +15,7 @@
          margin: 0;
          flex: 0 0 30%;
       }
+
    }
 
    &__title {
@@ -34,8 +35,20 @@
       font-size: 20px;
       line-height: 120%;
 
+      a {
+         font-size: inherit;
+         line-height: inherit;
+         color: var(--color-blue);
+      }
+
       @media (min-width:1024px) {
          font-size: 30px;
+      }
+   }
+
+   &__link {
+      @media (max-width:767.98px) {
+         width: 100%;
       }
    }
 

@@ -12,6 +12,11 @@ $minDesktop: 'min-width:1344px';
    #{$prop}: calc($minpx + (100vw - 768px)/(1344 - 768)*($max - $min));
 }
 
+@mixin sizeMaxMinMobileFlex ($grow, $shrink, $max, $min) {
+   $minpx : $min + px;
+   flex: $grow $shrink calc($minpx + (100vw - 768px)/(1024 - 768)*($max - $min));
+}
+
 @mixin sizeMaxMinTabletFlex ($grow, $shrink, $max, $min) {
    $minpx : $min + px;
    flex: $grow $shrink calc($minpx + (100vw - 768px)/(1344 - 768)*($max - $min));
@@ -21,8 +26,3 @@ $minDesktop: 'min-width:1344px';
    $minpx : $min + px;
    flex: $grow $shrink calc($minpx + (100vw - 1024px)/(1344 - 1024)*($max - $min));
 }
-
-// @mixin sizeMaxMinMobile ($prop, $max, $min) {
-//    $minpx : $min + px;
-//    #{$prop}: calc($minpx + (100vw - 375px)/(1024 - 375)*($max - $min));
-// }

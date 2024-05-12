@@ -51,22 +51,27 @@
             padding-left: 39px;
             font-size: 12px;
 
+            a {
+               font-size: inherit;
+            }
+
             @media (min-width:768px) {
                font-size: 14px;
             }
 
             @media (min-width:1024px) {
                font-size: 16px;
+
             }
 
             &:not(:last-child) {
-               margin-bottom: 15px;
+               margin-bottom: 10px;
             }
 
             &::before {
                content: '';
                position: absolute;
-               top: 0;
+               top: 3px;
                left: 0;
                display: inline-block;
                min-width: 19px;

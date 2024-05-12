@@ -63,6 +63,7 @@
 
          &[data-quantity]::after {
             content: '(' attr(data-quantity)')';
+            color: var(--color-violet);
          }
       }
    }
@@ -151,8 +152,25 @@
    &__favourites {
       flex: 1 1 auto;
 
+      .card {
+         padding: 10px 5px;
+         border: 1px solid var(--color-gray);
+         border-radius: 10px;
+         overflow: hidden;
+      }
+
       &>*:not(:last-child) {
          margin-bottom: 20px;
+      }
+
+      @media (max-width:767.98px) {
+         .card__button {
+            width: 100%;
+
+            button {
+               width: 100%;
+            }
+         }
       }
    }
 
@@ -257,7 +275,8 @@
    &__orders-inner-block {
       display: none;
       margin-left: 20px;
-      border-top: 1px solid var(--color-gray-light);
+      margin-right: 20px;
+      border-top: 1px solid var(--color-gray);
    }
 
    &__orders-shell {}
@@ -278,6 +297,10 @@
 
       @media (min-width:1024px) {
          font-size: 16px;
+      }
+
+      .accound__orders-product {
+         padding-left: 10px;
       }
    }
 
@@ -351,7 +374,7 @@
    }
 
    &__orders-image {
-      border: 1px solid var(--color-gray-light);
+      border: 1px solid var(--color-gray);
 
       img {
          width: 86px;
@@ -401,11 +424,15 @@
          padding-top: 0;
          padding-bottom: 0;
          display: flex;
-         flex: 0 0 85px;
+         @include sizeMaxMinMobileFlex (0, 0, 170, 100)
       }
 
       @media (min-width:1024px) {
-         flex: 0 0 100px;
+         @include sizeMaxMinPcFlex (0, 1, 220, 90)
+      }
+
+      @media (min-width:1344px) {
+         flex: 0 0 220px;
       }
    }
 
@@ -413,11 +440,15 @@
       text-align: end;
 
       @media (min-width:768px) {
-         flex: 0 0 80px;
+         @include sizeMaxMinMobileFlex (0, 0, 220, 100)
       }
 
       @media (min-width:1024px) {
-         flex: 0 0 120px;
+         @include sizeMaxMinPcFlex (0, 1, 220, 100)
+      }
+
+      @media (min-width:1344px) {
+         flex: 0 0 220px;
       }
    }
 
@@ -445,8 +476,10 @@
       }
 
       @media (min-width:1024px) {
-         flex: 0 0 210px;
+         flex: 0 0 250px;
       }
+
+
 
       .accound__orders-open {
          display: none;
@@ -465,10 +498,6 @@
       @media (min-width:768px) {
          display: flex;
          justify-content: center;
-      }
-
-      @media (min-width:1024px) {
-         flex: 0 0 100px;
       }
    }
 

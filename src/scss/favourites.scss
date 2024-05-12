@@ -6,6 +6,23 @@
       &>*:not(:last-child) {
          margin-bottom: 30px;
       }
+
+      .card {
+         padding: 10px 5px;
+         border: 1px solid var(--color-gray);
+         border-radius: 10px;
+         overflow: hidden;
+      }
+
+      @media (max-width:767.98px) {
+         .card__button {
+            width: 100%;
+
+            button {
+               width: 100%;
+            }
+         }
+      }
    }
 
    &__sum {

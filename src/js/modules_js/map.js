@@ -8,7 +8,7 @@ if (document.getElementById('contacts-map')) {
       });
       var myPlacemark = new ymaps.Placemark([55.844334, 37.383633], {}, {
          iconLayout: 'default#imageWithContent',
-         iconImageHref: '../../img/svg/icon_point.svg',
+         iconImageHref: './img/svg/icon_point.svg',
          iconImageSize: [60, 73],
          iconImageOffset: [-30, -73]
       });

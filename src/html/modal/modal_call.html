@@ -5,7 +5,10 @@
             <h2 class="modal__title">Заказать звонок</h2>
             <p class="modal__text">Оставьте заявку и мы перезвоним Вам в самое ближайшее время!</p>
             <form action="404.html" method="post" name="write" id="write">
-               @@include('../modal/modal_modules/modal_inputs.html',{})
+               <div class="modal__input-block">
+                  <input class="modal__input" type="text" placeholder="Ваше имя" required>
+                  <input class="modal__input js-phone" type="text" placeholder="Введите ваш телефон" required>
+               </div>
                @@include('../modal/modal_modules/modal_button.html',{})
                <div class="modal__check">
                   @@include('../check/check.html',{"type":"checkbox","name": "personal-data", "text": "Я согласен на ","linkText": "обработку персональных данных", "link": "404.html"})

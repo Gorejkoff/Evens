@@ -54,6 +54,7 @@
       position: relative;
       width: 86px;
       height: 62px;
+      border: 1px solid var(--color-gray-light);
 
       img {
          position: absolute;
@@ -196,8 +197,10 @@
    }
 
    &__total-group {
-      max-width: max-content;
-      margin-left: auto;
+      @media (min-width:768px) {
+         max-width: max-content;
+         margin-left: auto;
+      }
 
       a,
       button {
@@ -206,14 +209,18 @@
    }
 
    &__total {
+      padding-top: 10px;
+      padding-bottom: 10px;
       margin-top: 20px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
       gap: 20px;
       font-weight: 700;
       font-size: 20px;
 
+      @media (min-width:768px) {
+         justify-content: space-between;
+      }
    }
 
    &__total-number {
