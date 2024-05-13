@@ -523,9 +523,14 @@
 
       @media (min-width:768px) and (max-width:1023.98px) {
          display: block;
-         margin: 20px auto;
+
+         &.cancel-active {
+            margin: 20px auto;
+         }
       }
    }
+
+
 
    &__orders-status-delivery {
       font-weight: 700;

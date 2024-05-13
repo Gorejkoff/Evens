@@ -235,6 +235,10 @@
          line-height: 214%;
          list-style-type: disc;
       }
+
+      a {
+         font-size: inherit;
+      }
    }
 
    &__term {
@@ -245,6 +249,7 @@
       a {
          text-decoration: underline;
          color: var(--color-blue);
+         font-size: inherit;
       }
    }
 
