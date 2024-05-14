@@ -84,8 +84,11 @@
       gap: 24px;
 
       @media (min-width:768px) {
-
          align-items: flex-end;
+      }
+
+      @media (min-width:1024px) {
+         flex-direction: row;
       }
 
       @media (max-width:1023.98px) {

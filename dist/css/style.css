@@ -502,9 +502,6 @@ textarea::placeholder {
   display: none;
 }
 
-.search-result {
-  display: none;
-}
 .search-result ol {
   padding-top: 20px;
 }
@@ -5329,6 +5326,11 @@ table.specifications tbody td:nth-child(2n) {
 @media (min-width: 768px) {
   .search__header {
     align-items: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  .search__header {
+    flex-direction: row;
   }
 }
 @media (max-width: 1023.98px) {
