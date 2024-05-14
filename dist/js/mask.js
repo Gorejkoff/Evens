@@ -3636,11 +3636,7 @@
 }));
 //# sourceMappingURL=imask.js.map
 
-
-
 const LIST_PHONE = document.querySelectorAll('.js-phone');
-console.log(LIST_PHONE);
-const maskOptions = {
-   mask: '+{7} 000 000 00 00'
-};
-LIST_PHONE.forEach((e) => IMask(e, maskOptions))
+const maskOptions = { mask: '+{7} 000 000 00 00' };
+LIST_PHONE.forEach((e) => { IMask(e, maskOptions) })
+
