@@ -2,7 +2,7 @@
    <div class="information__questions-title">Остались вопросы?</div>
    <div class="information__questions-text">Пожалуйста, оставьте заявку и наши специалисты свяжутся с Вами</div>
    @@include('../registration/input.html',{"required": true, "name": "name", "placeholder": "Ваша имя", "type": "text"})
-   @@include('../registration/input.html',{"required": true, "name": "name", "placeholder": "Ваш телефон", "type": "text", "class": "js-phone"})
+   @@include('../registration/input.html',{"required": true, "name": "name", "placeholder": "Ваш телефон", "type": "tel", "class": "js-phone"})
    <button class="button-green" type="submit">Отправить</button>
    @@include('../check/check.html',{"type":"checkbox","name": "personal-data", "text": "Я согласен на ","linkText": "обработку персональных данных", "link": "404.html"})
 </form>

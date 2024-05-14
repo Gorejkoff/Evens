@@ -3637,6 +3637,11 @@
 //# sourceMappingURL=imask.js.map
 
 const LIST_PHONE = document.querySelectorAll('.js-phone');
-const maskOptions = { mask: '+{7} 000 000 00 00' };
-LIST_PHONE.forEach((e) => { IMask(e, maskOptions) })
+if (LIST_PHONE.length > 0) {
+   const maskOptions = { mask: '+{7} (000) 000 00 00' };
+   LIST_PHONE.forEach((e) => {
+      const mask = IMask(e, maskOptions);
+      //  e.addEventListener('input', () => console.log(mask.unmaskedValue));// mask.unmaskedValue - введённый номер без маски
+   })
+}
 
