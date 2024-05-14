@@ -277,6 +277,18 @@
       margin-left: 20px;
       margin-right: 20px;
       border-top: 1px solid var(--color-gray);
+
+      @media (min-width:768px) and (max-width: 1023.98px) {
+         .accound__orders-image {
+            width: 48px;
+            min-width: 48px;
+            height: 35px;
+         }
+      }
+
+      @media (min-width:768px) {
+         margin-right: -20px;
+      }
    }
 
    &__orders-shell {}
@@ -359,36 +371,49 @@
       gap: 10px;
 
       @media (min-width:768px) {
-         flex: 1 1 auto;
-      }
+         flex: 0 0 200px;
 
-      .accound__orders-open {
-         @media (min-width:768px) {
+         .accound__orders-open {
             display: none;
          }
       }
 
       @media (min-width:1024px) {
+         flex: 1 1 auto;
          gap: 24px;
       }
    }
 
    &__orders-image {
+      position: relative;
       border: 1px solid var(--color-gray);
+      width: 86px;
+      min-width: 86px;
+      height: 62px;
+
+      @media (min-width:768px) and (max-width: 1023.98px) {
+         width: 62px;
+         min-width: 62px;
+         height: 62px;
+      }
 
       img {
-         width: 86px;
-         max-width: 86px;
-         max-height: 62px;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
       }
    }
+
+
 
    &__orders-data {
       flex: 1 1 auto;
    }
 
    &__orders-name {
-      margin-bottom: 10px;
       line-height: 156%;
 
       @media (min-width:768px) {
@@ -428,7 +453,7 @@
       }
 
       @media (min-width:1024px) {
-         @include sizeMaxMinPcFlex (0, 1, 220, 90)
+         @include sizeMaxMinPcFlex (0, 0, 220, 90)
       }
 
       @media (min-width:1344px) {
@@ -444,7 +469,7 @@
       }
 
       @media (min-width:1024px) {
-         @include sizeMaxMinPcFlex (0, 1, 220, 100)
+         @include sizeMaxMinPcFlex (0, 0, 220, 100)
       }
 
       @media (min-width:1344px) {

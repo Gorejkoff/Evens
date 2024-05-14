@@ -400,10 +400,35 @@ textarea {
 }
 
 .search-result {
-   //  display: none;
+   display: none;
+   padding: 10px;
+   position: absolute;
+   top: 100%;
+   right: -20px;
+   z-index: 10;
+   width: 100vw;
+
+   background-color: var(--color-white);
+   border: 1px solid var(--color-gray);
+
+
+
+   @media (min-width:768px) {
+      border-radius: 6px;
+      width: 100%;
+      right: 0;
+   }
+
+   @media (min-width:1344px) {
+      width: 965px;
+   }
+
+   @media (min-width:1024px) and (max-width:1343.98px) {
+      @include sizeMaxMinPc(width, 965, 701);
+   }
 
    ol {
-      padding-top: 20px;
+      padding-top: 10px;
    }
 
    li {
@@ -424,7 +449,7 @@ textarea {
 
       a {
          margin-top: 20px;
-         margin-bottom: 20px;
+         margin-bottom: 10px;
          display: inline-block;
       }
    }

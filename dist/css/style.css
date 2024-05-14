@@ -502,8 +502,36 @@ textarea::placeholder {
   display: none;
 }
 
+.search-result {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  top: 100%;
+  right: -20px;
+  z-index: 10;
+  width: 100vw;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray);
+}
+@media (min-width: 768px) {
+  .search-result {
+    border-radius: 6px;
+    width: 100%;
+    right: 0;
+  }
+}
+@media (min-width: 1344px) {
+  .search-result {
+    width: 965px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1343.98px) {
+  .search-result {
+    width: calc(701px + (100vw - 1024px) / 320 * 264);
+  }
+}
 .search-result ol {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 .search-result li {
   padding-bottom: 10px;
@@ -520,7 +548,7 @@ textarea::placeholder {
 }
 .search-result__button a {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
@@ -649,6 +677,7 @@ body {
   background-color: var(--color-black);
 }
 .header-nav__body {
+  position: relative;
   padding-top: 7px;
   padding-bottom: 7px;
   display: flex;
@@ -737,10 +766,11 @@ body {
 }
 .header-nav__search {
   position: absolute;
+  margin-left: -20px;
   top: 0;
   left: 0;
   z-index: 10;
-  width: 100%;
+  width: 100vw;
   height: 100%;
   border-bottom: 1px solid var(--color-gray);
   border-top: 1px solid var(--color-gray);
@@ -750,13 +780,14 @@ body {
   .header-nav__search {
     position: relative;
     flex: 1 1 auto;
+    margin-left: 0;
     display: block;
     border: none;
     width: auto;
   }
 }
 .header-nav__search input {
-  padding: 4px 25px 4px 10px;
+  padding: 4px 25px 4px 40px;
   width: 100%;
   min-height: 100%;
   font-weight: 500;
@@ -4972,6 +5003,18 @@ table.specifications tbody td:nth-child(2n) {
   margin-right: 20px;
   border-top: 1px solid var(--color-gray);
 }
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .accound__orders-inner-block .accound__orders-image {
+    width: 48px;
+    min-width: 48px;
+    height: 35px;
+  }
+}
+@media (min-width: 768px) {
+  .accound__orders-inner-block {
+    margin-right: -20px;
+  }
+}
 .accound__orders-shell.orders-header {
   background-color: var(--color-gray-light);
   font-weight: 700;
@@ -5039,32 +5082,44 @@ table.specifications tbody td:nth-child(2n) {
 }
 @media (min-width: 768px) {
   .accound__orders-product {
-    flex: 1 1 auto;
+    flex: 0 0 200px;
   }
-}
-@media (min-width: 768px) {
   .accound__orders-product .accound__orders-open {
     display: none;
   }
 }
 @media (min-width: 1024px) {
   .accound__orders-product {
+    flex: 1 1 auto;
     gap: 24px;
   }
 }
 .accound__orders-image {
+  position: relative;
   border: 1px solid var(--color-gray);
+  width: 86px;
+  min-width: 86px;
+  height: 62px;
+}
+@media (min-width: 768px) and (max-width: 1023.98px) {
+  .accound__orders-image {
+    width: 62px;
+    min-width: 62px;
+    height: 62px;
+  }
 }
 .accound__orders-image img {
-  width: 86px;
-  max-width: 86px;
-  max-height: 62px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .accound__orders-data {
   flex: 1 1 auto;
 }
 .accound__orders-name {
-  margin-bottom: 10px;
   line-height: 156%;
 }
 @media (min-width: 768px) {
@@ -5108,7 +5163,7 @@ table.specifications tbody td:nth-child(2n) {
 }
 @media (min-width: 1024px) {
   .accound__orders-quantity {
-    flex: 0 1 calc(90px + (100vw - 1024px) / 320 * 130);
+    flex: 0 0 calc(90px + (100vw - 1024px) / 320 * 130);
   }
 }
 @media (min-width: 1344px) {
@@ -5126,7 +5181,7 @@ table.specifications tbody td:nth-child(2n) {
 }
 @media (min-width: 1024px) {
   .accound__orders-price {
-    flex: 0 1 calc(100px + (100vw - 1024px) / 320 * 120);
+    flex: 0 0 calc(100px + (100vw - 1024px) / 320 * 120);
   }
 }
 @media (min-width: 1344px) {

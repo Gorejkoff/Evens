@@ -5,7 +5,7 @@
             <img src="@img/svg/menu-2.svg" alt="кнопка открыть меню">
          </button>
          <form class="header-nav__search" action="search" method="post" name="search" id="search">
-            <input type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
+            <input id="search-nav" type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
             <button class="header-nav__search-submit" type="button">
                <img src="@img/svg/search.svg" alt="поиск">
             </button>
@@ -40,6 +40,7 @@
                </a>
             </li>
          </ol>
+         @@include('../html/search_result.html',{})
       </nav>
       @@include('../html/catalog_nav/catalog_nav.html',{})
    </div>
