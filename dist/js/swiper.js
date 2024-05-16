@@ -6244,44 +6244,84 @@ if (document.querySelector('.naws__swiper')) {
    });
 }
 
+let swiperStateBrand;
+let swiperBrand;
 if (document.querySelector('.swiper-brand')) {
-
-   let swiperState;
-   let swiper;
-
-   changeSlider();
-
-   function initSwiper() {
-      swiper = new Swiper('.swiper-brand', {
-         keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-         },
-         allowTouchMove: true,
-         loop: false,
-         speed: 300,
-         slidesPerView: 1.3,
-         spaceBetween: 24,
-      });
-   }
-
+   changeSliderBrand();
    window.addEventListener('resize', () => {
-      changeSlider()
+      changeSliderBrand();
    })
+}
+function initSwiperBrand() {
+   swiperBrand = new Swiper('.swiper-brand', {
+      keyboard: {
+         enabled: true,
+         onlyInViewport: true,
+      },
+      allowTouchMove: true,
+      loop: false,
+      speed: 300,
+      slidesPerView: 1.3,
+      spaceBetween: 24,
+   });
+}
 
-   function changeSlider() {
-      if (!MIN768.matches) {
-         if (!swiperState) {
-            swiperState = true;
-            initSwiper();
-         }
-      } else {
-         if (swiperState) {
-            swiperState = false;
-            swiper.destroy(true, true);
-         }
+function changeSliderBrand() {
+   if (!MIN768.matches) {
+      if (!swiperStateBrand) {
+         swiperStateBrand = true;
+         initSwiperBrand();
+      }
+   } else {
+      if (swiperStateBrand) {
+         swiperStateBrand = false;
+         swiperBrand.destroy(true, true);
       }
    }
+}
+
+const CHANGE_VIEW = document.querySelector('.js-change-view')
+let swiperStateSearch;
+let swiperSearch;
+if (document.querySelector('.swiper-search')) {
+   changeSliderSearch();
+   window.addEventListener('resize', () => {
+      if (MIN768.matches && swiperStateSearch) viewGrid();
+      if (!MIN768.matches && CHANGE_VIEW.classList.contains('view-block')) viewGrid();
+   })
+}
+
+function initSwiperSearch() {
+   swiperSearch = new Swiper('.swiper-search', {
+      keyboard: {
+         enabled: true,
+         onlyInViewport: true,
+      },
+      allowTouchMove: true,
+      loop: false,
+      speed: 300,
+      slidesPerView: 1.3,
+      spaceBetween: 24,
+      pagination: {
+         el: '.view-swiper-pagination',
+         clickable: true,
+      },
+   });
+}
+
+function changeSliderSearch() {
+   if (!MIN768.matches && CHANGE_VIEW.classList.contains('view-swiper')) {
+      if (!swiperStateSearch) {
+         swiperStateSearch = true;
+         initSwiperSearch();
+      }
+      return
+   }
+   if (swiperStateSearch) {
+      swiperStateSearch = false;
+      swiperSearch.destroy(true, true);
+   }
+
 }
 
 if (document.querySelector('.swiper-brand-main')) {

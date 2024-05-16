@@ -26,7 +26,12 @@
       flex: 1 1 10%;
    }
 
+   &__button-search {
+      border-radius: 4px;
+   }
+
    &__sort-option-title {
+      margin-bottom: 10px;
       font-weight: 600;
       font-size: 16px;
       line-height: 136%;
@@ -80,7 +85,7 @@
    &__header {
       margin-bottom: 20px;
       display: flex;
-      flex-direction: column;
+      flex-wrap: wrap;
       gap: 24px;
 
       @media (min-width:768px) {
@@ -88,7 +93,11 @@
       }
 
       @media (min-width:1024px) {
-         flex-direction: row;
+         .sort__button {
+            span {
+               text-decoration: underline;
+            }
+         }
       }
 
       @media (max-width:1023.98px) {
@@ -97,7 +106,9 @@
    }
 
    &__quantity-product {
-      @media (min-width:1024px) {
+      flex: 0 0 100%;
+
+      @media (min-width:768px) {
          flex: 0 0 307px;
       }
    }
@@ -111,6 +122,8 @@
       }
 
       button {
+         align-items: flex-end;
+
          svg {
             width: 23px;
             height: 23px;
@@ -127,8 +140,10 @@
    }
 
    &__content {
+      padding-top: 8px;
       display: flex;
       gap: 24px;
+      border-top: 1px solid var(--color-gray);
    }
 
    &__categories-title {
@@ -147,14 +162,47 @@
    &__shell {
 
       &.view-grid {
+         padding-left: 27px;
+         padding-right: 27px;
          display: grid;
          grid-template-columns: 1fr;
          gap: 20px;
 
          @media (min-width:768px) {
+            padding-left: 0;
+            padding-right: 0;
             grid-template-columns: 1fr 1fr 1fr;
          }
       }
-   }
 
+      &.view-block {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+
+         .card {
+            border-radius: 10px;
+            border: 1px solid var(--color-gray);
+            overflow: hidden;
+         }
+
+         .card__status {
+            padding: 6px;
+            font-size: 12px;
+            height: 27px;
+         }
+      }
+   }
+}
+
+.swiper-search {
+   max-width: calc(100vw - 40px);
+
+   .view-swiper.search__shell {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 0;
+
+   }
 }

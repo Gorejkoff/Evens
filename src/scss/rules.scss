@@ -254,6 +254,11 @@ textarea {
    color: var(--color-green);
    border: 1px solid var(--color-green);
    border-radius: 2px;
+
+   &:hover {
+      color: var(--color-white);
+      background-color: var(--color-green);
+   }
 }
 
 .button-transparent,
@@ -448,10 +453,68 @@ textarea {
       text-align: center;
 
       a {
+         display: inline-block;
          margin-top: 20px;
          margin-bottom: 10px;
-         display: inline-block;
+         padding: 10px 16px;
+         min-height: 45px;
+         border-radius: 4px;
+         font-weight: 600;
+         font-size: 20px;
+
+         @media (min-width:768px) and (max-width:1023.98px) {
+            min-height: 40px;
+            font-size: 16px;
+         }
+
       }
    }
 
+}
+
+.js-view-grid {
+   display: flex;
+
+   .block-view {
+      display: block;
+
+      @media (min-width:768px) {
+         display: none;
+      }
+   }
+
+   .grid-view {
+      display: none;
+
+      @media (min-width:768px) {
+         display: block;
+      }
+   }
+}
+
+.js-view-block {
+   display: none;
+
+   @media (min-width:768px) {
+      display: flex;
+   }
+}
+
+.js-view-swiper {
+   display: flex;
+
+   @media (min-width:768px) {
+      display: none;
+   }
+}
+
+.view-swiper-pagination.swiper-pagination {
+   display: none;
+}
+
+.view-swiper+.view-swiper-pagination.swiper-pagination {
+   display: flex;
+   padding-top: 40px;
+   padding-bottom: 20px;
+   justify-content: center;
 }

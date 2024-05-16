@@ -81,7 +81,7 @@
       <li><a href="404.html"><span>Игровой </span>компьютер EvensPC Snow man</a></li>
       <li><a href="404.html"><span>Игровой </span>видеокарта</a></li>
       <li><a href="404.html"><span>Игровой </span>ноутбуки</a></li>
-      <li><a href="404.html"><span>Игровой </span>мыш</a>ь</li>
+      <li><a href="404.html"><span>Игровой </span>мышь</a></li>
       <li><a href="404.html"><span>Игровой </span>клавиатура</a></li>
    </ol>
    <div class="search-result__button">
@@ -478,7 +478,6 @@
 </header>
 
       <main class="main">
-
          <div class="bread-crumbs">
    <div class="bread-crumbs__container">
       <ol class="bread-crumbs__body">
@@ -486,13 +485,11 @@
       </ol>
    </div>
 </div>
-
          <div class="page-title">
    <div class="page-title__container">
       <h1 class="title ">Поиск</h1>
    </div>
 </div>
-
          <div class="search margin-section">
             <div class="search__container">
                <div class="search__body">
@@ -512,7 +509,7 @@
                            </button>
                         </div>
                      </div>
-                     <button class="button-green" type="submit">Поиск</button>
+                     <button class="search__button-search button-green" type="submit">Поиск</button>
                   </div>
                   <div class="search__keywords">
                      <span>
@@ -536,19 +533,31 @@
 </div>
                      </div>
                      <div class="search__view">
-                        <button class="js-grid active" type="button">
-                           <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <button class="js-view-grid active" type="button">
+                           <svg class="grid-view" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <rect width="10" height="10" fill="#D9D9D9" />
                               <rect x="13" width="10" height="10" fill="#D9D9D9" />
                               <rect y="13" width="10" height="10" fill="#D9D9D9" />
                               <rect x="13" y="13" width="10" height="10" fill="#D9D9D9" />
                            </svg>
+                           <svg class="block-view" width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect width="23" height="6" fill="#D9D9D9" />
+                              <rect y="9" width="23" height="5" fill="#D9D9D9" />
+                              <rect y="17" width="23" height="6" fill="#D9D9D9" />
+                           </svg>
                         </button>
-                        <button class="js-block" type="button">
+                        <button class="js-view-block" type="button">
                            <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <rect width="23" height="6" fill="#D9D9D9" />
                               <rect y="9" width="23" height="5" fill="#D9D9D9" />
                               <rect y="17" width="23" height="6" fill="#D9D9D9" />
+                           </svg>
+                        </button>
+                        <button class="js-view-swiper" type="button">
+                           <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <rect x="6.5" width="23" height="6" transform="rotate(90 6.5 0)" fill="#D9D9D9" />
+                              <rect x="14.5" width="23" height="5" transform="rotate(90 14.5 0)" fill="#D9D9D9" />
+                              <rect x="23.5" width="23" height="6" transform="rotate(90 23.5 0)" fill="#D9D9D9" />
                            </svg>
                         </button>
                      </div>
@@ -632,10 +641,10 @@
                            </div>
                         </div>
                      </div>
-
                      <div class="search__list">
-                        <div class="search__shell view-grid js-change-view">
-                           <article class="card swiper-slide">
+                        <div class="swiper-search swiper">
+                           <div class="search__shell view-grid js-change-view swiper-wrapper">
+                              <article class="card swiper-slide">
    
       <div class="card__image">
          <div class="card__image-body">
@@ -969,6 +978,8 @@
          
    </a>
 </article>
+                           </div>
+                           <div class="swiper-pagination view-swiper-pagination"></div>
                         </div>
                         <div class="pagination">
    <ol class="pagination__body">
@@ -981,16 +992,10 @@
    </ol>
 </div>
                      </div>
-
-
                   </div>
-
-
-
                </div>
             </div>
          </div>
-
       </main>
 
       <footer class="footer">

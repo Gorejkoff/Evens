@@ -17,6 +17,7 @@ const MENU_TABS = document.querySelectorAll('.js-menu-tab');
 const MENU_CONTENT = document.querySelector('.js-menu-tab-content');
 const MENU_LIST = document.querySelectorAll('.js-menu-tab-content li');
 const HEADER_LINKS = document.querySelector('.js-header-links');
+const SEARCH_VIEW = document.querySelector('.search__view');
 
 // медиазапрос
 const MIN768 = window.matchMedia('(min-width: 768px)');
@@ -176,18 +177,16 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('.show-image__close')) {
       event.target.closest('.show-image').remove();
    }
-   if (event.target.closest('.js-grid')) {
-      event.target.closest('.js-grid').classList.add('active');
-      document.querySelector('.js-block').classList.remove('active');
-      document.querySelector('.js-change-view').classList.remove('view-block');
-      document.querySelector('.js-change-view').classList.add('view-grid');
-   }
-   if (event.target.closest('.js-block')) {
-      event.target.closest('.js-block').classList.add('active');
-      document.querySelector('.js-grid').classList.remove('active');
-      document.querySelector('.js-change-view').classList.add('view-block');
-      document.querySelector('.js-change-view').classList.remove('view-grid');
-   }
+   // переключение вида списка товаров на странице search
+   if (SEARCH_VIEW && event.target.closest('.js-view-grid')) {
+      viewGrid()
+   };
+   if (SEARCH_VIEW && event.target.closest('.js-view-block')) {
+      viewBlock()
+   };
+   if (SEARCH_VIEW && event.target.closest('.js-view-swiper')) {
+      viewSwiper();
+   };
 })
 
 /* === СОБЫТИЕ МЫШЬ НАД ЭЛЕМЕНТОМ === */
@@ -201,6 +200,34 @@ document.body.addEventListener('mouseover', (event) => {
       MENU_TABS.forEach((e) => { closeTabs(e) })
    }
 })
+
+// переключение вида списка товаров на странице search
+function viewBlock() {
+   document.querySelector('.js-view-grid').classList.remove('active');
+   document.querySelector('.js-view-swiper').classList.remove('active');
+   document.querySelector('.js-change-view').classList.remove('view-grid');
+   document.querySelector('.js-change-view').classList.remove('view-swiper');
+   document.querySelector('.js-view-block').classList.add('active');
+   document.querySelector('.js-change-view').classList.add('view-block');
+}
+function viewGrid() {
+   document.querySelector('.js-view-block').classList.remove('active');
+   document.querySelector('.js-view-swiper').classList.remove('active');
+   document.querySelector('.js-change-view').classList.remove('view-block');
+   document.querySelector('.js-change-view').classList.remove('view-swiper');
+   document.querySelector('.js-view-grid').classList.add('active');
+   document.querySelector('.js-change-view').classList.add('view-grid');
+   changeSliderSearch();
+}
+function viewSwiper() {
+   document.querySelector('.js-view-block').classList.remove('active');
+   document.querySelector('.js-view-grid').classList.remove('active');
+   document.querySelector('.js-change-view').classList.remove('view-block');
+   document.querySelector('.js-change-view').classList.add('view-grid');
+   document.querySelector('.js-view-swiper').classList.add('active');
+   document.querySelector('.js-change-view').classList.add('view-swiper');
+   changeSliderSearch();
+}
 
 // проверка количесва товара в корзине
 const QUANTITY_BASKET = document.querySelectorAll('.basket__quantity input');

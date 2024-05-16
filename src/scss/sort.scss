@@ -2,6 +2,7 @@
    margin-bottom: 20px;
    display: flex;
    justify-content: space-between;
+   align-items: center;
 
    @media (min-width:768px) {
       margin-bottom: 10px;
@@ -17,7 +18,8 @@
       display: none;
 
       @media (min-width:1024px) {
-         display: block;
+         display: flex;
+         align-items: center;
       }
    }
 
@@ -28,6 +30,8 @@
 
    &__body {
       position: relative;
+      display: flex;
+      align-items: center;
    }
 
    &__button {
