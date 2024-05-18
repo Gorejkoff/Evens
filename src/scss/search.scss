@@ -85,11 +85,13 @@
    &__header {
       margin-bottom: 20px;
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
       gap: 24px;
 
       @media (min-width:768px) {
          align-items: center;
+
       }
 
       @media (min-width:1024px) {
@@ -101,16 +103,18 @@
             }
          }
       }
-
-      @media (max-width:1023.98px) {
-         justify-content: space-between;
-      }
    }
 
    &__quantity-product {
       flex: 0 0 100%;
 
       @media (min-width:768px) {
+         margin-right: 40px;
+         flex: 0 1 auto;
+      }
+
+      @media (min-width:1024px) {
+         margin-right: 0;
          flex: 0 0 307px;
       }
    }
@@ -119,7 +123,7 @@
       display: flex;
       gap: 10px;
 
-      @media (min-width:1024px) {
+      @media (min-width:768px) {
          flex: 1 1 auto;
       }
 
