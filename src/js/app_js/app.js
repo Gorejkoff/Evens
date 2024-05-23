@@ -53,6 +53,7 @@ window.addEventListener('scroll', (event) => {
       moveListMenu();
    } else {
       resetMoveListMenu();
+      if (document.querySelector('.js-index') && MIN1024.matches) closeCatalogNav();
    }
 });
 function scrollHeaderHight() {
@@ -187,6 +188,11 @@ document.addEventListener('click', (event) => {
    if (SEARCH_VIEW && event.target.closest('.js-view-swiper')) {
       viewSwiper();
    };
+   if (event.target.closest('.button__compare') ||
+      event.target.closest('.button__favourites') ||
+      event.target.closest('.card__button button')) {
+      event.preventDefault();
+   }
 })
 
 /* === СОБЫТИЕ МЫШЬ НАД ЭЛЕМЕНТОМ === */

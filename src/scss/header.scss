@@ -90,6 +90,8 @@
    }
 
    &__address {
+      line-height: 110%;
+
       @media (min-width:768px) and (max-width: 1023.98px) {
          display: none;
       }
@@ -102,7 +104,7 @@
 
    &__address-correction {
       white-space: nowrap;
-      font-size: 12px;
+      font-size: 14px;
    }
 
    &__phone {

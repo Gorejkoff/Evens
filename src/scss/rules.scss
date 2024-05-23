@@ -416,7 +416,9 @@ textarea {
    background-color: var(--color-white);
    border: 1px solid var(--color-gray);
 
-
+   .page-scroll & {
+      width: 100%;
+   }
 
    @media (min-width:768px) {
       border-radius: 6px;
@@ -426,6 +428,8 @@ textarea {
 
    @media (min-width:1344px) {
       width: 965px;
+
+
    }
 
    @media (min-width:1024px) and (max-width:1343.98px) {
@@ -466,10 +470,8 @@ textarea {
             min-height: 40px;
             font-size: 16px;
          }
-
       }
    }
-
 }
 
 .js-view-grid {

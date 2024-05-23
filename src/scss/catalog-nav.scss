@@ -55,27 +55,35 @@
    }
 }
 
-.index .main .catalog-nav-wrapper {
+.js-index .main .catalog-nav-wrapper {
    top: 0;
    right: 0;
    display: none;
-   height: 100%;
+
 
    @media (min-width:1024px) {
       display: block;
+
    }
 
-   &__container,
-   &__body {
+   @media (max-width:1023.98px) {
       height: 100%;
-      max-height: 100%;
-      box-shadow: none;
+
+      &__container,
+      &__body {
+         height: 100%;
+         max-height: 100%;
+         box-shadow: none;
+      }
    }
 }
 
 .catalog-nav {
    flex: 1 0 230px;
-   max-height: calc(100vh - var(--height-header));
+
+   @media (max-width:1023.98px) {
+      max-height: calc(100vh - var(--height-header));
+   }
 
    @media (min-width:1024px) {
       @include sizeMaxMinPcFlex (0, 0, 306, 250);

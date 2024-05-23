@@ -57,6 +57,10 @@
 
       a {
          color: var(--color-black);
+
+         &:hover {
+            color: var(--color-violet);
+         }
       }
 
       &>ol>li {

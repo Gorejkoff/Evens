@@ -1,11 +1,14 @@
 // открывает вкладки в меню каталога
 const CATALOG_CONTENT = document.querySelectorAll('.js-catalog-nav-content');
 
-if (isPC) {
+// вариант открытия с ховером на ПК
+/* if (isPC) {
    document.addEventListener('mouseover', (event) => { runTabCatalogNav(event) })
 } else {
    document.addEventListener('click', (event) => { runTabCatalogNav(event) })
-}
+} */
+// вариант открытия только кликом
+document.addEventListener('click', (event) => { runTabCatalogNav(event) })
 
 function runTabCatalogNav(event) {
    if (event.target.closest('.js-catalog-nav-button')) {

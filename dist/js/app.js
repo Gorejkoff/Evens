@@ -53,6 +53,7 @@ window.addEventListener('scroll', (event) => {
       moveListMenu();
    } else {
       resetMoveListMenu();
+      if (document.querySelector('.js-index') && MIN1024.matches) closeCatalogNav();
    }
 });
 function scrollHeaderHight() {
@@ -187,6 +188,11 @@ document.addEventListener('click', (event) => {
    if (SEARCH_VIEW && event.target.closest('.js-view-swiper')) {
       viewSwiper();
    };
+   if (event.target.closest('.button__compare') ||
+      event.target.closest('.button__favourites') ||
+      event.target.closest('.card__button button')) {
+      event.preventDefault();
+   }
 })
 
 /* === СОБЫТИЕ МЫШЬ НАД ЭЛЕМЕНТОМ === */
@@ -343,11 +349,14 @@ function moving(e, order, addressMove) {
 // открывает вкладки в меню каталога
 const CATALOG_CONTENT = document.querySelectorAll('.js-catalog-nav-content');
 
-if (isPC) {
+// вариант открытия с ховером на ПК
+/* if (isPC) {
    document.addEventListener('mouseover', (event) => { runTabCatalogNav(event) })
 } else {
    document.addEventListener('click', (event) => { runTabCatalogNav(event) })
-}
+} */
+// вариант открытия только кликом
+document.addEventListener('click', (event) => { runTabCatalogNav(event) })
 
 function runTabCatalogNav(event) {
    if (event.target.closest('.js-catalog-nav-button')) {
@@ -663,10 +672,15 @@ function closeModal(event) {
       document.body.classList.remove('body-overflow');
    }
 }
+// открывает окно найденного в поиске (для примера)
 const SEARCH_INPUT = document.querySelector('#search-nav');
 const SEARCH_RESULT = document.querySelector('.search-result');
 SEARCH_INPUT.addEventListener('focus', () => SEARCH_RESULT.style.display = "block");
-
+document.addEventListener('click', (event) => {
+   if (!event.target.closest('.search-result') && !event.target.closest('#search-nav')) {
+      SEARCH_RESULT.style.display = "none"
+   }
+})
 // табы с выбором опции
 class TabsOpen {
    constructor(options) {

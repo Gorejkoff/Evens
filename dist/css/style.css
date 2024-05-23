@@ -517,6 +517,9 @@ textarea::placeholder {
   background-color: var(--color-white);
   border: 1px solid var(--color-gray);
 }
+.page-scroll .search-result {
+  width: 100%;
+}
 @media (min-width: 768px) {
   .search-result {
     border-radius: 6px;
@@ -715,6 +718,9 @@ body {
   font-size: 14px;
   color: var(--color-violet);
 }
+.header__address {
+  line-height: 110%;
+}
 @media (min-width: 768px) and (max-width: 1023.98px) {
   .header__address {
     display: none;
@@ -726,7 +732,7 @@ body {
 }
 .header__address-correction {
   white-space: nowrap;
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (min-width: 768px) {
   .header__phone {
@@ -789,6 +795,12 @@ body {
   color: var(--color-white);
   font-weight: 600;
   font-size: 20px;
+}
+._pc .js-index .header-nav__catalog-button {
+  pointer-events: none;
+}
+.js-index .page-scroll .header-nav__catalog-button {
+  pointer-events: all;
 }
 .header-nav__links {
   align-self: stretch;
@@ -1216,26 +1228,34 @@ body {
   }
 }
 
-.index .main .catalog-nav-wrapper {
+.js-index .main .catalog-nav-wrapper {
   top: 0;
   right: 0;
   display: none;
-  height: 100%;
 }
 @media (min-width: 1024px) {
-  .index .main .catalog-nav-wrapper {
+  .js-index .main .catalog-nav-wrapper {
     display: block;
   }
 }
-.index .main .catalog-nav-wrapper__container, .index .main .catalog-nav-wrapper__body {
-  height: 100%;
-  max-height: 100%;
-  box-shadow: none;
+@media (max-width: 1023.98px) {
+  .js-index .main .catalog-nav-wrapper {
+    height: 100%;
+  }
+  .js-index .main .catalog-nav-wrapper__container, .js-index .main .catalog-nav-wrapper__body {
+    height: 100%;
+    max-height: 100%;
+    box-shadow: none;
+  }
 }
 
 .catalog-nav {
   flex: 1 0 230px;
-  max-height: calc(100vh - var(--height-header));
+}
+@media (max-width: 1023.98px) {
+  .catalog-nav {
+    max-height: calc(100vh - var(--height-header));
+  }
 }
 @media (min-width: 1024px) {
   .catalog-nav {
@@ -1436,6 +1456,9 @@ body {
 }
 .catalog-nav-content__body a {
   color: var(--color-black);
+}
+.catalog-nav-content__body a:hover {
+  color: var(--color-violet);
 }
 .catalog-nav-content__body > ol > li {
   padding-top: 10px;
@@ -4248,6 +4271,12 @@ table.specifications tbody td:nth-child(2n) {
   border: 1px solid var(--color-gray);
   border-radius: 10px;
   padding: 20px 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 @media (min-width: 768px) {
   .compare__card-item {

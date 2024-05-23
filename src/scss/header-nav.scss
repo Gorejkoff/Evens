@@ -56,6 +56,14 @@
       font-size: 20px;
    }
 
+   ._pc .js-index &__catalog-button {
+      pointer-events: none;
+   }
+
+   .js-index .page-scroll &__catalog-button {
+      pointer-events: all;
+   }
+
    &__links {
       align-self: stretch;
       display: flex;
