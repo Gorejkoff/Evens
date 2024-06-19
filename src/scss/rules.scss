@@ -3,6 +3,7 @@
    --color-white: #ffffff;
    --color-black-dark: #000000;
    --color-black: #282828;
+   --color-black2: #333333;
    --color-green: #45CC2E;
    --color-gray: #C5C7C6;
    --color-gray-light: #F6F6F6;
@@ -56,7 +57,7 @@
    line-height: 125%;
 
    @media (min-width:1024px) {
-      font-size: 50px;
+      font-size: 40px;
    }
 }
 
@@ -304,7 +305,6 @@ textarea {
       height: 100%;
       position: relative;
       transition-property: transform;
-      // display: block;
       touch-action: pan-y;
    }
 }
@@ -405,16 +405,13 @@ textarea {
 }
 
 .search-result {
-   display: none;
    padding: 10px;
+   display: none;
    position: absolute;
    top: 100%;
-   right: -20px;
-   z-index: 10;
    width: 100vw;
-
+   z-index: 10;
    background-color: var(--color-white);
-   border: 1px solid var(--color-gray);
 
    .page-scroll & {
       width: 100%;
@@ -424,6 +421,7 @@ textarea {
       border-radius: 6px;
       width: 100%;
       right: 0;
+      border: 1px solid var(--color-gray);
    }
 
    @media (min-width:1344px) {
@@ -457,66 +455,15 @@ textarea {
       text-align: center;
 
       a {
-         display: inline-block;
+         display: inline-flex;
+         align-items: center;
          margin-top: 20px;
          margin-bottom: 10px;
          padding: 10px 16px;
-         min-height: 45px;
+         min-height: 40px;
          border-radius: 4px;
          font-weight: 600;
-         font-size: 20px;
-
-         @media (min-width:768px) and (max-width:1023.98px) {
-            min-height: 40px;
-            font-size: 16px;
-         }
+         font-size: 16px;
       }
    }
-}
-
-.js-view-grid {
-   display: flex;
-
-   .block-view {
-      display: block;
-
-      @media (min-width:768px) {
-         display: none;
-      }
-   }
-
-   .grid-view {
-      display: none;
-
-      @media (min-width:768px) {
-         display: block;
-      }
-   }
-}
-
-.js-view-block {
-   display: none;
-
-   @media (min-width:768px) {
-      display: flex;
-   }
-}
-
-.js-view-swiper {
-   display: flex;
-
-   @media (min-width:768px) {
-      display: none;
-   }
-}
-
-.view-swiper-pagination.swiper-pagination {
-   display: none;
-}
-
-.view-swiper+.view-swiper-pagination.swiper-pagination {
-   display: flex;
-   padding-top: 40px;
-   padding-bottom: 20px;
-   justify-content: center;
 }

@@ -1,0 +1,25 @@
+.view {
+   display: flex;
+   gap: 10px;
+
+   @media (min-width:768px) {
+      flex: 1 1 auto;
+   }
+
+   button {
+      align-items: flex-end;
+
+      svg {
+         width: 23px;
+         height: 23px;
+      }
+
+      &.active {
+         svg {
+            rect {
+               fill: var(--color-violet)
+            }
+         }
+      }
+   }
+}

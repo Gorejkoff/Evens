@@ -1,46 +1,61 @@
 <header id="header_nav" class="header-nav">
    <div class="header-nav__container">
       <nav class="header-nav__body js-header-nav-da">
-         <button id="burger" class="header-nav__burger" type="button">
-            <img src="@img/svg/menu-2.svg" alt="кнопка открыть меню">
-         </button>
          <form class="header-nav__search" action="search" method="post" name="search" id="search">
-            <input id="search-nav" type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
-            <button class="header-nav__search-submit" type="button">
-               <img src="@img/svg/search.svg" alt="поиск">
-            </button>
-            <button class="header-nav__search-back" type="button">
+            <div class="header-nav__search-block">
+               <input id="search-nav" type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
+               <button class="header-nav__search-submit" type="button">
+                  <span>Найти</span>
+                  <img src="@img/svg/search.svg" alt="поиск">
+               </button>
+            </div>
+            <!--       <button class="header-nav__search-back" type="button">
                <img src="@img/svg/arrow-nav-left.svg" alt="кнопка назад">
-            </button>
+            </button> -->
+
+            @@include('../html/search_result.html',{})
          </form>
          <ol class="header-nav__office">
+            <li class="home-menu">
+               <a href="index.html">
+                  <img src="@img/svg/home.svg" alt="на главную страницу">
+               </a>
+            </li>
+            <li class="fone-menu">
+               <img src="@img/svg/fone-2.svg" alt="контакты">
+            </li>
             <li class="header-nav__button-search">
                <button data-message="Поиск" type="button">
                   <img src="@img/svg/search-2.svg" alt="поиск">
                </button>
             </li>
-            <li>
+            <li class="compare-menu">
                <a href="compare.html" data-message="У вас пока нет товаров для сравнения">
                   <img src="@img/svg/compare.svg" alt="сравнение">
                </a>
             </li>
-            <li>
+            <li class="burger-menu">
+               <button id="burger" class="header-nav__burger" type="button">
+                  <img src="@img/svg/menu-3.svg" alt="кнопка открыть меню">
+               </button>
+            </li>
+            <li class="favourites-menu">
                <a href="favourites.html" data-quantity="4"><!-- data-message="У вас пока нет избранных товаров" -->
                   <img src="@img/svg/favourites.svg" alt="избранное">
                </a>
             </li>
-            <li>
+            <li class="basket-menu">
                <a href="basket.html" data-quantity="20">
                   <img src="@img/svg/shop.svg" alt="корзина">
                </a>
             </li>
-            <li>
+            <li class="log-menu">
                <a href="log_in.html">
                   <img src="@img/svg/user.svg" alt="кабинет">
                </a>
             </li>
          </ol>
-         @@include('../html/search_result.html',{})
+
       </nav>
       @@include('../html/catalog_nav/catalog_nav.html',{})
    </div>

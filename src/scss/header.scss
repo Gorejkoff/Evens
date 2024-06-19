@@ -1,7 +1,9 @@
 .header {
    background: url('../img/svg/header-background.svg');
 
-   &__container {}
+   @media (max-width:767.98px) {
+      order: 2;
+   }
 
    &__body {
       padding-top: 8px;
@@ -9,9 +11,12 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 13px;
       min-height: 49px;
 
+      @media (min-width:768px) {
+         gap: 20px;
+      }
 
       @media (max-width:1343.98px) and (min-width:768px) {
          @include sizeMaxMinTablet (min-height, 80, 52);
@@ -24,9 +29,7 @@
 
    &__logo {
       img {
-         width: 120px;
-
-
+         width: 110px;
 
          @media (max-width:1343.98px) and (min-width:768px) {
             @include sizeMaxMinTablet (width, 180, 100);
@@ -51,16 +54,23 @@
       button {
          padding: 5px 15px;
          width: 100%;
-         min-height: 32px;
-         border-radius: 4px;
+         min-height: 30px;
+         border-radius: 2px;
          background-color: var(--color-violet);
          font-weight: 600;
-         font-size: 16px;
+         font-size: 12px;
          color: var(--color-white);
+
+         @media (min-width:768px) {
+            min-height: 32px;
+            border-radius: 4px;
+            font-size: 16px;
+         }
 
          @media (max-width:1343.98px) and (min-width:768px) {
             @include sizeMaxMinTablet (font-size, 16, 14);
          }
+
       }
    }
 
@@ -105,11 +115,5 @@
    &__address-correction {
       white-space: nowrap;
       font-size: 14px;
-   }
-
-   &__phone {
-      @media (min-width:768px) {
-         display: none;
-      }
    }
 }

@@ -20,6 +20,10 @@ body {
    display: flex;
    flex-direction: column;
    overflow: hidden;
+
+   @media (max-width:767.98px) {
+      order: 3;
+   }
 }
 
 
@@ -61,6 +65,7 @@ body {
 @import "enter_code";
 @import "accound";
 @import "search";
+@import "view";
 
 
 

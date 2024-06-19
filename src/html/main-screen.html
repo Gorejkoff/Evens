@@ -1,8 +1,7 @@
 <div class="main-screen margin-section">
    <div class="main-screen__container">
       <div class="main-screen__body">
-         <div class="main-screen__nav">
-         </div>
+         <div class="main-screen__nav"></div>
          <div class="main-screen__content">
             <div class="swiper swiper-main">
                <div class="swiper-wrapper">
@@ -25,6 +24,18 @@
                      <img src="@img/webp/main-screen-1.webp" alt="системный блок с подсветкой">
                   </div>
                </div>
+               <button type="button" class="swiper-main-prev swiper-button">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="20" cy="20" r="19.5" fill="white" stroke="#C5C7C6" />
+                     <path d="M22 14 L16 20 L22 26" stroke="#C5C7C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </button>
+               <button type="button" class="swiper-main-next swiper-button">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="20" cy="20" r="19.5" fill="white" stroke="#C5C7C6" />
+                     <path d="M17 14 L23 20 L17 26" stroke="#C5C7C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </button>
                <div class="swiper-main-pagination swiper-pagination"></div>
             </div>
             <div class="swiper swiper-brand-main">
@@ -32,10 +43,29 @@
                   @@loop('../html/brand/brand_card.html', [
                   { "name": "Intel LGA 1700", "image": "brand-4.png", "link": "404.html" },
                   { "name": "AMD AM9", "image": "brand-5.png", "link": "404.html" },
+                  { "name": "Intel LGA 1200", "image": "brand-6.png", "link": "404.html" },
+                  { "name": "Intel LGA 1700", "image": "brand-4.png", "link": "404.html" },
+                  { "name": "AMD AM9", "image": "brand-5.png", "link": "404.html" },
+                  { "name": "Intel LGA 1200", "image": "brand-6.png", "link": "404.html" },
+                  { "name": "Intel LGA 1700", "image": "brand-4.png", "link": "404.html" },
+                  { "name": "AMD AM9", "image": "brand-5.png", "link": "404.html" },
                   { "name": "Intel LGA 1200", "image": "brand-6.png", "link": "404.html" }
                   ])
                </div>
+               <button type="button" class="swiper-brand-main-prev swiper-button">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="20" cy="20" r="19.5" fill="white" stroke="#C5C7C6" />
+                     <path d="M22 14 L16 20 L22 26" stroke="#C5C7C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </button>
+               <button type="button" class="swiper-brand-main-next swiper-button">
+                  <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <circle cx="20" cy="20" r="19.5" fill="white" stroke="#C5C7C6" />
+                     <path d="M17 14 L23 20 L17 26" stroke="#C5C7C6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+               </button>
             </div>
+            <div class="swiper-brand-main-pagination swiper-pagination"></div>
          </div>
       </div>
       @@include('../html/catalog_nav/catalog_nav.html',{})

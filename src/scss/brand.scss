@@ -24,10 +24,14 @@
       }
 
       @media (min-width:768px) {
-         min-height: 180px;
+         min-height: 24vw;
       }
 
       @media (min-width:1024px) {
+         min-height: 17vw;
+      }
+
+      @media (min-width:1310px) {
          min-height: 224px;
       }
    }
@@ -38,8 +42,12 @@
       left: 0;
       z-index: 1;
       padding: 20px 20px 0;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 700;
+
+      @media (min-width:768px) {
+         font-size: 20px;
+      }
    }
 
    &__image {
@@ -97,6 +105,8 @@
 }
 
 .swiper-brand-main {
+   position: relative;
+
    .swiper-slide {
       transition: color 0.2s, background-color 0.2s;
    }

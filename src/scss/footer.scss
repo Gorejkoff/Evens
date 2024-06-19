@@ -5,11 +5,13 @@
    color: var(--color-white);
    line-height: 120%;
 
+   @media (max-width:991.98px) {
+      order: 4;
+   }
+
    @media (min-width:768px) {
       padding-top: 40px;
    }
-
-   &__container {}
 
    &__body {
       margin-bottom: 20px;

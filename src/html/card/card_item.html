@@ -4,24 +4,37 @@
          <div class="card__image-body">
             <img src="@img/png/@@image" alt="образец товара">
          </div>
+         <div class="card__article">Артикул: 21018900054</div>
       </div>
-      <div class="card__article">Артикул: 21018900054</div>
       <div class="card__data">
-         <div class="card__header">
-            <div class="card__status @@status">@@statusName</div>
-            <div class="card__buttons">
+         <div class="card__status @@status">@@statusName</div>
+         <h3 class="card__title-card"> @@if(context.grid == false){<a href="product_card.html">}@@titleCard @@if(context.grid == false){</a>}</h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
                @@include('../buttons/button_compare.html',{})
                @@include('../buttons/button_favourites.html',{"text": "Удалить из избранного", "state": ""})
             </div>
+            @@if(wasprice){<span class="card__wasprice">@@wasprice</span>}<span>@@price</span>
          </div>
-         <h3 class="card__title-card"> @@if(context.grid == false){<a href="product_card.html">}@@titleCard @@if(context.grid == false){</a>}</h3>
-         <div class="card__footer">
-            <div class="card__price">@@if(wasprice){<span class="card__wasprice">@@wasprice</span>}<span>@@price</span></div>
-            <div class="card__button">
-               <button class="button-transparent" type="button" @@condition>@@if(condition){Нет в наличии} @@if(!condition){Добавить в корзину}</button>
-            </div>
+         <div class="card__button">
+            <button class="button-green" type="button" @@condition>@@if(condition){Нет в наличии} @@if(!condition){Добавить в корзину}</button>
          </div>
-         @@if(context.grid == true){
-      </div>}
-   </a>
+      </div>
+
+      @@if(context.grid == true || context.grid == "true"){
+   </a>}
+
 </article>

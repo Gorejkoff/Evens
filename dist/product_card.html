@@ -26,57 +26,41 @@
          <a class="header__logo" href="index.html">
             <img src="./img/svg/logo.svg" alt="логотип Evens">
          </a>
-
-
-         <button class="header__phone js-modal-open" type="button" data-modal_open="modal-call">
-            <img src="./img/svg/fone.svg" alt="иконка телефона">
-         </button>
+         <div class="header-nav__catalog" data-da=".header-nav__body,0,768">
+            <button class="header-nav__catalog-button js-open-catalog-nav" type="button">
+               <img src="./img/svg/menu.svg" alt="кнопка открыть меню">
+               Каталог<span>товаров</span>
+            </button>
+         </div>
+         <!--
+         <div class="header-nav__catalog" data-da=".js-header-nav-da,1,768">
+            <button id="closeMenu" class="menu-mobile__close" type="button">
+               <img src="./img/svg/close.svg" alt="закрыть">
+            </button>
+         </div>
+         -->
+         <div class="header__build js-modal-open" data-modal_open="modal-build-pc"><!-- data-da=".js-header-da,1,768" -->
+            <button type="button">Собрать ПК</button>
+         </div>
       </div>
    </div>
 </header>
       <header id="header_nav" class="header-nav">
    <div class="header-nav__container">
       <nav class="header-nav__body js-header-nav-da">
-         <button id="burger" class="header-nav__burger" type="button">
-            <img src="./img/svg/menu-2.svg" alt="кнопка открыть меню">
-         </button>
          <form class="header-nav__search" action="search" method="post" name="search" id="search">
-            <input id="search-nav" type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
-            <button class="header-nav__search-submit" type="button">
-               <img src="./img/svg/search.svg" alt="поиск">
-            </button>
-            <button class="header-nav__search-back" type="button">
-               <img src="./img/svg/arrow-nav-left.svg" alt="кнопка назад">
-            </button>
-         </form>
-         <ol class="header-nav__office">
-            <li class="header-nav__button-search">
-               <button data-message="Поиск" type="button">
-                  <img src="./img/svg/search-2.svg" alt="поиск">
+            <div class="header-nav__search-block">
+               <input id="search-nav" type="text" name="search" autocomplete="off" placeholder="Введите название или артикул">
+               <button class="header-nav__search-submit" type="button">
+                  <span>Найти</span>
+                  <img src="./img/svg/search.svg" alt="поиск">
                </button>
-            </li>
-            <li>
-               <a href="compare.html" data-message="У вас пока нет товаров для сравнения">
-                  <img src="./img/svg/compare.svg" alt="сравнение">
-               </a>
-            </li>
-            <li>
-               <a href="favourites.html" data-quantity="4"><!-- data-message="У вас пока нет избранных товаров" -->
-                  <img src="./img/svg/favourites.svg" alt="избранное">
-               </a>
-            </li>
-            <li>
-               <a href="basket.html" data-quantity="20">
-                  <img src="./img/svg/shop.svg" alt="корзина">
-               </a>
-            </li>
-            <li>
-               <a href="log_in.html">
-                  <img src="./img/svg/user.svg" alt="кабинет">
-               </a>
-            </li>
-         </ol>
-         <div class="search-result">
+            </div>
+            <!--       <button class="header-nav__search-back" type="button">
+               <img src="./img/svg/arrow-nav-left.svg" alt="кнопка назад">
+            </button> -->
+
+            <div class="search-result" data-da=".header-nav__body,last,768">
    <ol>
       <li><a href="404.html"><span>Игровой </span>компьютер EvensPC Snow man</a></li>
       <li><a href="404.html"><span>Игровой </span>видеокарта</a></li>
@@ -88,6 +72,48 @@
       <a class="button-green" href="search.html">Показать все товары</a>
    </div>
 </div>
+         </form>
+         <ol class="header-nav__office">
+            <li class="home-menu">
+               <a href="index.html">
+                  <img src="./img/svg/home.svg" alt="на главную страницу">
+               </a>
+            </li>
+            <li class="fone-menu">
+               <img src="./img/svg/fone-2.svg" alt="контакты">
+            </li>
+            <li class="header-nav__button-search">
+               <button data-message="Поиск" type="button">
+                  <img src="./img/svg/search-2.svg" alt="поиск">
+               </button>
+            </li>
+            <li class="compare-menu">
+               <a href="compare.html" data-message="У вас пока нет товаров для сравнения">
+                  <img src="./img/svg/compare.svg" alt="сравнение">
+               </a>
+            </li>
+            <li class="burger-menu">
+               <button id="burger" class="header-nav__burger" type="button">
+                  <img src="./img/svg/menu-3.svg" alt="кнопка открыть меню">
+               </button>
+            </li>
+            <li class="favourites-menu">
+               <a href="favourites.html" data-quantity="4"><!-- data-message="У вас пока нет избранных товаров" -->
+                  <img src="./img/svg/favourites.svg" alt="избранное">
+               </a>
+            </li>
+            <li class="basket-menu">
+               <a href="basket.html" data-quantity="20">
+                  <img src="./img/svg/shop.svg" alt="корзина">
+               </a>
+            </li>
+            <li class="log-menu">
+               <a href="log_in.html">
+                  <img src="./img/svg/user.svg" alt="кабинет">
+               </a>
+            </li>
+         </ol>
+
       </nav>
       <div id="catalog_nav_wrapper" class="catalog-nav-wrapper">
    <div class="catalog-nav-wrapper__container">
@@ -621,25 +647,12 @@
 
       <div class="product-info js-product-tabs" data-da=".product-wrapper__pc-block,last,1024">
    <div class="product-info__buttons scroll">
-      <button class="js-product-button active" data-button="1" type="button">Описание</button>
-      <button class="js-product-button" data-button="2" type="button">Характеристики</button>
+      <button class="js-product-button active" data-button="2" type="button">Характеристики</button>
+      <button class="js-product-button" data-button="1" type="button">Описание</button>
       <button class="js-product-button" data-button="3" type="button">Отзывы</button>
    </div>
    <div class="product-info__tabs">
-      <div class="product-info__tab active js-product-tab" data-tab="1">
-         <div class="product-info__title">Описание</div>
-         <ol class="product-info__text">
-            <li>4-ядерный процессор</li>
-            <li>Socket AM4</li>
-            <li>Частота 3500 МГц</li>
-            <li>Объем кэша L2: 2048 КБ</li>
-            <li>Ядро Bristol Ridgeтех</li>
-            <li>Процесс 28 нм</li>
-            <li>Интегрированное графическое ядро</li>
-            <li>Встроенный контроллер памяти</li>
-         </ol>
-      </div>
-      <div class="product-info__tab js-product-tab" data-tab="2">
+      <div class="product-info__tab active js-product-tab" data-tab="2">
          <div class="product-info__title">Характеристики</div>
          <table class="specifications">
             <thead>
@@ -685,6 +698,19 @@
                <tr></tr>
             </tbody>
          </table>
+      </div>
+      <div class="product-info__tab js-product-tab" data-tab="1">
+         <div class="product-info__title">Описание</div>
+         <ol class="product-info__text">
+            <li>4-ядерный процессор</li>
+            <li>Socket AM4</li>
+            <li>Частота 3500 МГц</li>
+            <li>Объем кэша L2: 2048 КБ</li>
+            <li>Ядро Bristol Ridgeтех</li>
+            <li>Процесс 28 нм</li>
+            <li>Интегрированное графическое ядро</li>
+            <li>Встроенный контроллер памяти</li>
+         </ol>
       </div>
       <div class="product-info__tab js-product-tab" data-tab="3">
          <div class="product-info__title">Отзывы
@@ -741,12 +767,26 @@
          <div class="card__image-body">
             <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
+         <div class="card__article">Артикул: 21018900054</div>
       </div>
-      <div class="card__article">Артикул: 21018900054</div>
       <div class="card__data">
-         <div class="card__header">
-            <div class="card__status orange">Хит</div>
-            <div class="card__buttons">
+         <div class="card__status orange">Хит</div>
+         <h3 class="card__title-card"> undefined </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
                <button class="button__compare" type="button">
    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
@@ -762,28 +802,41 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
+            <span>120 000 ₽</span>
          </div>
-         <h3 class="card__title-card"> undefined </h3>
-         <div class="card__footer">
-            <div class="card__price"><span>120 000 ₽</span></div>
-            <div class="card__button">
-               <button class="button-transparent" type="button" > Добавить в корзину</button>
-            </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
          </div>
-         
-   </a>
+      </div>
+
+      
+
 </article>  <article class="card swiper-slide">
    
       <div class="card__image">
          <div class="card__image-body">
             <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
+         <div class="card__article">Артикул: 21018900054</div>
       </div>
-      <div class="card__article">Артикул: 21018900054</div>
       <div class="card__data">
-         <div class="card__header">
-            <div class="card__status green">Скидка</div>
-            <div class="card__buttons">
+         <div class="card__status green">Скидка</div>
+         <h3 class="card__title-card"> undefined </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
                <button class="button__compare" type="button">
    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
@@ -799,28 +852,41 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
+            <span>90 000 ₽</span>
          </div>
-         <h3 class="card__title-card"> undefined </h3>
-         <div class="card__footer">
-            <div class="card__price"><span>90 000 ₽</span></div>
-            <div class="card__button">
-               <button class="button-transparent" type="button" > Добавить в корзину</button>
-            </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
          </div>
-         
-   </a>
+      </div>
+
+      
+
 </article>  <article class="card swiper-slide">
    
       <div class="card__image">
          <div class="card__image-body">
             <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
+         <div class="card__article">Артикул: 21018900054</div>
       </div>
-      <div class="card__article">Артикул: 21018900054</div>
       <div class="card__data">
-         <div class="card__header">
-            <div class="card__status violet">Новинка</div>
-            <div class="card__buttons">
+         <div class="card__status violet">Новинка</div>
+         <h3 class="card__title-card"> undefined </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
                <button class="button__compare" type="button">
    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
@@ -836,28 +902,41 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
+            <span>130 000 ₽</span>
          </div>
-         <h3 class="card__title-card"> undefined </h3>
-         <div class="card__footer">
-            <div class="card__price"><span>130 000 ₽</span></div>
-            <div class="card__button">
-               <button class="button-transparent" type="button" > Добавить в корзину</button>
-            </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
          </div>
-         
-   </a>
+      </div>
+
+      
+
 </article>  <article class="card swiper-slide">
    
       <div class="card__image">
          <div class="card__image-body">
             <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
+         <div class="card__article">Артикул: 21018900054</div>
       </div>
-      <div class="card__article">Артикул: 21018900054</div>
       <div class="card__data">
-         <div class="card__header">
-            <div class="card__status orange">Хит</div>
-            <div class="card__buttons">
+         <div class="card__status orange">Хит</div>
+         <h3 class="card__title-card"> undefined </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
                <button class="button__compare" type="button">
    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
@@ -873,28 +952,41 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
+            <span>120 000 ₽</span>
          </div>
-         <h3 class="card__title-card"> undefined </h3>
-         <div class="card__footer">
-            <div class="card__price"><span>120 000 ₽</span></div>
-            <div class="card__button">
-               <button class="button-transparent" type="button" > Добавить в корзину</button>
-            </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
          </div>
-         
-   </a>
+      </div>
+
+      
+
 </article>  <article class="card swiper-slide">
    
       <div class="card__image">
          <div class="card__image-body">
             <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
+         <div class="card__article">Артикул: 21018900054</div>
       </div>
-      <div class="card__article">Артикул: 21018900054</div>
       <div class="card__data">
-         <div class="card__header">
-            <div class="card__status green">Скидка</div>
-            <div class="card__buttons">
+         <div class="card__status green">Скидка</div>
+         <h3 class="card__title-card"> undefined </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
                <button class="button__compare" type="button">
    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
@@ -910,28 +1002,41 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
+            <span>90 000 ₽</span>
          </div>
-         <h3 class="card__title-card"> undefined </h3>
-         <div class="card__footer">
-            <div class="card__price"><span>90 000 ₽</span></div>
-            <div class="card__button">
-               <button class="button-transparent" type="button" > Добавить в корзину</button>
-            </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
          </div>
-         
-   </a>
+      </div>
+
+      
+
 </article>  <article class="card swiper-slide">
    
       <div class="card__image">
          <div class="card__image-body">
             <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
+         <div class="card__article">Артикул: 21018900054</div>
       </div>
-      <div class="card__article">Артикул: 21018900054</div>
       <div class="card__data">
-         <div class="card__header">
-            <div class="card__status violet">Новинка</div>
-            <div class="card__buttons">
+         <div class="card__status violet">Новинка</div>
+         <h3 class="card__title-card"> undefined </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
                <button class="button__compare" type="button">
    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
@@ -947,16 +1052,15 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
+            <span>130 000 ₽</span>
          </div>
-         <h3 class="card__title-card"> undefined </h3>
-         <div class="card__footer">
-            <div class="card__price"><span>130 000 ₽</span></div>
-            <div class="card__button">
-               <button class="button-transparent" type="button" > Добавить в корзину</button>
-            </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
          </div>
-         
-   </a>
+      </div>
+
+      
+
 </article>  </div>
                <div class="card-block-pagination swiper-pagination"></div>
                <div class="button-transition">
@@ -1106,17 +1210,6 @@
    <div class="menu-mobile__container">
       <div class="menu-mobile__body">
 
-         <div class="header-nav__catalog" data-da=".js-header-nav-da,1,768">
-            <button class="header-nav__catalog-button js-open-catalog-nav" type="button">
-               <img src="./img/svg/menu.svg" alt="кнопка открыть меню">
-               Каталог товаров
-            </button>
-
-            <button id="closeMenu" class="menu-mobile__close" type="button">
-               <img src="./img/svg/close.svg" alt="закрыть">
-            </button>
-
-         </div>
          <ol class="header-nav__links js-header-links" data-da=".js-header-nav-da,2,768">
             <li>
                <a href="contacts.html">Контакты</a>
@@ -1140,9 +1233,6 @@
             </li>
          </ol>
 
-         <div class="header__build js-modal-open" data-da=".js-header-da,1,768" data-modal_open="modal-build-pc">
-            <button type="button">Собрать ПК</button>
-         </div>
          <div class="header__social" data-da=".js-header-da,2,768">
             <a href="404.html">
                <img src="./img/svg/vk.svg" alt="иконка социальной сети в контакте">
