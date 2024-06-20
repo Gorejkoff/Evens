@@ -1,5 +1,6 @@
 <div class="compare__shell">
    <div class="compare__body">
+      @@include('../compare/compare_recommendation.html',{})
       <div class="compare__card">
          @@include('../compare/compare_card.html',{"name": "Процессор AMD Ryzen 5 4500 OEM", "price": "6 270 ₽", "status": false})
          @@include('../compare/compare_card.html',{"name": "Процессор AMD A10 9700 OEM", "price": "5 270 ₽", "status": true})
@@ -7,10 +8,6 @@
          @@include('../compare/compare_card.html',{"name": "Процессор AMD A10 9700 OEM", "price": "5 270 ₽", "status": true})
       </div>
       <div id="scroll-card" class="imitation-scrollbar"><span></span></div>
-      @@if(context.message == true) { <div class="compare__message" data-da=".compare__shell,0,768">
-         <img src="@img/svg/important.svg" alt="восклицательный знак">
-         <span>Чтобы сохранить список и иметь к нему доступ с различных устройств, <a class="" href="log_in.html"><span>войдите в личный кабинет</span></a></span>
-      </div>}
       <div class="compare__description">
          <div class="compare__description-title">Сравнение характеристик</div>
          <div class="compare__description-body">

@@ -189,6 +189,13 @@ document.addEventListener('click', (event) => {
       event.target.closest('.card__button button')) {
       event.preventDefault();
    }
+   //открывает модальное окно слайдера в карточке товара
+   if (event.target.closest('.swiper-gallery')) {
+      document.body.classList.add('gallery-madal-open');
+   }
+   if (event.target.closest('.product-gallery__modal-close') || !event.target.closest('.product-gallery__modal-wrapper')) {
+      document.body.classList.remove('gallery-madal-open');
+   }
 })
 
 /* === СОБЫТИЕ МЫШЬ НАД ЭЛЕМЕНТОМ === */
@@ -264,6 +271,7 @@ if (INPUTS_CODE.length > 0) {
       })
    })
 }
+
 
 const ACCOUND_FORM = document.forms.personal_data;
 function accessForm(boolean) {

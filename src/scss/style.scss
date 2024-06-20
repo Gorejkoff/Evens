@@ -8,6 +8,10 @@ body {
    color: var(--color-black);
 }
 
+body.gallery-madal-open {
+   overflow: hidden;
+}
+
 .wrapper {
    display: flex;
    flex-direction: column;

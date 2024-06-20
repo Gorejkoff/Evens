@@ -9,16 +9,14 @@
    </div>
    <div class="compare__block" data-da=".compare__data,1,768">
       <div class="compare__price">@@price</div>
-      <button class="button-transparent" type="button"><span class="text-full">Добавить в корзину</span><span class="text-short">В корзину</span></button>
+      <button class="button-green" type="button"><span class="text-full">Добавить в корзину</span><span class="text-short">В корзину</span></button>
    </div>
    <div class="compare__buttons" data-da=".compare__data,last,1024">
-      <div class="compare__buttons-group">
-         @@if(context.status) { <div class="compare__status-shell">
-            <div class="compare__status orange" data-da=".compare__buttons,0,768">Хит</div>
-         </div>}
-         <div data-da=".compare__buttons,1,768">
-            @@include('../buttons/button_favourites.html',{"text": "В избранное"})
-         </div>
+      @@if(context.status) { <div class="compare__status-shell">
+         <div class="compare__status orange" data-da=".compare__buttons,0,768">Хит</div>
+      </div>}
+      <div data-da=".compare__buttons,1,768">
+         @@include('../buttons/button_favourites.html',{"text": "В избранное"})
       </div>
       @@include('../buttons/button_delete.html',{})
    </div>

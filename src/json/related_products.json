@@ -8,6 +8,7 @@
       "cards": [
          {
             "status": "orange",
+            "titleCard": "Процессор AMD A10 9700 OEM",
             "statusName": "Хит",
             "image": "catalog-1.png",
             "description": "Процессор AMD A10 9700 OEM",
@@ -17,6 +18,7 @@
          },
          {
             "status": "green",
+            "titleCard": "Процессор AMD A10 9700 OEM",
             "statusName": "Скидка",
             "image": "catalog-1.png",
             "description": "Процессор AMD A10 9700 OEM",
@@ -26,6 +28,7 @@
          },
          {
             "status": "violet",
+            "titleCard": "Процессор AMD A10 9700 OEM",
             "statusName": "Новинка",
             "image": "catalog-1.png",
             "description": "Процессор AMD A10 9700 OEM",
@@ -35,6 +38,7 @@
          },
          {
             "status": "orange",
+            "titleCard": "Процессор AMD A10 9700 OEM",
             "statusName": "Хит",
             "image": "catalog-1.png",
             "description": "Процессор AMD A10 9700 OEM",
@@ -44,6 +48,7 @@
          },
          {
             "status": "green",
+            "titleCard": "Процессор AMD A10 9700 OEM",
             "statusName": "Скидка",
             "image": "catalog-1.png",
             "description": "Процессор AMD A10 9700 OEM",
@@ -53,6 +58,7 @@
          },
          {
             "status": "violet",
+            "titleCard": "Процессор AMD A10 9700 OEM",
             "statusName": "Новинка",
             "image": "catalog-1.png",
             "description": "Процессор AMD A10 9700 OEM",

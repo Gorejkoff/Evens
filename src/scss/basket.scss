@@ -114,24 +114,25 @@
    }
 
    &__quantity {
+      margin: 0 auto;
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 42px;
+      height: 30px;
       border-radius: 2px;
-      width: 100%;
       border: 1px solid var(--color-gray);
+      min-width: 116px;
 
       @media (min-width:768px) {
-         min-width: 116px;
-         width: auto;
+         margin: 0;
       }
 
       input {
          width: 50px;
          font-weight: 700;
          text-align: center;
+         font-size: 16px;
       }
    }
 
@@ -162,11 +163,12 @@
 
    &__table-delete {
       @media (max-width:767.98px) {
+         margin-top: -50px;
          grid-column: span 2;
          border-bottom: 1px solid var(--color-gray);
 
          button {
-            margin: 0 auto;
+            margin-left: auto;
          }
       }
    }

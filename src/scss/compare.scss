@@ -51,6 +51,8 @@
 
    &__card-item {
       flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
       border: 1px solid var(--color-gray);
       border-radius: 10px;
       padding: 20px 10px;
@@ -71,8 +73,8 @@
    }
 
    &__card-group {
+      flex: 1 1 auto;
       margin-bottom: 20px;
-
       display: flex;
       gap: 24px;
 
@@ -93,9 +95,12 @@
 
    &__data {
       flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
    }
 
    &__name {
+      flex: 1 1 auto;
       margin-bottom: 20px;
       font-weight: 700;
       font-size: 16px;
@@ -149,33 +154,9 @@
 
    &__buttons {
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: space-between;
       gap: 10px;
-
-      @media (min-width:768px) {
-         justify-content: space-between;
-         flex-direction: row;
-      }
-   }
-
-   &__buttons-group {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-
-      button {
-         min-height: 40px;
-      }
-
-      @media (min-width:768px) {
-         display: none;
-      }
-   }
-
-   &__status-shell {
-      flex: 1 1 auto;
    }
 
    &__status {

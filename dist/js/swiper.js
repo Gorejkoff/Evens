@@ -6280,49 +6280,6 @@ function changeSliderBrand() {
    }
 }
 
-/* const CHANGE_VIEW = document.querySelector('.js-change-view')
-let swiperStateSearch;
-let swiperSearch;
-if (document.querySelector('.swiper-search')) {
-   changeSliderSearch();
-   window.addEventListener('resize', () => {
-      if (MIN768.matches && swiperStateSearch) viewGrid();
-      if (!MIN768.matches && CHANGE_VIEW.classList.contains('view-block')) viewGrid();
-   })
-}
-
-function initSwiperSearch() {
-   swiperSearch = new Swiper('.swiper-view', {
-      keyboard: {
-         enabled: true,
-         onlyInViewport: true,
-      },
-      allowTouchMove: true,
-      loop: false,
-      speed: 300,
-      slidesPerView: 1.3,
-      spaceBetween: 24,
-      pagination: {
-         el: '.view-swiper-pagination',
-         clickable: true,
-      },
-   });
-}
-
-function changeSliderSearch() {
-   if (!MIN768.matches && CHANGE_VIEW.classList.contains('view-swiper')) {
-      if (!swiperStateSearch) {
-         swiperStateSearch = true;
-         initSwiperSearch();
-      }
-      return
-   }
-   if (swiperStateSearch) {
-      swiperStateSearch = false;
-      swiperSearch.destroy(true, true);
-   }
-} */
-
 if (document.querySelector('.swiper-brand-main')) {
    const swiper = new Swiper('.swiper-brand-main', {
       keyboard: {
@@ -6380,8 +6337,28 @@ if (document.querySelector('.swiper-main')) {
    });
 }
 
-if (document.querySelector('.product-gallery')) {
-   const swiper = new Swiper('.product-gallery', {
+if (document.querySelector('.swiper-gallery')) {
+   const swiper2 = new Swiper('.swiper-gallery-thumb', {
+      keyboard: {
+         enabled: true,
+         onlyInViewport: true,
+      },
+      loop: false,
+      speed: 300,
+      slidesPerView: 4.5,
+      spaceBetween: 24,
+      navigation: {
+         nextEl: '.swiper-gallery-thumb-next',
+         prevEl: '.swiper-gallery-thumb-prev',
+      },
+      breakpoints: {
+         1024: {
+            slidesPerView: 6,
+         }
+      }
+   });
+
+   const swiper = new Swiper('.swiper-gallery', {
       keyboard: {
          enabled: true,
          onlyInViewport: true,
@@ -6393,10 +6370,12 @@ if (document.querySelector('.product-gallery')) {
       pagination: {
          el: '.product-gallery-pagination',
          clickable: true,
-      }
+      },
+      thumbs: {
+         swiper: swiper2,
+      },
    });
 }
-
 
 if (document.querySelector('.brands__swiper')) {
    const swiper = new Swiper('.brands__swiper', {
