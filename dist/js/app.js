@@ -723,12 +723,16 @@ class TabsOpen {
       }
    }
    open = (element) => {
-      element.querySelector('.js-tab-content').style.height = this.getSize(element) + 'px';
-      element.classList.add('active');
+      if (element.querySelector('.js-tab-content')) {
+         element.querySelector('.js-tab-content').style.height = this.getSize(element) + 'px';
+         element.classList.add('active');
+      }
    };
    close = (element) => {
-      element.querySelector('.js-tab-content').style.height = '';
-      element.classList.remove('active');
+      if (element.querySelector('.js-tab-content')) {
+         element.querySelector('.js-tab-content').style.height = '';
+         element.classList.remove('active');
+      }
    };
    closeAll = () => { this.tabsList.forEach(element => this.close(element)); }
    adjustment = () => {
