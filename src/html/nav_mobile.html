@@ -1,8 +1,11 @@
-<div class="menu-mobile">
+<div class="menu-mobile madal-background">
    <div class="menu-mobile__container">
       <div class="menu-mobile__body">
-
-         <ol class="header-nav__links js-header-links" data-da=".js-header-nav-da,2,768">
+         @@include('./catalog_nav/catalog_buttons.html',{})
+         <ol class="header-nav__links js-header-links" data-da=".js-header-nav-da,1,768">
+            <li class="header-nav__open-catalog">
+               <button type="button" class="js-open-catalog-nav">Каталог товаров</button>
+            </li>
             <li>
                <a href="contacts.html">Контакты</a>
             </li>
@@ -15,7 +18,7 @@
                   <img src="@img/svg/arrow-nav-bottom.svg" alt="стрелка указывает вниз">
                </button>
                <div class="header-nav__info js-menu-tab-body">
-                  <ol class=" js-menu-tab-content">
+                  <ol class="js-menu-tab-content">
                      <li><a href="payment.html">Оплата</a></li>
                      <li><a href="delivery.html">Доставка</a></li>
                      <li><a href="404.html">Самовывоз</a></li>

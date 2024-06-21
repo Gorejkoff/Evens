@@ -112,10 +112,7 @@ document.addEventListener('click', (event) => {
    } else if (MIN768.matches && !event.target.closest('.js-catalog-nav-body')) {
       closeCatalogNav();
    }
-   // меню, кнопка назад
-   if (event.target.closest('.js-nav-back')) {
-      event.target.closest('.open').classList.remove('open');
-   }
+
    // меню, кнопка закрыть, закрывает все открытые вкладки
    if (event.target.closest('.js-nav-close')) {
       document.querySelectorAll('.open').forEach((e) => e.classList.remove('open'));
@@ -146,6 +143,11 @@ document.addEventListener('click', (event) => {
    // смена текста на странице входа в ЛК
    if (event.target.closest('.js-log-button')) {
       document.querySelector('.js-log-email').style.display = 'none';
+      document.querySelector('.js-log-name').style.display = 'block';
+   }
+   // смена текста на странице входа в ЛК
+   if (event.target.closest('.js-name-button')) {
+      document.querySelector('.js-log-name').style.display = 'none';
       document.querySelector('.js-log-code').style.display = 'block';
    }
    // едактировать форму в ЛК
@@ -193,7 +195,7 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('.swiper-gallery')) {
       document.body.classList.add('gallery-madal-open');
    }
-   if (event.target.closest('.product-gallery__modal-close') || !event.target.closest('.product-gallery__modal-wrapper')) {
+   if (event.target.closest('.product-gallery__modal-buttons button') || !event.target.closest('.product-gallery__modal-wrapper')) {
       document.body.classList.remove('gallery-madal-open');
    }
 })

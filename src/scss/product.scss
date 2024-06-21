@@ -302,6 +302,11 @@
       }
    }
 
+   &__modal-buttons,
+   &__modal-description {
+      display: none;
+   }
+
    .product-gallery-pagination {
       width: 100%;
       justify-content: center;
@@ -311,7 +316,6 @@
       }
    }
 }
-
 
 .gallery-madal-open {
    .product-gallery {
@@ -360,6 +364,7 @@
       }
 
       &__modal-description {
+         display: block;
          align-self: self-end;
          font-size: 14px;
          line-height: 140%;
@@ -379,30 +384,17 @@
 
       &__modal-buttons {
          display: flex;
-         justify-content: end;
+         justify-content: flex-end;
+
+         button {
+            @media (max-width:1023.98px) {
+               order: 1;
+            }
+         }
+
       }
 
-      &__modal-close {
-         height: 40px;
-         width: 40px;
 
-         @media (max-width:1023.98px) {
-            order: 1;
-         }
-
-         svg {
-            width: 14px;
-            height: 14px;
-         }
-
-         path {
-            transition: fill 0.3s;
-         }
-
-         &:hover path {
-            fill: var(--color-violet);
-         }
-      }
 
       .swiper-gallery {
          margin-bottom: 20px;

@@ -86,28 +86,16 @@
       margin-bottom: 20px;
       display: flex;
       justify-content: space-between;
+      align-items: center;
       flex-wrap: wrap;
       gap: 24px;
 
       @media (min-width:768px) {
-         align-items: center;
-
-      }
-
-      @media (min-width:1024px) {
          align-items: flex-end;
-
-         .sort__button {
-            span {
-               text-decoration: underline;
-            }
-         }
       }
    }
 
    &__quantity-product {
-      flex: 0 0 100%;
-
       @media (min-width:768px) {
          margin-right: 40px;
          flex: 0 1 auto;
@@ -117,6 +105,10 @@
          margin-right: 0;
          flex: 0 0 307px;
       }
+   }
+
+   &__view {
+      flex: 1 1 auto;
    }
 
    &__content {

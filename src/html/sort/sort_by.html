@@ -1,31 +1,46 @@
 <div class="sort__block">
    <p class="sort__name">Сортировать по:</p>
+   <p class="sort__name-mobile">Сортировка</p>
    <div class="sort__body js-tab-body">
       <button class="sort__button js-tab-button" type="button">
-         <span id="sort-button-text">Популярности</span>
-         <img src="@img/svg/arrow-bottom.svg" alt="стрелка указывает вниз">
+         <span class="sort__button-text" id="sort-button-text">Популярности</span>
+         <img class="sort__button-img" src="@img/svg/arrow-bottom.svg" alt="стрелка указывает вниз">
+         <img class="sort__button-img-mobile" src="@img/svg/sort.svg" alt="стрелки указывают вверх и вниз">
       </button>
-      <form class="sort__tab js-tab-content" action="#" method="post" name="sort" id="sort">
-         <ol class="js-tab-content-inner">
-            <li>
-               <label class="js-sort-value">
-                  <input type="radio" name="sort-item" value="Increasing">
-                  <span class="sort__value hover-inner-menu">По возрастанию цены</span>
-               </label>
-            </li>
-            <li>
-               <label class="js-sort-value">
-                  <input type="radio" name="sort-item" value="popularity">
-                  <span class="sort__value hover-inner-menu">По популярности</span>
-               </label>
-            </li>
-            <li>
-               <label class="js-sort-value">
-                  <input type="radio" name="sort-item" value="date">
-                  <span class="sort__value hover-inner-menu">По дате</span>
-               </label>
-            </li>
-         </ol>
-      </form>
+      <div class="sort__tab js-tab-content madal-background">
+         <form class="sort__tab-shell js-tab-content-inner" action="#" method="post" name="sort" id="sort">
+            <div class="sort__tab-header">
+               <div class="sort__tab-title">Сортировка</div>
+               @@include('../buttons/button_close.html'.{})
+            </div>
+            <div class="search__view" data-da=".js-move-view-button,1,768">
+               @@include('../view/view.html',{})
+            </div>
+            <ol class="sort__tab-inner">
+               <li>
+                  <label class="sort__value js-sort-value">
+                     <span class="sort__value-text">По возрастанию цены</span>
+                     <input type="radio" name="sort-item" value="Increasing">
+                     <span class="sort__value-check"></span>
+                  </label>
+               </li>
+               <li>
+                  <label class="sort__value js-sort-value">
+                     <span class="sort__value-text">По популярности</span>
+                     <input type="radio" name="sort-item" value="popularity">
+                     <span class="sort__value-check"></span>
+                  </label>
+               </li>
+               <li>
+                  <label class="sort__value js-sort-value">
+                     <span class="sort__value-text">По дате</span>
+                     <input type="radio" name="sort-item" value="date">
+                     <span class="sort__value-check"></span>
+                  </label>
+               </li>
+            </ol>
+            <button type="submit" class="button-violet">Применить</button>
+         </form>
+      </div>
    </div>
 </div>

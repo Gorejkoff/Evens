@@ -4,9 +4,10 @@
    right: 110vw;
    z-index: 12;
    width: 100vw;
-   height: calc(100vh - (var(--height-header, 49px) + 1px));
+   height: calc(100vh - (var(--height-header-nav, 49px) + 1px));
    transition: right 0.3s;
    pointer-events: none;
+   background-color: var(--color-white);
 
    @media (min-width:768px) {
       display: none;
@@ -14,18 +15,24 @@
       max-height: calc(100vh - (var(--height-header, 49) + var(--height-header-nav, 69px) + 12px));
       width: 100%;
       height: auto;
+      background-color: transparent;
+
+      .js-tab-content {
+         height: auto;
+      }
    }
+
 
    &__body {
       position: relative;
       z-index: 12;
-      padding-top: 18px;
-      padding-bottom: 20px;
       max-height: 100%;
       background-color: var(--color-white);
       pointer-events: all;
 
       @media (min-width:768px) {
+         padding-top: 18px;
+         padding-bottom: 20px;
          display: inline-flex;
          min-width: 230px;
          gap: 24px;
@@ -44,7 +51,7 @@
 
 .header-nav .catalog-nav-wrapper__body {
    overflow-y: auto;
-   max-height: calc(100vh - var(--height-header) - var(--height-header-nav) + var(--ignore-header-hight));
+   max-height: calc(100vh - var(--height-header-nav));
 }
 
 .open.catalog-nav-wrapper {
@@ -60,10 +67,8 @@
    right: 0;
    display: none;
 
-
    @media (min-width:1024px) {
       display: block;
-
    }
 
    @media (max-width:1023.98px) {
@@ -79,11 +84,8 @@
 }
 
 .catalog-nav {
+   padding-top: 20px;
    flex: 1 0 230px;
-
-   @media (max-width:1023.98px) {
-      max-height: calc(100vh - var(--height-header));
-   }
 
    @media (min-width:1024px) {
       @include sizeMaxMinPcFlex (0, 0, 306, 250);
@@ -93,8 +95,7 @@
       flex: 0 0 306px;
    }
 
-   &__button,
-   &__button-other {
+   &__button {
       padding: 10px;
       display: flex;
       justify-content: space-between;
@@ -109,24 +110,42 @@
       }
    }
 
-   &__button-other {
-      font-weight: 700;
-      justify-content: flex-start;
-      gap: 14px;
-      color: var(--color-white);
-      background-color: var(--color-green);
+   &__button-text {
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
-      @media (min-width:768px) {
-         display: none;
+      img {
+         @media (min-width:768px) {
+            display: none;
+         }
       }
    }
 
    &__button {
       text-align: start;
-      border-top: 1px solid var(--color-gray-light);
+      border-top: 1px solid var(--color-gray);
+
+      @media (min-width:768px) {
+         border-color: var(--color-gray-light);
+      }
 
       path {
          transition: all 0.2s;
+      }
+
+      svg {
+         @media (max-width:767.98px) {
+            transform: rotate(90deg);
+         }
+      }
+   }
+
+   .js-tab-body.active &__button {
+      svg {
+         @media (max-width:767.98px) {
+            transform: rotate(0deg);
+         }
       }
    }
 
@@ -139,12 +158,11 @@
       }
    }
 
-   &__back,
    &__close,
    &__mobile-button {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-end;
       gap: 10px;
    }
 
@@ -156,32 +174,10 @@
       }
    }
 
-   &__back {
-      font-weight: 700;
-      font-size: 14px;
-      line-height: 160%;
-      color: var(--color-violet);
-
-      img {
-         width: 13px;
-      }
-   }
-
    &__close {
 
       img {
          width: 14px;
-      }
-   }
-
-   &__list-title {
-      padding: 10px;
-      font-weight: 400;
-      color: var(--color-white);
-      background-color: var(--color-violet);
-
-      @media (min-width:768px) {
-         display: none;
       }
    }
 
@@ -219,7 +215,6 @@
          min-height: 48px;
          font-weight: 500;
          font-size: 14px;
-         //    border-bottom: 1px solid var(--color-gray);
       }
    }
 

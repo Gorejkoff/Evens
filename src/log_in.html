@@ -28,7 +28,15 @@
                      <div class="log__subscribe">Введите свой e-mail и получите уникальный код для входа</div>
                      @@include('html/registration/input.html',{"required": true, "name": "E-mail", "title" : "E-mail", "placeholder": "Введите свой E-mail", "type": "text"})
                      <div class="log__button">
-                        <button class="button-green js-log-button" type="button">Получить код</button>
+                        <button class="button-green js-log-button" type="button">Войти</button>
+                     </div>
+                  </div>
+
+                  <div class="js-log-name">
+                     <div class="log__subscribe">Укажите Ваше имя для дальнейшей регистрации</div>
+                     @@include('html/registration/input.html',{"required": true, "name": "Имя", "title" : "Имя", "placeholder": "Введите Ваше Имя", "type": "text"})
+                     <div class="log__button">
+                        <button class="button-green js-name-button" type="button">Получить код</button>
                      </div>
                   </div>
 

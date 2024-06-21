@@ -1,20 +1,12 @@
-<div id="catalog_nav_wrapper" class="catalog-nav-wrapper">
+<div id="catalog_nav_wrapper" class="catalog-nav-wrapper js-catalog-nav">
    <div class="catalog-nav-wrapper__container">
       <div class="catalog-nav-wrapper__body js-catalog-nav-body">
          <div class="catalog-nav">
             @@include('../catalog_nav/catalog_buttons.html',{})
-            <button class="catalog-nav__button-other js-modal-open" type="button" data-modal_open="modal-build-pc">
-               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M12 5V19" stroke="#9604CF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-               </svg>
-               Собрать компьютер
-            </button>
             <ol>
                @@loop("../catalog_nav/catalog_nav_li.html", "json/catalog_nav_list.json")
             </ol>
          </div>
-         @@include('../catalog_nav/catalog_nav_content.html',{"jsonName": "catalog_nav_tab_1.json","number": "1"})
-         @@include('../catalog_nav/catalog_nav_content.html',{"jsonName": "catalog_nav_tab_2.json","number": "2"})
       </div>
    </div>
 </div>

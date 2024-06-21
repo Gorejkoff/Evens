@@ -34,7 +34,7 @@ class TabsOpen {
          return;
       }
       if (!event.target.closest('.js-tab-content') && this.closeAllTabs) {
-         this.tabsList.forEach(element => this.close(element));
+         this.closeAll();
       }
    }
    examinationHover = (event) => {
@@ -43,7 +43,7 @@ class TabsOpen {
             element == event.target.closest('.js-tab-body') ? this.open(element) : this.close(element);
          });
       } else {
-         this.tabsList.forEach(element => this.close(element));
+         this.closeAll();
       }
    }
    open = (element) => {
@@ -54,6 +54,7 @@ class TabsOpen {
       element.querySelector('.js-tab-content').style.height = '';
       element.classList.remove('active');
    };
+   closeAll = () => { this.tabsList.forEach(element => this.close(element)); }
    adjustment = () => {
       this.tabsList.forEach((e) => e.classList.contains('active') && this.open(e));
       this.externalFunctionResize && this.externalFunctionResize()
@@ -67,7 +68,7 @@ if (document.querySelector('.js-sort')) {
       name: '.js-sort',
       hover: true,
       closeAllTabs: true,
-      closeClickContent: true,
+      closeClickContent: false,
       externalFunction: showSelection
    }).init();
 }
@@ -76,6 +77,19 @@ if (document.querySelector('.js-sort')) {
 const BUTTON_TEXT = document.getElementById('sort-button-text');
 function showSelection(event) {
    if (event.target.closest('.js-sort-value')) {
-      BUTTON_TEXT.innerHTML = event.target.closest('.js-sort-value span').innerHTML;
+      BUTTON_TEXT.innerHTML = event.target.closest('.js-sort-value').querySelector('.sort__value-text').innerHTML;
    }
+   if (event.target.closest('.sort__tab-header .button-close')) {
+      this.closeAll();
+   }
+}
+
+
+if (document.querySelector('.js-catalog-nav')) {
+   let tebSort = new TabsOpen({
+      name: '.js-catalog-nav',
+      hover: true,
+      closeAllTabs: false,
+      closeClickContent: false,
+   }).init();
 }

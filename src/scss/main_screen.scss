@@ -1,9 +1,14 @@
 .main-screen {
    position: relative;
    color: var(--color-white);
+   padding-bottom: 40px;
 
    @media (min-width:768px) {
       margin-top: 20px;
+   }
+
+   @media (min-width:1024px) {
+      padding-bottom: 80px;
    }
 
    &__container {}

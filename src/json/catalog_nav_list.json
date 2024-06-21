@@ -1,62 +1,92 @@
 [
    {
+      "icon": "icon-1",
       "item": "Комплектующие",
-      "number": "1"
+      "number": "1",
+      "json": "catalog_nav_tab_1.json"
    },
    {
+      "icon": "icon-2",
       "item": "Готовые компьютеры",
-      "number": "2"
+      "number": "2",
+      "json": "catalog_nav_tab_2.json"
    },
    {
+      "icon": "icon-3",
       "item": "Компоненты СВО",
-      "number": "3"
+      "number": "3",
+      "json": false
    },
    {
+      "icon": "icon-4",
       "item": "Сетевое оборудование",
-      "number": "4"
+      "number": "4",
+      "json": false
    },
    {
+      "icon": "icon-5",
       "item": "Мониторы",
-      "number": "5"
+      "number": "5",
+      "json": false
    },
    {
+      "icon": "icon-6",
       "item": "ИБП, Стабилизаторы",
-      "number": "6"
+      "number": "6",
+      "json": false
    },
    {
+      "icon": "icon-7",
       "item": "Принтеры, сканеры",
-      "number": "7"
+      "number": "7",
+      "json": false
    },
    {
+      "icon": "icon-8",
       "item": "Манипуляторы",
-      "number": "8"
+      "number": "8",
+      "json": false
    },
    {
+      "icon": "icon-9",
       "item": "Мультимедиа",
-      "number": "9"
+      "number": "9",
+      "json": false
    },
    {
+      "icon": "icon-10",
       "item": "Программное обеспечение",
-      "number": "10"
+      "number": "10",
+      "json": false
    },
    {
+      "icon": "icon-11",
       "item": "Аксессуары",
-      "number": "11"
+      "number": "11",
+      "json": false
    },
    {
+      "icon": "icon-1",
       "item": "Кабельная продукция",
-      "number": "12"
+      "number": "12",
+      "json": false
    },
    {
+      "icon": "icon-1",
       "item": "Товары для майнинга",
-      "number": "13"
+      "number": "13",
+      "json": false
    },
    {
+      "icon": "icon-1",
       "item": "Устройства видеозахвата",
-      "number": "14"
+      "number": "14",
+      "json": false
    },
    {
+      "icon": "icon-1",
       "item": "Распродажа",
-      "number": "15"
+      "number": "15",
+      "json": false
    }
 ]

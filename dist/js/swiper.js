@@ -6191,7 +6191,7 @@ if (document.querySelector('.swiper-card')) {
       allowTouchMove: true,
       loop: false,
       speed: 300,
-      slidesPerView: 1.15,
+      slidesPerView: 2,
       spaceBetween: 10,
       breakpoints: {
          768: {

@@ -1,19 +1,20 @@
 .stocks {
 
-   &__container {}
-
    &__body {
       @media (min-width:768px) and (max-width:1023.98px) {
          display: grid;
          grid-template-columns: 1fr 1fr 1fr;
          gap: 24px;
       }
-
    }
 
    &__card {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
       &:not(:last-child) {
-         margin-bottom: 20px;
+         margin-bottom: 40px;
 
          @media (min-width:1024px) {
             margin-bottom: 10px;
@@ -22,8 +23,7 @@
 
       @media (min-width:1024px) {
          margin-bottom: 10px;
-         display: flex;
-         gap: 14px;
+         flex-direction: row;
          border-radius: 10px;
          background-color: var(--color-gray-light);
          overflow: hidden;
@@ -31,10 +31,8 @@
    }
 
    &__image {
-      margin-bottom: 20px;
-
       @media (min-width:1024px) {
-         margin: 0;
+         order: 1;
          flex: 0 0 40.5%;
       }
    }
@@ -60,20 +58,21 @@
 
    &__content {
       &>*:not(:last-child) {
-         margin-bottom: 20px;
+         margin-bottom: 10px;
       }
 
       @media (min-width:1024px) {
+         order: 2;
          padding: 10px;
       }
    }
 
    &__date {
-      padding: 10px;
+      padding: 8px 10px;
       display: flex;
       align-items: center;
       gap: 10px;
-      min-height: 40px;
+      min-height: 36px;
       width: max-content;
       border-radius: 4px;
       color: var(--color-white);
@@ -90,6 +89,7 @@
       display: inline-block;
       font-weight: 700;
       font-size: 20px;
+      line-height: 120%;
       color: var(--color-black);
       transition: color 0.2s;
 
@@ -104,6 +104,7 @@
 
    &__text {
       font-size: 14px;
+      line-height: 130%;
       color: var(--color-black-dark);
 
       @media (min-width:1024px) {
