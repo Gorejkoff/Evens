@@ -17,12 +17,13 @@
                   <img src="@img/svg/home.svg" alt="на главную страницу">
                </a>
             </li>
-            <li class="fone-menu">
+            <li class="fone-menu js-modal-open" data-modal_open="modal-call">
                <img src="@img/svg/fone-2.svg" alt="контакты">
             </li>
             <li class="header-nav__button-search">
                <button data-message="Поиск" type="button">
-                  <img src="@img/svg/search-2.svg" alt="поиск">
+                  <img class="button-search-open" src="@img/svg/search-2.svg" alt="поиск">
+                  <img class="button-search-close js-nav-close" src="@img/svg/close_5.svg" alt="кнопка закрыть поиск">
                </button>
             </li>
             <li class="compare-menu">
@@ -32,7 +33,8 @@
             </li>
             <li class="burger-menu">
                <button id="burger" class="header-nav__burger" type="button">
-                  <img src="@img/svg/menu-3.svg" alt="кнопка открыть меню">
+                  <img class="burger-menu__open" src="@img/svg/menu-3.svg" alt="кнопка открыть меню">
+                  <img class="burger-menu__close js-nav-close" src="@img/svg/close_5.svg" alt="кнопка закрыть меню">
                </button>
             </li>
             <li class="favourites-menu">

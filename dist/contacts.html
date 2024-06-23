@@ -11,7 +11,7 @@
 <link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-SemiBold.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Bold.woff2" crossorigin>
 
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css?_v=20240623192905">
 </head>
 
 
@@ -35,13 +35,6 @@
                <img src="./img/svg/menu-2.svg" alt="горизонтальные полоски">
             </button>
          </div>
-
-         <!--       <div class="header-nav__catalog" data-da=".js-header-nav-da,1,768">
-            <button id="closeMenu" class="menu-mobile__close" type="button">
-               <img src="./img/svg/close.svg" alt="закрыть">
-            </button>
-         </div> -->
-
          <div class="header__build js-modal-open" data-modal_open="modal-build-pc"><!-- data-da=".js-header-da,1,768" -->
             <button type="button">Собрать ПК</button>
          </div>
@@ -78,12 +71,13 @@
                   <img src="./img/svg/home.svg" alt="на главную страницу">
                </a>
             </li>
-            <li class="fone-menu">
+            <li class="fone-menu js-modal-open" data-modal_open="modal-call">
                <img src="./img/svg/fone-2.svg" alt="контакты">
             </li>
             <li class="header-nav__button-search">
                <button data-message="Поиск" type="button">
-                  <img src="./img/svg/search-2.svg" alt="поиск">
+                  <img class="button-search-open" src="./img/svg/search-2.svg" alt="поиск">
+                  <img class="button-search-close js-nav-close" src="./img/svg/close_5.svg" alt="кнопка закрыть поиск">
                </button>
             </li>
             <li class="compare-menu">
@@ -93,7 +87,8 @@
             </li>
             <li class="burger-menu">
                <button id="burger" class="header-nav__burger" type="button">
-                  <img src="./img/svg/menu-3.svg" alt="кнопка открыть меню">
+                  <img class="burger-menu__open" src="./img/svg/menu-3.svg" alt="кнопка открыть меню">
+                  <img class="burger-menu__close js-nav-close" src="./img/svg/close_5.svg" alt="кнопка закрыть меню">
                </button>
             </li>
             <li class="favourites-menu">
@@ -116,13 +111,8 @@
       </nav>
       <div id="catalog_nav_wrapper" class="catalog-nav-wrapper js-catalog-nav">
    <div class="catalog-nav-wrapper__container">
-      <div class="catalog-nav-wrapper__body js-catalog-nav-body">
+      <div class="catalog-nav-wrapper__body">
          <div class="catalog-nav">
-            <div class="catalog-nav__mobile-button">
-   <button class="catalog-nav__close js-nav-close" type="button">
-      <img src="./img/svg/close.svg" alt="кнопка закрыть">
-   </button>
-</div>
             <ol>
                <li class="js-tab-body">
    <button class="catalog-nav__button js-catalog-nav-button js-tab-button" type="button" data-number="1">
@@ -660,11 +650,6 @@
       <div class="menu-mobile madal-background">
    <div class="menu-mobile__container">
       <div class="menu-mobile__body">
-         <div class="catalog-nav__mobile-button">
-   <button class="catalog-nav__close js-nav-close" type="button">
-      <img src="./img/svg/close.svg" alt="кнопка закрыть">
-   </button>
-</div>
          <ol class="header-nav__links js-header-links" data-da=".js-header-nav-da,1,768">
             <li class="header-nav__open-catalog">
                <button type="button" class="js-open-catalog-nav">Каталог товаров</button>
@@ -826,10 +811,10 @@
 
    </div>
 
-   <script src="https://api-maps.yandex.ru/2.1/?apikey=6f1ea5a8-bc6c-4023-a413-08b9577cdfcf&lang=ru_RU" type="text/javascript"></script>
-   <script defer src='./js/app.js'></script>
-<script defer src='./js/swiper.js'></script>
-<script defer src='./js/mask.js'></script>
+   <script src="https://api-maps.yandex.ru/2.1/?apikey=6f1ea5a8-bc6c-4023-a413-08b9577cdfcf&lang=ru_RU&_v=20240623192905" type="text/javascript"></script>
+   <script defer src='./js/app.js?_v=20240623192905'></script>
+<script defer src='./js/swiper.js?_v=20240623192905'></script>
+<script defer src='./js/mask.js?_v=20240623192905'></script>
 
 
 </body>

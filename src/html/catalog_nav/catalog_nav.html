@@ -1,8 +1,7 @@
 <div id="catalog_nav_wrapper" class="catalog-nav-wrapper js-catalog-nav">
    <div class="catalog-nav-wrapper__container">
-      <div class="catalog-nav-wrapper__body js-catalog-nav-body">
+      <div class="catalog-nav-wrapper__body">
          <div class="catalog-nav">
-            @@include('../catalog_nav/catalog_buttons.html',{})
             <ol>
                @@loop("../catalog_nav/catalog_nav_li.html", "json/catalog_nav_list.json")
             </ol>

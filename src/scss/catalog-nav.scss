@@ -158,29 +158,6 @@
       }
    }
 
-   &__close,
-   &__mobile-button {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 10px;
-   }
-
-   &__mobile-button {
-      margin-bottom: 18px;
-
-      @media (min-width:768px) {
-         display: none;
-      }
-   }
-
-   &__close {
-
-      img {
-         width: 14px;
-      }
-   }
-
    &__content {
       position: absolute;
       top: 0;

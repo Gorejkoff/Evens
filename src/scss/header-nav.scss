@@ -442,6 +442,21 @@ li.header-nav__open-catalog {
    }
 }
 
+.burger-menu__close {
+   display: none;
+}
+
+.catalog-nav-open,
+.burger-active {
+   .burger-menu__close {
+      display: block;
+   }
+
+   .burger-menu__open {
+      display: none;
+   }
+}
+
 .basket-menu {
    @media (max-width:767.98px) {
       order: 7;
@@ -490,8 +505,21 @@ li.header-nav__open-catalog {
    }
 }
 
+.button-search-close {
+   display: none;
+}
+
 .open-search {
    .header-nav__search {
       display: block;
    }
+
+   .button-search-close {
+      display: block;
+   }
+
+   .button-search-open {
+      display: none;
+   }
+
 }

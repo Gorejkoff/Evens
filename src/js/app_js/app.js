@@ -109,7 +109,7 @@ document.addEventListener('click', (event) => {
    /* открывает catalog-nav */
    if (event.target.closest('.js-open-catalog-nav') || (MIN768.matches && event.target.closest('#burger'))) {
       openCatalogNav();
-   } else if (MIN768.matches && !event.target.closest('.js-catalog-nav-body')) {
+   } else if (MIN768.matches && !event.target.closest('.js-catalog-nav-body') && !event.target.closest('#catalog_nav_wrapper')) {
       closeCatalogNav();
    }
 
@@ -235,6 +235,7 @@ QUANTITY_BASKET.forEach((e) => {
 
 function closeMenuMobile() {
    document.body.classList.remove('burger-active');
+   document.body.classList.remove('catalog-nav-open');
 }
 
 function closeTabs(element) {
@@ -252,11 +253,13 @@ function openTab(element) {
 }
 
 function openCatalogNav() {
-   document.querySelector('#catalog_nav_wrapper').classList.toggle('open')
+   document.querySelector('#catalog_nav_wrapper').classList.toggle('open');
+   document.body.classList.add('catalog-nav-open');
 }
 
 function closeCatalogNav() {
-   document.querySelector('#catalog_nav_wrapper').classList.remove('open')
+   document.querySelector('#catalog_nav_wrapper').classList.remove('open');
+   document.body.classList.remove('catalog-nav-open');
 }
 function validationQuantityBasket(e) {
    if (e.value < 1) { e.value = 1; }
