@@ -2,15 +2,13 @@
    <div class="card-block__container">
       <div class="card-block__title">
          <h2 class="title">@@title</h2>
+         @@include('../html/link_transition.html',{"text": "@@linkText", "link": "@@link", "adaptive": ".card-block__title,last,1024"})
       </div>
       @@if(description !== false){ <p class="card-block__text">@@description</p> }
       <div class="swiper swiper-card">
          <div class="swiper-wrapper view-grid">
             @@for (var i = 0; i < context.cards.length; i++) { @@include('../html/card/card_item.html',{"grid": "`+context.cards[i].grid+`" , "titleCard" : "`+context.cards[i].titleCard+`" , "wasprice" : "`+context.cards[i].wasprice+`" , "price" : "`+context.cards[i].price+`" , "condition" : "`+context.cards[i].condition+`" , "status" : "`+context.cards[i].status+`" , "statusName" :"`+context.cards[i].statusName+`", "image" : "`+context.cards[i].image+`" }) } </div>
                <div class="card-block-pagination swiper-pagination"></div>
-               <div class="button-transition">
-                  @@include('../html/link_transition.html',{"text": "@@linkText", "link": "@@link", "adaptive": ".card-block__title,last,1024"})
-               </div>
          </div>
       </div>
 </section>

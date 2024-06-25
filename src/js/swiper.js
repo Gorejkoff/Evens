@@ -6200,6 +6200,7 @@ if (document.querySelector('.swiper-card')) {
             allowTouchMove: true,
          },
          1024: {
+            spaceBetween: 24,
             keyboard: {
                enabled: false,
                onlyInViewport: false,
@@ -6363,6 +6364,11 @@ if (document.querySelector('.swiper-gallery')) {
          enabled: true,
          onlyInViewport: true,
       },
+      zoom: {
+         toggle: false,
+         maxRatio: 4,
+         minRatio: 1,
+      },
       loop: false,
       speed: 300,
       slidesPerView: 1,
@@ -6375,6 +6381,40 @@ if (document.querySelector('.swiper-gallery')) {
          swiper: swiper2,
       },
    });
+
+   const buttons = document.querySelector('.product-gallery__modal-buttons');
+   const scale_plus = document.querySelector('.image-scale-plus');
+   const scale_minus = document.querySelector('.image-scale-minus');
+   activeButtons();
+   buttons.addEventListener('click', (event) => {
+      if (event.target.closest('.image-scale-plus')) {
+         swiper.zoom.in(swiper.zoom.scale + 1);
+         activeButtons();
+      }
+      if (event.target.closest('.image-scale-minus')) {
+         swiper.zoom.in(swiper.zoom.scale - 1);
+         activeButtons();
+      }
+   })
+   swiper.on('slideChange', function () {
+      swiper.zoom.out()
+   });
+
+   function activeButtons() {
+      if (swiper.zoom.scale > 1) {
+         scale_minus.removeAttribute('disabled');
+      }
+      if (swiper.zoom.scale < 4) {
+         scale_plus.removeAttribute('disabled');
+      }
+      if (swiper.zoom.scale <= 1) {
+         scale_minus.setAttribute('disabled', 'true');
+      }
+      if (swiper.zoom.scale >= 4) {
+         scale_plus.setAttribute('disabled', 'true');
+      }
+   }
+
 }
 
 if (document.querySelector('.brands__swiper')) {

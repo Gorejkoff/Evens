@@ -195,7 +195,7 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('.swiper-gallery')) {
       document.body.classList.add('gallery-madal-open');
    }
-   if (event.target.closest('.product-gallery__modal-buttons button') || !event.target.closest('.product-gallery__modal-wrapper')) {
+   if (event.target.closest('.product-gallery__modal-buttons .button-close') || !event.target.closest('.product-gallery__modal-wrapper')) {
       document.body.classList.remove('gallery-madal-open');
    }
 })
@@ -371,7 +371,7 @@ function closeTabCatalogNav() {
 function openTabCatalogNav(event) {
    const number = event.target.closest('.js-catalog-nav-button').dataset.number;
    CATALOG_CONTENT.forEach((e) => {
-      if (e.dataset.number == number) {
+      if (!e.classList.contains('open') && e.dataset.number == number) {
          e.classList.add('open');
       } else {
          e.classList.remove('open');
@@ -691,9 +691,10 @@ class TabsOpen {
       this.resize();
    };
    examinationClick = (event) => {
-      this.externalFunction && this.externalFunction(event,);
+      this.externalFunction && this.externalFunction(event);
       if (this.hover && this.pc) return;
       let eventElement = this.closeClickContent ? event.target.closest('.js-tab-body') : event.target.closest('.js-tab-button');
+
       if (eventElement && event.target.closest('.js-tab-body').classList.contains('active')) {
          this.close(event.target.closest('.js-tab-body'));
          return;
@@ -742,16 +743,6 @@ class TabsOpen {
    resize = () => window.addEventListener('resize', this.adjustment);
 }
 
-if (document.querySelector('.js-sort')) {
-   let tebSort = new TabsOpen({
-      name: '.js-sort',
-      hover: true,
-      closeAllTabs: true,
-      closeClickContent: false,
-      externalFunction: showSelection
-   }).init();
-}
-
 /* Подменя текста, показать выбранный вариант */
 const BUTTON_TEXT = document.getElementById('sort-button-text');
 function showSelection(event) {
@@ -763,15 +754,16 @@ function showSelection(event) {
    }
 }
 
-
-if (document.querySelector('.js-catalog-nav')) {
-   let tebSort = new TabsOpen({
-      name: '.js-catalog-nav',
+if (document.querySelector('.js-sort')) {
+   let sortTab = new TabsOpen({
+      name: '.js-sort',
       hover: true,
-      closeAllTabs: false,
+      closeAllTabs: true,
       closeClickContent: false,
+      externalFunction: showSelection
    }).init();
 }
+
 class TabsSwitching {
    constructor(body__buttons, button, tab, execute) {
       this.name_button = button;

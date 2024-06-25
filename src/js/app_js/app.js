@@ -195,7 +195,7 @@ document.addEventListener('click', (event) => {
    if (event.target.closest('.swiper-gallery')) {
       document.body.classList.add('gallery-madal-open');
    }
-   if (event.target.closest('.product-gallery__modal-buttons button') || !event.target.closest('.product-gallery__modal-wrapper')) {
+   if (event.target.closest('.product-gallery__modal-buttons .button-close') || !event.target.closest('.product-gallery__modal-wrapper')) {
       document.body.classList.remove('gallery-madal-open');
    }
 })

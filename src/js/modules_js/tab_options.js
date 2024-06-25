@@ -16,9 +16,10 @@ class TabsOpen {
       this.resize();
    };
    examinationClick = (event) => {
-      this.externalFunction && this.externalFunction(event,);
+      this.externalFunction && this.externalFunction(event);
       if (this.hover && this.pc) return;
       let eventElement = this.closeClickContent ? event.target.closest('.js-tab-body') : event.target.closest('.js-tab-button');
+
       if (eventElement && event.target.closest('.js-tab-body').classList.contains('active')) {
          this.close(event.target.closest('.js-tab-body'));
          return;
@@ -67,16 +68,6 @@ class TabsOpen {
    resize = () => window.addEventListener('resize', this.adjustment);
 }
 
-if (document.querySelector('.js-sort')) {
-   let tebSort = new TabsOpen({
-      name: '.js-sort',
-      hover: true,
-      closeAllTabs: true,
-      closeClickContent: false,
-      externalFunction: showSelection
-   }).init();
-}
-
 /* Подменя текста, показать выбранный вариант */
 const BUTTON_TEXT = document.getElementById('sort-button-text');
 function showSelection(event) {
@@ -88,12 +79,12 @@ function showSelection(event) {
    }
 }
 
-
-if (document.querySelector('.js-catalog-nav')) {
-   let tebSort = new TabsOpen({
-      name: '.js-catalog-nav',
+if (document.querySelector('.js-sort')) {
+   let sortTab = new TabsOpen({
+      name: '.js-sort',
       hover: true,
-      closeAllTabs: false,
+      closeAllTabs: true,
       closeClickContent: false,
+      externalFunction: showSelection
    }).init();
 }

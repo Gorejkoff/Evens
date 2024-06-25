@@ -134,19 +134,17 @@
          justify-content: space-between;
          gap: 10px;
       }
-
    }
 
    &__header-price {
       white-space: nowrap;
       margin-bottom: 20px;
       font-weight: 700;
-      font-size: 40px;
+      font-size: 30px;
       color: var(--color-violet);
 
       @media (min-width:768px) and (max-width:1023.98px) {
          margin-bottom: 0;
-         font-size: 30px;
       }
    }
 
@@ -291,6 +289,7 @@
    &__image {
       position: relative;
       padding-bottom: 72.2%;
+      overflow: hidden;
 
       img {
          position: absolute;
@@ -385,6 +384,7 @@
       &__modal-buttons {
          display: flex;
          justify-content: flex-end;
+         align-items: flex-start;
 
          button {
             @media (max-width:1023.98px) {
@@ -393,8 +393,6 @@
          }
 
       }
-
-
 
       .swiper-gallery {
          margin-bottom: 20px;
@@ -585,5 +583,29 @@
 
    .swiper-button-disabled {
       display: none;
+   }
+}
+
+.image-scale-minus {
+   margin-right: 10px;
+   width: 40px;
+   height: 40px;
+
+   &:disabled {
+      path {
+         stroke: var(--color-gray-light);
+      }
+   }
+}
+
+.image-scale-plus {
+   margin-right: 20px;
+   width: 40px;
+   height: 40px;
+
+   &:disabled {
+      path {
+         stroke: var(--color-gray-light);
+      }
    }
 }

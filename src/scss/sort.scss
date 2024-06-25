@@ -13,6 +13,11 @@
       @media (min-width:768px) {
          display: flex;
          align-items: center;
+         font-size: 14px;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 16px;
       }
    }
 
@@ -59,7 +64,12 @@
       display: none;
 
       @media (min-width:768px) {
+         font-size: 14px;
          display: block;
+      }
+
+      @media (min-width:1024px) {
+         font-size: 16px;
       }
    }
 

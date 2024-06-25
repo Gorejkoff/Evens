@@ -242,6 +242,28 @@ textarea {
    }
 }
 
+.header-nav__links>li {
+
+   &>a,
+   &>button {
+      @media (max-width:767.98px) {
+         font-weight: 600;
+      }
+   }
+}
+
+.header-nav__menu-tab.active {
+   .js-menu-tab-button {
+      @media (max-width:767.98px) {
+         transition: color 0.3s;
+
+         &:hover {
+            color: var(--color-violet);
+         }
+      }
+   }
+}
+
 .button-close {
    height: 40px;
    width: 40px;
@@ -268,8 +290,14 @@ textarea {
    padding: 14px 16px;
    min-height: 48px;
    color: var(--color-white);
+   border: 1px solid var(--color-green);
    background-color: var(--color-green);
    border-radius: 2px;
+
+   &:hover {
+      color: var(--color-green);
+      background-color: transparent;
+   }
 }
 
 .button-transparent {
@@ -299,16 +327,6 @@ textarea {
    pointer-events: none;
 }
 
-.button-transition {
-   padding-top: 30px;
-   display: flex;
-   justify-content: center;
-
-   @media (min-width:1024px) {
-      display: none;
-   }
-}
-
 .button-violet {
    padding: 8px 16px;
    border-radius: 2px;
@@ -325,6 +343,12 @@ textarea {
    align-items: center;
    gap: 10px;
    color: var(--color-violet);
+   white-space: nowrap;
+   font-size: 14px;
+
+   @media (min-width:1024px) {
+      font-size: 16px;
+   }
 }
 
 .swiper-wrapper {
@@ -498,6 +522,41 @@ textarea {
          border-radius: 4px;
          font-weight: 600;
          font-size: 16px;
+      }
+   }
+}
+
+.swiper-zoom-container {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+span[data-quantity],
+a[data-quantity],
+button[data-quantity] {
+   position: relative;
+
+   &[data-quantity] {
+      &::after {
+         content: attr(data-quantity);
+         padding: 2px 3px;
+         position: absolute;
+         top: 0;
+         right: 0;
+         height: 10px;
+         min-width: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: 700;
+         font-size: 6px;
+         text-align: center;
+         border-radius: 5px;
+         background-color: var(--color-violet);
+         color: var(--color-white);
       }
    }
 }

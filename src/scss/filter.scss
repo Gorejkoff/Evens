@@ -1,26 +1,37 @@
 .filter {
-   margin-left: 20px;
-   padding: 20px;
    position: fixed;
-   top: 20px;
+   top: 0;
    left: -120%;
    z-index: 20;
-   height: calc(100vh - 40px);
-   width: calc(100% - 40px);
-   background-color: var(--color-gray-light);
-   border-radius: 10px;
+   height: 100%;
+   width: 100%;
    transition: left 0.3s;
+   background-color: var(--color-black-08);
 
    &.filter-open {
       left: 0;
    }
 
-   @media (min-width:768px) {
-      margin-left: 0;
-      min-width: 314px;
-      width: auto;
+   &__form {
+      margin-top: 20px;
+      margin-left: 20px;
+      padding: 20px;
+      height: calc(100vh - 40px);
+      width: calc(100% - 40px);
+      background-color: var(--color-gray-light);
+      border-radius: 10px;
 
+      @media (min-width:768px) {
+         margin-left: 0;
+         min-width: 314px;
+         width: auto;
+      }
    }
+
+   @media (min-width:768px) {
+      background-color: transparent;
+   }
+
 
    @media (min-width:1024px) {
       position: static;

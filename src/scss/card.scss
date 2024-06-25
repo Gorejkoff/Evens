@@ -1,4 +1,6 @@
 .card {
+   background-color: var(--color-white);
+
    &__description ol {
       margin-bottom: 20px;
       font-weight: 400;
@@ -280,7 +282,7 @@
          @media (max-width:767.98px) {
             position: absolute;
             top: 20px;
-            right: 0;
+            right: 10px;
          }
 
       }

@@ -7,7 +7,6 @@
    height: calc(100vh - (var(--height-header-nav, 49px) + 1px));
    transition: right 0.3s;
    pointer-events: none;
-   background-color: var(--color-white);
 
    @media (min-width:768px) {
       display: none;
@@ -15,20 +14,29 @@
       max-height: calc(100vh - (var(--height-header, 49) + var(--height-header-nav, 69px) + 12px));
       width: 100%;
       height: auto;
-      background-color: transparent;
 
       .js-tab-content {
          height: auto;
       }
    }
 
+   &__container {
+      @media (max-width:767.98px) {
+         padding: 0;
+      }
+   }
 
    &__body {
       position: relative;
       z-index: 12;
       max-height: 100%;
-      background-color: var(--color-white);
+      background-color: var(--color-gray-light);
       pointer-events: all;
+
+      @media (max-width:767.98px) {
+         padding-left: 20px;
+         padding-right: 20px;
+      }
 
       @media (min-width:768px) {
          padding-top: 18px;
@@ -36,7 +44,6 @@
          display: inline-flex;
          min-width: 230px;
          gap: 24px;
-         box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.11);
       }
 
       @media (min-width:1024px) {
@@ -86,6 +93,10 @@
 .catalog-nav {
    padding-top: 20px;
    flex: 1 0 230px;
+
+   @media (min-width:768px) {
+      padding-top: 0;
+   }
 
    @media (min-width:1024px) {
       @include sizeMaxMinPcFlex (0, 0, 306, 250);

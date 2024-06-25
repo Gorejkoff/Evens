@@ -1,10 +1,9 @@
 .catalog-nav-content {
-   background-color: var(--color-white);
    transition: right 0.3s;
+   display: none;
 
    @media (min-width:768px) {
       width: calc(100vw - 254px);
-      display: none;
    }
 
    @media (min-width:1024px) {
@@ -13,15 +12,11 @@
    }
 
    &.open {
-      right: 0;
-
-      @media (min-width:768px) {
-         display: block;
-      }
+      display: block;
    }
 
    &__container {
-      background-color: var(--color-white);
+      background-color: var(--color-gray-light);
 
       @media (min-width:768px) {
          padding-left: 0;

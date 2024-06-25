@@ -9,6 +9,7 @@
    &__container {
       flex: 1 1 auto;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100%;
@@ -60,6 +61,28 @@
          @media (min-width:768px) {
             max-width: 415px;
          }
+      }
+   }
+
+   &__buttons {
+      margin-top: 20px;
+      padding-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 333px;
+      border-top: 1px solid var(--color-gray);
+
+      @media (min-width:768px) {
+         display: none;
+      }
+
+      svg rect {
+         fill: var(--color-gray);
+      }
+
+      svg path {
+         stroke: var(--color-gray);
       }
    }
 }

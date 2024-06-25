@@ -1,10 +1,12 @@
-<form class="filter" action="#" method="post" name="filter" id="filter">
-   <div class="filter__header">
-      @@include('../filter/filter_open.html',{})
-      @@include('../filter/filter_close.html',{})
-   </div>
-   <div class="filter__body">
-      @@include('../filter/filter_price.html',{})
-      @@loop("../filter/filter_category.html", "json/filter.json")
-   </div>
-</form>
+<div class="filter">
+   <form class="filter__form" action="#" method="post" name="filter" id="filter">
+      <div class="filter__header">
+         @@include('../filter/filter_open.html',{})
+         @@include('../filter/filter_close.html',{})
+      </div>
+      <div class="filter__body">
+         @@include('../filter/filter_price.html',{})
+         @@loop("../filter/filter_category.html", "json/filter.json")
+      </div>
+   </form>
+</div>

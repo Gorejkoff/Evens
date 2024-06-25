@@ -8,7 +8,7 @@
       }
 
       .card {
-         padding: 10px 5px;
+         padding: 20px 10px;
          border: 1px solid var(--color-gray);
          border-radius: 10px;
          overflow: hidden;
@@ -19,10 +19,15 @@
             width: 100%;
 
             button {
+               min-height: 34px;
                width: 100%;
             }
          }
       }
+   }
+
+   .card__footer {
+      gap: 10px;
    }
 
    &__sum {

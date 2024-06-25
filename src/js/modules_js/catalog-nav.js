@@ -27,7 +27,7 @@ function closeTabCatalogNav() {
 function openTabCatalogNav(event) {
    const number = event.target.closest('.js-catalog-nav-button').dataset.number;
    CATALOG_CONTENT.forEach((e) => {
-      if (e.dataset.number == number) {
+      if (!e.classList.contains('open') && e.dataset.number == number) {
          e.classList.add('open');
       } else {
          e.classList.remove('open');
