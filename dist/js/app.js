@@ -101,9 +101,7 @@ document.addEventListener('click', (event) => {
    /* открывает меню в mobile */
    if (!MIN768.matches && event.target.closest('#burger')) {
       document.body.classList.add('burger-active');
-   }
-   /* закрывает меню в mobile */
-   if (event.target.closest('#closeMenu')) {
+   } else if (!MIN768.matches && !event.target.closest('.menu-mobile__container')) {
       closeMenuMobile();
    }
    /* открывает catalog-nav */
@@ -113,15 +111,10 @@ document.addEventListener('click', (event) => {
       closeCatalogNav();
    }
 
-   // меню, кнопка закрыть, закрывает все открытые вкладки
-   if (event.target.closest('.js-nav-close')) {
-      document.querySelectorAll('.open').forEach((e) => e.classList.remove('open'));
-      closeMenuMobile();
-   }
    // открывает поле поиска в меню после скролла и мобилка
-   if (event.target.closest('.header-nav__button-search')) {
+   if (event.target.closest('.button-search-open')) {
       HEADER_NAV.classList.add('open-search')
-   } else if (!event.target.closest('.header-nav__search') || event.target.closest('.header-nav__search-back')) {
+   } else if (!event.target.closest('.header-nav__search') && !event.target.closest('.search-result')) {
       // закрывает поле поиска в меню после скролла и в мобильном варианте
       HEADER_NAV.classList.remove('open-search')
    }
@@ -186,8 +179,8 @@ document.addEventListener('click', (event) => {
    if (VIEW && event.target.closest('.js-view-block')) {
       viewBlock()
    };
-   if (event.target.closest('.button__compare') ||
-      event.target.closest('.button__favourites') ||
+   if (event.target.closest('.card .button__compare') ||
+      event.target.closest('.card .button__favourites') ||
       event.target.closest('.card__button button')) {
       event.preventDefault();
    }
@@ -236,6 +229,7 @@ QUANTITY_BASKET.forEach((e) => {
 function closeMenuMobile() {
    document.body.classList.remove('burger-active');
    document.body.classList.remove('catalog-nav-open');
+   document.querySelectorAll('.catalog-nav-wrapper.open').forEach((e => { e.classList.remove('open') }))
 }
 
 function closeTabs(element) {

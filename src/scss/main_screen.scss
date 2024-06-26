@@ -134,7 +134,11 @@
       justify-content: center;
    }
 
-
+   .brand__image-body {
+      img {
+         top: 0;
+      }
+   }
 }
 
 .swiper-main {

@@ -50,6 +50,7 @@
          align-items: center;
          gap: 8px;
          width: 100%;
+         height: auto;
          font-weight: 700;
          font-size: 14px;
          line-height: 120%;
@@ -62,6 +63,10 @@
          }
 
          &[data-quantity]::after {
+            position: relative;
+            font-size: inherit;
+            background-color: transparent;
+            height: auto;
             content: '(' attr(data-quantity)')';
             color: var(--color-violet);
          }
