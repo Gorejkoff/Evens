@@ -1,17 +1,14 @@
 .accound {
-   &__title {
-      margin-bottom: 10px;
-      font-weight: 700;
-      font-size: 30px;
+   .title {
       text-align: center;
+      margin-bottom: 10px;
 
       @media (min-width:768px) {
-         margin-bottom: 20px;
          text-align: start;
       }
 
-      @media (min-width:1024px) {
-         font-size: 50px;
+      @media (min-width:1344px) {
+         margin-bottom: 20px;
       }
    }
 
@@ -596,12 +593,12 @@
          display: none;
       }
    }
-}
 
-@media (max-width:1024px) {
+   @media (max-width:1024px) {
 
-   .button__compare,
-   .button__favourites {
-      font-size: 12px;
+      .button__compare,
+      .button__favourites {
+         font-size: 12px;
+      }
    }
 }

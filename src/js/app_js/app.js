@@ -101,7 +101,7 @@ document.addEventListener('click', (event) => {
    /* открывает меню в mobile */
    if (!MIN768.matches && event.target.closest('#burger')) {
       document.body.classList.add('burger-active');
-   } else if (!MIN768.matches && !event.target.closest('.menu-mobile__container')) {
+   } else if (!MIN768.matches && !event.target.closest('.menu-mobile__container') && !event.target.closest('#catalog_nav_wrapper')) {
       closeMenuMobile();
    }
    /* открывает catalog-nav */

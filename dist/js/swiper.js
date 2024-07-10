@@ -6245,7 +6245,7 @@ if (document.querySelector('.naws__swiper')) {
    });
 }
 
-let swiperStateBrand;
+/* let swiperStateBrand;
 let swiperBrand;
 if (document.querySelector('.swiper-brand')) {
    changeSliderBrand();
@@ -6279,7 +6279,7 @@ function changeSliderBrand() {
          swiperBrand.destroy(true, true);
       }
    }
-}
+} */
 
 if (document.querySelector('.swiper-brand-main')) {
    const swiper = new Swiper('.swiper-brand-main', {

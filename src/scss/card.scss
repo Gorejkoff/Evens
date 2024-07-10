@@ -148,7 +148,7 @@
             width: 100%;
 
             @media (max-width:767.98px) {
-               padding: 8px 14px;
+               padding: 8px 10px;
                min-height: 30px;
                font-size: 12px;
             }
@@ -220,6 +220,7 @@
    flex-direction: column;
    gap: 20px;
 
+
    .card__status {
       padding: 6px;
       font-size: 12px;
@@ -238,10 +239,15 @@
          align-items: stretch;
          gap: 24px;
          border: 1px solid var(--color-gray);
+
+         &>a {
+            display: flex;
+            align-items: stretch;
+            gap: 24px;
+         }
       }
 
       &__image {
-
          @media (min-width:768px) and (max-width:1343.98px) {
             @include sizeMaxMinTabletFlex (0, 0, 193, 161)
          }
@@ -256,7 +262,6 @@
          padding-bottom: 75%;
          width: 75%;
          margin: 0 auto;
-
 
          @media (min-width:768px) {
             padding-bottom: 100%;
@@ -284,7 +289,6 @@
             top: 20px;
             right: 10px;
          }
-
       }
 
       &__data {

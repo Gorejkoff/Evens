@@ -20,7 +20,7 @@
 
          <div class="accound margin-section">
             <div class="accound__container">
-               <h1 class="accound__title">Личный кабинет</h1>
+               <h1 class="title">Личный кабинет</h1>
                <div class="accound__body">
 
                   @@include('html/accound/accound_menu.html',{"active": "data"})
@@ -43,7 +43,7 @@
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "street", "placeholder": "Улица", "type": "text"})
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "house", "placeholder": "Дом", "type": "text"})
                         @@include('html/registration/input.html',{"disabled": true,"required": true, "name": "apartment", "placeholder": "Квартира", "type": "text"})
-                        <div class="accound__data-button" data-da=".accound__form,4,1024">
+                        <div class="accound__data-button">
                            <button class="js-data-save button-green" type="submit" disabled>Сохранить</button>
                         </div>
                      </form>

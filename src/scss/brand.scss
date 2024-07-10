@@ -1,8 +1,11 @@
 .brand {
 
    .brand__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+
       @media (min-width:768px) {
-         display: grid;
          grid-template-columns: 1fr 1fr 1fr 1fr;
          gap: 24px;
       }
@@ -114,6 +117,10 @@
       transition: color 0.2s, background-color 0.2s;
    }
 
+   .swiper-button-disabled {
+      display: none;
+   }
+
    @media (max-width:767.98px) {
       .swiper-slide-active {
          background-color: var(--color-violet);
@@ -123,6 +130,18 @@
 
    @media (min-width:1024px) {
       @include sizeMaxMinPc (max-width, 965, 701);
+
+      ._touch &,
+      ._pc &:hover {
+
+         .swiper-brand-main-prev,
+         .swiper-brand-main-next {
+            opacity: 1;
+            pointer-events: all;
+         }
+
+
+      }
    }
 
    @media (min-width:1344px) {

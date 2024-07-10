@@ -67,8 +67,8 @@
    }
 
    &__table-name {
-      padding-left: 24px;
-      padding-right: 24px;
+      padding-left: 14px;
+      padding-right: 14px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -76,7 +76,13 @@
       gap: 5px;
       font-size: 14px;
 
+      @media (min-width:768px) {
+         padding-left: 24px;
+         padding-right: 24px;
+      }
+
       a {
+         color: var(--color-black);
          transition: color 0.2s;
          line-height: 156%;
          font-size: 16px;
@@ -95,6 +101,8 @@
 
    &__table-quantity {
       min-width: 120px;
+      padding-left: 114px;
+
 
       @media (min-width:768px) {
          padding-right: 20px;
@@ -114,7 +122,6 @@
    }
 
    &__quantity {
-      margin: 0 auto;
       position: relative;
       display: flex;
       align-items: center;
@@ -123,10 +130,6 @@
       border-radius: 2px;
       border: 1px solid var(--color-gray);
       min-width: 116px;
-
-      @media (min-width:768px) {
-         margin: 0;
-      }
 
       input {
          width: 50px;

@@ -73,14 +73,16 @@
 
       @media (min-width:768px) {
          text-transform: uppercase;
-         padding: 10px 16px;
+         padding: 8px 16px;
+         border-radius: 4px;
+
       }
 
-      @media (min-width:768px) and (max-width:991.98px) {
+      @media (min-width:768px) and (max-width:1023.98px) {
          display: none;
       }
 
-      @media (max-width:991.98px) {
+      @media (max-width:1023.98px) {
 
          span,
          img {
@@ -88,17 +90,16 @@
          }
       }
 
-      @media (min-width:768px) {
-         min-height: 45px;
-         border-radius: 4px;
-         font-size: 20px;
+      @media (min-width:1024px) {
+         min-height: 40px;
+         font-size: 18px;
       }
    }
 
    &__catalog-button-tablet {
       display: none;
 
-      @media (min-width:768px) and (max-width:991.98px) {
+      @media (min-width:768px) and (max-width:1023.98px) {
          display: block;
       }
    }
@@ -176,15 +177,12 @@
          flex: 1 1 auto;
          display: block;
          padding: 7px 10px 8px;
-         /*   padding: 4px 25px 4px 40px; */
-         /*  min-height: 100%; */
          font-weight: 600;
          font-size: 12px;
          color: var(--color-black);
          border-radius: 2px;
          border: 1px solid var(--color-black);
          background-color: var(--color-white);
-         /*      width: 241px; */
          height: 30px;
 
 
@@ -199,7 +197,7 @@
 
          @media (min-width:1024px) {
             padding: 10px 45px 10px 10px;
-            min-height: 49px;
+            min-height: 40px;
          }
 
          &::-webkit-input-placeholder {
@@ -285,9 +283,14 @@
       }
 
       img {
+
          @media (min-width:768px) {
             display: block;
-            width: 100%;
+            width: 16px;
+         }
+
+         @media (min-width:1024px) {
+            width: 21px;
          }
       }
    }
@@ -459,7 +462,9 @@ button.burger-menu__close {
 }
 
 .header-nav__office .header-nav__button-search {
-   order: 5;
+   @media (max-width:767.98px) {
+      order: 5;
+   }
 
    @media (min-width:768px) {
       display: none;
