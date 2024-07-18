@@ -289,8 +289,16 @@
       margin-bottom: 40px;
    }
 
+   &__modal-involucre {
+      display: flex;
+      align-items: center;
+      min-height: 100%;
+      max-width: 100vw;
+   }
+
    &__modal-wrapper {
       margin: 0 auto;
+      width: 100%;
       max-width: 1296px;
       background-color: var(--color-white);
    }
@@ -342,15 +350,12 @@
       }
 
       &__modal {
-         padding-top: 160px;
-         padding-bottom: 160px;
          position: fixed;
          top: 0;
          left: 0;
          z-index: 20;
          width: 100%;
          height: 100%;
-
          overflow-y: auto;
       }
 

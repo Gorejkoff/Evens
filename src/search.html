@@ -17,7 +17,7 @@
       <main class="main">
          @@include('html/bread_crumbs.html',{"list": [ {"name": "Главная", "link": "index.html"}, {"name": "Поиск", "link": "search.html"}]})
          @@include('html/title/page_title.html',{"title": "Поиск"})
-         <div class="search margin-section">
+         <div class="search">
             <div class="search__container">
                <div class="search__body">
                   <div class="search__sort">
@@ -52,68 +52,22 @@
                         </button>
                      </span>
                   </div>
-                  <div class="search__header js-move-view-button js-sort">
-                     <div class="search__quantity-product">
-                        @@include('html/sort/quantity_product.html',{})
+               </div>
+            </div>
+         </div>
+         <div class="margin-section">
+            <div class="catalog__container">
+               <div class="catalog__body">
+                  @@include('html/filter/filter.html',{"file": "filter.jsoan"})
+                  <div class="catalog__list">
+                     @@include('html/sort/sort.html',{})
+                     <div class="page-title" data-da=".page-title__container,1,768">
+                        <h1 class="title ">Процессоры</h1>
                      </div>
-                     @@include('html/sort/sort_by.html',{})
-                  </div>
-                  <div class="search__content">
-
-                     <div class="filter">
-                        <div class="search__categories-title">Найдено в категориях</div>
-                        <div class="filter__body">
-                           <div class="border-bottom js-filter-category">
-                              <button class="filter__category js-filter-open" type="button">
-                                 <div>Готовые компьютеры (15)</div>
-                              </button>
-                           </div>
-                           <div class="border-bottom js-filter-category">
-                              <button class="filter__category js-filter-open" type="button">
-                                 <div>Процессоры (14)</div>
-                                 <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
-                              </button>
-                              <div class="filter__list js-filter__block" style="">
-                                 <div class="filter__list-padding">
-                                    <ol class="scroll">
-                                       <li>
-                                          <span class="check__text">AMD (7)</span>
-                                       </li>
-                                       <li>
-                                          <span class="check__text">Intel (7)</span>
-                                       </li>
-                                    </ol>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="border-bottom js-filter-category">
-                              <button class="filter__category js-filter-open" type="button">
-                                 <div>Видеокарты (6)</div>
-                                 <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
-                              </button>
-                              <div class="filter__list js-filter__block" style="">
-                                 <div class="filter__list-padding">
-                                    <ol class="scroll">
-                                       <li>
-                                          <span class="check__text">AMD (1)</span>
-                                       </li>
-                                       <li>
-                                          <span class="check__text">Intel (5)</span>
-                                       </li>
-                                    </ol>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+                     <div class="js-change-view view-grid">
+                        @@loop("html/card/card_item.html", "../src/json/catalog_page.json")
                      </div>
-                     <div class="search__list">
-
-                        <div class="view-grid js-change-view">
-                           @@loop("html/card/card_item.html","json/search_list.json")
-                        </div>
-
-                        @@include('html/pagination.html',{})
-                     </div>
+                     @@include('html/pagination.html',{})
                   </div>
                </div>
             </div>

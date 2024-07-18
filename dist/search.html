@@ -11,7 +11,7 @@
 <link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-SemiBold.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="./fonts/Mulish-Bold.woff2" crossorigin>
 
-<link rel="stylesheet" href="css/style.css?_v=20240710130217">
+<link rel="stylesheet" href="css/style.css?_v=20240718125437">
 </head>
 
 
@@ -500,7 +500,7 @@
       <h1 class="title ">Поиск</h1>
    </div>
 </div>
-         <div class="search margin-section">
+         <div class="search">
             <div class="search__container">
                <div class="search__body">
                   <div class="search__sort">
@@ -535,14 +535,234 @@
                         </button>
                      </span>
                   </div>
-                  <div class="search__header js-move-view-button js-sort">
-                     <div class="search__quantity-product">
-                        <div class="number-product">
-   <p>Вариантов найдено:</p>
-   <span class="number-product__item">40</span>
+               </div>
+            </div>
+         </div>
+         <div class="margin-section">
+            <div class="catalog__container">
+               <div class="catalog__body">
+                  <div class="filter">
+   <form class="filter__form" action="#" method="post" name="filter" id="filter">
+      <div class="filter__header">
+         <button class="filter__open" type="button">
+   <img src="./img/svg/filter.svg" alt="иконка кнопки фильтра">
+   Фильтр
+</button>
+         <button class="filter__close" type="button">
+   <img src="./img/svg/close_3.svg" alt="закрыть фильтр">
+</button>
+      </div>
+      <div class="filter__body">
+         <div class="border-bottom js-filter-category js-category-open">
+   <button class="filter__category js-filter-open" type="button">
+      <div>Цена</div>
+      <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
+   </button>
+   <div class="filter__list scroll js-filter__block">
+      <div class="filter__list-padding">
+         <div class="filter__price-inputs">
+            <input id="price-min" class="filter__price-min" type="number" min="17" max="1546" name="min-price" value="">
+            <input id="price-max" class="filter__price-max" type="number" min="17" max="1546" name="max-price" value="">
+         </div>
+         <div id="price-range" class="filter__price-range">
+            <span id="spin-min" class="filter__price-spin-min"></span>
+            <span id="spin-max" class="filter__price-spin-max"></span>
+         </div>
+      </div>
+   </div>
 </div>
-                     </div>
-                     <div class="sort__block">
+         <div class="border-bottom js-filter-category">
+   <button class="filter__category js-filter-open" type="button">
+      <div>Производитель</div>
+      <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
+   </button>
+   <div class="filter__list js-filter__block">
+      <div class="filter__list-padding">
+         <ol class="scroll">
+             <li>
+               <label class="check">
+   <input type="checkbox" name="manufacture" value="amd">
+   <span class="check__item"></span>
+   <span class="check__text">AMD</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="manufacture" value="Intel">
+   <span class="check__item"></span>
+   <span class="check__text">Intel</span>
+</label>
+               </li>
+               
+         </ol>
+      </div>
+   </div>
+</div><div class="border-bottom js-filter-category">
+   <button class="filter__category js-filter-open" type="button">
+      <div>Наличие</div>
+      <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
+   </button>
+   <div class="filter__list js-filter__block">
+      <div class="filter__list-padding">
+         <ol class="scroll">
+             <li>
+               <label class="check">
+   <input type="checkbox" name="have" value="all">
+   <span class="check__item"></span>
+   <span class="check__text">Все</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="have" value="stock">
+   <span class="check__item"></span>
+   <span class="check__text">В наличии</span>
+</label>
+               </li>
+               
+         </ol>
+      </div>
+   </div>
+</div><div class="border-bottom js-filter-category">
+   <button class="filter__category js-filter-open" type="button">
+      <div>Тип процессора</div>
+      <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
+   </button>
+   <div class="filter__list js-filter__block">
+      <div class="filter__list-padding">
+         <ol class="scroll">
+             <li>
+               <label class="check">
+   <input type="checkbox" name="processor_type" value="A10">
+   <span class="check__item"></span>
+   <span class="check__text">AMD A10</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="processor_type" value="A6">
+   <span class="check__item"></span>
+   <span class="check__text">AMD A6</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="processor_type" value="A8">
+   <span class="check__item"></span>
+   <span class="check__text">AMD A8</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="processor_type" value="Athlon">
+   <span class="check__item"></span>
+   <span class="check__text">AMD Athlon</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="processor_type" value="Ryzen_3">
+   <span class="check__item"></span>
+   <span class="check__text">AMD Ryzen 3</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="processor_type" value="A10">
+   <span class="check__item"></span>
+   <span class="check__text">AMD A10</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="processor_type" value="A6">
+   <span class="check__item"></span>
+   <span class="check__text">AMD A6</span>
+</label>
+               </li>
+               
+         </ol>
+      </div>
+   </div>
+</div><div class="border-bottom js-filter-category">
+   <button class="filter__category js-filter-open" type="button">
+      <div>Количество ядер</div>
+      <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
+   </button>
+   <div class="filter__list js-filter__block">
+      <div class="filter__list-padding">
+         <ol class="scroll">
+             <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="2">
+   <span class="check__item"></span>
+   <span class="check__text">2</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="4">
+   <span class="check__item"></span>
+   <span class="check__text">4</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="6">
+   <span class="check__item"></span>
+   <span class="check__text">6</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="8">
+   <span class="check__item"></span>
+   <span class="check__text">8</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="12">
+   <span class="check__item"></span>
+   <span class="check__text">12</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="2">
+   <span class="check__item"></span>
+   <span class="check__text">2</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="4">
+   <span class="check__item"></span>
+   <span class="check__text">4</span>
+</label>
+               </li>
+                <li>
+               <label class="check">
+   <input type="checkbox" name="number_cores" value="6">
+   <span class="check__item"></span>
+   <span class="check__text">6</span>
+</label>
+               </li>
+               
+         </ol>
+      </div>
+   </div>
+</div>
+      </div>
+   </form>
+</div>
+                  <div class="catalog__list">
+                     <div class="sort js-sort js-move-view-button">
+   <button class="filter__open" type="button">
+   <img src="./img/svg/filter.svg" alt="иконка кнопки фильтра">
+   Фильтр
+</button>
+   <div class="sort__block">
    <p class="sort__name">Сортировать по:</p>
    <div class="sort__body js-tab-body">
       <button class="sort__button js-tab-button" type="button">
@@ -608,69 +828,26 @@
       </div>
    </div>
 </div>
-                  </div>
-                  <div class="search__content">
-
-                     <div class="filter">
-                        <div class="search__categories-title">Найдено в категориях</div>
-                        <div class="filter__body">
-                           <div class="border-bottom js-filter-category">
-                              <button class="filter__category js-filter-open" type="button">
-                                 <div>Готовые компьютеры (15)</div>
-                              </button>
-                           </div>
-                           <div class="border-bottom js-filter-category">
-                              <button class="filter__category js-filter-open" type="button">
-                                 <div>Процессоры (14)</div>
-                                 <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
-                              </button>
-                              <div class="filter__list js-filter__block" style="">
-                                 <div class="filter__list-padding">
-                                    <ol class="scroll">
-                                       <li>
-                                          <span class="check__text">AMD (7)</span>
-                                       </li>
-                                       <li>
-                                          <span class="check__text">Intel (7)</span>
-                                       </li>
-                                    </ol>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="border-bottom js-filter-category">
-                              <button class="filter__category js-filter-open" type="button">
-                                 <div>Видеокарты (6)</div>
-                                 <img src="./img/svg/arrow-nav-bottom.svg" alt="указатель">
-                              </button>
-                              <div class="filter__list js-filter__block" style="">
-                                 <div class="filter__list-padding">
-                                    <ol class="scroll">
-                                       <li>
-                                          <span class="check__text">AMD (1)</span>
-                                       </li>
-                                       <li>
-                                          <span class="check__text">Intel (5)</span>
-                                       </li>
-                                    </ol>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
+   <div class="number-product">
+   <p>Вариантов найдено:</p>
+   <span class="number-product__item">40</span>
+</div>
+</div>
+                     <div class="page-title" data-da=".page-title__container,1,768">
+                        <h1 class="title ">Процессоры</h1>
                      </div>
-                     <div class="search__list">
-
-                        <div class="view-grid js-change-view">
-                           <article class="card swiper-slide">
-   
+                     <div class="js-change-view view-grid">
+                        <article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
       <div class="card__image">
          <div class="card__image-body">
-            <img src="./img/png/img-1.png" alt="образец товара">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
          <div class="card__article">Артикул: 21018900054</div>
       </div>
       <div class="card__data">
          <div class="card__status orange">Хит</div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC Snow man </a></h3>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
          <div class="card__description">
             <ol>
                <li>4-ядерный процессор</li>
@@ -701,7 +878,7 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
-            <span class="card__wasprice">130 000 ₽</span><span>120 000 ₽</span>
+            <span>4 350 ₽</span>
          </div>
          <div class="card__button">
             <button class="button-green" type="button" > Добавить в корзину</button>
@@ -709,18 +886,19 @@
       </div>
 
       
+   </a>
 
 </article><article class="card swiper-slide">
-   
+   <a class="card__link" href="product_card.html">
       <div class="card__image">
          <div class="card__image-body">
-            <img src="./img/png/img-2.png" alt="образец товара">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
          <div class="card__article">Артикул: 21018900054</div>
       </div>
       <div class="card__data">
-         <div class="card__status "></div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC Snow </a></h3>
+         <div class="card__status green">Скидка</div>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
          <div class="card__description">
             <ol>
                <li>4-ядерный процессор</li>
@@ -751,7 +929,7 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
-            <span>100 000 ₽</span>
+            <span>6 200 ₽</span>
          </div>
          <div class="card__button">
             <button class="button-green" type="button" disabled>Нет в наличии </button>
@@ -759,68 +937,19 @@
       </div>
 
       
+   </a>
 
 </article><article class="card swiper-slide">
-   
+   <a class="card__link" href="product_card.html">
       <div class="card__image">
          <div class="card__image-body">
-            <img src="./img/png/img-3.png" alt="образец товара">
-         </div>
-         <div class="card__article">Артикул: 21018900054</div>
-      </div>
-      <div class="card__data">
-         <div class="card__status green">Скидка</div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC man </a></h3>
-         <div class="card__description">
-            <ol>
-               <li>4-ядерный процессор</li>
-               <li>Socket AM4</li>
-               <li>Частота 3500 МГц</li>
-               <li>Объем кэша L2: 2048 КБ</li>
-               <li>Ядро Bristol Ridgeтех</li>
-               <li>the line does not fit</li>
-            </ol>
-         </div>
-      </div>
-
-      <div class="card__footer">
-         <div class="card__price">
-            <div class="card__buttons" data-da=".card__data,last,768">
-               <button class="button__compare" type="button">
-   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-   </svg>
-   <span class="button__text">К сравнению</span>
-</button>
-               <button class="button__favourites " type="button">
-   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-   </svg>
-   <span class="button__text">Удалить из избранного</span>
-</button>
-            </div>
-            <span>90 000 ₽</span>
-         </div>
-         <div class="card__button">
-            <button class="button-green" type="button" > Добавить в корзину</button>
-         </div>
-      </div>
-
-      
-
-</article><article class="card swiper-slide">
-   
-      <div class="card__image">
-         <div class="card__image-body">
-            <img src="./img/png/img-4.png" alt="образец товара">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
          <div class="card__article">Артикул: 21018900054</div>
       </div>
       <div class="card__data">
          <div class="card__status violet">Новинка</div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC </a></h3>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
          <div class="card__description">
             <ol>
                <li>4-ядерный процессор</li>
@@ -851,7 +980,7 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
-            <span>130 000 ₽</span>
+            <span>5 700 ₽</span>
          </div>
          <div class="card__button">
             <button class="button-green" type="button" > Добавить в корзину</button>
@@ -859,18 +988,19 @@
       </div>
 
       
+   </a>
 
 </article><article class="card swiper-slide">
-   
+   <a class="card__link" href="product_card.html">
       <div class="card__image">
          <div class="card__image-body">
-            <img src="./img/png/img-1.png" alt="образец товара">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
          <div class="card__article">Артикул: 21018900054</div>
       </div>
       <div class="card__data">
          <div class="card__status orange">Хит</div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC Snow man </a></h3>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
          <div class="card__description">
             <ol>
                <li>4-ядерный процессор</li>
@@ -901,7 +1031,7 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
-            <span class="card__wasprice">130 000 ₽</span><span>120 000 ₽</span>
+            <span>4 350 ₽</span>
          </div>
          <div class="card__button">
             <button class="button-green" type="button" > Добавить в корзину</button>
@@ -909,18 +1039,19 @@
       </div>
 
       
+   </a>
 
 </article><article class="card swiper-slide">
-   
+   <a class="card__link" href="product_card.html">
       <div class="card__image">
          <div class="card__image-body">
-            <img src="./img/png/img-2.png" alt="образец товара">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
          <div class="card__article">Артикул: 21018900054</div>
       </div>
       <div class="card__data">
-         <div class="card__status "></div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC Snow </a></h3>
+         <div class="card__status green">Скидка</div>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
          <div class="card__description">
             <ol>
                <li>4-ядерный процессор</li>
@@ -951,7 +1082,7 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
-            <span>100 000 ₽</span>
+            <span>6 200 ₽</span>
          </div>
          <div class="card__button">
             <button class="button-green" type="button" disabled>Нет в наличии </button>
@@ -959,68 +1090,19 @@
       </div>
 
       
+   </a>
 
 </article><article class="card swiper-slide">
-   
+   <a class="card__link" href="product_card.html">
       <div class="card__image">
          <div class="card__image-body">
-            <img src="./img/png/img-3.png" alt="образец товара">
-         </div>
-         <div class="card__article">Артикул: 21018900054</div>
-      </div>
-      <div class="card__data">
-         <div class="card__status green">Скидка</div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC man </a></h3>
-         <div class="card__description">
-            <ol>
-               <li>4-ядерный процессор</li>
-               <li>Socket AM4</li>
-               <li>Частота 3500 МГц</li>
-               <li>Объем кэша L2: 2048 КБ</li>
-               <li>Ядро Bristol Ridgeтех</li>
-               <li>the line does not fit</li>
-            </ol>
-         </div>
-      </div>
-
-      <div class="card__footer">
-         <div class="card__price">
-            <div class="card__buttons" data-da=".card__data,last,768">
-               <button class="button__compare" type="button">
-   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
-      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
-      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
-   </svg>
-   <span class="button__text">К сравнению</span>
-</button>
-               <button class="button__favourites " type="button">
-   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
-   </svg>
-   <span class="button__text">Удалить из избранного</span>
-</button>
-            </div>
-            <span class="card__wasprice">110 000 ₽</span><span>90 000 ₽</span>
-         </div>
-         <div class="card__button">
-            <button class="button-green" type="button" > Добавить в корзину</button>
-         </div>
-      </div>
-
-      
-
-</article><article class="card swiper-slide">
-   
-      <div class="card__image">
-         <div class="card__image-body">
-            <img src="./img/png/img-4.png" alt="образец товара">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
          <div class="card__article">Артикул: 21018900054</div>
       </div>
       <div class="card__data">
          <div class="card__status violet">Новинка</div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC </a></h3>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
          <div class="card__description">
             <ol>
                <li>4-ядерный процессор</li>
@@ -1051,7 +1133,7 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
-            <span>130 000 ₽</span>
+            <span>5 700 ₽</span>
          </div>
          <div class="card__button">
             <button class="button-green" type="button" > Добавить в корзину</button>
@@ -1059,18 +1141,19 @@
       </div>
 
       
+   </a>
 
 </article><article class="card swiper-slide">
-   
+   <a class="card__link" href="product_card.html">
       <div class="card__image">
          <div class="card__image-body">
-            <img src="./img/png/img-1.png" alt="образец товара">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
          </div>
          <div class="card__article">Артикул: 21018900054</div>
       </div>
       <div class="card__data">
          <div class="card__status orange">Хит</div>
-         <h3 class="card__title-card"> <a href="product_card.html">Игровой компьютер EvensPC Snow man </a></h3>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
          <div class="card__description">
             <ol>
                <li>4-ядерный процессор</li>
@@ -1101,7 +1184,7 @@
    <span class="button__text">Удалить из избранного</span>
 </button>
             </div>
-            <span class="card__wasprice">130 000 ₽</span><span>120 000 ₽</span>
+            <span>4 350 ₽</span>
          </div>
          <div class="card__button">
             <button class="button-green" type="button" > Добавить в корзину</button>
@@ -1109,11 +1192,266 @@
       </div>
 
       
+   </a>
+
+</article><article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
+         <div class="card__article">Артикул: 21018900054</div>
+      </div>
+      <div class="card__data">
+         <div class="card__status green">Скидка</div>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+            <span>6 200 ₽</span>
+         </div>
+         <div class="card__button">
+            <button class="button-green" type="button" disabled>Нет в наличии </button>
+         </div>
+      </div>
+
+      
+   </a>
+
+</article><article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
+         <div class="card__article">Артикул: 21018900054</div>
+      </div>
+      <div class="card__data">
+         <div class="card__status violet">Новинка</div>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+            <span>5 700 ₽</span>
+         </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
+         </div>
+      </div>
+
+      
+   </a>
+
+</article><article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
+         <div class="card__article">Артикул: 21018900054</div>
+      </div>
+      <div class="card__data">
+         <div class="card__status orange">Хит</div>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+            <span>4 350 ₽</span>
+         </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
+         </div>
+      </div>
+
+      
+   </a>
+
+</article><article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
+         <div class="card__article">Артикул: 21018900054</div>
+      </div>
+      <div class="card__data">
+         <div class="card__status green">Скидка</div>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+            <span>6 200 ₽</span>
+         </div>
+         <div class="card__button">
+            <button class="button-green" type="button" disabled>Нет в наличии </button>
+         </div>
+      </div>
+
+      
+   </a>
+
+</article><article class="card swiper-slide">
+   <a class="card__link" href="product_card.html">
+      <div class="card__image">
+         <div class="card__image-body">
+            <img src="./img/png/catalog-1.png" alt="образец товара">
+         </div>
+         <div class="card__article">Артикул: 21018900054</div>
+      </div>
+      <div class="card__data">
+         <div class="card__status violet">Новинка</div>
+         <h3 class="card__title-card"> Процессор AMD A10 9700 OEM </h3>
+         <div class="card__description">
+            <ol>
+               <li>4-ядерный процессор</li>
+               <li>Socket AM4</li>
+               <li>Частота 3500 МГц</li>
+               <li>Объем кэша L2: 2048 КБ</li>
+               <li>Ядро Bristol Ridgeтех</li>
+               <li>the line does not fit</li>
+            </ol>
+         </div>
+      </div>
+
+      <div class="card__footer">
+         <div class="card__price">
+            <div class="card__buttons" data-da=".card__data,last,768">
+               <button class="button__compare" type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="8" y="4" width="2.04" height="17" rx="1.02" fill="#282828" />
+      <rect x="11.4" y="6.71997" width="2.04" height="14.28" rx="1.02" fill="#282828" />
+      <rect x="14.8" y="9.43994" width="2.04" height="11.56" rx="1.02" fill="#282828" />
+   </svg>
+   <span class="button__text">К сравнению</span>
+</button>
+               <button class="button__favourites " type="button">
+   <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 10.5219V10.5208C20.9984 9.06374 20.431 7.66274 19.4159 6.62623C18.4001 5.58901 17.0183 5.00166 15.5726 5H15.5714C14.2155 5 12.9631 5.45792 12 6.28217C11.0369 5.45792 9.78454 5 8.42857 5L8.42742 5C6.98168 5.00166 5.59993 5.58901 4.58412 6.62623C3.569 7.66274 3.00161 9.06374 3 10.5208V10.5219C3 13.5338 5.15442 16.1005 7.07967 17.8221C9.04575 19.5802 11.0447 20.6968 11.2512 20.8087C11.4804 20.9338 11.7376 21 12 21C12.2624 21 12.5196 20.9338 12.7488 20.8087C12.9553 20.6968 14.9542 19.5802 16.9203 17.8221C18.8456 16.1005 21 13.5338 21 10.5219Z" stroke="#282828" stroke-width="2" />
+   </svg>
+   <span class="button__text">Удалить из избранного</span>
+</button>
+            </div>
+            <span>5 700 ₽</span>
+         </div>
+         <div class="card__button">
+            <button class="button-green" type="button" > Добавить в корзину</button>
+         </div>
+      </div>
+
+      
+   </a>
 
 </article>
-                        </div>
-
-                        <div class="pagination">
+                     </div>
+                     <div class="pagination">
    <ol class="pagination__body">
       <li><a class="active" href="404.html">1</a></li>
       <li><a href="404.html">2</a></li>
@@ -1123,7 +1461,6 @@
       <li><a href="404.html">20</a></li>
    </ol>
 </div>
-                     </div>
                   </div>
                </div>
             </div>
@@ -1391,9 +1728,9 @@
    </div>
 
 
-   <script defer src='./js/app.js?_v=20240710130217'></script>
-<script defer src='./js/swiper.js?_v=20240710130217'></script>
-<script defer src='./js/mask.js?_v=20240710130217'></script>
+   <script defer src='./js/app.js?_v=20240718125437'></script>
+<script defer src='./js/swiper.js?_v=20240718125437'></script>
+<script defer src='./js/mask.js?_v=20240718125437'></script>
 
 
 </body>

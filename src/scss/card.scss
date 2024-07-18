@@ -237,19 +237,20 @@
          padding: 20px 20px 20px 5px;
          display: flex;
          align-items: stretch;
-         gap: 24px;
+         gap: 22px;
          border: 1px solid var(--color-gray);
 
          &>a {
             display: flex;
             align-items: stretch;
-            gap: 24px;
+            width: 100%;
+            gap: 22px;
          }
       }
 
       &__image {
          @media (min-width:768px) and (max-width:1343.98px) {
-            @include sizeMaxMinTabletFlex (0, 0, 193, 161)
+            @include sizeMaxMinTabletFlex (0, 0, 193, 160)
          }
 
          @media (min-width:1344px) {
@@ -318,7 +319,7 @@
       &__buttons {
          display: flex;
          flex-wrap: wrap;
-         gap: 24px;
+         gap: 20px;
 
          @media (max-width:767.98px) {
             flex: 1 1 auto;
@@ -326,11 +327,20 @@
             order: 3;
          }
 
+         svg {
+            max-width: 16px;
+         }
+
          .button__text {
             display: none;
+            font-size: 14px;
 
             @media (min-width:768px) {
                display: inline;
+            }
+
+            @media (min-width:1366px) {
+               font-size: 16px;
             }
          }
       }
@@ -357,13 +367,15 @@
          width: 100%;
 
          button {
+            padding: 8px 14px;
             white-space: nowrap;
+            min-height: 30px;
+            font-size: 12px;
+            width: 100%;
 
-            @media (max-width:767.98px) {
-               padding: 8px 14px;
-               width: 100%;
-               min-height: 30px;
-               font-size: 12px;
+            @media (min-width:768px) {
+               padding: 12px;
+               font-size: 14px;
             }
          }
       }
