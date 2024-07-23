@@ -101,7 +101,6 @@
 
    &__table-quantity {
       min-width: 120px;
-      padding-left: 114px;
 
 
       @media (min-width:768px) {
@@ -117,6 +116,7 @@
       }
 
       @media (max-width:767.98px) {
+         justify-content: center;
          grid-column: span 2;
       }
    }

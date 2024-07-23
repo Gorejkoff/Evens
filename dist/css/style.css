@@ -2831,7 +2831,7 @@ button.button-search-close {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 10px;
   font-size: 12px;
 }
 
@@ -3039,7 +3039,7 @@ button.button-search-close {
       -ms-flex-pack: end;
           justify-content: flex-end;
   border-radius: 4px;
-  min-height: 68.75vw;
+  min-height: 60vw;
   overflow: hidden;
 }
 
@@ -3096,8 +3096,6 @@ button.button-search-close {
 .swiper-main {
   position: relative;
   margin-bottom: 20px;
-  margin-left: -20px;
-  margin-right: -20px;
 }
 
 .swiper-brand-main-prev,
@@ -3802,7 +3800,6 @@ table.specifications tbody td:nth-child(2n) {
 
 .basket__table-quantity {
   min-width: 120px;
-  padding-left: 114px;
 }
 
 .basket__quantity {
@@ -5213,7 +5210,7 @@ table.specifications tbody td:nth-child(2n) {
 }
 
 .accound__favourites .card {
-  padding: 10px 5px;
+  padding: 10px 10px 20px;
   border: 1px solid var(--color-gray);
   border-radius: 10px;
   overflow: hidden;
@@ -6210,11 +6207,6 @@ table.specifications tbody td:nth-child(2n) {
 
   .main-screen__button {
     margin-bottom: 80px;
-  }
-
-  .swiper-main {
-    margin-left: 0;
-    margin-right: 0;
   }
 
   .product-wrapper__top-block {
@@ -7628,6 +7620,9 @@ table.specifications tbody td:nth-child(2n) {
   }
 
   .basket__table-quantity {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-grid-column-span: 2;
     grid-column: span 2;
   }

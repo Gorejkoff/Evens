@@ -54,7 +54,7 @@
       flex-direction: column;
       justify-content: flex-end;
       border-radius: 4px;
-      min-height: 68.75vw;
+      min-height: 60vw;
       overflow: hidden;
 
       @media (min-width:768px) {
@@ -148,13 +148,6 @@
 .swiper-main {
    position: relative;
    margin-bottom: 20px;
-   margin-left: -20px;
-   margin-right: -20px;
-
-   @media (min-width:768px) {
-      margin-left: 0;
-      margin-right: 0;
-   }
 
    @media (min-width:1024px) {
       @include sizeMaxMinPc (max-width, 965, 701);
