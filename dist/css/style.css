@@ -2013,7 +2013,7 @@ button.button-search-close {
   padding: 8px 14px;
   white-space: nowrap;
   min-height: 30px;
-  font-size: 12px;
+  font-size: 14px;
   width: 100%;
 }
 
@@ -6027,7 +6027,6 @@ table.specifications tbody td:nth-child(2n) {
 
   .view-block .card__button button {
     padding: 12px;
-    font-size: 14px;
   }
 
   .view-block .card__footer {
