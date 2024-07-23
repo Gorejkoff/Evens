@@ -49,11 +49,11 @@ let ignoreHeaderHight;
 /* === СОБЫТИЕ СКРОЛЛА === */
 window.addEventListener('scroll', (event) => {
    scrollHeaderHight();
-   if (scrollY > headerHeight && MIN1024.matches) {
+   if (scrollY > headerHeight && MIN768.matches) {
       moveListMenu();
    } else {
       resetMoveListMenu();
-      if (document.querySelector('.js-index') && MIN1024.matches) closeCatalogNav();
+      if (document.querySelector('.js-index') && MIN768.matches) closeCatalogNav();
    }
 });
 function scrollHeaderHight() {

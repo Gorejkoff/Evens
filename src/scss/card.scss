@@ -28,7 +28,7 @@
       flex-direction: column;
       position: relative;
       margin-bottom: 5px;
-      padding: 10px 5px;
+      padding: 30px 10px 5px;
       border-radius: 10px;
 
       &>a {
@@ -197,7 +197,7 @@
       &__status {
          position: absolute;
          top: 10px;
-         left: 7px;
+         left: 10px;
          z-index: 2;
          display: flex;
          align-items: center;
@@ -206,6 +206,11 @@
          min-height: 27px;
          color: var(--color-white);
          font-size: 12px;
+
+         @media (min-width:1024px) {
+            top: 10px;
+            left: 7px;
+         }
       }
    }
 
@@ -249,6 +254,8 @@
       }
 
       &__image {
+         padding-top: 20px;
+
          @media (min-width:768px) and (max-width:1343.98px) {
             @include sizeMaxMinTabletFlex (0, 0, 193, 160)
          }
@@ -304,8 +311,8 @@
 
       &__status {
          position: absolute;
-         top: 20px;
-         left: 20px;
+         top: 10px;
+         left: 10px;
          z-index: 2;
          display: flex;
          align-items: center;
@@ -314,6 +321,11 @@
          min-height: 27px;
          color: var(--color-white);
          font-size: 12px;
+
+         @media (min-width:1024px) {
+            top: 20px;
+            left: 20px;
+         }
       }
 
       &__buttons {

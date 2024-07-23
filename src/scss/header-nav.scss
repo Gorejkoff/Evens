@@ -461,19 +461,11 @@ button.burger-menu__close {
    }
 }
 
-.header-nav__office .header-nav__button-search {
-   @media (max-width:767.98px) {
-      order: 5;
-   }
-
-   @media (min-width:768px) {
-      display: none;
-   }
-}
-
 .page-scroll {
-   .header-nav__button-search {
-      display: inline-block;
+   .header-nav__office .header-nav__button-search {
+      @media (min-width:768px) {
+         display: inline-block;
+      }
    }
 
    .header-nav__menu-tab {
@@ -496,6 +488,16 @@ button.burger-menu__close {
       .header-nav__search {
          display: flex;
       }
+   }
+}
+
+.header-nav__office .header-nav__button-search {
+   @media (max-width:767.98px) {
+      order: 5;
+   }
+
+   @media (min-width:768px) {
+      display: none;
    }
 }
 
