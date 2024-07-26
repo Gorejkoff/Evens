@@ -105,6 +105,11 @@
       font-weight: 700;
       font-size: 16px;
       line-height: 125%;
+      color: inherit;
+
+      &:hover {
+         color: var(--color-violet);
+      }
    }
 
    &__block {
@@ -176,6 +181,12 @@
       padding: 20px 20px;
       border-radius: 10px;
       background-color: var(--color-gray-light);
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
 
       @media (min-width:768px) {
          margin-left: 0;

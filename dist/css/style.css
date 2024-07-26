@@ -1712,6 +1712,7 @@ button.button-search-close {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
 
 .view-grid .card {
@@ -1724,7 +1725,7 @@ button.button-search-close {
           flex-direction: column;
   position: relative;
   margin-bottom: 5px;
-  padding: 30px 10px 5px;
+  padding: 30px 3px 10px;
   border-radius: 10px;
 }
 
@@ -1996,6 +1997,7 @@ button.button-search-close {
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
+  color: var(--color-black);
 }
 
 .view-block .card__title-card a {
@@ -3692,7 +3694,8 @@ table.specifications thead th {
 
 table.specifications tbody td {
   padding: 10px;
-  font-size: 18px;
+  font-size: 15px;
+  line-height: 150%;
   font-weight: 500;
 }
 
@@ -4541,6 +4544,11 @@ table.specifications tbody td:nth-child(2n) {
   font-weight: 700;
   font-size: 16px;
   line-height: 125%;
+  color: inherit;
+}
+
+.compare__name:hover {
+  color: var(--color-violet);
 }
 
 .compare__block {
@@ -4611,6 +4619,11 @@ table.specifications tbody td:nth-child(2n) {
   padding: 20px 20px;
   border-radius: 10px;
   background-color: var(--color-gray-light);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .compare__description-title {
@@ -5958,7 +5971,6 @@ table.specifications tbody td:nth-child(2n) {
   .view-grid {
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
   }
 
   .view-grid .card {

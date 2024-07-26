@@ -17,10 +17,10 @@
 .view-grid {
    display: grid;
    grid-template-columns: 1fr 1fr;
+   gap: 10px;
 
    @media (min-width:768px) {
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
    }
 
    .card {
@@ -28,7 +28,7 @@
       flex-direction: column;
       position: relative;
       margin-bottom: 5px;
-      padding: 30px 10px 5px;
+      padding: 30px 3px 10px;
       border-radius: 10px;
 
       &>a {
@@ -361,6 +361,7 @@
          margin-bottom: 10px;
          font-weight: 700;
          font-size: 14px;
+         color: var(--color-black);
 
          @media (min-width:768px) {
             margin-bottom: 20px;
