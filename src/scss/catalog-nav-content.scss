@@ -40,7 +40,11 @@
       }
 
       a {
-         color: var(--color-black);
+         color: var(--color-blue2);
+
+         @media (min-width:768px) {
+            color: var(--color-black);
+         }
 
          &:hover {
             color: var(--color-violet);
@@ -73,6 +77,10 @@
 
          ol {
             margin-top: 10px;
+
+            a {
+               color: var(--color-black);
+            }
          }
       }
    }

@@ -27,19 +27,21 @@
             </div>
          </div>
 
-
-         @@include('html/basket/basket_table.html',{})
-
-         <div class="registration margin-section">
+         <div class="registration">
             <div class="registration__container">
                @@include('html/registration/order_registration.html',{})
                @@include('html/registration/method.html',{})
                @@include('html/registration/comment.html',{})
-               @@include('html/registration/total.html',{})
-
             </div>
          </div>
 
+         @@include('html/basket/basket_table.html',{"margin":false})
+
+         <div class="registration margin-section">
+            <div class="registration__container">
+               @@include('html/registration/total.html',{})
+            </div>
+         </div>
 
          @@include('html/info.html',{})
 

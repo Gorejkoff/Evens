@@ -74,7 +74,7 @@ function showSelection(event) {
    if (event.target.closest('.js-sort-value')) {
       BUTTON_TEXT.innerHTML = event.target.closest('.js-sort-value').querySelector('.sort__value-text').innerHTML;
    }
-   if (event.target.closest('.sort__tab-header .button-close')) {
+   if (event.target.closest('.sort__tab-header .button-close') || event.target.closest('.sort__apply')) {
       this.closeAll();
    }
 }

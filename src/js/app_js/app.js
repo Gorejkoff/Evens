@@ -18,7 +18,7 @@ const MENU_CONTENT = document.querySelector('.js-menu-tab-content');
 const MENU_LIST = document.querySelectorAll('.js-menu-tab-content li');
 const HEADER_LINKS = document.querySelector('.js-header-links');
 const VIEW = document.querySelector('.view');
-
+let functionView = viewBlock;
 // медиазапрос
 const MIN768 = window.matchMedia('(min-width: 768px)');
 const MIN1024 = window.matchMedia('(min-width: 1024px)');
@@ -174,11 +174,19 @@ document.addEventListener('click', (event) => {
    }
    // переключение вида списка товаров на странице search
    if (VIEW && event.target.closest('.js-view-grid')) {
-      viewGrid()
+      viewButtonGrid();
+      functionView = viewGrid;
+      MIN768.matches && functionView();
    };
    if (VIEW && event.target.closest('.js-view-block')) {
-      viewBlock()
+      viewButtonBlock();
+      functionView = viewBlock;
+      MIN768.matches && functionView();
    };
+   if (event.target.closest('.sort__apply')) {
+      functionView();
+   }
+   // отмена перехода по ссылке
    if (event.target.closest('.card .button__compare') ||
       event.target.closest('.card .button__favourites') ||
       event.target.closest('.card__button button')) {
@@ -206,16 +214,20 @@ document.body.addEventListener('mouseover', (event) => {
 })
 
 // переключение вида списка товаров на странице search
-function viewBlock() {
+function viewButtonBlock() {
    document.querySelector('.js-view-grid').classList.remove('active');
-   document.querySelector('.js-change-view').classList.remove('view-grid');
    document.querySelector('.js-view-block').classList.add('active');
+}
+function viewBlock() {
+   document.querySelector('.js-change-view').classList.remove('view-grid');
    document.querySelector('.js-change-view').classList.add('view-block');
 }
-function viewGrid() {
+function viewButtonGrid() {
    document.querySelector('.js-view-block').classList.remove('active');
-   document.querySelector('.js-change-view').classList.remove('view-block');
    document.querySelector('.js-view-grid').classList.add('active');
+}
+function viewGrid() {
+   document.querySelector('.js-change-view').classList.remove('view-block');
    document.querySelector('.js-change-view').classList.add('view-grid');
 }
 
