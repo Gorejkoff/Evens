@@ -2,6 +2,7 @@
    <div class="news__container">
       <div class="news__title">
          <h2 class="title">Новости</h2>
+         @@include('../link_transition.html',{"text": "Смотреть все ", "link": "404.html"})
       </div>
       <div class="swiper naws__swiper">
          <div class="news__body swiper-wrapper">
@@ -9,7 +10,6 @@
          </div>
          <div class="swiper-news-pagination swiper-pagination"></div>
          <div class="button-transition">
-            @@include('../link_transition.html',{"text": "Смотреть все ", "link": "404.html", "adaptive": ".news__title,last,1024"})
          </div>
       </div>
 </section>
