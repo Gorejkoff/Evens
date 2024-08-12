@@ -126,7 +126,6 @@
    }
 
    &__form {
-
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -136,6 +135,12 @@
          grid-template-columns: 1fr 1fr;
          align-items: end;
          gap: 20px;
+      }
+
+      &.active {
+         .order-registration__input-title {
+            color: var(--color-violet);
+         }
       }
    }
 

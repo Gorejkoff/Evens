@@ -5202,6 +5202,10 @@ table.specifications tbody td:nth-child(2n) {
   gap: 10px;
 }
 
+.accound__form.active .order-registration__input-title {
+  color: var(--color-violet);
+}
+
 .accound__data-button {
   display: none;
   -ms-grid-column-span: 2;
